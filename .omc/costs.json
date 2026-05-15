@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "project": "factory",
+  "currency": "USD",
+  "daily_rate_cap_default": 10,
+  "overnight_mode_default": false,
+  "sessions": [],
+  "totals": {
+    "all_time_usd": 0,
+    "last_30_days_usd": 0,
+    "last_7_days_usd": 0
+  },
+  "_notes": [
+    "Append one entry per Claude/Codex session to sessions[].",
+    "Each session entry: { date, session_id, agent, model, tokens_in, tokens_out, cost_usd, task_summary }.",
+    "Totals recomputed by IFleet cost tracker (PR #39) on every write.",
+    "Cost ceiling check: sum of today's sessions > daily_rate_cap_default = pause work + Discord alert."
+  ]
+}
