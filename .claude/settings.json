@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_comment": "Repo-scoped Claude Code hooks. Pairs with .husky/pre-commit (the git-level enforcement). These hooks fire INSIDE Claude Code before/after tool use; the git hook fires at commit time. Both must agree.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'cmd=\"$CLAUDE_TOOL_INPUT_COMMAND\"; if echo \"$cmd\" | grep -E \"git\\s+push.*--force.*\\b(main|master)\\b\" >/dev/null; then echo \"BLOCKED: force-push to main is forbidden (AGENTS.md §7).\" >&2; exit 2; fi; if echo \"$cmd\" | grep -E \"--no-verify\\b\" >/dev/null; then echo \"BLOCKED: --no-verify is forbidden (AGENTS.md §7 / §13).\" >&2; exit 2; fi; exit 0'"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'path=\"$CLAUDE_TOOL_INPUT_FILE_PATH\"; case \"$path\" in *docs/decisions/*.md) if [ -f \"$path\" ] && grep -E \"^status:\\s*accepted\" \"$path\" >/dev/null 2>&1; then echo \"BLOCKED: $path has status: accepted — ADRs are append-only (AGENTS.md §7).\" >&2; exit 2; fi ;; esac; exit 0'"
+          }
+        ]
+      }
+    ],
+    "PreCommit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .husky/pre-commit"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'if [ -n \"$(git status --porcelain 2>/dev/null)\" ]; then echo \"REMINDER: working tree dirty — update .omc/STATUS.md before ending the session (AGENTS.md §5).\"; fi'"
+          }
+        ]
+      }
+    ]
+  }
+}

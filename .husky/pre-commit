@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+# Pre-commit hook — secret-pattern rejection per ENV.md lines 116-123
+#
+# This is the canonical, tracked script. Install it as the active git hook with:
+#   git config core.hooksPath .husky
+# (no Node / husky package required — script is plain bash)
+#
+# Rejects commits whose staged changes contain any of the patterns below.
+# Whitelist false positives in markdown by wrapping with <example>...</example>.
+
+set -e
+
+# Patterns from ENV.md §"Enforced patterns" (lines 116-123)
+PATTERNS=(
+  'sk_(test|live)_[a-zA-Z0-9]{20,}'                              # Stripe
+  'xoxb-[a-zA-Z0-9-]+'                                           # Slack
+  'eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+'            # JWT
+  'AKIA[0-9A-Z]{16}'                                             # AWS access key ID
+  'ghp_[a-zA-Z0-9]{36}'                                          # GitHub PAT
+  'sentry_dsn_[a-zA-Z0-9_-]+'                                    # Sentry DSN
+)
+
+# Block edits to .env files outright (per AGENTS.md "Never commit .env")
+if git diff --cached --name-only | grep -E '(^|/)\.env(\.|$)' >/dev/null; then
+  echo "ERROR: refusing to commit a .env file." >&2
+  echo "Listed files:" >&2
+  git diff --cached --name-only | grep -E '(^|/)\.env(\.|$)' >&2
+  exit 1
+fi
+
+# Inspect staged diff content (added lines only)
+DIFF_CONTENT=$(git diff --cached --no-color -U0 -- ':(exclude)<example>*')
+
+# Strip <example>...</example> blocks (whitelist convention from ENV.md line 124)
+SANITIZED=$(printf '%s' "$DIFF_CONTENT" | perl -0pe 's{<example>.*?</example>}{}gs')
+
+# Only check newly-added lines (start with '+', not '+++')
+ADDED=$(printf '%s\n' "$SANITIZED" | grep -E '^\+[^+]' || true)
+
+FOUND=0
+for pat in "${PATTERNS[@]}"; do
+  if printf '%s\n' "$ADDED" | grep -E -- "$pat" >/dev/null; then
+    echo "ERROR: staged diff contains a value matching forbidden pattern: $pat" >&2
+    printf '%s\n' "$ADDED" | grep -E --color=never -- "$pat" | head -5 >&2
+    FOUND=$((FOUND + 1))
+  fi
+done
+
+# Generic high-entropy guard: ≥32-char base64-ish blob in non-prose context
+# (a token-shaped run inside quotes or assignment, not inside <example>)
+HIGH_ENTROPY=$(printf '%s\n' "$ADDED" \
+  | grep -E '([=:]\s*"?|^\+\s*"?)[A-Za-z0-9_+/=-]{32,}"?$' || true)
+if [ -n "$HIGH_ENTROPY" ]; then
+  echo "WARNING: high-entropy ≥32-char token-shaped value(s) staged:" >&2
+  printf '%s\n' "$HIGH_ENTROPY" | head -5 >&2
+  echo "If this is prose/example, wrap with <example>...</example> in markdown to whitelist." >&2
+  echo "If this is a real secret: ABORT now, rotate, and recommit clean." >&2
+  FOUND=$((FOUND + 1))
+fi
+
+if [ "$FOUND" -gt 0 ]; then
+  echo "" >&2
+  echo "Commit blocked. Remove the secret, rotate if it ever existed, then retry." >&2
+  echo "DO NOT bypass with --no-verify (forbidden by AGENTS.md §7)." >&2
+  exit 1
+fi
+
+exit 0

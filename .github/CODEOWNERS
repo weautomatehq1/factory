@@ -1,0 +1,63 @@
+# CODEOWNERS — mirrors SECURITY.md §"Protected Paths" globs
+#
+# Every Protected Path requires review by @monstersebas1 before merge.
+# Enforced in concert with `.github/workflows/protected-paths.yml`.
+# Update both files together when SECURITY.md changes.
+#
+# Syntax: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Auth and authorization
+**/lib/auth/**                          @monstersebas1
+**/api/auth/**                          @monstersebas1
+**/middleware/auth*.ts                  @monstersebas1
+**/middleware/api-guard*.ts             @monstersebas1
+**/(auth)/**                            @monstersebas1
+
+# Billing and payments
+**/lib/billing/**                       @monstersebas1
+**/api/billing/**                       @monstersebas1
+**/api/webhooks/stripe/**               @monstersebas1
+**/features/billing/**                  @monstersebas1
+
+# PII handlers
+**/lib/pii/**                           @monstersebas1
+**/lib/audit/**                         @monstersebas1
+**/api/user/**                          @monstersebas1
+**/api/profile/**                       @monstersebas1
+
+# Database
+**/packages/db/migrations/**            @monstersebas1
+**/supabase/migrations/**               @monstersebas1
+**/db/seed/**                           @monstersebas1
+
+# Infrastructure
+**/infrastructure/**                    @monstersebas1
+**/terraform/**                         @monstersebas1
+**/.github/workflows/**                 @monstersebas1
+**/Dockerfile                           @monstersebas1
+**/docker-compose*.yml                  @monstersebas1
+
+# Security and ops files
+/SECURITY.md                            @monstersebas1
+/ENV.md                                 @monstersebas1
+/INTEGRATIONS.md                        @monstersebas1
+/.well-known/security.txt               @monstersebas1
+/.well-known/**                         @monstersebas1
+
+# AGENTS contract
+/AGENTS.md                              @monstersebas1
+/CLAUDE.md                              @monstersebas1
+**/AGENTS.md                            @monstersebas1
+**/CLAUDE.md                            @monstersebas1
+
+# Spec invariants (factory)
+/ARCHITECTURE.md                        @monstersebas1
+/NON_GOALS.md                           @monstersebas1
+/STAKEHOLDERS.md                        @monstersebas1
+/docs/decisions/*.md                    @monstersebas1
+
+# Enforcement files themselves (changes to these need owner review)
+/.github/CODEOWNERS                     @monstersebas1
+/.github/workflows/protected-paths.yml  @monstersebas1
+/.husky/pre-commit                      @monstersebas1
+/.claude/settings.json                  @monstersebas1
