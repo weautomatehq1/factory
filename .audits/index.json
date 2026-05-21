@@ -1,9 +1,9 @@
 {
   "repo": "factory",
-  "last_updated": "2026-05-21T03:03:04Z",
-  "open_findings": 10,
+  "last_updated": "2026-05-21T15:50:24Z",
+  "open_findings": 9,
   "by_severity": {
-    "CRITICAL": 2,
+    "CRITICAL": 1,
     "IMPORTANT": 7,
     "COSMETIC": 1
   },
@@ -45,10 +45,10 @@
       "fix_sketch": "1) Update every M-NNN status in ROADMAP.md to reflect actual state. 2) Check off completed tasks in SPRINT.md and flip status to `shipped` or `incomplete`. 3) Update .omc/STATUS.md with actual Done/In-flight/Up-next. 4) Add CHANGELOG entries for the 5 days of work. 5) Add a CI check or cron reminder that flags when .omc/STATUS.md hasn't been updated in >48 hours.",
       "parallel_safe": true,
       "fingerprint": "b522763f024657702aff48516394cad778893a8425a3482aec1034a52f496067",
-      "status": "verifying",
+      "status": "closed",
       "opened_at": "2026-05-21T03:03:04Z",
-      "closed_at": null,
-      "closing_pr": null
+      "closed_at": "2026-05-21T15:50:24Z",
+      "closing_pr": 2
     },
     {
       "id": "AUDIT-factory-9ea4af13",
