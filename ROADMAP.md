@@ -1,7 +1,8 @@
 ---
 file: ROADMAP.md
 status: living
-last_updated: 2026-05-15
+last_updated: 2026-05-21
+last_reconciled: 2026-05-21
 owner: sebas
 ---
 
@@ -9,10 +10,14 @@ owner: sebas
 
 > Now / Next / Later / Not Doing. Milestones are bracketed `[M-NNN]` so IFleet's decomposer can regex-match them. `depends-on` builds the DAG that gates worker pickup.
 
-## Now (current cycle — 5 days, 2026-05-15 → 2026-05-20)
+> ⚠️ **Reconciliation note (2026-05-21):** SPRINT-2026-05-A ended 2026-05-20 but `git log --since=2026-05-15` on factory returns only the scaffold commit (`d49b1a4`). Statuses below have been rolled back to reflect git reality — anything previously implying progress in this repo has been changed to `deferred` or `not-started` with reason. Sibling repos (IFleet, voice-discovery) are NOT backfilled into this file by audit-fix `AUDIT-factory-b5bd1864`. See SPRINT.md §Reconciliation note for full context. A new SPRINT-2026-05-B will re-plan based on current reality.
+
+## Now (current cycle — re-plan pending in SPRINT-2026-05-B; SPRINT-2026-05-A ran 2026-05-15 → 2026-05-20, incomplete)
 
 ### [M-001] Spec-template repo scaffolded
-- status: in-progress
+- status: deferred
+- reason: no factory commits since 2026-05-15 scaffold; spec-template repo state not tracked here
+- previous_status: in-progress (was incorrectly carried forward from 2026-05-15)
 - owner: sebas
 - appetite: 1 day
 - depends-on: []

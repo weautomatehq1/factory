@@ -1,0 +1,190 @@
+{
+  "audit_id": "audit-20260521T030304Z",
+  "repo": "factory",
+  "scanned_at": "2026-05-21T03:03:04Z",
+  "scanner": "claude-opus-4-7",
+  "findings": [
+    {
+      "id": "AUDIT-factory-b6ff2b68",
+      "severity": "CRITICAL",
+      "category": "risk",
+      "title": "No pre-commit hooks, CODEOWNERS, or GitHub Actions exist despite being referenced as enforced controls",
+      "detail": "Multiple files assert that pre-commit hooks enforce secret-pattern rejection (ENV.md line 114, AGENTS.md section 13, SECURITY.md line 34, NON_GOALS.md NoGo-10 line 145) and that CODEOWNERS + a dedicated GitHub Action enforce the Protected Paths auto-merge gate (SECURITY.md lines 125-126). However, the `.git/hooks/` directory contains zero non-sample hooks, there is no `.github/` directory (no CODEOWNERS, no workflows), and there is no `.claude/settings.json` for Claude Code hooks.\n\nThis means the entire security enforcement layer described across SECURITY.md, AGENTS.md, ENV.md, and NON_GOALS.md is aspirational documentation, not reality. A worker or human could commit secrets or auto-merge a Protected Path change today with zero enforcement. The SECURITY.md OWASP A08 row claims 'pre-commit hook + branch protection' \u2014 this is currently false.\n\nThe gap between what the spec claims is enforced and what is actually enforced is the single largest risk in this repo.",
+      "file_globs": [
+        "SECURITY.md",
+        "AGENTS.md",
+        "ENV.md",
+        "NON_GOALS.md",
+        ".github/**",
+        ".git/hooks/**"
+      ],
+      "fix_sketch": "1) Add pre-commit hook (or husky/lefthook config) implementing the secret-pattern regex from ENV.md lines 116-123. 2) Create `.github/CODEOWNERS` mapping Protected Paths globs to @monstersebas1. 3) Create `.github/workflows/protected-paths.yml`. 4) Create `.claude/settings.json` with hooks described in CLAUDE.md. 5) Until these exist, add a WARNING banner at the top of SECURITY.md and AGENTS.md stating enforcement is planned but not wired.",
+      "parallel_safe": false,
+      "fingerprint": "4000d3cc21299221374b375233476f43beb02a8bfd97907eb15fdff75aa9699f",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-b5bd1864",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "Sprint SPRINT-2026-05-A ends today (2026-05-20) but repo has had zero updates since initial scaffold on 2026-05-15",
+      "detail": "The sprint defined in SPRINT.md (`ends: 2026-05-20`) ends today. Git log shows exactly one commit: `d49b1a4` on 2026-05-15. ROADMAP.md shows M-001 as `in-progress` and all 14 others as `planned`. .omc/STATUS.md says 'In flight: (none)'. SPRINT.md tasks (lines 91-105) all unchecked.\n\nEither all sprint work happened in other repos (IFleet) and this repo's tracking is stale, or the sprint wasn't executed. The IFleet memory entry confirms IFleet launched at df0a302 \u2014 work happened, but Factory was never updated. For a coordination repo whose entire purpose is to be the source of truth for sprint state, being 5 days stale on sprint-end day is a fundamental failure of the coordination contract.",
+      "file_globs": [
+        "SPRINT.md",
+        "ROADMAP.md",
+        ".omc/STATUS.md",
+        "CHANGELOG.md"
+      ],
+      "fix_sketch": "1) Update every M-NNN status in ROADMAP.md to reflect actual state. 2) Check off completed tasks in SPRINT.md and flip status to `shipped` or `incomplete`. 3) Update .omc/STATUS.md with actual Done/In-flight/Up-next. 4) Add CHANGELOG entries for the 5 days of work. 5) Add a CI check or cron reminder that flags when .omc/STATUS.md hasn't been updated in >48 hours.",
+      "parallel_safe": true,
+      "fingerprint": "b522763f024657702aff48516394cad778893a8425a3482aec1034a52f496067",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-9ea4af13",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "ENV.md missing Stripe and Documenso secret_refs that INTEGRATIONS.md declares",
+      "detail": "INTEGRATIONS.md line 244 declares `secret_refs: [STRIPE_SECRET_KEY, STRIPE_PUBLISHABLE_KEY, STRIPE_WEBHOOK_SECRET]` for Stripe and line 264 declares `secret_refs: [DOCUMENSO_API_KEY]` for Documenso. However, ENV.md contains zero rows for any of these \u2014 grep for 'STRIPE' and 'DOCUMENSO' in ENV.md returns empty.\n\nThis means: (a) the ENV.md rotation calendar does not cover these secrets, (b) a worker wiring Stripe or Documenso has no ENV.md guidance on scope/source/rotation, (c) the registry is incomplete as a source of truth for 'what secrets exist'.",
+      "file_globs": [
+        "ENV.md",
+        "INTEGRATIONS.md"
+      ],
+      "fix_sketch": "Add rows for STRIPE_SECRET_KEY, STRIPE_PUBLISHABLE_KEY, STRIPE_WEBHOOK_SECRET, and DOCUMENSO_API_KEY to ENV.md with proper scope, rotation cadence (90d for Stripe), and consumed_by fields. Add to the rotation calendar table.",
+      "parallel_safe": true,
+      "fingerprint": "7e3b3a77b724b21a204128612066c26f494bd0613b3d17aebe7f21ed23817a7a",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-3622c711",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "ADR-0006 contains a lazy reference 'NG-something equivalent' instead of citing the actual Non-Goal ID",
+      "detail": "In `docs/decisions/0006-retell-default-voice.md` line 42, the ADR reads: 'The pick is *locked for the sprint* (per NON_GOALS.md NG-something equivalent \u2014 switching mid-sprint = sprint death).' This is an accepted ADR with a placeholder that was never resolved. The actual reference should be SPRINT.md's No-gos section or NON_GOALS NG-6.\n\nPer the ADR append-only invariant, this accepted ADR cannot be edited. The vague reference undermines traceability \u2014 workers cannot locate the relevant constraint.",
+      "file_globs": [
+        "docs/decisions/0006-retell-default-voice.md"
+      ],
+      "fix_sketch": "Since the ADR is append-only, add an erratum note at the bottom (outside the MADR body) clarifying: 'The NG-something reference on line 42 refers to SPRINT.md \u00a7No-gos item 5 (NOT migrating from Retell mid-sprint).' Alternatively, justify a narrow exception to the append-only rule via a micro-ADR.",
+      "parallel_safe": true,
+      "fingerprint": "b5218501a1494249a0fff2a08a9f44ccf66b6f9232db050d4c7ea593487e64d7",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-4e615356",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP 'Not Doing' section only covers 6 of 10 No-Gos from NON_GOALS.md",
+      "detail": "NON_GOALS.md defines 10 No-Gos. ROADMAP.md 'Not Doing' lists only 6, missing NoGo-5, NoGo-7, NoGo-8, NoGo-9, NoGo-10. Additionally, ROADMAP duplicates NoGo-1's intent in two differently-worded bullets.\n\nAgents reading ROADMAP.md as their 'Not Doing' reference miss 4 No-Gos. The incomplete enumeration creates a false sense of coverage.",
+      "file_globs": [
+        "ROADMAP.md",
+        "NON_GOALS.md"
+      ],
+      "fix_sketch": "Replace the ROADMAP Not Doing section with a single pointer: 'See NON_GOALS.md for the complete No-Go list. Canonical source is there, not here.' Avoid sync drift. Remove the duplicate 'developer tools' entry.",
+      "parallel_safe": true,
+      "fingerprint": "275b0fd5917f5f7104625d734955cbc6c856ea8cc2a44408bb39d7727e6f21e9",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-6f96e44a",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "README.md references stale IFleet status memory file (2026-05-13), missing the 2026-05-19 launch",
+      "detail": "README.md line 82 points to `~/.claude/projects/-Users-Seb/memory/project_status_20260513.md`. The newer entry `project_status_20260519.md` documents IFleet's launch at commit df0a302 (PR #117). README directs readers to a status 6 days old that predates the launch.\n\nFor a coordination repo, pointing humans to stale status is actively misleading. A new contributor reading README would think IFleet is in 'Phase A green' state when it's actually launched.",
+      "file_globs": [
+        "README.md"
+      ],
+      "fix_sketch": "Update README line 82 to reference `project_status_20260519.md`. Better: replace the hardcoded memory path with a note to 'check MEMORY.md index for the latest project_status entry'. Also update the IFleet row in the repo table to reflect launched state.",
+      "parallel_safe": true,
+      "fingerprint": "c2f47428d40164d1865925508b62371a6fd8e2d5961f268902e156d6628abc82",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-62468376",
+      "severity": "IMPORTANT",
+      "category": "overconfidence",
+      "title": "SECURITY.md security.txt references unresolved TBD URLs that will break RFC 9116 compliance",
+      "detail": "SECURITY.md lines 17-18 contain two TBD entries: `Encryption: https://weautomatehq.com/pgp-key.txt (TBD)` and `Policy: https://weautomatehq.com/security-policy (TBD)`. The file instructs to 'mirror into /.well-known/security.txt verbatim once the marketing site is live'. If mirrored verbatim, the URLs will be syntactically invalid per RFC 9116. More importantly, `security@weautomatehq.com` may not be configured \u2014 bounce = compliance and reputation failure.\n\nAdditionally, INTEGRATIONS.md line 42 lists the Retell status page with 'verify URL post-account-creation' and line 194 lists Hostinger with 'verify URL' \u2014 flags sitting unverified for 5 days.",
+      "file_globs": [
+        "SECURITY.md",
+        "INTEGRATIONS.md"
+      ],
+      "fix_sketch": "1) Verify whether security@weautomatehq.com receives mail. 2) Remove '(TBD)' and either populate real URLs or remove the lines. 3) Verify Retell and Hostinger status URLs. 4) Add a tracking issue for PGP key generation and security policy page.",
+      "parallel_safe": true,
+      "fingerprint": "39c1effed3d3661c994143d290b9c902cf2ffcaf4d64018a69c289b11a0cd51c",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-95226593",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "costs.json references IFleet PR #39 as the cost tracker but this is a coordination-only repo with no cost enforcement mechanism",
+      "detail": "The costs.json _notes claim 'Totals recomputed by IFleet cost tracker (PR #39) on every write' but this is the Factory repo. No mechanism exists for IFleet to write to Factory's costs.json across repo boundaries. ENV.md DAILY_RATE_CAP_USD and OVERNIGHT_MODE reference enforcement that happens in IFleet, not here.\n\nIf intent is per-repo costs.json, Factory's instance will never be populated. If cross-repo aggregation, no mechanism exists. Either way, the file is misleading about who writes to it and when.",
+      "file_globs": [
+        ".omc/costs.json",
+        "ENV.md"
+      ],
+      "fix_sketch": "Clarify the cost tracking architecture: document that Factory's costs.json tracks only Factory Claude sessions, or remove the PR #39 reference since that PR is in IFleet's repo.",
+      "parallel_safe": true,
+      "fingerprint": "5d516dd4097841895ce3f6b045cd6a89420c5923e1c21c33493029c3c888e6f3",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-308e0445",
+      "severity": "IMPORTANT",
+      "category": "redo",
+      "title": "CHANGELOG.md ADR-0010 missing from the Decisions subsection",
+      "detail": "CHANGELOG.md 'Decisions' subsection lists ADR-0001 through ADR-0009 but omits ADR-0010 ('Issues created by 4 upstream sources + humans'). DECISIONS.md line 28 lists all 10. The CHANGELOG was written before ADR-0010 was finalized; sync was missed.\n\nFor a repo that claims append-only discipline and cites CHANGELOG as the release history, a missing ADR in the initial scaffold undermines the audit trail.",
+      "file_globs": [
+        "CHANGELOG.md"
+      ],
+      "fix_sketch": "Add a line to CHANGELOG.md under [Unreleased] > Decisions: '- Issues created by 4 upstream sources + humans (ADR-0003, ADR-0010)'.",
+      "parallel_safe": true,
+      "fingerprint": "f924b3751064144998b65069770e92e93cd9dc88b792fe7c79cce906241b817c",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-7217b91c",
+      "severity": "COSMETIC",
+      "category": "logic",
+      "title": "ROADMAP 'Not Doing' duplicates the same No-Go in two differently-worded bullets",
+      "detail": "ROADMAP.md lines 268 and 272 both express NoGo-1: 'Will NOT compete with Lovable / Bolt / Cursor / v0' and 'Will NOT ship a \"developer tools for sale\" product'. Same constraint stated twice with different framing. Reads as padding rather than distinct decisions.",
+      "file_globs": [
+        "ROADMAP.md"
+      ],
+      "fix_sketch": "Merge into one bullet: 'Will NOT compete with Lovable / Bolt / Cursor / v0 or ship The Factory as a developer tool product. This is internal agency leverage.'",
+      "parallel_safe": true,
+      "fingerprint": "43ba1d5d61ffc7af6cb2e640fdcc1f673ff3cda9aeee0e924513dd04d7957d1b",
+      "status": "open",
+      "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    }
+  ]
+}

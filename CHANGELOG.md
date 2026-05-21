@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.
 
 ## [Unreleased]
 
+### Changed
+- **2026-05-21 — Sprint reconciliation** (closes audit finding `AUDIT-factory-b5bd1864`). SPRINT-2026-05-A `ends: 2026-05-20` arrived but `git log --since=2026-05-15` showed zero feature commits in this repo since the initial scaffold (`d49b1a4`). Docs that implied progress were rolled back to git reality without fabricating completion: SPRINT.md `status: active → incomplete`, all M-NNN tasks marked `⏭️ Deferred` or `❌ Not started`, ROADMAP.md M-001 `in-progress → deferred`, `.omc/STATUS.md` rewritten with honest snapshot. Sibling-repo work (IFleet, voice-discovery) NOT backfilled here — that requires a separate PR with explicit cross-repo evidence. SPRINT-2026-05-B re-plan pending.
+
 ### Added
 - Initial scaffold of The Factory master coordination repo at `~/dev/coordination/factory/`
 - `AGENTS.md` — cross-vendor AI worker rulebook (agents.md convention)
