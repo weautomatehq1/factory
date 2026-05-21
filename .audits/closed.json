@@ -18,6 +18,25 @@
       "closing_pr": 2,
       "closing_branch": "fix/audit-factory-b5bd1864-sprint-reconcile",
       "fix_summary": "Reconciled stale SPRINT/ROADMAP/STATUS/CHANGELOG to match git reality (zero non-scaffold commits since 2026-05-15); sprint marked incomplete, no fabricated progress, no sibling-repo backfill."
+    },
+    {
+      "finding_id": "AUDIT-factory-b6ff2b68",
+      "fingerprint": "4000d3cc21299221374b375233476f43beb02a8bfd97907eb15fdff75aa9699f",
+      "category": "risk",
+      "severity": "CRITICAL",
+      "title": "No pre-commit hooks, CODEOWNERS, or GitHub Actions exist despite being referenced as enforced controls",
+      "file_globs": [
+        "SECURITY.md",
+        "AGENTS.md",
+        "ENV.md",
+        "NON_GOALS.md",
+        ".github/**",
+        ".git/hooks/**"
+      ],
+      "closed_at": "2026-05-21T16:02:27Z",
+      "closing_pr": 1,
+      "closing_branch": "fix/audit-factory-b6ff2b68-security-controls",
+      "fix_summary": "Wired the four missing enforcement primitives \u2014 .husky/pre-commit (secret-pattern reject, advisory high-entropy notice), .github/CODEOWNERS (all SECURITY.md Protected Paths + the enforcement files themselves), .github/workflows/protected-paths.yml (label + comment + owner-approval gate), .claude/settings.json (force-push/no-verify/accepted-ADR blockers + PreCommit delegation + Stop reminder); WARNING banners on SECURITY.md and AGENTS.md."
     }
   ],
   "repeat_counts": {
@@ -26,6 +45,13 @@
       "last_closed_at": "2026-05-21T15:50:24Z",
       "closures_history": [
         "AUDIT-factory-b5bd1864"
+      ]
+    },
+    "4000d3cc21299221374b375233476f43beb02a8bfd97907eb15fdff75aa9699f": {
+      "count": 1,
+      "last_closed_at": "2026-05-21T16:02:27Z",
+      "closures_history": [
+        "AUDIT-factory-b6ff2b68"
       ]
     }
   }
