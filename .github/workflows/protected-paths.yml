@@ -1,0 +1,101 @@
+name: protected-paths
+
+# Enforces SECURITY.md §"Protected Paths" auto-merge gate.
+# Runs on every PR touching one of the Protected Paths and:
+#   1. Labels the PR `protected-path-touched` for visibility
+#   2. Posts/updates a sticky comment listing the matched paths
+#   3. Fails the check if the PR is missing a review from @monstersebas1
+#
+# The CODEOWNERS file is the source of truth for *who* must review;
+# this workflow is the *signal* that they must.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, review_requested]
+    paths:
+      - 'SECURITY.md'
+      - 'ENV.md'
+      - 'INTEGRATIONS.md'
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - 'ARCHITECTURE.md'
+      - 'NON_GOALS.md'
+      - 'STAKEHOLDERS.md'
+      - '.well-known/**'
+      - 'docs/decisions/*.md'
+      - '.github/CODEOWNERS'
+      - '.github/workflows/protected-paths.yml'
+      - '.husky/pre-commit'
+      - '.claude/settings.json'
+      - '**/lib/auth/**'
+      - '**/api/auth/**'
+      - '**/middleware/auth*.ts'
+      - '**/middleware/api-guard*.ts'
+      - '**/(auth)/**'
+      - '**/lib/billing/**'
+      - '**/api/billing/**'
+      - '**/api/webhooks/stripe/**'
+      - '**/features/billing/**'
+      - '**/lib/pii/**'
+      - '**/lib/audit/**'
+      - '**/api/user/**'
+      - '**/api/profile/**'
+      - '**/packages/db/migrations/**'
+      - '**/supabase/migrations/**'
+      - '**/db/seed/**'
+      - '**/infrastructure/**'
+      - '**/terraform/**'
+      - '**/.github/workflows/**'
+      - '**/Dockerfile'
+      - '**/docker-compose*.yml'
+      - '**/AGENTS.md'
+      - '**/CLAUDE.md'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: List changed files
+        id: changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr view "${{ github.event.pull_request.number }}" \
+            --json files --jq '.files[].path' > changed.txt
+          echo "files<<EOF" >> "$GITHUB_OUTPUT"
+          cat changed.txt >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+          echo "Changed files:"
+          cat changed.txt
+
+      - name: Add protected-path-touched label
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr edit "${{ github.event.pull_request.number }}" \
+            --add-label "protected-path-touched" || true
+
+      - name: Check for required CODEOWNERS approval
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          REQUIRED_OWNER="monstersebas1"
+          REVIEWS=$(gh pr view "${{ github.event.pull_request.number }}" \
+            --json reviews --jq '.reviews[] | select(.state=="APPROVED") | .author.login')
+          echo "Approved-by reviewers:"
+          echo "$REVIEWS"
+          if echo "$REVIEWS" | grep -qx "$REQUIRED_OWNER"; then
+            echo "OK — required owner @$REQUIRED_OWNER has approved."
+            exit 0
+          fi
+          echo "::error::PR touches a Protected Path (SECURITY.md). Approval from @$REQUIRED_OWNER is required before merge."
+          gh pr comment "${{ github.event.pull_request.number }}" --body \
+            "🛡️ **Protected Path touched** — this PR modifies files listed in [SECURITY.md §Protected Paths](../blob/main/SECURITY.md#protected-paths-the-auto-merge-gate). Approval from @$REQUIRED_OWNER is required before merge. Auto-merge is blocked."
+          exit 1

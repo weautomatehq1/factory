@@ -1,6 +1,6 @@
 {
   "repo": "factory",
-  "last_updated": "2026-05-21T15:50:24Z",
+  "last_updated": "2026-05-21T16:00:00Z",
   "open_findings": 9,
   "by_severity": {
     "CRITICAL": 1,
@@ -25,10 +25,10 @@
       "fix_sketch": "1) Add pre-commit hook (or husky/lefthook config) implementing the secret-pattern regex from ENV.md lines 116-123. 2) Create `.github/CODEOWNERS` mapping Protected Paths globs to @monstersebas1. 3) Create `.github/workflows/protected-paths.yml`. 4) Create `.claude/settings.json` with hooks described in CLAUDE.md. 5) Until these exist, add a WARNING banner at the top of SECURITY.md and AGENTS.md stating enforcement is planned but not wired.",
       "parallel_safe": false,
       "fingerprint": "4000d3cc21299221374b375233476f43beb02a8bfd97907eb15fdff75aa9699f",
-      "status": "open",
+      "status": "verifying",
       "opened_at": "2026-05-21T03:03:04Z",
       "closed_at": null,
-      "closing_pr": null
+      "closing_pr": 1
     },
     {
       "id": "AUDIT-factory-b5bd1864",

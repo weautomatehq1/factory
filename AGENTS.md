@@ -1,5 +1,7 @@
 # AGENTS.md
 
+> ⚠️ **WARNING — hard-enforcement controls newly wired (2026-05-21).** §13 below lists "hard-enforced rules" (pre-commit secret rejection, accepted-ADR edit blocker, force-push blocker). Until 2026-05-21 these were aspirational — the hook files did not exist. The first PR (`fix(audit): close AUDIT-factory-b6ff2b68`) creates `.husky/pre-commit`, `.github/CODEOWNERS`, `.github/workflows/protected-paths.yml`, and `.claude/settings.json`. Workers and humans MUST run `git config core.hooksPath .husky` after first clone for the secret-scan hook to fire locally. The first Protected-Path PR is the live verification of the gate.
+
 > This file is the primary rulebook for every AI worker that touches this repo. It follows the cross-vendor agents.md convention (https://agents.md). Claude Code reads it via the `@AGENTS.md` import in `CLAUDE.md`.
 
 ## 1. Project overview
