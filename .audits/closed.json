@@ -1,0 +1,32 @@
+{
+  "repo": "factory",
+  "version": 1,
+  "closures": [
+    {
+      "finding_id": "AUDIT-factory-b5bd1864",
+      "fingerprint": "b522763f024657702aff48516394cad778893a8425a3482aec1034a52f496067",
+      "category": "logic",
+      "severity": "CRITICAL",
+      "title": "Sprint SPRINT-2026-05-A ends today (2026-05-20) but repo has had zero updates since initial scaffold on 2026-05-15",
+      "file_globs": [
+        "SPRINT.md",
+        "ROADMAP.md",
+        ".omc/STATUS.md",
+        "CHANGELOG.md"
+      ],
+      "closed_at": "2026-05-21T15:50:24Z",
+      "closing_pr": 2,
+      "closing_branch": "fix/audit-factory-b5bd1864-sprint-reconcile",
+      "fix_summary": "Reconciled stale SPRINT/ROADMAP/STATUS/CHANGELOG to match git reality (zero non-scaffold commits since 2026-05-15); sprint marked incomplete, no fabricated progress, no sibling-repo backfill."
+    }
+  ],
+  "repeat_counts": {
+    "b522763f024657702aff48516394cad778893a8425a3482aec1034a52f496067": {
+      "count": 1,
+      "last_closed_at": "2026-05-21T15:50:24Z",
+      "closures_history": [
+        "AUDIT-factory-b5bd1864"
+      ]
+    }
+  }
+}
