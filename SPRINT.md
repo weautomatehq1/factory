@@ -6,10 +6,13 @@ ends: 2026-05-20
 milestones: [M-001, M-002, M-003, M-004, M-005, M-006, M-007, M-008, M-009, M-010, M-011, M-012, M-013, M-014, M-015]
 owner: sebas
 co_owner: esme
-status: active
+status: incomplete
+reconciled_at: 2026-05-21
 ---
 
 # Sprint: The Factory — full pipeline build
+
+> ⚠️ **Reconciliation note (2026-05-21):** This sprint's end-date (2026-05-20) passed but `git log --since=2026-05-15` on this repo shows **zero feature commits since the initial scaffold** (`d49b1a4`, 2026-05-15). The sprint did not execute against this repo. Every task below that lacks a backing commit has been flipped from unchecked-pending to ❌ Not started or ⏭️ Deferred. No fabricated progress. This file is retained as a historical record of the planned sprint and the gap that triggered audit finding `AUDIT-factory-b5bd1864`. A separate, honest re-plan goes into SPRINT-2026-05-B.
 
 ## Problem
 
@@ -84,27 +87,31 @@ gantt
 - **NOT writing comprehensive tests for new IFleet workers in this sprint.** Smoke tests only. Full coverage in next cycle. Trade-off documented.
 - **NOT migrating from Retell if R1 research suggests Vapi is marginally cheaper.** Switching mid-sprint = sprint death. Locked for the sprint.
 
-## Tasks (decomposer fills this — manually seeded for SPRINT-A)
+## Tasks (reconciled to git reality 2026-05-21)
 
-Priority order (cut from bottom if appetite slips):
+Status legend: ✅ done (commit landed in this repo) · ⏭️ Deferred (no work delivered against THIS repo by sprint end) · ❌ Not started · 🔁 Re-plan in SPRINT-2026-05-B
 
-- [ ] [M-001] spec-template scaffolded — sebas, D1
-- [ ] [M-002] IFleet decomposer — esme, D1
-- [ ] [M-005] voice-discovery + Retell + n8n + Supabase — sebas, D2
-- [ ] [M-003] dependency-aware queue — esme, D2
-- [ ] [M-004] policy hook — esme, D2
-- [ ] [M-006] voice interviewer brain — sebas, D3
-- [ ] [M-007] operator dashboard — sebas, D3 (CUT if D3 slips)
-- [ ] [M-008] schema worker — esme, D3
-- [ ] [M-009] design bootstrap — esme, D3 (CUT if D3 slips)
-- [ ] [M-010] spec synthesizer — sebas, D4
-- [ ] [M-011] self-heal T1/T2 — sebas, D4
-- [ ] [M-012] deploy worker — esme, D4
-- [ ] [M-014] bootstrapper — sebas, D4 (CUT to D5 if D4 slips)
-- [ ] [M-013] staging URL — esme, D4
-- [ ] [M-015] dry-run — both, D5
+Evidence base: `git log --since=2026-05-15 --pretty=oneline` returns only `d49b1a4` (scaffold). No subsequent commits.
+
+- ⏭️ [M-001] spec-template scaffolded — sebas, D1 — **Not started in factory repo.** Spec-template is a separate repo; no link landed here. Reason: no factory commits since 2026-05-15.
+- ⏭️ [M-002] IFleet decomposer — esme, D1 — Lives in IFleet repo; status of that work is NOT backfilled in this PR (out of scope per audit finding closure rules). Re-plan in next sprint.
+- ⏭️ [M-005] voice-discovery + Retell + n8n + Supabase — sebas, D2 — Not started.
+- ⏭️ [M-003] dependency-aware queue — esme, D2 — Not backfilled from sibling repos.
+- ⏭️ [M-004] policy hook — esme, D2 — Not backfilled from sibling repos.
+- ❌ [M-006] voice interviewer brain — sebas, D3
+- ❌ [M-007] operator dashboard — sebas, D3
+- ❌ [M-008] schema worker — esme, D3
+- ❌ [M-009] design bootstrap — esme, D3
+- ❌ [M-010] spec synthesizer — sebas, D4
+- ❌ [M-011] self-heal T1/T2 — sebas, D4
+- ❌ [M-012] deploy worker — esme, D4
+- ❌ [M-014] bootstrapper — sebas, D4
+- ❌ [M-013] staging URL — esme, D4
+- ❌ [M-015] dry-run — both, D5
 
 ## Done when
+
+Original done criteria preserved below for the historical record. None of these were met by 2026-05-20. Status of this sprint: **incomplete**.
 
 - All M-001 through M-015 success-criteria pass (see ROADMAP.md for per-milestone criteria)
 - Sebastian and Esme both sign off on the D5 dry-run video/recording
@@ -112,7 +119,17 @@ Priority order (cut from bottom if appetite slips):
 - Discord 8am digest at least once shows real data
 - This file's `status` flips to `shipped` and a new SPRINT-2026-05-B is opened
 
+## Reconciliation note (2026-05-21)
+
+- **Audit trigger:** `AUDIT-factory-b5bd1864` (CRITICAL) flagged docs-vs-reality drift on sprint-end day.
+- **Git evidence:** `git log --since=2026-05-15` on `weautomatehq1/factory` returns exactly one commit — the scaffold itself.
+- **Honest conclusion:** SPRINT-2026-05-A did not execute against this repo. Either work was done in sibling repos without updating Factory (the coordination-of-record), or the planned work did not happen. Per `audit-fix` rules: NOT this PR's job to backfill sibling-repo references.
+- **Action taken here:** every M-NNN above is now marked ⏭️ Deferred or ❌ Not started with git-evidence reasoning. Status flipped from `active` to `incomplete`.
+- **Action NOT taken here:** no backfill from IFleet, voice-discovery, or any other sibling repo. That belongs in a separate PR with explicit cross-repo evidence links.
+- **Next step:** Sebastian + Esme open SPRINT-2026-05-B with re-scoped milestones based on actual capacity and learning from this gap.
+
 ---
 
-**Last updated:** 2026-05-15
-**Last verified:** 2026-05-15 — Sebastian
+**Last updated:** 2026-05-21 (reconciliation, no progress fabricated)
+**Last verified:** 2026-05-21 — via `git log --since=2026-05-15` (1 commit, scaffold only)
+**Originally written:** 2026-05-15 — Sebastian
