@@ -11,9 +11,10 @@
     "last_7_days_usd": 0
   },
   "_notes": [
-    "Append one entry per Claude/Codex session to sessions[].",
+    "Append one entry per Claude/Codex session running IN THIS REPO (factory) to sessions[].",
     "Each session entry: { date, session_id, agent, model, tokens_in, tokens_out, cost_usd, task_summary }.",
-    "Totals recomputed by IFleet cost tracker (PR #39) on every write.",
-    "Cost ceiling check: sum of today's sessions > daily_rate_cap_default = pause work + Discord alert."
+    "Totals are recomputed manually or by the Claude Code session that writes a new entry — this file is factory-repo-only. IFleet has its own costs.json in the IFleet repo (see IFleet PR #39 for that tracker).",
+    "Cost ceiling check: sum of today's sessions > daily_rate_cap_default = pause work + Discord alert.",
+    "Note updated 2026-05-22: removed incorrect cross-repo reference — closes AUDIT-factory-95226593."
   ]
 }

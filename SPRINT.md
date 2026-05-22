@@ -130,6 +130,19 @@ Original done criteria preserved below for the historical record. None of these 
 
 ---
 
-**Last updated:** 2026-05-21 (reconciliation, no progress fabricated)
+**Last updated:** 2026-05-22 (nightly audit: added SPRINT-2026-05-B pending stub — closes AUDIT-factory-a1b2c3d4)
 **Last verified:** 2026-05-21 — via `git log --since=2026-05-15` (1 commit, scaffold only)
 **Originally written:** 2026-05-15 — Sebastian
+
+---
+
+## SPRINT-2026-05-B (pending re-plan)
+
+> **Status: stub.** This sprint has not been defined yet. Sebastian + Esme must open a re-plan session based on:
+> - Learning from SPRINT-2026-05-A's gap (zero factory commits 2026-05-15 → 2026-05-21)
+> - Current actual state of IFleet, voice-discovery, and spec-template (not backfilled by this audit)
+> - Decision on cross-repo coordination contract (see STATUS.md Open questions)
+>
+> **Action required:** Sebastian or Esme replaces this stub with a full sprint definition following the SPRINT-2026-05-A format. Until then, this stub resolves references to SPRINT-2026-05-B across the repo without fabricating content.
+>
+> Opened as stub: 2026-05-22 by nightly audit (closes AUDIT-factory-a1b2c3d4). Content authored: 0 lines — intentionally empty per "correct not clever" principle.

@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.
 ## [Unreleased]
 
 ### Changed
+- **2026-05-22 — Nightly audit fixes** (closes AUDIT-factory-9ea4af13, 4e615356, 6f96e44a, 62468376, 95226593, 308e0445, 7217b91c). Added missing STRIPE_* and DOCUMENSO_API_KEY rows to ENV.md. Replaced ROADMAP 'Not Doing' section with a pointer to NON_GOALS.md (was covering only 6 of 10 No-Gos with a duplicate entry). Updated README.md IFleet status to launched (commit df0a302). Removed TBD URL placeholders from SECURITY.md security.txt block. Clarified costs.json cross-repo note. Added ADR-0010 to CHANGELOG Decisions. Removed 'verify URL' placeholders from INTEGRATIONS.md.
 - **2026-05-21 — Sprint reconciliation** (closes audit finding `AUDIT-factory-b5bd1864`). SPRINT-2026-05-A `ends: 2026-05-20` arrived but `git log --since=2026-05-15` showed zero feature commits in this repo since the initial scaffold (`d49b1a4`). Docs that implied progress were rolled back to git reality without fabricating completion: SPRINT.md `status: active → incomplete`, all M-NNN tasks marked `⏭️ Deferred` or `❌ Not started`, ROADMAP.md M-001 `in-progress → deferred`, `.omc/STATUS.md` rewritten with honest snapshot. Sibling-repo work (IFleet, voice-discovery) NOT backfilled here — that requires a separate PR with explicit cross-repo evidence. SPRINT-2026-05-B re-plan pending.
 
 ### Added
@@ -37,7 +38,8 @@ The format is based on [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.
 ### Decisions
 - Use `AGENTS.md` as primary AI rulebook, `CLAUDE.md` as `@AGENTS.md` import bridge (ADR-0001)
 - Four-repo structure: Factory + IFleet + voice-discovery + spec-template + per-client (ADR-0002)
-- GitHub Issues remain the unit of work for IFleet, fed by 4 upstream automated sources + humans (ADR-0003, ADR-0010)
+- GitHub Issues remain the unit of work for IFleet (ADR-0003)
+- Issues created by 4 upstream automated sources + humans: Decomposer, Sentry/PostHog bridge, Deploy worker, Cron monitor (ADR-0010)
 - Build the full pipeline before client #1 — no manual shortcuts (ADR-0004)
 - Tier 3 runtime self-healing deferred until 2 weeks of production data (ADR-0005)
 - Retell AI as voice platform default, pending Esme R1 confirmation (ADR-0006)

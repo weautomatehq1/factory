@@ -16,13 +16,13 @@ related_adrs: [ADR-0009]
 
 ```
 Contact: mailto:security@weautomatehq.com
-Encryption: https://weautomatehq.com/pgp-key.txt (TBD)
 Preferred-Languages: en, es
-Policy: https://weautomatehq.com/security-policy (TBD)
 Expires: 2027-05-15T00:00:00Z
 ```
 
-**To mirror into** `/.well-known/security.txt` verbatim once the marketing site is live. Keep `Expires` rolling — update annually.
+> **Omitted lines (pending):** `Encryption` (PGP key not yet generated) and `Policy` (security policy page not yet live). Add both before mirroring to `/.well-known/security.txt` — omitting them is RFC 9116-valid; including `(TBD)` placeholders is not.
+
+**To mirror into** `/.well-known/security.txt` verbatim once the marketing site is live. Keep `Expires` rolling — update annually. Verify `security@weautomatehq.com` receives mail before publishing.
 
 ---
 

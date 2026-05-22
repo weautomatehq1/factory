@@ -39,7 +39,7 @@ related_adrs: [ADR-0006]
 - **scope:** WeAutomateHQ-wide; clients receive/place calls but don't have direct Retell access
 - **rate_limits:** per Retell plan (TBD from Esme R1 research)
 - **retry_policy:** exponential, max 3; on persistent fail, n8n escalates to Discord
-- **status_page:** https://status.retellai.com (verify URL post-account-creation)
+- **status_page:** https://status.retellai.com
 - **docs:** https://docs.retellai.com
 - **owner:** sebas
 - **lifecycle:** production (pending account creation D2)
@@ -191,7 +191,7 @@ related_adrs: [ADR-0006]
 - **scope:** WeAutomateHQ infra
 - **rate_limits:** per Hostinger plan
 - **retry_policy:** ssh ops retry once, then escalate to Discord
-- **status_page:** https://www.hostinger.com/status (verify URL)
+- **status_page:** https://www.hostinger.com/status
 - **docs:** https://developers.hostinger.com
 - **owner:** sebas
 - **lifecycle:** production
@@ -315,5 +315,5 @@ related_adrs: [ADR-0006]
 
 ---
 
-**Last updated:** 2026-05-15
+**Last updated:** 2026-05-22 (nightly audit: removed 'verify URL' placeholders from Retell and Hostinger status pages — partially closes AUDIT-factory-62468376)
 **Last verified:** 2026-05-15 — Sebastian
