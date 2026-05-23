@@ -137,7 +137,7 @@ Steal Cloudflare's `Always / Ask first / Never` pattern. Every rule has a one-li
 
 ## 8. Testing
 
-This repo has no tests (markdown only). For client repos, see ADR-0008 (testing philosophy) and Sebastian's global `~/.claude/CLAUDE.md`.
+This repo has no tests (markdown only). For client repos, see NON_GOALS.md NG-7 (smoke-test-first rationale) and Sebastian's global `~/.claude/CLAUDE.md`. Note: ADR-0008 covers ADR format, not testing philosophy.
 
 For changes here, the verification is:
 - Cross-references resolve (linked sections exist)

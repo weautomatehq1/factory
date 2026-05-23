@@ -8,7 +8,7 @@ related_adrs: [ADR-0009]
 
 # Security
 
-> ⚠️ **WARNING — enforcement controls newly wired (2026-05-21).** Until 2026-05-21, the pre-commit hook, CODEOWNERS file, and Protected-Paths GitHub Action described in this document existed in prose only — `.git/hooks/`, `.github/`, and `.claude/` were empty. The first PR (`fix(audit): close AUDIT-factory-b6ff2b68`) creates them: `.husky/pre-commit`, `.github/CODEOWNERS`, `.github/workflows/protected-paths.yml`, and `.claude/settings.json`. Treat the first real PR that touches a Protected Path as a live verification of the gate — confirm the workflow runs, the label is applied, and merge is blocked without the required approval. If any link in the chain misfires, treat it as a CRITICAL security incident and pause auto-merge across the fleet.
+> ✅ **Enforcement controls CONFIRMED LIVE (wired 2026-05-21, PR #1 merged).** `.husky/pre-commit`, `.github/CODEOWNERS`, `.github/workflows/protected-paths.yml`, and `.claude/settings.json` are present and active. Treat the **next** PR touching a Protected Path as a live verification of the gate — confirm the workflow runs, the label is applied, and merge is blocked without the required approval. If any link in the chain misfires, treat it as a CRITICAL security incident and pause auto-merge across the fleet.
 
 > STRIDE threat model + OWASP Top 10 (2021) mapping + OWASP ASVS Level 2 default + RFC 9116 security.txt + four-tier data classification with NIST CIA mapping. The "Protected Paths" section is the auto-merge gate that the worker fleet honors absolutely.
 
@@ -64,7 +64,7 @@ Changes touching these paths **REQUIRE human review** — IFleet workers MAY NOT
 **/api/auth/**
 **/middleware/auth*.ts
 **/middleware/api-guard*.ts
-**/(auth)/**
+**/auth/**
 
 # Billing and payments
 **/lib/billing/**
