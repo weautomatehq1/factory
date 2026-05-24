@@ -189,6 +189,13 @@ The Factory operates across four bounded contexts. The same word can mean differ
 - **NOT:** "voice agent," "voice AI" (these describe the function, not the repo)
 - **Source:** ROADMAP [M-005]
 
+### Voice Interviewer Agent
+- **Canonical:** Voice Interviewer Agent (title case in prose), voice-interviewer-agent (lowercase-hyphenated in code/config)
+- **Context:** all
+- **Definition:** The AI-driven discovery agent running inside the voice-discovery repo, powered by Retell AI for phone/voice I/O. Conducts the client discovery interview by executing Layer 1 (scripted) and Layer 2 (adaptive) prompts. Not a repo name — refers to the running Retell agent instance.
+- **NOT:** "voice agent" alone (ambiguous), "voice-discovery" (that is the repo, not the agent instance)
+- **Source:** INTEGRATIONS.md §Retell AI; ARCHITECTURE.md §Discovery Layer
+
 ### Spec Template
 - **Canonical:** spec-template (lowercase, hyphenated — repo name)
 - **Context:** all

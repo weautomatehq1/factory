@@ -4,7 +4,7 @@
 
 A voice AI interviews a client → produces 17 spec markdown files → autonomous Claude/Codex workers (IFleet) read the spec → build, ship, and self-heal the platform.
 
-**Status:** spec-defining phase. Not yet operational. Target operational date: end of Day 5 (2026-05-20).
+**Status:** spec-defining phase. Not yet operational. Original target date (2026-05-20) was not met — SPRINT-2026-05-A was incomplete. Revised target: SPRINT-2026-05-B (see SPRINT.md for current status).
 
 ## What this repo contains
 

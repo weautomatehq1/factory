@@ -61,6 +61,12 @@ last_verified: YYYY-MM-DD by <name> — <pass | fail | partial>
 
 _(Empty. Entries will be added here as runbook items are written.)_
 
+## Definitions
+
+- **SLI (Service Level Indicator):** A quantitative measure of a specific aspect of the service (e.g., success rate %, latency p99 ms, error rate %).
+- **SLO (Service Level Objective):** A target value or range for an SLI. Example: "99.5% of voice interviews complete without error". Breach triggers an incident.
+- **Rule of two:** Any alert that fires a second time without an existing runbook entry requires one to be created before the incident closes. First fire = investigate and fix. Second fire = investigate, fix, and write the runbook entry.
+
 ## Trigger rules — when an entry MUST be added
 
 Per Google SRE Book Ch. 15 "Postmortem Culture":

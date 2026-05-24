@@ -107,6 +107,8 @@ CLAUDE.md
 ARCHITECTURE.md
 NON_GOALS.md
 STAKEHOLDERS.md
+ROADMAP.md         # [M-NNN] format is parsed by Decomposer; format changes break parsing
+DECISIONS.md       # ADR index — unauthorized edits can hide ADRs from workers
 docs/decisions/*.md  # individual ADRs are append-only — modifying accepted ones is gate-blocked
 ```
 
@@ -117,7 +119,7 @@ docs/decisions/*.md  # individual ADRs are append-only — modifying accepted on
 - **Infrastructure**: changes here affect every deployed surface. Human.
 - **Security / ops files**: loosening these weakens every safety rail.
 - **AGENTS contract**: this is what workers READ; allowing workers to write it = unsafe self-modification.
-- **Spec invariants**: ARCHITECTURE / NON_GOALS / STAKEHOLDERS are commitments; ADRs are decided.
+- **Spec invariants**: ARCHITECTURE / NON_GOALS / STAKEHOLDERS / ROADMAP are commitments; ADRs are decided. DECISIONS.md is the machine-readable ADR index.
 
 ### How the gate works (implementation contract)
 
