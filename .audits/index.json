@@ -1,11 +1,15 @@
 {
   "repo": "factory",
-  "last_updated": "2026-05-21T16:02:27Z",
-  "open_findings": 8,
+  "last_updated": "2026-05-23T04:45:00Z",
+  "open_findings": 12,
   "by_severity": {
-    "IMPORTANT": 7,
-    "COSMETIC": 1
+    "IMPORTANT": 10,
+    "COSMETIC": 2
   },
+  "nightly_audits": [
+    "2026-05-21T03:03:04Z.json",
+    "20260523T042538Z.json"
+  ],
   "findings": [
     {
       "id": "AUDIT-factory-b6ff2b68",
@@ -186,6 +190,50 @@
       "fingerprint": "43ba1d5d61ffc7af6cb2e640fdcc1f673ff3cda9aeee0e924513dd04d7957d1b",
       "status": "open",
       "opened_at": "2026-05-21T03:03:04Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-b01a3d58",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "Retell platform decision marked pending but architecture treats it as locked",
+      "file_globs": ["docs/decisions/0006-retell-default-voice.md", "ROADMAP.md"],
+      "status": "open",
+      "opened_at": "2026-05-23T04:25:38Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-c5e702e1",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "RUNBOOK SLOs are TBD with no process to define them before first incident",
+      "file_globs": ["RUNBOOK.md"],
+      "status": "open",
+      "opened_at": "2026-05-23T04:25:38Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-47e08664",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "Logging cross-cutting concern undefined — no schema, levels, or PII rules",
+      "file_globs": ["ARCHITECTURE.md", "AGENTS.md"],
+      "status": "open",
+      "opened_at": "2026-05-23T04:25:38Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-d567bb1d",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "13 of 18 spec files have last_updated 2026-05-15 despite 2026-05-21 reconciliation",
+      "file_globs": ["*.md"],
+      "status": "open",
+      "opened_at": "2026-05-23T04:25:38Z",
       "closed_at": null,
       "closing_pr": null
     }
