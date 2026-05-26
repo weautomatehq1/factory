@@ -1,7 +1,7 @@
 ---
 file: ENV.md
 status: accepted
-last_updated: 2026-05-15
+last_updated: 2026-05-26
 owner: sebas
 related_adrs: []
 ---
@@ -92,6 +92,20 @@ Every env var row has:
 | `SELF_HEAL_RUNTIME` | Tier 3 (Sentry/PostHog runtime fix PRs) — `on` / `off` | per-deploy / Discord command | runtime | yes (default `off`) | never | sebas | IFleet runtime listener |
 | `OMC_KILLSWITCH` | Global OMC orchestration off-switch | shell env | runtime | no | never | sebas | claude-code OMC layer |
 
+### Billing — Stripe (per-client, when applicable)
+
+| name | purpose | source | scope | required | rotation | owner | consumed_by |
+|---|---|---|---|---|---|---|---|
+| `STRIPE_SECRET_KEY` | Server-side Stripe API key | dashboard.stripe.com | runtime, server-only | conditional:billing-enabled | 90d | sebas | per-client billing flows |
+| `STRIPE_PUBLISHABLE_KEY` | Client-safe Stripe key (`NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`) | dashboard.stripe.com | runtime, client (with `NEXT_PUBLIC_` prefix) | conditional:billing-enabled | never | sebas | per-client web app |
+| `STRIPE_WEBHOOK_SECRET` | Signing secret for Stripe webhook events | dashboard.stripe.com → Webhooks | runtime, server-only | conditional:billing-enabled | on-incident | sebas | per-client billing flows |
+
+### Signing — Documenso
+
+| name | purpose | source | scope | required | rotation | owner | consumed_by |
+|---|---|---|---|---|---|---|---|
+| `DOCUMENSO_API_KEY` | API key for e-signing requests | sign.weautomatehq.cloud | runtime, server-only | conditional:signing-enabled | 90d | sebas | client onboarding flow |
+
 ### Cost controls
 
 | name | purpose | source | scope | required | rotation | owner | consumed_by |
@@ -127,14 +141,14 @@ False positives in prose: surround with `<example>...</example>` tags in markdow
 
 | Cadence | Items | Trigger |
 |---|---|---|
-| 90 days | `SUPABASE_SERVICE_KEY`, `GITHUB_TOKEN`, `VERCEL_TOKEN`, `HOSTINGER_API_KEY`, `N8N_API_KEY` | quarterly cron + ADR check |
+| 90 days | `SUPABASE_SERVICE_KEY`, `GITHUB_TOKEN`, `VERCEL_TOKEN`, `HOSTINGER_API_KEY`, `N8N_API_KEY`, `STRIPE_SECRET_KEY`, `DOCUMENSO_API_KEY` | quarterly cron + ADR check |
 | 180 days | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `RETELL_API_KEY`, `SENTRY_AUTH_TOKEN`, `HOSTINGER_VPS_SSH_KEY` | half-yearly |
-| Never | `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `DISCORD_CHANNEL_IFLEET`, `RETELL_PHONE_NUMBER` | n/a |
-| On incident | `RETELL_WEBHOOK_SECRET`, `DISCORD_BOT_TOKEN`, anything suspected leaked | as needed |
+| Never | `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `DISCORD_CHANNEL_IFLEET`, `RETELL_PHONE_NUMBER`, `STRIPE_PUBLISHABLE_KEY` | n/a |
+| On incident | `RETELL_WEBHOOK_SECRET`, `DISCORD_BOT_TOKEN`, `STRIPE_WEBHOOK_SECRET`, anything suspected leaked | as needed |
 
 When rotating: update 1Password vault → update each deployment target → confirm with synthetic health-check → document the rotation in `CHANGELOG.md` under `Security`.
 
 ---
 
-**Last updated:** 2026-05-15
+**Last updated:** 2026-05-26
 **Last verified:** 2026-05-15 — Sebastian

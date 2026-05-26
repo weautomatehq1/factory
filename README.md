@@ -18,7 +18,7 @@ This repo does **not** contain runnable code. Code lives in the other three Fact
 
 | Repo | Purpose | Status |
 |---|---|---|
-| `weautomatehq1/IFleet` | Worker fleet — picks issues, ships PRs | Exists (Phase A green 2026-05-13) |
+| `weautomatehq1/IFleet` | Worker fleet — picks issues, ships PRs | Exists (launched 2026-05-19, PR #117) |
 | `weautomatehq1/voice-discovery` | Voice interviewer + n8n orchestration | Not yet created |
 | `weautomatehq1/spec-template` | GitHub template used to spawn per-client repos | Not yet created |
 | `weautomatehq1/<client-name>` | Per-client SaaS — generated from spec-template | Created when client #1 interviews |
@@ -79,8 +79,8 @@ Full glossary: `UBIQUITOUS_LANGUAGE.md`.
 
 - Sebastian's global rules: `~/.claude/CLAUDE.md`
 - Auto-memory index: `~/.claude/projects/-Users-Seb/memory/MEMORY.md`
-- IFleet status (latest): `~/.claude/projects/-Users-Seb/memory/project_status_20260513.md`
+- IFleet status (latest): check MEMORY.md index for the most recent `project_status_*.md` entry (do not rely on a hardcoded filename — it is updated per session)
 
 ---
 
-**Last updated:** 2026-05-15
+**Last updated:** 2026-05-26

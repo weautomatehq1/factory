@@ -31,6 +31,7 @@ on:
       - '**/api/auth/**'
       - '**/middleware/auth*.ts'
       - '**/middleware/api-guard*.ts'
+      - '**/auth/**'
       - '**/(auth)/**'
       - '**/lib/billing/**'
       - '**/api/billing/**'

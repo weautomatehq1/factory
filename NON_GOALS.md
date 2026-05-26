@@ -1,7 +1,7 @@
 ---
 file: NON_GOALS.md
 status: accepted
-last_updated: 2026-05-15
+last_updated: 2026-05-26
 owner: sebas
 related_adrs: [ADR-0004]
 ---
@@ -148,5 +148,5 @@ These are walking-away decisions. If a feature/scope hits a No-Go, we don't do i
 
 ---
 
-**Last updated:** 2026-05-15
-**Last verified:** 2026-05-15 — Sebastian
+**Last updated:** 2026-05-26
+**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)

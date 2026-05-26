@@ -1,7 +1,7 @@
 ---
 file: ARCHITECTURE.md
 status: accepted
-last_updated: 2026-05-15
+last_updated: 2026-05-26
 owner: sebas
 related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0007, ADR-0010]
 ---
@@ -208,5 +208,5 @@ Quick pointers:
 
 ---
 
-**Last updated:** 2026-05-15
-**Last verified:** 2026-05-15 — Sebastian
+**Last updated:** 2026-05-26
+**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)

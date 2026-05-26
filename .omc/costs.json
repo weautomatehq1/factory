@@ -13,7 +13,8 @@
   "_notes": [
     "Append one entry per Claude/Codex session to sessions[].",
     "Each session entry: { date, session_id, agent, model, tokens_in, tokens_out, cost_usd, task_summary }.",
-    "Totals recomputed by IFleet cost tracker (PR #39) on every write.",
-    "Cost ceiling check: sum of today's sessions > daily_rate_cap_default = pause work + Discord alert."
+    "This file tracks Factory-repo-only Claude sessions (spec edits, ADR writes, audit runs). IFleet has its own costs.json in its own repo. Cross-repo aggregation is not yet wired.",
+    "Cost ceiling check: sum of today's sessions > daily_rate_cap_default = pause work + Discord alert.",
+    "IFleet cost enforcement (daily cap, OVERNIGHT_MODE) lives in IFleet repo, not here."
   ]
 }
