@@ -11,6 +11,7 @@
 **/api/auth/**                          @monstersebas1
 **/middleware/auth*.ts                  @monstersebas1
 **/middleware/api-guard*.ts             @monstersebas1
+**/auth/**                              @monstersebas1
 **/(auth)/**                            @monstersebas1
 
 # Billing and payments

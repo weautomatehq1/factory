@@ -16,11 +16,11 @@ related_adrs: [ADR-0009]
 
 ```
 Contact: mailto:security@weautomatehq.com
-Encryption: https://weautomatehq.com/pgp-key.txt (TBD)
 Preferred-Languages: en, es
-Policy: https://weautomatehq.com/security-policy (TBD)
 Expires: 2027-05-15T00:00:00Z
 ```
+
+> ⚠️ **PGP key and security policy URL omitted** until the marketing site is live. RFC 9116 requires all listed URLs to be valid — `(TBD)` suffixes are not valid URL syntax. Add `Encryption:` and `Policy:` lines only when the URLs resolve. Track in: generate PGP key → publish at weautomatehq.com/pgp-key.txt → generate security policy page → add both lines here → re-mirror to /.well-known/security.txt.
 
 **To mirror into** `/.well-known/security.txt` verbatim once the marketing site is live. Keep `Expires` rolling — update annually.
 
@@ -178,5 +178,5 @@ Toggling: SSH to relevant deployment, update env, restart. Discord command bridg
 
 ---
 
-**Last updated:** 2026-05-15
-**Last verified:** 2026-05-15 — Sebastian
+**Last updated:** 2026-05-26
+**Last verified:** 2026-05-26 — nightly audit

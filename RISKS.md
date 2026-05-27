@@ -1,7 +1,7 @@
 ---
 file: RISKS.md
 status: accepted
-last_updated: 2026-05-15
+last_updated: 2026-05-26
 owner: sebas
 scoring: FMEA — Severity (1-10) × Occurrence (1-10) × Detection (1-10) = RPN
 review_threshold: RPN >= 100
@@ -93,5 +93,5 @@ escalate_rule: "S >= 9 always escalates regardless of RPN (catches rank-reversal
 
 ---
 
-**Last updated:** 2026-05-15
-**Last verified:** 2026-05-15 — Sebastian
+**Last updated:** 2026-05-26
+**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
