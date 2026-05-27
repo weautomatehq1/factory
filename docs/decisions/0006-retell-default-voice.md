@@ -39,7 +39,9 @@ The Factory's voice interviewer needs telephony + STT + TTS + interrupt handling
 
 Chosen: **Retell AI (default, pending Esme R1 confirmation in SPRINT-2026-05-A).**
 
-If Esme's R1 research reveals a materially better option, this ADR is superseded by a follow-up ADR. The pick is *locked for the sprint* (per NON_GOALS.md NG-something equivalent — switching mid-sprint = sprint death).
+If Esme's R1 research reveals a materially better option, this ADR is superseded by a follow-up ADR. The pick is *locked for the sprint* (per SPRINT.md § No-gos item 5: "NOT migrating from Retell if R1 research suggests Vapi is marginally cheaper. Switching mid-sprint = sprint death.").
+
+<!-- Erratum 2026-05-27: The original text read "NON_GOALS.md NG-something equivalent" — a placeholder that was never resolved. The actual sprint-scoped constraint lives in SPRINT.md § No-gos #5. The nearest permanent analogue in NON_GOALS.md is NG-6 (model selection locked mid-sprint) whose "sprint death" rationale applies equally here. -->
 
 ### Why not the others?
 - **Vapi.ai:** comparable; Retell is documented in our OMC skill so onboarding is faster. Marginal cost difference doesn't justify the documentation rebuild.

@@ -268,14 +268,7 @@ owner: sebas
 
 ## Not Doing (explicit no-gos)
 
-These are **never**, not "not yet." Walking-away decisions:
-
-- **Will NOT compete with Lovable / Bolt / Cursor / v0.** Those are dev tools for end-users. The Factory is internal agency leverage.
-- **Will NOT support non-SaaS deliverables** (mobile apps, embedded firmware, ML training pipelines). Out of competence zone.
-- **Will NOT replace HubSpot or any client's CRM of record.** We integrate with what they have.
-- **Will NOT auto-merge any change touching auth / billing / PII paths.** Always human-merge. Even with a perfect track record.
-- **Will NOT ship a "developer tools for sale" product.** This is internal agency leverage, not a SaaS product itself.
-- **Will NOT support clients who can't be voice-interviewed** (e.g., text-only requirement, deafness without a sign-language workflow). Future possible via text intake, but a different product.
+See **`NON_GOALS.md`** for the complete, canonical No-Go list (NoGo-1 through NoGo-10). That file is the single source of truth; do not add no-gos here. The previous partial list in this section was missing NoGo-5, NoGo-7, NoGo-8, NoGo-9, and NoGo-10, and duplicated NoGo-1 in two differently-worded bullets — both removed in the 2026-05-27 nightly audit.
 
 ---
 

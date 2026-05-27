@@ -79,7 +79,7 @@ Full glossary: `UBIQUITOUS_LANGUAGE.md`.
 
 - Sebastian's global rules: `~/.claude/CLAUDE.md`
 - Auto-memory index: `~/.claude/projects/-Users-Seb/memory/MEMORY.md`
-- IFleet status (latest): `~/.claude/projects/-Users-Seb/memory/project_status_20260513.md`
+- IFleet status (latest): check `MEMORY.md` index for the most recent `project_status_*.md` entry (last known: `project_status_20260519.md` — IFleet launched at df0a302)
 
 ---
 

@@ -1,0 +1,78 @@
+{
+  "audit_id": "audit-20260527T041319Z",
+  "repo": "factory",
+  "scanned_at": "2026-05-27T04:13:19Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-308e0445",
+      "severity": "IMPORTANT",
+      "category": "redo",
+      "title": "CHANGELOG.md ADR-0010 missing — verified already resolved",
+      "detail": "Re-verified CHANGELOG.md: line 40 already includes 'ADR-0003, ADR-0010'. Finding was already resolved in a previous commit. Closing.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Already present at CHANGELOG.md:40.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-27T04:13:19Z",
+      "closed_at": "2026-05-27T04:13:19Z",
+      "closing_pr": "audit/nightly-2026-05-27"
+    },
+    {
+      "id": "AUDIT-factory-3622c711",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "ADR-0006 lazy 'NG-something' reference — erratum note added",
+      "detail": "docs/decisions/0006-retell-default-voice.md line 42 had an unresolved 'NG-something equivalent' placeholder. Added an inline erratum comment resolving it to SPRINT.md § No-gos item 5 and NON_GOALS.md NG-6.",
+      "file_globs": ["docs/decisions/0006-retell-default-voice.md"],
+      "fix_sketch": "Added erratum HTML comment inline in the decision text.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-27T04:13:19Z",
+      "closed_at": "2026-05-27T04:13:19Z",
+      "closing_pr": "audit/nightly-2026-05-27"
+    },
+    {
+      "id": "AUDIT-factory-4e615356",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP 'Not Doing' incomplete — replaced with NON_GOALS.md pointer",
+      "detail": "ROADMAP.md 'Not Doing' section listed only 6 of 10 No-Gos and duplicated NoGo-1. Replaced the full section with a single canonical pointer to NON_GOALS.md to prevent future sync drift.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Section replaced with pointer to NON_GOALS.md.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-27T04:13:19Z",
+      "closed_at": "2026-05-27T04:13:19Z",
+      "closing_pr": "audit/nightly-2026-05-27"
+    },
+    {
+      "id": "AUDIT-factory-7217b91c",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ROADMAP duplicate No-Go bullets — resolved with AUDIT-factory-4e615356",
+      "detail": "Fixed together with the incomplete Not Doing section — both resolved by replacing the section with a NON_GOALS.md pointer.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Section replaced.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-27T04:13:19Z",
+      "closed_at": "2026-05-27T04:13:19Z",
+      "closing_pr": "audit/nightly-2026-05-27"
+    },
+    {
+      "id": "AUDIT-factory-6f96e44a",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "README stale memory file reference updated",
+      "detail": "README.md line 82 pointed to project_status_20260513.md (pre-launch). Updated to direct readers to check the MEMORY.md index for the latest entry, noting project_status_20260519.md as last known (IFleet launched at df0a302).",
+      "file_globs": ["README.md"],
+      "fix_sketch": "Replaced hardcoded dated path with MEMORY.md index pointer.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-27T04:13:19Z",
+      "closed_at": "2026-05-27T04:13:19Z",
+      "closing_pr": "audit/nightly-2026-05-27"
+    }
+  ]
+}
