@@ -1,6 +1,6 @@
 {
   "repo": "factory",
-  "last_updated": "2026-05-21T16:02:27Z",
+  "last_updated": "2026-05-28T04:35:00Z",
   "open_findings": 8,
   "by_severity": {
     "IMPORTANT": 7,
@@ -12,7 +12,7 @@
       "severity": "CRITICAL",
       "category": "risk",
       "title": "No pre-commit hooks, CODEOWNERS, or GitHub Actions exist despite being referenced as enforced controls",
-      "detail": "Multiple files assert that pre-commit hooks enforce secret-pattern rejection (ENV.md line 114, AGENTS.md section 13, SECURITY.md line 34, NON_GOALS.md NoGo-10 line 145) and that CODEOWNERS + a dedicated GitHub Action enforce the Protected Paths auto-merge gate (SECURITY.md lines 125-126). However, the `.git/hooks/` directory contains zero non-sample hooks, there is no `.github/` directory (no CODEOWNERS, no workflows), and there is no `.claude/settings.json` for Claude Code hooks.\n\nThis means the entire security enforcement layer described across SECURITY.md, AGENTS.md, ENV.md, and NON_GOALS.md is aspirational documentation, not reality. A worker or human could commit secrets or auto-merge a Protected Path change today with zero enforcement. The SECURITY.md OWASP A08 row claims 'pre-commit hook + branch protection' \u2014 this is currently false.\n\nThe gap between what the spec claims is enforced and what is actually enforced is the single largest risk in this repo.",
+      "detail": "Multiple files assert that pre-commit hooks enforce secret-pattern rejection (ENV.md line 114, AGENTS.md section 13, SECURITY.md line 34, NON_GOALS.md NoGo-10 line 145) and that CODEOWNERS + a dedicated GitHub Action enforce the Protected Paths auto-merge gate (SECURITY.md lines 125-126). However, the `.git/hooks/` directory contains zero non-sample hooks, there is no `.github/` directory (no CODEOWNERS, no workflows), and there is no `.claude/settings.json` for Claude Code hooks.\n\nThis means the entire security enforcement layer described across SECURITY.md, AGENTS.md, ENV.md, and NON_GOALS.md is aspirational documentation, not reality. A worker or human could commit secrets or auto-merge a Protected Path change today with zero enforcement. The SECURITY.md OWASP A08 row claims 'pre-commit hook + branch protection' — this is currently false.\n\nThe gap between what the spec claims is enforced and what is actually enforced is the single largest risk in this repo.",
       "file_globs": [
         "SECURITY.md",
         "AGENTS.md",
@@ -34,7 +34,7 @@
       "severity": "CRITICAL",
       "category": "logic",
       "title": "Sprint SPRINT-2026-05-A ends today (2026-05-20) but repo has had zero updates since initial scaffold on 2026-05-15",
-      "detail": "The sprint defined in SPRINT.md (`ends: 2026-05-20`) ends today. Git log shows exactly one commit: `d49b1a4` on 2026-05-15. ROADMAP.md shows M-001 as `in-progress` and all 14 others as `planned`. .omc/STATUS.md says 'In flight: (none)'. SPRINT.md tasks (lines 91-105) all unchecked.\n\nEither all sprint work happened in other repos (IFleet) and this repo's tracking is stale, or the sprint wasn't executed. The IFleet memory entry confirms IFleet launched at df0a302 \u2014 work happened, but Factory was never updated. For a coordination repo whose entire purpose is to be the source of truth for sprint state, being 5 days stale on sprint-end day is a fundamental failure of the coordination contract.",
+      "detail": "The sprint defined in SPRINT.md (`ends: 2026-05-20`) ends today. Git log shows exactly one commit: `d49b1a4` on 2026-05-15. ROADMAP.md shows M-001 as `in-progress` and all 14 others as `planned`. .omc/STATUS.md says 'In flight: (none)'. SPRINT.md tasks (lines 91-105) all unchecked.\n\nEither all sprint work happened in other repos (IFleet) and this repo's tracking is stale, or the sprint wasn't executed. The IFleet memory entry confirms IFleet launched at df0a302 — work happened, but Factory was never updated. For a coordination repo whose entire purpose is to be the source of truth for sprint state, being 5 days stale on sprint-end day is a fundamental failure of the coordination contract.",
       "file_globs": [
         "SPRINT.md",
         "ROADMAP.md",
@@ -54,7 +54,7 @@
       "severity": "IMPORTANT",
       "category": "risk",
       "title": "ENV.md missing Stripe and Documenso secret_refs that INTEGRATIONS.md declares",
-      "detail": "INTEGRATIONS.md line 244 declares `secret_refs: [STRIPE_SECRET_KEY, STRIPE_PUBLISHABLE_KEY, STRIPE_WEBHOOK_SECRET]` for Stripe and line 264 declares `secret_refs: [DOCUMENSO_API_KEY]` for Documenso. However, ENV.md contains zero rows for any of these \u2014 grep for 'STRIPE' and 'DOCUMENSO' in ENV.md returns empty.\n\nThis means: (a) the ENV.md rotation calendar does not cover these secrets, (b) a worker wiring Stripe or Documenso has no ENV.md guidance on scope/source/rotation, (c) the registry is incomplete as a source of truth for 'what secrets exist'.",
+      "detail": "INTEGRATIONS.md line 244 declares `secret_refs: [STRIPE_SECRET_KEY, STRIPE_PUBLISHABLE_KEY, STRIPE_WEBHOOK_SECRET]` for Stripe and line 264 declares `secret_refs: [DOCUMENSO_API_KEY]` for Documenso. However, ENV.md contains zero rows for any of these — grep for 'STRIPE' and 'DOCUMENSO' in ENV.md returns empty.\n\nThis means: (a) the ENV.md rotation calendar does not cover these secrets, (b) a worker wiring Stripe or Documenso has no ENV.md guidance on scope/source/rotation, (c) the registry is incomplete as a source of truth for 'what secrets exist'.",
       "file_globs": [
         "ENV.md",
         "INTEGRATIONS.md"
@@ -72,11 +72,11 @@
       "severity": "IMPORTANT",
       "category": "assumption",
       "title": "ADR-0006 contains a lazy reference 'NG-something equivalent' instead of citing the actual Non-Goal ID",
-      "detail": "In `docs/decisions/0006-retell-default-voice.md` line 42, the ADR reads: 'The pick is *locked for the sprint* (per NON_GOALS.md NG-something equivalent \u2014 switching mid-sprint = sprint death).' This is an accepted ADR with a placeholder that was never resolved. The actual reference should be SPRINT.md's No-gos section or NON_GOALS NG-6.\n\nPer the ADR append-only invariant, this accepted ADR cannot be edited. The vague reference undermines traceability \u2014 workers cannot locate the relevant constraint.",
+      "detail": "In `docs/decisions/0006-retell-default-voice.md` line 42, the ADR reads: 'The pick is *locked for the sprint* (per NON_GOALS.md NG-something equivalent — switching mid-sprint = sprint death).' This is an accepted ADR with a placeholder that was never resolved. The actual reference should be SPRINT.md's No-gos section or NON_GOALS NG-6.\n\nPer the ADR append-only invariant, this accepted ADR cannot be edited. The vague reference undermines traceability — workers cannot locate the relevant constraint.",
       "file_globs": [
         "docs/decisions/0006-retell-default-voice.md"
       ],
-      "fix_sketch": "Since the ADR is append-only, add an erratum note at the bottom (outside the MADR body) clarifying: 'The NG-something reference on line 42 refers to SPRINT.md \u00a7No-gos item 5 (NOT migrating from Retell mid-sprint).' Alternatively, justify a narrow exception to the append-only rule via a micro-ADR.",
+      "fix_sketch": "Since the ADR is append-only, add an erratum note at the bottom (outside the MADR body) clarifying: 'The NG-something reference on line 42 refers to SPRINT.md §No-gos item 5 (NOT migrating from Retell mid-sprint).' Alternatively, justify a narrow exception to the append-only rule via a micro-ADR.",
       "parallel_safe": true,
       "fingerprint": "b5218501a1494249a0fff2a08a9f44ccf66b6f9232db050d4c7ea593487e64d7",
       "status": "open",
@@ -124,7 +124,7 @@
       "severity": "IMPORTANT",
       "category": "overconfidence",
       "title": "SECURITY.md security.txt references unresolved TBD URLs that will break RFC 9116 compliance",
-      "detail": "SECURITY.md lines 17-18 contain two TBD entries: `Encryption: https://weautomatehq.com/pgp-key.txt (TBD)` and `Policy: https://weautomatehq.com/security-policy (TBD)`. The file instructs to 'mirror into /.well-known/security.txt verbatim once the marketing site is live'. If mirrored verbatim, the URLs will be syntactically invalid per RFC 9116. More importantly, `security@weautomatehq.com` may not be configured \u2014 bounce = compliance and reputation failure.\n\nAdditionally, INTEGRATIONS.md line 42 lists the Retell status page with 'verify URL post-account-creation' and line 194 lists Hostinger with 'verify URL' \u2014 flags sitting unverified for 5 days.",
+      "detail": "SECURITY.md lines 17-18 contain two TBD entries: `Encryption: https://weautomatehq.com/pgp-key.txt (TBD)` and `Policy: https://weautomatehq.com/security-policy (TBD)`. The file instructs to 'mirror into /.well-known/security.txt verbatim once the marketing site is live'. If mirrored verbatim, the URLs will be syntactically invalid per RFC 9116. More importantly, `security@weautomatehq.com` may not be configured — bounce = compliance and reputation failure.\n\nAdditionally, INTEGRATIONS.md line 42 lists the Retell status page with 'verify URL post-account-creation' and line 194 lists Hostinger with 'verify URL' — flags sitting unverified for 5 days.",
       "file_globs": [
         "SECURITY.md",
         "INTEGRATIONS.md"
@@ -188,6 +188,90 @@
       "opened_at": "2026-05-21T03:03:04Z",
       "closed_at": null,
       "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-a1b2c3d4",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "README.md: 'other three Factory repos' contradicts the four-repo table",
+      "detail": "README.md stated 'Code lives in the other three Factory repos' but the table immediately below listed four repos. ADR-0002 is titled 'Four-repo structure'. Fixed by nightly audit 2026-05-28.",
+      "file_globs": ["README.md"],
+      "fix_sketch": "Changed 'other three' to 'other four'.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-28T04:30:00Z",
+      "closed_at": "2026-05-28T04:35:00Z",
+      "closing_pr": "audit/nightly-2026-05-28"
+    },
+    {
+      "id": "AUDIT-factory-b2c3d4e5",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "README.md + ARCHITECTURE.md: '17 spec files' count wrong — table shows 18",
+      "detail": "All occurrences of '17 spec files' updated to '18' across README.md, ARCHITECTURE.md, AGENTS.md, and CLAUDE.md. CHANGELOG.md was added after the initial count was established. Fixed by nightly audit 2026-05-28.",
+      "file_globs": ["README.md", "ARCHITECTURE.md", "AGENTS.md", "CLAUDE.md"],
+      "fix_sketch": "Changed all '17 spec files' to '18 spec files'.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-05-28T04:30:00Z",
+      "closed_at": "2026-05-28T04:35:00Z",
+      "closing_pr": "audit/nightly-2026-05-28"
+    },
+    {
+      "id": "AUDIT-factory-c3d4e5f6",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "SECURITY.md: footer date contradicts frontmatter last_updated",
+      "detail": "Footer read 2026-05-15; frontmatter said 2026-05-21. Updated footer to match. Fixed by nightly audit 2026-05-28.",
+      "file_globs": ["SECURITY.md"],
+      "fix_sketch": "Updated footer to 2026-05-21.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-28T04:30:00Z",
+      "closed_at": "2026-05-28T04:35:00Z",
+      "closing_pr": "audit/nightly-2026-05-28"
+    },
+    {
+      "id": "AUDIT-factory-d4e5f6a7",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "ROADMAP.md: footer date contradicts frontmatter last_updated",
+      "detail": "Footer read 2026-05-15; frontmatter said 2026-05-21. Updated footer to match. Fixed by nightly audit 2026-05-28.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Updated footer to 2026-05-21.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-28T04:30:00Z",
+      "closed_at": "2026-05-28T04:35:00Z",
+      "closing_pr": "audit/nightly-2026-05-28"
+    },
+    {
+      "id": "AUDIT-factory-e5f6a7b8",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "README.md: operational date '2026-05-20' is past with no status update",
+      "detail": "Status line said 'Target operational date: end of Day 5 (2026-05-20)' — 8 days past. Updated to reflect delayed status. Fixed by nightly audit 2026-05-28.",
+      "file_globs": ["README.md"],
+      "fix_sketch": "Updated status to: 'Not yet operational. Original target: 2026-05-20 (delayed — see SPRINT.md).'",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-28T04:30:00Z",
+      "closed_at": "2026-05-28T04:35:00Z",
+      "closing_pr": "audit/nightly-2026-05-28"
+    },
+    {
+      "id": "AUDIT-factory-f6a7b8c9",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "README.md footer date stale",
+      "detail": "Footer read '2026-05-15'; updated to '2026-05-28'. Fixed by nightly audit 2026-05-28.",
+      "file_globs": ["README.md"],
+      "fix_sketch": "Updated footer date.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-28T04:30:00Z",
+      "closed_at": "2026-05-28T04:35:00Z",
+      "closing_pr": "audit/nightly-2026-05-28"
     }
   ]
 }

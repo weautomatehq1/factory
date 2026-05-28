@@ -2,19 +2,19 @@
 
 > WeAutomateHQ's autonomous client-SaaS factory.
 
-A voice AI interviews a client → produces 17 spec markdown files → autonomous Claude/Codex workers (IFleet) read the spec → build, ship, and self-heal the platform.
+A voice AI interviews a client → produces 18 spec markdown files → autonomous Claude/Codex workers (IFleet) read the spec → build, ship, and self-heal the platform.
 
-**Status:** spec-defining phase. Not yet operational. Target operational date: end of Day 5 (2026-05-20).
+**Status:** spec-defining phase. Not yet operational. Original target: 2026-05-20 (delayed — see SPRINT.md).
 
 ## What this repo contains
 
 This is the **master coordination repo** for The Factory. It contains:
 
-- **17 spec files** describing The Factory itself (we eat our own dogfood — The Factory is its own first client)
+- **18 spec files** describing The Factory itself (we eat our own dogfood — The Factory is its own first client)
 - **Architectural Decision Records** (`docs/decisions/`) — the why behind the picks
 - **Operational state** (`.omc/STATUS.md`) — current sprint progress
 
-This repo does **not** contain runnable code. Code lives in the other three Factory repos:
+This repo does **not** contain runnable code. Code lives in the other four Factory repos:
 
 | Repo | Purpose | Status |
 |---|---|---|
@@ -29,7 +29,7 @@ This repo does **not** contain runnable code. Code lives in the other three Fact
 
 **As an AI worker (Claude / Codex / Cursor / Aider):** read `AGENTS.md` first. It has the required-reading order, boundaries, commit protocol, and "when stuck" guidance.
 
-## The 17 spec files
+## The 18 spec files
 
 | File | Purpose |
 |---|---|
@@ -83,4 +83,4 @@ Full glossary: `UBIQUITOUS_LANGUAGE.md`.
 
 ---
 
-**Last updated:** 2026-05-15
+**Last updated:** 2026-05-28

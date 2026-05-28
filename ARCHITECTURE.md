@@ -61,7 +61,7 @@ Related: see `INTEGRATIONS.md` for auth model per service.
 ```mermaid
 flowchart TB
     subgraph factory[" Factory (this repo) "]
-        F1[17 spec files<br/>markdown]
+        F1[18 spec files<br/>markdown]
         F2[docs/decisions/<br/>ADRs]
         F3[.omc/STATUS.md<br/>operational state]
     end
@@ -74,7 +74,7 @@ flowchart TB
     end
 
     subgraph template[" spec-template (new repo) "]
-        T1[17 file skeletons<br/>+ frontmatter]
+        T1[18 file skeletons<br/>+ frontmatter]
         T2[GitHub template config]
     end
 
@@ -150,7 +150,7 @@ factory/
 These are the rules that don't show up by reading code — they show up by violations breaking the system.
 
 1. **The Factory repo contains no executable code.** Markdown only. Code lives in IFleet / voice-discovery / per-client repos.
-2. **The 17 spec files are the contract.** If code contradicts a spec, the spec wins. Open an issue; do not silently drift.
+2. **The 18 spec files are the contract.** If code contradicts a spec, the spec wins. Open an issue; do not silently drift.
 3. **Issues are the unit of work for IFleet.** Voice interview, self-healing, monitoring, humans — all upstream sources go through "create issue" → "worker picks up." See ADR-0003.
 4. **No worker self-merges.** A human or designated reviewer agent merges every PR. Even green CI does not authorize self-merge.
 5. **Auth / billing / PII paths are always human-merge.** Listed in `SECURITY.md#protected-paths`. The auto-merge gate enforces this regardless of confidence.

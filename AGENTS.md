@@ -6,7 +6,7 @@
 
 ## 1. Project overview
 
-**The Factory** is WeAutomateHQ's autonomous client-SaaS factory. A voice AI interviews a client → produces 17 spec files in this format → autonomous Claude/Codex workers (IFleet) read the spec → build, ship, and self-heal the platform.
+**The Factory** is WeAutomateHQ's autonomous client-SaaS factory. A voice AI interviews a client → produces 18 spec files in this format → autonomous Claude/Codex workers (IFleet) read the spec → build, ship, and self-heal the platform.
 
 Two repos sit beside this one:
 - `github.com/weautomatehq1/IFleet` — the worker fleet that executes specs
@@ -123,7 +123,7 @@ Steal Cloudflare's `Always / Ask first / Never` pattern. Every rule has a one-li
 - **Adding to `NON_GOALS.md`'s "No-Gos" list.** Rationale: a "never" is forever; it must be deliberate.
 - **Adding a new integration** to `INTEGRATIONS.md`. Rationale: each adds attack surface; security review required.
 - **Touching `SECURITY.md` `Protected Paths` list.** Rationale: this is the auto-merge gate; loosening it weakens the whole safety model.
-- **Changing the file format of any of the 17 spec files** (frontmatter schema, section names). Rationale: the decomposer parses these; format changes break it.
+- **Changing the file format of any of the 18 spec files** (frontmatter schema, section names). Rationale: the decomposer parses these; format changes break it.
 
 ### Never
 - **Commit secrets, `.env`, or API keys.** Rationale: public repo; one leak = full rotation.

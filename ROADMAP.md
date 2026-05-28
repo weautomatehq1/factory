@@ -287,5 +287,5 @@ These are **never**, not "not yet." Walking-away decisions:
 
 ---
 
-**Last updated:** 2026-05-15
-**Last verified:** 2026-05-15 — Sebastian
+**Last updated:** 2026-05-21
+**Last verified:** 2026-05-21 — Sebastian

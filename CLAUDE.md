@@ -7,7 +7,7 @@ The `@AGENTS.md` import above pulls in all shared agent rules. This file adds on
 ## Required reading at session start
 
 1. `.omc/STATUS.md` — what the last session left behind
-2. The 17 spec files in the order defined in `AGENTS.md` §2 (skim, deep-read only the ones relevant to your task)
+2. The 18 spec files in the order defined in `AGENTS.md` §2 (skim, deep-read only the ones relevant to your task)
 3. The nearest `AGENTS.md` to the files you're about to edit (cascading rule)
 
 ## Default mode
