@@ -1,15 +1,17 @@
 {
   "repo": "factory",
-  "last_updated": "2026-05-26T04:07:10Z",
-  "open_findings": 5,
+  "last_updated": "2026-05-29T00:10:00Z",
+  "open_findings": 2,
+  "fixed_this_run": 3,
   "by_severity": {
-    "IMPORTANT": 5,
+    "IMPORTANT": 2,
     "COSMETIC": 0
   },
   "nightly_audits": [
     "2026-05-21T03:03:04Z.json",
     "20260523T042538Z.json",
-    "20260526T040710Z.json"
+    "20260526T040710Z.json",
+    "2026-05-29T00:00:00Z.json"
   ],
   "findings": [
     {
@@ -61,12 +63,12 @@
       "title": "ADR-0006 contains a lazy reference 'NG-something equivalent' instead of citing the actual Non-Goal ID",
       "detail": "In docs/decisions/0006-retell-default-voice.md, the ADR contains 'NG-something equivalent' as an unresolved placeholder. Per append-only invariant, cannot edit the accepted ADR body. Must append an erratum.",
       "file_globs": ["docs/decisions/0006-retell-default-voice.md"],
-      "fix_sketch": "Append an erratum clarifying the reference points to SPRINT.md §No-gos item 5.",
+      "fix_sketch": "Created ADR-0011 (docs/decisions/0011-adr-0006-ng-erratum.md) as an append-only-compliant erratum clarifying the NG reference maps to NON_GOALS.md NG-6 + AGENTS.md §7.",
       "parallel_safe": true,
-      "status": "open",
+      "status": "fixed",
       "opened_at": "2026-05-21T03:03:04Z",
-      "closed_at": null,
-      "closing_pr": null
+      "closed_at": "2026-05-29T00:10:00Z",
+      "closing_pr": "audit/nightly-2026-05-29"
     },
     {
       "id": "AUDIT-factory-4e615356",
@@ -173,12 +175,12 @@
       "title": "RUNBOOK SLOs are TBD with no process to define them before first incident",
       "detail": "RUNBOOK.md trigger rules reference TBD per-product SLOs. No SLO is defined for any Factory service. Operators cannot determine incident severity or correct escalation path without these.",
       "file_globs": ["RUNBOOK.md"],
-      "fix_sketch": "Add Factory SLOs section to RUNBOOK.md before M-016. Derive escalation SLA thresholds from SLOs explicitly.",
+      "fix_sketch": "Added §SLOs (v0.1) table to RUNBOOK.md with Sev 1-4 response targets, error budgets, and IFleet worker uptime/Tier-1 self-heal SLOs. Updated escalation matrix SLAs to reference the new values.",
       "parallel_safe": true,
-      "status": "open",
+      "status": "fixed",
       "opened_at": "2026-05-23T04:25:38Z",
-      "closed_at": null,
-      "closing_pr": null
+      "closed_at": "2026-05-29T00:10:00Z",
+      "closing_pr": "audit/nightly-2026-05-29"
     },
     {
       "id": "AUDIT-factory-47e08664",
@@ -187,12 +189,12 @@
       "title": "Logging cross-cutting concern undefined — no schema, levels, or PII rules across per-client repos",
       "detail": "ARCHITECTURE.md §6 lists logging as a cross-cutting concern but no document defines log schema, level taxonomy, or PII redaction rules. Per-client repos will define logging ad-hoc, violating Architectural Invariant 10.",
       "file_globs": ["ARCHITECTURE.md", "AGENTS.md"],
-      "fix_sketch": "Add minimal logging standard to AGENTS.md §6 or create ADR-0011 covering structured JSON logs, severity levels, PII redaction fields, and Sentry + stdout pattern.",
+      "fix_sketch": "Added §6.1 Logging standard to AGENTS.md covering structured JSON format, mandatory fields (ts/level/service/msg/traceId), severity semantics (debug/info/warn/error/fatal), PII redaction list, and PM2+Sentry routing pattern.",
       "parallel_safe": true,
-      "status": "open",
+      "status": "fixed",
       "opened_at": "2026-05-23T04:25:38Z",
-      "closed_at": null,
-      "closing_pr": null
+      "closed_at": "2026-05-29T00:10:00Z",
+      "closing_pr": "audit/nightly-2026-05-29"
     },
     {
       "id": "AUDIT-factory-d567bb1d",

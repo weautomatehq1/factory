@@ -73,13 +73,30 @@ Per Google SRE Book Ch. 15 "Postmortem Culture":
 6. **Stakeholder request** (client, Sebastian, Esme asks for a runbook entry)
 7. **Rule of two:** any alert that fires a second time without an existing runbook entry
 
-## Escalation matrix (until real entries exist, use this)
+## SLOs (v0.1 — effective 2026-05-29, subject to revision after client #1)
+
+These SLOs define the targets and trigger thresholds for the trigger rules above. Mark v0.1 — to be refined once first real incidents establish baseline.
+
+| Tier | SLI | Target | Error budget / month | Measurement |
+|---|---|---|---|---|
+| Sev 1 (data loss / security) | Time-to-detection | ≤ 2 min from Discord alert | 0 allowed | Discord alert timestamp vs Sentry first-seen |
+| Sev 1 (data loss / security) | Time-to-mitigation | ≤ 30 min | 0 allowed | Alert timestamp vs rollback/isolate confirmed |
+| Sev 2 (customer-visible degradation) | Time-to-acknowledge | ≤ 5 min | 14 min / month | Sebastian first Discord reply |
+| Sev 2 (customer-visible degradation) | Time-to-resolution | ≤ 1 hour | 4 events / month | Incident closed message |
+| Sev 3 (internal degradation) | Time-to-triage | ≤ 30 min | 8 hours / month | GitHub issue opened |
+| Sev 3 (internal degradation) | Time-to-resolution | ≤ 4 hours | — | Issue closed |
+| IFleet worker uptime | Successful sprints / total sprints | ≥ 80% | — | `tasks` table: `done / (done + failed + blocked)` over 7-day window |
+| Tier 1 self-heal success | Auto-resolved without human / total Tier-1 escalations | ≥ 60% | — | Workers table: resolved vs escalated |
+
+**SLO violation consequence:** any Sev-1 or Sev-2 SLO miss triggers a mandatory blameless postmortem (see Postmortem template below).
+
+## Escalation matrix
 
 | Severity | Who to ping | Where | SLA |
 |---|---|---|---|
-| Sev 1: data loss, security breach, production down | Sebastian | Discord DM + phone | Immediate |
-| Sev 2: customer-visible degradation, billing fail | Sebastian | Discord #ifleet @mention | <30 min |
-| Sev 3: internal degradation, single worker stuck | Sebastian | Discord #ifleet | <4 hours |
+| Sev 1: data loss, security breach, production down | Sebastian | Discord DM + phone | ≤ 2 min detect, ≤ 30 min mitigate |
+| Sev 2: customer-visible degradation, billing fail | Sebastian | Discord #ifleet @mention | ≤ 5 min ack, ≤ 1 hr resolve |
+| Sev 3: internal degradation, single worker stuck | Sebastian | Discord #ifleet | ≤ 30 min triage, ≤ 4 hr resolve |
 | Sev 4: cosmetic, non-blocking | none | GitHub Issue with `severity:4` label | Next business day |
 
 ## Postmortem template (use after every Sev 1 / Sev 2)
@@ -131,5 +148,5 @@ Operator response: review the draft PR, merge if appropriate.
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; SLO gap flagged as AUDIT-factory-c5e702e1)
+**Last updated:** 2026-05-29
+**Last verified:** 2026-05-29 — nightly audit (added SLOs v0.1; AUDIT-factory-efb36da0)

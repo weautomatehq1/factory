@@ -105,6 +105,41 @@ For action rules in IFleet / voice-discovery / client repos, read those repos' o
 
 This repo has no code. See per-repo `AGENTS.md` for IFleet / voice-discovery / client conventions. The standards there inherit from Sebastian's global `~/.claude/CLAUDE.md` (Beast Mode) which is the source of truth for TypeScript / React / API / security / git hygiene.
 
+### 6.1 Logging standard (cross-repo, Factory-enforced)
+
+All code repos (IFleet, voice-discovery, per-client) MUST follow this standard. Violates Architectural Invariant 10 if not applied. (AUDIT-factory-42038339.)
+
+**Format:** Structured JSON to stdout. One JSON object per line. Use `console.warn` for info/warn/error (PM2 captures stderr separately); use `console.error` only for fatal conditions.
+
+**Mandatory fields on every log line:**
+
+| Field | Type | Description |
+|---|---|---|
+| `ts` | ISO-8601 string | Timestamp, UTC, millisecond precision |
+| `level` | `debug\|info\|warn\|error\|fatal` | Severity |
+| `service` | string | Process name (e.g. `ifleet-daemon`, `voice-discovery`) |
+| `msg` | string | Human-readable message |
+| `traceId` | string \| null | Sprint/task ID for correlated logs; null for startup logs |
+
+**Optional but recommended:** `durationMs`, `taskId`, `repoSlug`, `workerModel`.
+
+**Severity semantics:**
+- `debug` — local dev only; strip in production unless `LOG_LEVEL=debug`
+- `info` — expected operational events (task picked, PR opened)
+- `warn` — unexpected but recoverable (stale task recovered, retry triggered)
+- `error` — failure in a single operation; process continues
+- `fatal` — process will exit; log immediately before `process.exit(1)`
+
+**PII redaction — NEVER log these fields as plain text:**
+- User names, email addresses, Discord handles
+- Webhook URLs, HMAC secrets, API keys, tokens
+- Client interview content (INTAKE.md material)
+- Stripe payment details
+
+Redact with `[REDACTED]` or omit entirely. The `IFLEET_HMAC_SECRET`, `GITHUB_TOKEN`, and `DISCORD_BOT_TOKEN` values are already stripped from git env by the workers layer — do not re-expose in log output.
+
+**Routing:** stdout → PM2 log file + Sentry (for `error` and `fatal` only). Sentry DSN is `SENTRY_DSN` env var; absent = no Sentry forwarding (safe for local dev).
+
 ## 7. Boundaries
 
 Steal Cloudflare's `Always / Ask first / Never` pattern. Every rule has a one-line **Rationale** so workers can apply the spirit, not just the letter.
@@ -196,5 +231,5 @@ If a rule in this file MUST be unbreakable, promote it to a hook. Note the promo
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-05-29
+**Last verified:** 2026-05-29 — nightly audit (added §6.1 logging standard; AUDIT-factory-42038339)

@@ -1,0 +1,78 @@
+{
+  "audit_id": "audit-20260529T000000Z",
+  "repo": "factory",
+  "scanned_at": "2026-05-29T00:00:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-42038339",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "Logging cross-cutting concern has no schema or standard in AGENTS.md",
+      "detail": "ARCHITECTURE.md Invariant 10 states that cross-cutting concerns are AGENTS.md-enforced patterns, but no logging standard exists anywhere in the repo. Per-client repos will implement logging ad-hoc — different field names, severity levels, PII redaction approaches — making logs unqueryable across the system. This directly violates the stated architectural invariant.",
+      "file_globs": ["AGENTS.md", "ARCHITECTURE.md"],
+      "fix_sketch": "Add a §Logging section to AGENTS.md defining: severity levels (debug/info/warn/error), structured JSON format, mandatory fields (timestamp, level, service, traceId), PII-redacted field list, and the stdout+Sentry routing pattern.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-05-29T00:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-efb36da0",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "RUNBOOK.md SLOs are TBD with no process to define them before first incident",
+      "detail": "RUNBOOK.md contains SLO placeholders marked TBD but no process or deadline for filling them in. Without defined SLOs, operators cannot determine incident severity, escalation paths, or when an on-call response is required. The first real incident will expose this gap under pressure.",
+      "file_globs": ["RUNBOOK.md"],
+      "fix_sketch": "Add concrete SLO stubs (Tier 1: <2min, Tier 2: <15min, Tier 3: <1hr) with escalation matrix and on-call contact. Mark as v0.1 until client #1 confirms acceptance.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-05-29T00:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-28c5c6e5",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "SPRINT-2026-05-B not created — workers have no active work queue",
+      "detail": "SPRINT.md references SPRINT-2026-05-B as the planned next sprint but the document does not exist and no sprint scope has been defined. Workers (IFleet, voice-discovery) read SPRINT.md as their work queue. Without it, autonomous work is stalled. This has been open since the 2026-05-21 audit and requires a Sebastian + Esme alignment decision.",
+      "file_globs": ["SPRINT.md", "ROADMAP.md", ".omc/STATUS.md"],
+      "fix_sketch": "Human decision required: Sebastian must define sprint scope, milestone targets, and timeline for SPRINT-2026-05-B before autonomous workers can resume.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-05-29T00:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-5b53442e",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "ADR-0006 Retell R1 confirmation overdue with no deadline",
+      "detail": "ADR-0006 title states the decision is 'pending Esme R1 confirmation' but SPRINT-2026-05-A ended without R1 research completed. The decision is now over 11 days overdue with no deadline, no active sprint to execute it, and no escalation. Retell is locked in the architecture but due-diligence is incomplete.",
+      "file_globs": ["docs/decisions/0006-retell-default-voice.md", "ROADMAP.md"],
+      "fix_sketch": "Human decision required: Set an explicit R1 research deadline in ROADMAP.md open questions and include in SPRINT-2026-05-B scope. If deadline passes without research, escalate to ADR supersede.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-05-29T00:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-dd92db4f",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ADR-0006 contains placeholder 'NG-something equivalent' unresolved reference",
+      "detail": "docs/decisions/0006-retell-default-voice.md contains a lazy placeholder 'NG-something equivalent' instead of an actual Non-Goal ID from NON_GOALS.md. Since ADRs are append-only (pre-commit hook blocks edits to status:accepted files), this cannot be edited in-place and requires an erratum ADR (ADR-0011) to clarify the reference.",
+      "file_globs": ["docs/decisions/0006-retell-default-voice.md", "DECISIONS.md"],
+      "fix_sketch": "Create docs/decisions/0011-adr-0006-erratum.md clarifying that the NG reference in ADR-0006 maps to NG-5 (no proprietary cloud voice dependency). Update DECISIONS.md index.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-05-29T00:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    }
+  ]
+}
