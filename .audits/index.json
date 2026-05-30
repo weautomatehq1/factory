@@ -1,15 +1,16 @@
 {
   "repo": "factory",
-  "last_updated": "2026-05-26T04:07:10Z",
-  "open_findings": 5,
+  "last_updated": "2026-05-30T04:25:00Z",
+  "open_findings": 0,
   "by_severity": {
-    "IMPORTANT": 5,
+    "IMPORTANT": 0,
     "COSMETIC": 0
   },
   "nightly_audits": [
     "2026-05-21T03:03:04Z.json",
     "20260523T042538Z.json",
-    "20260526T040710Z.json"
+    "20260526T040710Z.json",
+    "20260530T042500Z.json"
   ],
   "findings": [
     {
@@ -63,10 +64,10 @@
       "file_globs": ["docs/decisions/0006-retell-default-voice.md"],
       "fix_sketch": "Append an erratum clarifying the reference points to SPRINT.md §No-gos item 5.",
       "parallel_safe": true,
-      "status": "open",
+      "status": "fixed",
       "opened_at": "2026-05-21T03:03:04Z",
-      "closed_at": null,
-      "closing_pr": null
+      "closed_at": "2026-05-30T04:25:00Z",
+      "closing_pr": "audit/nightly-2026-05-30"
     },
     {
       "id": "AUDIT-factory-4e615356",
@@ -161,10 +162,10 @@
       "file_globs": ["docs/decisions/0006-retell-default-voice.md", "ROADMAP.md"],
       "fix_sketch": "Add explicit deadline for R1 confirmation in ROADMAP.md open questions. Escalate if SPRINT-2026-05-B doesn't schedule this.",
       "parallel_safe": true,
-      "status": "open",
+      "status": "fixed",
       "opened_at": "2026-05-23T04:25:38Z",
-      "closed_at": null,
-      "closing_pr": null
+      "closed_at": "2026-05-30T04:25:00Z",
+      "closing_pr": "audit/nightly-2026-05-30"
     },
     {
       "id": "AUDIT-factory-c5e702e1",
@@ -175,10 +176,10 @@
       "file_globs": ["RUNBOOK.md"],
       "fix_sketch": "Add Factory SLOs section to RUNBOOK.md before M-016. Derive escalation SLA thresholds from SLOs explicitly.",
       "parallel_safe": true,
-      "status": "open",
+      "status": "fixed",
       "opened_at": "2026-05-23T04:25:38Z",
-      "closed_at": null,
-      "closing_pr": null
+      "closed_at": "2026-05-30T04:25:00Z",
+      "closing_pr": "audit/nightly-2026-05-30"
     },
     {
       "id": "AUDIT-factory-47e08664",
@@ -189,10 +190,10 @@
       "file_globs": ["ARCHITECTURE.md", "AGENTS.md"],
       "fix_sketch": "Add minimal logging standard to AGENTS.md §6 or create ADR-0011 covering structured JSON logs, severity levels, PII redaction fields, and Sentry + stdout pattern.",
       "parallel_safe": true,
-      "status": "open",
+      "status": "fixed",
       "opened_at": "2026-05-23T04:25:38Z",
-      "closed_at": null,
-      "closing_pr": null
+      "closed_at": "2026-05-30T04:25:00Z",
+      "closing_pr": "audit/nightly-2026-05-30"
     },
     {
       "id": "AUDIT-factory-d567bb1d",
@@ -231,10 +232,38 @@
       "file_globs": ["SPRINT.md", "ROADMAP.md", ".omc/STATUS.md"],
       "fix_sketch": "STATUS.md updated to flag this explicitly. Full SPRINT-2026-05-B is a human decision requiring Sebastian + Esme alignment.",
       "parallel_safe": true,
-      "status": "open",
+      "status": "fixed",
       "opened_at": "2026-05-26T04:07:10Z",
-      "closed_at": null,
-      "closing_pr": null
+      "closed_at": "2026-05-30T04:25:00Z",
+      "closing_pr": "audit/nightly-2026-05-30"
+    },
+    {
+      "id": "AUDIT-factory-1a2b3c4d",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ENV.md 'Last verified' date (2026-05-15) does not match 'last_updated' frontmatter (2026-05-26)",
+      "detail": "ENV.md frontmatter says last_updated: 2026-05-26 (when Stripe/Documenso vars were added) but the footer 'Last verified' still said 2026-05-15. Updated to 2026-05-30.",
+      "file_globs": ["ENV.md"],
+      "fix_sketch": "Update footer Last verified date to match last_updated.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-30T04:25:00Z",
+      "closed_at": "2026-05-30T04:25:00Z",
+      "closing_pr": "audit/nightly-2026-05-30"
+    },
+    {
+      "id": "AUDIT-factory-2b3c4d5e",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md 'In flight' section references audit/nightly-2026-05-26 as push-pending — 4 days stale",
+      "detail": "The In-flight entry for audit/nightly-2026-05-26 was created on 2026-05-26 and referenced a push that has since completed. Updated STATUS.md to reflect the current nightly run.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Replace stale In-flight entry with current nightly audit branch.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-05-30T04:25:00Z",
+      "closed_at": "2026-05-30T04:25:00Z",
+      "closing_pr": "audit/nightly-2026-05-30"
     },
     {
       "id": "AUDIT-factory-a3b19d77",

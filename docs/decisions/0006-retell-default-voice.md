@@ -72,3 +72,7 @@ If Esme's R1 research reveals a materially better option, this ADR is superseded
 - Related skill: `~/.claude/skills/voice-ai-agent`
 - Related: INTEGRATIONS.md "Retell AI" entry
 - Related risks: R-004 (Retell tool-calling state loss), R-005 (webhook auth)
+
+## Erratum (2026-05-30 — AUDIT-factory-3622c711)
+
+The phrase "per NON_GOALS.md NG-something equivalent" in the Decision Outcome section was an unresolved placeholder. The intended reference is to **SPRINT-2026-05-A §No-gos item 5**: "NOT migrating from Retell if R1 research suggests Vapi is marginally cheaper. Switching mid-sprint = sprint death. Locked for the sprint." That sprint-local no-go constrained Retell for the duration of SPRINT-2026-05-A only; it is not a permanent entry in `NON_GOALS.md`. The broader principle (avoid platform switching mid-sprint) is documented in AGENTS.md under the "Never" boundary for mid-sprint architectural pivots. The ADR body is preserved verbatim per the append-only invariant.
