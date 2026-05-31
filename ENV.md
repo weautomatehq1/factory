@@ -151,4 +151,4 @@ When rotating: update 1Password vault → update each deployment target → conf
 ---
 
 **Last updated:** 2026-05-26
-**Last verified:** 2026-05-15 — Sebastian
+**Last verified:** 2026-05-30 — nightly audit (date corrected; closes AUDIT-factory-1a2b3c4d)

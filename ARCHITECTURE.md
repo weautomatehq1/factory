@@ -166,12 +166,43 @@ These are the rules that don't show up by reading code — they show up by viola
 |---|---|---|
 | **Authentication** | per-client repo `lib/auth/`; protected path | `SECURITY.md` |
 | **Multi-tenant isolation** | Supabase RLS policies; `lib/api-guard/` | `supabase-multitenant` skill |
-| **Logging** | Sentry breadcrumbs; structured logs to stdout | `RUNBOOK.md` |
+| **Logging** | Structured JSON to stdout + Sentry breadcrumbs (see standard below) | `AGENTS.md` §6 |
 | **Error handling** | API boundary returns `{ data, error, status }`; never expose stack traces | `AGENTS.md` §6 |
 | **Observability** | Sentry + PostHog + n8n execution history + Session Report plugin | `KPI.md` |
 | **Cost tracking** | per-session in `.omc/costs.json`; daily aggregate in Discord digest | `M-019` |
 | **Secrets management** | 1Password vault → env vars at deploy; names only in `ENV.md` | `SECURITY.md` |
 | **Killswitches** | env vars `SELF_HEAL_BUILD`, `SELF_HEAL_DEPLOY`, `SELF_HEAL_RUNTIME` | per-client `RUNBOOK.md` |
+
+### Logging standard (closes AUDIT-factory-47e08664)
+
+All server-side code across IFleet, voice-discovery, and per-client repos MUST follow this minimal standard. Policy hook (M-004) will enforce it pre-merge.
+
+**Format:** Structured JSON to stdout (one object per line). Human-readable in dev via `pino-pretty` or equivalent. Machine-readable in production.
+
+**Fields (required on every log line):**
+
+| Field | Type | Notes |
+|---|---|---|
+| `level` | `"error" \| "warn" \| "info" \| "debug"` | No trace/verbose in production |
+| `ts` | ISO-8601 UTC | `new Date().toISOString()` |
+| `module` | `"[module-name]"` | e.g. `"[discord-source]"` |
+| `msg` | string | Human-readable, no PII in the message itself |
+
+**PII redaction rules:**
+- Never log: email addresses, phone numbers, full names, IP addresses, Stripe card data, Supabase `service_role` keys.
+- If a field may contain PII, log its hash or a truncated hint: `email: sha256(email).slice(0,8)`.
+- Transcripts (voice interview) are logged only by session ID reference, never verbatim.
+
+**Dual-channel pattern:**
+- **stdout** → structured JSON (Sentry SDK attaches breadcrumbs from this stream automatically).
+- **Sentry** → errors and warns only. Use `Sentry.captureException(err)` at API boundaries; no duplicate manual calls inside helpers.
+- Never send PII to Sentry `extra` or `tags` fields.
+
+**Severity guidelines:**
+- `error` — unrecoverable failure; human action required.
+- `warn` — degraded state; system continues but an operator should know.
+- `info` — normal significant lifecycle event (task picked, PR opened, deploy triggered).
+- `debug` — detailed trace; disabled in production by default (`LOG_LEVEL=info`).
 
 ## 7. Boundaries & Layers
 

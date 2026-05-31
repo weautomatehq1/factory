@@ -61,6 +61,21 @@ last_verified: YYYY-MM-DD by <name> — <pass | fail | partial>
 
 _(Empty. Entries will be added here as runbook items are written.)_
 
+## Factory Service SLOs
+
+These SLOs define what constitutes a triggering condition for runbook entries and escalation. Populate with real data once M-016 (first client) completes 2 weeks of production.
+
+| Service | SLI | SLO target | Window | Sev on breach |
+|---|---|---|---|---|
+| Spec synthesis | Voice call ends → PR #1 opened | < 30 min | per call | Sev 2 |
+| IFleet pipeline | Issue created → PR opened | < 2 h | per issue | Sev 3 |
+| Self-healing Tier 1 | CI failure detected → IFleet re-runs | < 15 min | per failure | Sev 2 |
+| Self-healing Tier 2 | Deploy smoke fails → rollback complete | < 60 s | per deploy | Sev 1 |
+| Discord 8am digest | Digest delivered within ±15 min of 08:00 | ≥ 95%/week | weekly | Sev 3 |
+| Operator approval gate | PR awaiting human merge → notified | < 1 h | per PR | Sev 4 |
+
+SLO violations escalate per the Escalation Matrix below. Thresholds are initial guesses; review after M-016 provides 2 weeks of data (per ADR-0005 Tier 3 calibration pattern).
+
 ## Trigger rules — when an entry MUST be added
 
 Per Google SRE Book Ch. 15 "Postmortem Culture":
@@ -131,5 +146,5 @@ Operator response: review the draft PR, merge if appropriate.
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; SLO gap flagged as AUDIT-factory-c5e702e1)
+**Last updated:** 2026-05-30
+**Last verified:** 2026-05-30 — nightly audit (Factory SLOs section added, closes AUDIT-factory-c5e702e1)
