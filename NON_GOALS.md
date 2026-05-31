@@ -10,8 +10,8 @@ related_adrs: [ADR-0004]
 
 > Two categories, both load-bearing for the worker fleet's safety:
 >
-> - **Non-Goals** — could reasonably be goals, explicitly deferred this release. Revisit later.
-> - **No-Gos** — never, walk away. (Shape Up convention.)
+> - **Non-Goals** — could reasonably be goals, explicitly deferred this release. Revisit later. *(numbered `NG-N` in section headings below)*
+> - **No-Gos** — never, walk away. (Shape Up convention.) *(numbered `NoGo-N` in section headings below)*
 >
 > If a worker proposes work that hits either, the proposal is rejected. No further review needed.
 

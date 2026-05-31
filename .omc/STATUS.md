@@ -22,22 +22,26 @@ Three sections only. Next agent reads this first.
 - Closes finding `AUDIT-factory-b5bd1864`.
 - **No fabricated progress.** No sibling-repo backfill.
 
-### 2026-05-26 — Nightly audit (this session)
-- Nightly audit branch `audit/nightly-2026-05-26` opened.
+### 2026-05-26 — Nightly audit
+- Nightly audit branch `audit/nightly-2026-05-26` pushed.
 - 9 findings fixed (5 IMPORTANT, 4 COSMETIC): ENV.md Stripe/Documenso vars added, ROADMAP Not Doing synced to NON_GOALS.md, README stale memory ref updated, SECURITY.md TBD security.txt URLs removed, costs.json cross-repo note corrected, auth glob gap in CODEOWNERS+workflow fixed, KPI.md OKRs marked stale/missed, ROADMAP/SECURITY footer dates corrected, last_updated stamps refreshed.
 - 5 findings remain open (carried forward): AUDIT-factory-3622c711 (ADR-0006 placeholder), AUDIT-factory-b01a3d58 (Retell R1 pending), AUDIT-factory-c5e702e1 (RUNBOOK SLOs), AUDIT-factory-47e08664 (logging spec undefined), AUDIT-factory-f2d80a11 (SPRINT-B missing).
 
+### 2026-05-31 — Nightly audit
+- Nightly audit branch `audit/nightly-2026-05-31` opened.
+- 3 findings fixed (1 IMPORTANT, 2 COSMETIC): ADR-0011 example in AGENTS.md → ADR-NNNN, NON_GOALS.md NG-N/NoGo-N naming clarified, README sprint date corrected.
+- 5 open findings carried forward unchanged (all require human action — see Up next).
+
 ## In flight
 
-- `audit/nightly-2026-05-26` — push pending for this session.
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-05-26 there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-05-31 (10 days overdue). Sebastian + Esme must open SPRINT-2026-05-B to resume work.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 5 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity.
-2. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero. Either build a sync mechanism or stop claiming Factory is the coordination-of-record.
+1. **Open SPRINT-2026-05-B** — now 10 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity.
+2. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 3. **Address 5 remaining open audit findings** in `.audits/index.json` — all IMPORTANT: ADR-0006 erratum, Retell R1 confirmation deadline, RUNBOOK SLOs, logging spec, SPRINT-B creation.
-4. **Verify Retell R1 research** (Esme) — SPRINT-2026-05-A ended without this; it's now 11 days overdue.
+4. **Verify Retell R1 research** (Esme) — SPRINT-2026-05-A ended without this; it's now 16 days overdue.
 
 ## Open questions
 
@@ -47,5 +51,5 @@ Three sections only. Next agent reads this first.
 
 ---
 
-**Last updated:** 2026-05-26 — nightly audit
-**Previously updated:** 2026-05-21 — sprint reconciliation by audit-fix lane
+**Last updated:** 2026-05-31 — nightly audit
+**Previously updated:** 2026-05-26 — nightly audit

@@ -150,7 +150,7 @@ For changes here, the verification is:
 - **Branch from `main`:** `feat/<short>`, `fix/<short>`, `chore/<short>`, `docs/<short>`, `adr/<short>`.
 - **Conventional Commits:** `<type>(<scope>): <imperative description>`.
   - Example: `docs(non-goals): add explicit no-go for native mobile app`
-  - Example: `chore(adr): add ADR-0011 for n8n vs Inngest`
+  - Example: `chore(adr): add ADR-NNNN for n8n vs Inngest`
 - **One logical change per commit.** Don't combine an ADR with a roadmap edit.
 - **PR title:** `[<area>] <imperative title>`. Example: `[spec] Add Q3 milestones to ROADMAP`.
 - **PR body MUST include:**
