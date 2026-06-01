@@ -63,7 +63,7 @@ Every env var row has:
 | `GITHUB_TOKEN` | PAT for repo ops (create, commit, PR) | github.com/settings/tokens | runtime, server-only | yes | 90d | sebas | IFleet, voice-discovery synthesizer |
 | `DISCORD_BOT_TOKEN` | Discord bot identity | discord.com/developers | runtime, server-only | yes | on-incident | sebas | discord-claude-bot |
 | `DISCORD_CHANNEL_IFLEET` | Channel ID for IFleet briefs (1504120127791042631) | discord (channel right-click → copy ID) | runtime | yes | never | sebas | discord-claude-bot, n8n digest |
-| `DISCORD_USER_LABEL` | Outgoing prefix (`Sebas` or `Esmel`) | per-machine config | runtime | yes | never | per-user | discord-claude-bot |
+| `DISCORD_USER_LABEL` | Outgoing prefix (`Sebas` or `Esme`) | per-machine config | runtime | yes | never | per-user | discord-claude-bot |
 
 ### Deploy & Hosting
 

@@ -34,7 +34,6 @@ This repo does **not** contain runnable code. Code lives in the other three Fact
 | File | Purpose |
 |---|---|
 | `AGENTS.md` | Rulebook for AI workers (cross-vendor agents.md convention) |
-| `CLAUDE.md` | Claude-specific bridge (`@AGENTS.md` import + Claude rules) |
 | `ROADMAP.md` | Phased milestones with `[M-NNN]` IDs |
 | `ARCHITECTURE.md` | System shape (Mermaid C4 Levels 1–2) + invariants |
 | `SPRINT.md` | Current active work |

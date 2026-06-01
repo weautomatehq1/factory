@@ -1,7 +1,7 @@
 ---
 file: SECURITY.md
 status: accepted
-last_updated: 2026-05-21
+last_updated: 2026-05-26
 owner: sebas
 related_adrs: [ADR-0009]
 ---
