@@ -1,0 +1,78 @@
+{
+  "audit_id": "audit-20260601T042000Z",
+  "repo": "factory",
+  "scanned_at": "2026-06-01T04:20:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-5416b5ff",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "README 'The 17 spec files' table contains 18 rows — CLAUDE.md is included but is Claude-specific, not a template spec file",
+      "detail": "README.md §'The 17 spec files' lists 18 rows in the table, including CLAUDE.md which is the Claude Code-specific bridge and not part of the 17-file template spec. AGENTS.md §2 required-reading order correctly lists CLAUDE.md as item 18, separate from the 17 spec files. The table should not include CLAUDE.md, or the heading/count should be updated.",
+      "file_globs": ["README.md"],
+      "fix_sketch": "Remove CLAUDE.md row from the '17 spec files' table in README.md (it's Claude-specific, not a template spec file) so count matches heading.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-06-01T04:20:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-b3520e60",
+      "severity": "IMPORTANT",
+      "category": "cosmetic",
+      "title": "SECURITY.md frontmatter last_updated stale (2026-05-21 vs footer 2026-05-26)",
+      "detail": "SECURITY.md frontmatter shows last_updated: 2026-05-21 but the footer correctly records 'Last updated: 2026-05-26'. The mismatch means tooling that reads frontmatter (the decomposer, DECISIONS.md index, audit scripts) sees a stale date.",
+      "file_globs": ["SECURITY.md"],
+      "fix_sketch": "Change last_updated: 2026-05-21 → last_updated: 2026-05-26 in SECURITY.md frontmatter.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-06-01T04:20:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-a4acb7b5",
+      "severity": "IMPORTANT",
+      "category": "cosmetic",
+      "title": "ROADMAP.md frontmatter last_updated and last_reconciled stale (2026-05-21 vs footer 2026-05-30)",
+      "detail": "ROADMAP.md frontmatter shows last_updated: 2026-05-21 and last_reconciled: 2026-05-21 but the footer records 'Last updated: 2026-05-30'. Both frontmatter dates are stale.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Change both last_updated and last_reconciled from 2026-05-21 to 2026-05-30 in ROADMAP.md frontmatter.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-06-01T04:20:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-bf16f991",
+      "severity": "IMPORTANT",
+      "category": "cosmetic",
+      "title": "KPI.md frontmatter last_updated stale (2026-05-15 vs footer 2026-05-26)",
+      "detail": "KPI.md frontmatter shows last_updated: 2026-05-15 but the footer records 'Last updated: 2026-05-26'. The frontmatter is two version-cycle updates behind.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Change last_updated: 2026-05-15 → last_updated: 2026-05-26 in KPI.md frontmatter.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-06-01T04:20:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-74420628",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ENV.md DISCORD_USER_LABEL example shows 'Esmel' but all other docs spell it 'Esme'",
+      "detail": "ENV.md line 66 shows the DISCORD_USER_LABEL example value as ('Sebas' or 'Esmel') while every other document in the repo consistently uses 'Esme'. Either the Discord display name is actually 'Esmel' (in which case the other docs need updating), or this is a typo.",
+      "file_globs": ["ENV.md"],
+      "fix_sketch": "Verify Esme's actual Discord display name. If it is 'Esme', correct 'Esmel' → 'Esme' in ENV.md line 66.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-06-01T04:20:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    }
+  ]
+}
