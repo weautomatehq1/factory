@@ -210,6 +210,20 @@ The Factory operates across four bounded contexts. The same word can mean differ
 - **NOT:** "progress bar," "completeness view"
 - **Source:** ROADMAP [M-007]
 
+### PITCH
+- **Canonical:** PITCH (all-caps filename)
+- **Context:** Spec → Build transition
+- **Definition:** A document created post-interview that proposes feature ideas authored by The Factory team, not the client. Lives in the spec repo root alongside INTAKE.md. Separate from INTAKE because INTAKE is canonical evidence (client words verbatim); PITCH is synthesis + optionality authored by The Factory.
+- **NOT:** "feature request," "backlog item" (those live in GitHub Issues after PITCH content is reviewed)
+- **Source:** INTAKE.md §Out-of-scope inputs
+
+### MADR
+- **Canonical:** MADR (acronym, all-caps)
+- **Context:** Spec, all repos
+- **Definition:** Markdown Architectural Decision Record. A template and format for writing ADRs using YAML frontmatter and a structured Markdown body. Defined at adr.github.io/madr/. All Factory ADRs in `docs/decisions/*.md` use MADR format.
+- **NOT:** "ADR format" (MADR is one format among many; use "MADR format" to be specific), "decision doc"
+- **Source:** ADR-0008
+
 ---
 
 ## Events (past-tense, for Event Storming → code)
