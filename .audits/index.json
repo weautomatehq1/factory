@@ -1,8 +1,9 @@
 {
   "repo": "factory",
-  "last_updated": "2026-05-30T04:25:00Z",
-  "open_findings": 0,
+  "last_updated": "2026-06-02T04:11:40Z",
+  "open_findings": 2,
   "by_severity": {
+    "CRITICAL": 2,
     "IMPORTANT": 0,
     "COSMETIC": 0
   },
@@ -10,7 +11,8 @@
     "2026-05-21T03:03:04Z.json",
     "20260523T042538Z.json",
     "20260526T040710Z.json",
-    "20260530T042500Z.json"
+    "20260530T042500Z.json",
+    "20260602T041140Z.json"
   ],
   "findings": [
     {

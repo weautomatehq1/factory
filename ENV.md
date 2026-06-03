@@ -97,7 +97,7 @@ Every env var row has:
 | name | purpose | source | scope | required | rotation | owner | consumed_by |
 |---|---|---|---|---|---|---|---|
 | `STRIPE_SECRET_KEY` | Server-side Stripe API key | dashboard.stripe.com | runtime, server-only | conditional:billing-enabled | 90d | sebas | per-client billing flows |
-| `STRIPE_PUBLISHABLE_KEY` | Client-safe Stripe key (`NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`) | dashboard.stripe.com | runtime, client (with `NEXT_PUBLIC_` prefix) | conditional:billing-enabled | never | sebas | per-client web app |
+| `STRIPE_PUBLISHABLE_KEY` | Client-safe Stripe key — injected as `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` at deploy time (stored in vault as `STRIPE_PUBLISHABLE_KEY`, `NEXT_PUBLIC_` prefix added by Next.js build) | dashboard.stripe.com | runtime, client (with `NEXT_PUBLIC_` prefix) | conditional:billing-enabled | never | sebas | per-client web app |
 | `STRIPE_WEBHOOK_SECRET` | Signing secret for Stripe webhook events | dashboard.stripe.com → Webhooks | runtime, server-only | conditional:billing-enabled | on-incident | sebas | per-client billing flows |
 
 ### Signing — Documenso

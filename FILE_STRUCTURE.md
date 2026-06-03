@@ -139,7 +139,7 @@ factory/
 |---|---|---|
 | Component file | `PascalCase.tsx` | `BillingPlanCard.tsx` |
 | Utility file | `camelCase.ts` | `formatCurrency.ts` |
-| Server action | `camelCase.ts` (imperative-noun) | `createSubscription.ts` |
+| Server action | `camelCase.ts` (verb+noun) | `createSubscription.ts` |
 | Zod schema | `camelCase.ts` | `subscriptionSchema.ts` |
 | Folder | `kebab-case/` | `billing-portal/` |
 | Migration | `<unix-ts>_<snake_case>.sql` | `1715789324_create_subscriptions.sql` |

@@ -81,6 +81,8 @@ owner: sebas
 
 ## Escalation paths
 
+<!-- See also RISKS.md R-012 (Sebastian unavailable during sprint blocker) for the risk context behind these paths. -->
+
 ### If Sebastian is unreachable > 48 hours
 1. Esme can acknowledge inbound briefs in Discord (act as comms holding pattern).
 2. Esme proceeds with non-Protected-Path build work using last-known decisions.
