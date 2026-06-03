@@ -1,0 +1,78 @@
+{
+  "audit_id": "audit-20260603T041154Z",
+  "repo": "factory",
+  "scanned_at": "2026-06-03T04:11:54Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-462dc77e",
+      "severity": "CRITICAL",
+      "category": "assumption",
+      "title": "SPRINT-2026-05-B missing document now 14 days overdue",
+      "detail": "SPRINT-2026-05-B has been referenced as the solution to the Sprint-A planning gap since 2026-05-21 (14 days as of 2026-06-03). STATUS.md correctly flags it as a hard blocker. No SPRINT-B document exists in the repo. Without it, AI workers have no work queue and all milestone progress is frozen. Requires human decision (Sebastian/Esme) to scope and create SPRINT-2026-05-B.",
+      "file_globs": ["SPRINT.md", "ROADMAP.md", ".omc/STATUS.md"],
+      "fix_sketch": "Sebastian must create SPRINT-2026-05-B.md with realistic capacity and scope. Agent cannot invent sprint scope.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-03T04:11:54Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-dd039051",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "KPI.md OKR KR2 deadline 2026-05-27 is missed, still marked at-risk",
+      "detail": "KPI.md marks OKR KR2 as 'at-risk' with DUE 2026-05-27. As of 2026-06-03 (7 days past deadline), this is definitively MISSED. KR3 and KR4 also depend on KR2. Requires human decision on how to update OKR targets for the new timeline.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "KPI.md needs human update: flip KR2/KR3/KR4 to MISSED with note, or set new deadlines with justification. Agent cannot invent new OKR targets.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-03T04:11:54Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-ff7670b5",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "KPI.md KR4 and ROADMAP.md M-018 deadlines expire 2026-06-04 (tomorrow) with no progress",
+      "detail": "ROADMAP.md and KPI.md KR4 both target 2026-06-04 for Discord 8am digest (M-018). As of 2026-06-03, no progress exists on M-018 or its prerequisites M-015. These deadlines will be missed tomorrow. Requires human decision on revised dates.",
+      "file_globs": ["ROADMAP.md", "KPI.md"],
+      "fix_sketch": "Human must update ROADMAP.md and KPI.md dates for M-018/KR4 to reflect realistic completion timeline after SPRINT-B is scoped.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-03T04:11:54Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-b9d96362",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "STATUS.md in-flight section stale — audit/nightly-2026-05-30 merged long ago",
+      "detail": "STATUS.md listed 'audit/nightly-2026-05-30 — push pending for this session' as in-flight. That branch was merged on 2026-05-30 (4+ days ago). The stale entry and outdated SPRINT-B overdue count (day 9 → actually day 14) were misleading the next agent about current work state.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Cleared stale push-pending in-flight entry. Updated STATUS.md with 2026-06-03 audit session entry and corrected SPRINT-B overdue count to day 14.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-06-03T04:11:54Z",
+      "closed_at": "2026-06-03T04:20:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-4b27134c",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "DECISIONS.md reviewer enforcement note (false positive — already present)",
+      "detail": "Initial scan flagged DECISIONS.md as missing a reviewer enforcement note. On verification, line 15 of DECISIONS.md already contains: 'Reviewers: reject any ADR PR that omits the DECISIONS.md update.' No fix needed.",
+      "file_globs": ["DECISIONS.md"],
+      "fix_sketch": "No fix needed — already present in DECISIONS.md line 15.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-03T04:11:54Z",
+      "closed_at": "2026-06-03T04:20:00Z",
+      "closing_pr": null
+    }
+  ]
+}

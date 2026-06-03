@@ -1,16 +1,18 @@
 {
   "repo": "factory",
-  "last_updated": "2026-05-30T04:25:00Z",
-  "open_findings": 0,
+  "last_updated": "2026-06-03T04:20:00Z",
+  "open_findings": 3,
   "by_severity": {
-    "IMPORTANT": 0,
+    "CRITICAL": 1,
+    "IMPORTANT": 2,
     "COSMETIC": 0
   },
   "nightly_audits": [
     "2026-05-21T03:03:04Z.json",
     "20260523T042538Z.json",
     "20260526T040710Z.json",
-    "20260530T042500Z.json"
+    "20260530T042500Z.json",
+    "20260603T041154Z.json"
   ],
   "findings": [
     {
@@ -306,6 +308,36 @@
       "opened_at": "2026-05-26T04:07:10Z",
       "closed_at": "2026-05-26T04:07:10Z",
       "closing_pr": "audit/nightly-2026-05-26"
+    },
+    {
+      "id": "AUDIT-factory-462dc77e",
+      "severity": "CRITICAL",
+      "category": "assumption",
+      "title": "SPRINT-2026-05-B missing document now 14 days overdue",
+      "status": "open",
+      "opened_at": "2026-06-03T04:11:54Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-dd039051",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "KPI.md OKR KR2 deadline 2026-05-27 is missed, still marked at-risk",
+      "status": "open",
+      "opened_at": "2026-06-03T04:11:54Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-ff7670b5",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "KPI.md KR4 and ROADMAP.md M-018 deadlines expire 2026-06-04 (tomorrow) with no progress",
+      "status": "open",
+      "opened_at": "2026-06-03T04:11:54Z",
+      "closed_at": null,
+      "closing_pr": null
     }
   ]
 }
