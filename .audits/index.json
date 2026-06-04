@@ -1,9 +1,9 @@
 {
   "repo": "factory",
-  "last_updated": "2026-06-02T04:11:40Z",
-  "open_findings": 2,
+  "last_updated": "2026-06-04T04:19:27Z",
+  "open_findings": 0,
   "by_severity": {
-    "CRITICAL": 2,
+    "CRITICAL": 0,
     "IMPORTANT": 0,
     "COSMETIC": 0
   },
@@ -12,7 +12,8 @@
     "20260523T042538Z.json",
     "20260526T040710Z.json",
     "20260530T042500Z.json",
-    "20260602T041140Z.json"
+    "20260602T041140Z.json",
+    "20260604T041927Z.json"
   ],
   "findings": [
     {
@@ -308,6 +309,186 @@
       "opened_at": "2026-05-26T04:07:10Z",
       "closed_at": "2026-05-26T04:07:10Z",
       "closing_pr": "audit/nightly-2026-05-26"
+    },
+    {
+      "id": "AUDIT-factory-20260604-01",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ADR-0006 (accepted) was directly edited to add an Erratum section, violating the append-only rule",
+      "file_globs": ["docs/decisions/0006-retell-default-voice.md", "DECISIONS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-02",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP 'Next cycle' window (2026-05-21 → 2026-06-04) expired today with no completion evidence and no reconciliation banner",
+      "file_globs": ["ROADMAP.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-03",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "KPI.md KR4 deadline (2026-06-04) passed today with confidence=6 and no active sprint",
+      "file_globs": ["KPI.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-04",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "AGENTS.md §8 cites 'NON_GOALS.md NG-7' as 'smoke-test-first rationale' but NG-7 is a sprint-scoped test-debt trade-off",
+      "file_globs": ["AGENTS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-05",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "UBIQUITOUS_LANGUAGE.md 'Protected Path' lists ADR-0001 as its source, but ADR-0001 does not define Protected Paths",
+      "file_globs": ["UBIQUITOUS_LANGUAGE.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-06",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "SECURITY.md Killswitches references M-019 for Discord command bridge but M-019 is the cost-tracking dashboard",
+      "file_globs": ["SECURITY.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-07",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP M-015 depends-on field uses non-parseable range syntax '[M-001 through M-014]'",
+      "file_globs": ["ROADMAP.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-08",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "AGENTS.md §2 required reading list has 18 items but context refers to '17 spec files'; CLAUDE.md not clarified as bridge-only",
+      "file_globs": ["AGENTS.md"],
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-09",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ADR-0002 title says 'Four-repo structure' but subtitle lists five distinct repo types",
+      "file_globs": ["DECISIONS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-10",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md initial scaffold entry states '22 domain terms + 24 events' but UBIQUITOUS_LANGUAGE.md now has 27 terms + 26 events",
+      "file_globs": ["CHANGELOG.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-11",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Gap numbering in ROADMAP is non-sequential vs the Gap glossary ordered list",
+      "file_globs": ["UBIQUITOUS_LANGUAGE.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-12",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "INTEGRATIONS.md Anthropic Claude entry references 'Phase B decision' without a cross-reference",
+      "file_globs": ["INTEGRATIONS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-13",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ARCHITECTURE.md frontmatter related_adrs omits ADR-0005 and ADR-0009 which are referenced in its body",
+      "file_globs": ["ARCHITECTURE.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-14",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "UBIQUITOUS_LANGUAGE.md Sprint entry source says 'ADR-0008-ish (Shape Up adopted; full ADR pending)' — placeholder 20 days stale",
+      "file_globs": ["UBIQUITOUS_LANGUAGE.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260604-15",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "NON_GOALS.md NoGo-1 cites ADR-0004 as its source but ADR-0004 is about build-first sprint strategy, not productization scope",
+      "file_globs": ["NON_GOALS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-04T04:19:27Z",
+      "closed_at": "2026-06-04T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-04"
     }
   ]
 }

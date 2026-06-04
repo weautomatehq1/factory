@@ -86,7 +86,7 @@ These are walking-away decisions. If a feature/scope hits a No-Go, we don't do i
 - We will NOT compete with Lovable / Bolt / Cursor / v0 / Replit Agent / Devin.
 - The Factory is **internal agency leverage**. The product we sell is the SaaS we build for the client, not the system that built it.
 - Reason: distinct market, distinct customer (developers vs business owners), distinct support requirements. We don't have the bandwidth or interest for a dev-tool customer base.
-- Documented: ADR-0004
+- Basis: Sebastian 2026-05-12 scope decision (see STAKEHOLDERS.md project overview; ADR-0004 covers sprint strategy, not this scope boundary)
 
 ### NoGo-2. NOT supporting non-SaaS deliverables
 - Mobile apps (native iOS/Android) — out of competence zone

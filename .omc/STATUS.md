@@ -32,25 +32,30 @@ Three sections only. Next agent reads this first.
 - 7 findings fixed (5 IMPORTANT carried from 2026-05-26 + 2 new COSMETIC): ADR-0006 erratum appended (3622c711), Retell R1 deadline ACTION REQUIRED added to ROADMAP (b01a3d58), Factory SLOs table added to RUNBOOK (c5e702e1), logging standard added to ARCHITECTURE §6 (47e08664), SPRINT-B day-9 status noted here (f2d80a11), ENV.md Last verified date corrected (1a2b3c4d), STATUS.md stale in-flight entry replaced (2b3c4d5e).
 - All findings in `.audits/20260530T042500Z.json` now closed.
 
+### 2026-06-04 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-06-04` opened.
+- 15 findings fixed (8 IMPORTANT, 7 COSMETIC): ADR-0006 erratum violation resolved via ADR-0011 superseder, ROADMAP "Next" cycle reconciliation banner added + M-015 depends-on array fixed, KPI.md KR4 marked MISSED + confidence updated to 0, AGENTS.md §8 NG-7 description corrected + §2 CLAUDE.md note added, SECURITY.md killswitches M-019 reference corrected, UBIQUITOUS_LANGUAGE.md Protected Path source + Gap note + Sprint source all fixed, DECISIONS.md ADR-0002 title + ADR-0011 entry added, INTEGRATIONS.md Phase B jargon fixed, ARCHITECTURE.md related_adrs updated, NON_GOALS.md NoGo-1 source corrected.
+- All 15 findings from `20260604T*.json` closed.
+
 ## In flight
 
-- `audit/nightly-2026-05-30` — push pending for this session.
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-05-30 (day 9 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. This is now a hard blocker for any milestone progress.
+- `audit/nightly-2026-06-04` — commit and push pending.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-04 (day 14 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. This is now a hard blocker for any milestone progress. The "Next" cycle window (2026-05-21 → 2026-06-04) expired today with zero delivery.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 9 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — SPRINT-2026-05-A ended without this; now 10 days overdue. ROADMAP Q3 has ACTION REQUIRED notice. Must be resolved before SPRINT-B scope is locked.
+1. **Open SPRINT-2026-05-B** — now 14 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker. The "Next" cycle window closed today with zero delivery.
+2. **Confirm Retell R1 research** (Esme) — SPRINT-2026-05-A ended without this; now 15 days overdue. ROADMAP Q3 has ACTION REQUIRED notice. Must be resolved before SPRINT-B scope is locked.
 3. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero. Either build a sync mechanism or stop claiming Factory is the coordination-of-record.
-4. **All 7 audit findings from 2026-05-30 are now closed.** Next audit will verify no regressions.
+4. **All 15 audit findings from 2026-06-04 are now closed.**
 
 ## Open questions
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes, before re-planning.
-- What is the ADR-0006 Retell R1 confirmation deadline given SPRINT-2026-05-B hasn't been scoped?
+- Retell R1 confirmation: now 15 days overdue; ADR-0006 superseded by ADR-0011 which retains Retell as default.
 
 ---
 
-**Last updated:** 2026-05-30 — nightly audit
-**Previously updated:** 2026-05-26 — nightly audit
+**Last updated:** 2026-06-04 — nightly audit
+**Previously updated:** 2026-05-30 — nightly audit

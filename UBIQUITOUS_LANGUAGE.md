@@ -106,7 +106,7 @@ The Factory operates across four bounded contexts. The same word can mean differ
 ### Gap
 - **Canonical:** Gap (capital G when ID'd, e.g., "Gap 1")
 - **Context:** Build (IFleet evolution)
-- **Definition:** One of the 8 missing IFleet components needed for spec → deployed: Decomposer (1), DAG Queue (2), Bootstrapper (3), Schema Worker (4), Policy Hook (5), Design Bootstrap (6), Deploy Worker (7), Staging URL (8).
+- **Definition:** One of the 8 missing IFleet components needed for spec → deployed: Decomposer (1), DAG Queue (2), Bootstrapper (3), Schema Worker (4), Policy Hook (5), Design Bootstrap (6), Deploy Worker (7), Staging URL (8). Gap numbers are logical IDs, not build-sequence order — see ROADMAP.md for execution order (M-002=Gap1, M-003=Gap2, M-004=Gap5, M-008=Gap4, M-009=Gap6, M-014=Gap3, M-012=Gap7, M-013=Gap8).
 - **NOT:** "feature" (gap is specifically a missing piece, not a new feature)
 - **Source:** Sebastian 2026-05-14 conversation, ROADMAP [M-002 to M-014]
 
@@ -129,7 +129,7 @@ The Factory operates across four bounded contexts. The same word can mean differ
 - **Context:** Operate
 - **Definition:** A file path glob listed in `SECURITY.md#protected-paths` that auto-merge MUST NEVER touch. Includes auth, billing, PII, infrastructure code. Enforced by the auto-merge gate; bypassable only via human merge.
 - **NOT:** "sensitive path," "guarded path"
-- **Source:** ADR-0001, SECURITY.md
+- **Source:** ARCHITECTURE.md §5 (invariant 5), SECURITY.md §Protected-Paths
 
 ### Operator
 - **Canonical:** Operator (capital O)
@@ -165,7 +165,7 @@ The Factory operates across four bounded contexts. The same word can mean differ
 - **Context:** Spec, Build
 - **Definition:** A 1–2 week cycle of work, defined in `SPRINT.md`. Adapted Shape Up: Problem, Appetite (hard time-cap), Solution sketch, Rabbit holes, No-gos, Tasks, Done when. One sprint maps to one or more `[M-NNN]` milestones.
 - **NOT:** "iteration," "cycle" (cycle is broader)
-- **Source:** ADR-0008-ish (Shape Up adopted; full ADR pending)
+- **Source:** Sebastian 2026-05-15 conversation; Shape Up (Basecamp) adapted for 2-person team — no formal ADR written, decision considered self-evident. ADR-0008 covers ADR format, not sprint methodology.
 
 ### Milestone
 - **Canonical:** Milestone (referenced by ID, `[M-NNN]`)

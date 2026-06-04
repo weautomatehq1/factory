@@ -37,7 +37,7 @@ Before doing any non-trivial work in a client repo generated from this template,
 15. `DECISIONS.md` → `docs/decisions/*.md` — why we picked what we picked
 16. `CHANGELOG.md` — release history
 17. `AGENTS.md` — this file
-18. `CLAUDE.md` — Claude-specific bridge
+18. `CLAUDE.md` — Claude-specific bridge (not a spec file; the canonical 17 spec files are items 1–16 above plus this file; CLAUDE.md is included here as the Claude Code entry point, not counted in the 17)
 
 **If a spec file contradicts code, the spec wins.** Open an issue; do not silently drift.
 
@@ -137,7 +137,7 @@ Steal Cloudflare's `Always / Ask first / Never` pattern. Every rule has a one-li
 
 ## 8. Testing
 
-This repo has no tests (markdown only). For client repos, see NON_GOALS.md NG-7 (smoke-test-first rationale) and Sebastian's global `~/.claude/CLAUDE.md`. Note: ADR-0008 covers ADR format, not testing philosophy.
+This repo has no tests (markdown only). For client repos, see NON_GOALS.md NG-7 (intentional test-debt trade-off for sprint velocity; not a general "smoke-test-first" philosophy) and Sebastian's global `~/.claude/CLAUDE.md`. Note: ADR-0008 covers ADR format, not testing philosophy.
 
 For changes here, the verification is:
 - Cross-references resolve (linked sections exist)
