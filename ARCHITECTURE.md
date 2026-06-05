@@ -3,7 +3,7 @@ file: ARCHITECTURE.md
 status: accepted
 last_updated: 2026-05-26
 owner: sebas
-related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0007, ADR-0010]
+related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0005, ADR-0007, ADR-0009, ADR-0010]
 ---
 
 # Architecture

@@ -196,7 +196,7 @@ owner: sebas
 - status: planned
 - owner: sebas+esme
 - appetite: 0.5 day
-- depends-on: [M-001 through M-014]
+- depends-on: [M-001, M-002, M-003, M-004, M-005, M-006, M-007, M-008, M-009, M-010, M-011, M-012, M-013, M-014]
 - success-criteria:
   - Sebastian plays fake client; voice interviewer runs the call
   - Synthesizer generates 17 spec files
@@ -208,7 +208,9 @@ owner: sebas
 
 ---
 
-## Next (next cycle — ~2 weeks, 2026-05-21 → 2026-06-04)
+## Next (next cycle — 2026-05-21 → 2026-06-04; window expired with zero delivery; re-plan pending)
+
+> ⚠️ **Reconciliation note (2026-06-04 nightly audit):** The "next cycle" window (2026-05-21 → 2026-06-04) ended today with none of milestones [M-016] through [M-019] delivered. SPRINT-2026-05-B was never created — there is no active sprint document. Statuses below remain `planned`. All work in this section is deferred until SPRINT-2026-05-B opens. Sebastian and Esme must define the new sprint before any milestone can progress. See `.omc/STATUS.md` "Up next" for immediate blockers.
 
 ### [M-016] Real client #1 — interview through full pipeline
 - status: planned

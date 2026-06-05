@@ -93,7 +93,7 @@ related_adrs: [ADR-0006]
 ### Anthropic Claude (API + Code)
 - **kind:** API
 - **type:** ai
-- **purpose:** Synthesizer brain (Opus), worker pipeline (Sonnet default, Opus on complexity:high per Phase B decision)
+- **purpose:** Synthesizer brain (Opus), worker pipeline (Sonnet default, Opus on complexity:high per IFleet model routing decision 2026-05-12; see STAKEHOLDERS.md decision log)
 - **auth_model:** api_key
 - **secret_refs:** [`ANTHROPIC_API_KEY`]
 - **scope:** all repos

@@ -161,7 +161,7 @@ The Factory repo itself (markdown only) is **Level 1** — no code surface to at
 - `OMC_KILLSWITCH=on` — disables all oh-my-claudecode orchestration (the global escape hatch)
 - KPI regression detected → **automatic** pause of all self-healing for that project until human clears
 
-Toggling: SSH to relevant deployment, update env, restart. Discord command bridge planned (M-019).
+Toggling: SSH to relevant deployment, update env, restart. Discord command bridge for killswitch toggling is planned but not yet scoped into a milestone (M-019 is the cost-tracking dashboard — see ROADMAP.md).
 
 ---
 

@@ -90,7 +90,7 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 
 ### Q2 2026 (until 2026-06-30)
 
-> ⚠️ **OKR update required (2026-05-26 nightly audit):** KR1 deadline (2026-05-20) passed — SPRINT-2026-05-A ended incomplete (zero feature commits). KR2 deadline (2026-05-27) is tomorrow but SPRINT-2026-05-B has not been opened. These OKRs must be revised by Sebastian/Esme in the next sprint planning session. Current status preserved for audit trail.
+> ⚠️ **OKR update required (2026-05-26 nightly audit; updated 2026-06-04):** KR1 deadline (2026-05-20) passed — SPRINT-2026-05-A ended incomplete (zero feature commits). KR2 deadline (2026-05-27) passed — SPRINT-2026-05-B has not been opened. KR4 deadline (2026-06-04) passed today — M-018 not built, no active sprint (MISSED). These OKRs must be revised by Sebastian/Esme in the next sprint planning session. Current status preserved for audit trail.
 
 **Objective:** Operationalize The Factory and onboard client #1 end-to-end.
 
@@ -98,13 +98,13 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 - KR1: Complete SPRINT-2026-05-A dry-run with all 15 milestones green — DUE 2026-05-20 ❌ MISSED (sprint incomplete)
 - KR2: Onboard client #1 via voice interview → merged spec PR — DUE 2026-05-27 (at-risk — no active sprint)
 - KR3: Client #1's phase 1 staging URL reviewed and signed-off by client — DUE 2026-06-10 (depends on KR2)
-- KR4: First Discord 8am digest contains at least 5 days of real data — DUE 2026-06-04 (depends on M-018)
+- KR4: First Discord 8am digest contains at least 5 days of real data — DUE 2026-06-04 ❌ MISSED (M-018 not built; no active sprint)
 
 **Confidence (1-10):**
 - KR1: 0 (missed — SPRINT-2026-05-A confirmed incomplete as of 2026-05-21)
 - KR2: 2 (no active sprint; Retell R1 research still pending; client not scheduled)
 - KR3: 2 (depends on KR2)
-- KR4: 6 (M-018 is straightforward once active sprint starts)
+- KR4: 0 (deadline passed 2026-06-04; M-018 not built; no active sprint)
 
 ---
 

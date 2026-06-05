@@ -1,7 +1,7 @@
 ---
 adr: "0006"
 title: "Retell AI as voice platform default (pending Esme R1 confirmation)"
-status: accepted
+status: superseded by ADR-0011
 date: 2026-05-15
 deciders: [sebas]
 consulted: [esme, voice-research]
