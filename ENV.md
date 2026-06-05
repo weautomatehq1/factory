@@ -139,16 +139,20 @@ False positives in prose: surround with `<example>...</example>` tags in markdow
 
 ## Rotation calendar
 
+> Note: `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, and `DOCUMENSO_API_KEY` appear in this calendar only when their feature is enabled (`required: conditional:billing-enabled` / `conditional:signing-enabled`). Skip those rows when the corresponding feature is disabled.
+
 | Cadence | Items | Trigger |
 |---|---|---|
-| 90 days | `SUPABASE_SERVICE_KEY`, `GITHUB_TOKEN`, `VERCEL_TOKEN`, `HOSTINGER_API_KEY`, `N8N_API_KEY`, `STRIPE_SECRET_KEY`, `DOCUMENSO_API_KEY` | quarterly cron + ADR check |
+| 90 days | `SUPABASE_SERVICE_KEY`, `GITHUB_TOKEN`, `VERCEL_TOKEN`, `HOSTINGER_API_KEY`, `N8N_API_KEY`, `STRIPE_SECRET_KEY`†, `DOCUMENSO_API_KEY`† | quarterly cron + ADR check |
 | 180 days | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `RETELL_API_KEY`, `SENTRY_AUTH_TOKEN`, `HOSTINGER_VPS_SSH_KEY` | half-yearly |
-| Never | `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `DISCORD_CHANNEL_IFLEET`, `RETELL_PHONE_NUMBER`, `STRIPE_PUBLISHABLE_KEY` | n/a |
-| On incident | `RETELL_WEBHOOK_SECRET`, `DISCORD_BOT_TOKEN`, `STRIPE_WEBHOOK_SECRET`, anything suspected leaked | as needed |
+| Never | `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `DISCORD_CHANNEL_IFLEET`, `RETELL_PHONE_NUMBER`, `STRIPE_PUBLISHABLE_KEY`† | n/a |
+| On incident | `RETELL_WEBHOOK_SECRET`, `DISCORD_BOT_TOKEN`, `STRIPE_WEBHOOK_SECRET`†, anything suspected leaked | as needed |
+
+† Conditional — rotate only when billing/signing feature is enabled.
 
 When rotating: update 1Password vault → update each deployment target → confirm with synthetic health-check → document the rotation in `CHANGELOG.md` under `Security`.
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-30 — nightly audit (date corrected; closes AUDIT-factory-1a2b3c4d)
+**Last updated:** 2026-06-05
+**Last verified:** 2026-06-05 — nightly audit (rotation calendar conditional note added; closes AUDIT-factory-c856e7d6)

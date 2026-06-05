@@ -1,9 +1,9 @@
 {
   "repo": "factory",
-  "last_updated": "2026-06-02T04:11:40Z",
-  "open_findings": 2,
+  "last_updated": "2026-06-05T04:30:00Z",
+  "open_findings": 0,
   "by_severity": {
-    "CRITICAL": 2,
+    "CRITICAL": 0,
     "IMPORTANT": 0,
     "COSMETIC": 0
   },
@@ -12,7 +12,8 @@
     "20260523T042538Z.json",
     "20260526T040710Z.json",
     "20260530T042500Z.json",
-    "20260602T041140Z.json"
+    "20260602T041140Z.json",
+    "2026-06-05T04:30:00Z.json"
   ],
   "findings": [
     {
@@ -308,6 +309,62 @@
       "opened_at": "2026-05-26T04:07:10Z",
       "closed_at": "2026-05-26T04:07:10Z",
       "closing_pr": "audit/nightly-2026-05-26"
+    },
+    {
+      "id": "AUDIT-factory-ea932b34",
+      "severity": "IMPORTANT",
+      "category": "redo",
+      "title": "CHANGELOG.md missing 2026-05-30 nightly audit entry",
+      "detail": "The 2026-05-30 nightly audit fixed 7 findings but CHANGELOG.md had no corresponding entry, leaving an 11-day gap in the changelog history.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Add 2026-05-30 nightly audit entry to CHANGELOG.md [Unreleased] → Changed section.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-05T04:30:00Z",
+      "closed_at": "2026-06-05T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-05"
+    },
+    {
+      "id": "AUDIT-factory-f1e0f9fc",
+      "severity": "COSMETIC",
+      "category": "redo",
+      "title": "STATUS.md In-flight entry is 6 days stale — audit/nightly-2026-05-30 still listed as pending push",
+      "detail": "STATUS.md 'In flight' section still listed 'audit/nightly-2026-05-30 — push pending' as of 2026-06-05, 6 days after that session completed.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Move to Done section. Update In-flight to current nightly. Update SPRINT-B day count.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-05T04:30:00Z",
+      "closed_at": "2026-06-05T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-05"
+    },
+    {
+      "id": "AUDIT-factory-c856e7d6",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "ENV.md rotation calendar entries do not indicate conditional features they depend on",
+      "detail": "The 90-day rotation row includes STRIPE_SECRET_KEY and DOCUMENSO_API_KEY which are conditional vars (only needed when billing/signing is enabled). No note indicated conditionality, risking unnecessary rotation work when features are disabled.",
+      "file_globs": ["ENV.md"],
+      "fix_sketch": "Add note above rotation calendar explaining conditional vars apply only when feature is enabled. Add † markers to conditional entries.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-05T04:30:00Z",
+      "closed_at": "2026-06-05T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-05"
+    },
+    {
+      "id": "AUDIT-factory-bf5bd31d",
+      "severity": "COSMETIC",
+      "category": "redo",
+      "title": "DECISIONS.md last_updated date not refreshed since 2026-06-02 audit session",
+      "detail": "Footer was 3 days stale; updated to 2026-06-05 to confirm index was reviewed in this audit session.",
+      "file_globs": ["DECISIONS.md"],
+      "fix_sketch": "Update footer to 2026-06-05.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-05T04:30:00Z",
+      "closed_at": "2026-06-05T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-05"
     }
   ]
 }

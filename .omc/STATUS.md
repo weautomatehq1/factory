@@ -27,22 +27,27 @@ Three sections only. Next agent reads this first.
 - 9 findings fixed (5 IMPORTANT, 4 COSMETIC): ENV.md Stripe/Documenso vars added, ROADMAP Not Doing synced to NON_GOALS.md, README stale memory ref updated, SECURITY.md TBD security.txt URLs removed, costs.json cross-repo note corrected, auth glob gap in CODEOWNERS+workflow fixed, KPI.md OKRs marked stale/missed, ROADMAP/SECURITY footer dates corrected, last_updated stamps refreshed.
 - 5 findings remain open (carried forward): AUDIT-factory-3622c711 (ADR-0006 placeholder), AUDIT-factory-b01a3d58 (Retell R1 pending), AUDIT-factory-c5e702e1 (RUNBOOK SLOs), AUDIT-factory-47e08664 (logging spec undefined), AUDIT-factory-f2d80a11 (SPRINT-B missing).
 
-### 2026-05-30 — Nightly audit (this session)
-- Nightly audit branch `audit/nightly-2026-05-30` opened.
+### 2026-05-30 — Nightly audit
+- Nightly audit branch `audit/nightly-2026-05-30` pushed.
 - 7 findings fixed (5 IMPORTANT carried from 2026-05-26 + 2 new COSMETIC): ADR-0006 erratum appended (3622c711), Retell R1 deadline ACTION REQUIRED added to ROADMAP (b01a3d58), Factory SLOs table added to RUNBOOK (c5e702e1), logging standard added to ARCHITECTURE §6 (47e08664), SPRINT-B day-9 status noted here (f2d80a11), ENV.md Last verified date corrected (1a2b3c4d), STATUS.md stale in-flight entry replaced (2b3c4d5e).
 - All findings in `.audits/20260530T042500Z.json` now closed.
 
+### 2026-06-05 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-06-05` opened.
+- 4 findings fixed (0 IMPORTANT, 4 COSMETIC/process): CHANGELOG.md backfilled 2026-05-30 entry (ea932b34), STATUS.md In-flight entry corrected (f1e0f9fc), ENV.md rotation calendar clarified for conditional vars (c856e7d6), DECISIONS.md last_updated refreshed (bf5bd31d).
+- Human-decision blockers unchanged: SPRINT-2026-05-B still not created (15 days overdue), Retell R1 confirmation still pending. Both require Sebastian + Esme alignment before any milestone progress.
+
 ## In flight
 
-- `audit/nightly-2026-05-30` — push pending for this session.
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-05-30 (day 9 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. This is now a hard blocker for any milestone progress.
+- `audit/nightly-2026-06-05` — push pending for this session.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-05 (day 15 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. This is a hard blocker for any milestone progress.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 9 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — SPRINT-2026-05-A ended without this; now 10 days overdue. ROADMAP Q3 has ACTION REQUIRED notice. Must be resolved before SPRINT-B scope is locked.
+1. **Open SPRINT-2026-05-B** — now 15 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — SPRINT-2026-05-A ended without this; now 16 days overdue. ROADMAP Q3 has ACTION REQUIRED notice. Must be resolved before SPRINT-B scope is locked.
 3. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero. Either build a sync mechanism or stop claiming Factory is the coordination-of-record.
-4. **All 7 audit findings from 2026-05-30 are now closed.** Next audit will verify no regressions.
+4. **All 4 audit findings from 2026-06-05 are now closed.** Next audit will verify no regressions.
 
 ## Open questions
 
@@ -52,5 +57,5 @@ Three sections only. Next agent reads this first.
 
 ---
 
-**Last updated:** 2026-05-30 — nightly audit
-**Previously updated:** 2026-05-26 — nightly audit
+**Last updated:** 2026-06-05 — nightly audit
+**Previously updated:** 2026-05-30 — nightly audit
