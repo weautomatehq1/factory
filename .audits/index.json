@@ -1,6 +1,6 @@
 {
   "repo": "factory",
-  "last_updated": "2026-06-04T04:19:27Z",
+  "last_updated": "2026-06-06T04:30:00Z",
   "open_findings": 0,
   "by_severity": {
     "CRITICAL": 0,
@@ -13,7 +13,8 @@
     "20260526T040710Z.json",
     "20260530T042500Z.json",
     "20260602T041140Z.json",
-    "20260604T041927Z.json"
+    "20260604T041927Z.json",
+    "20260606T040000Z.json"
   ],
   "findings": [
     {
@@ -489,6 +490,114 @@
       "opened_at": "2026-06-04T04:19:27Z",
       "closed_at": "2026-06-04T04:30:00Z",
       "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260606-01",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "KPI.md KR3 deadline (2026-06-10) is 4 days away with KR2 missed and no active sprint — no chance of KR3 delivery",
+      "file_globs": ["KPI.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-06T04:00:00Z",
+      "closed_at": "2026-06-06T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-06"
+    },
+    {
+      "id": "AUDIT-factory-20260606-02",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "STATUS.md 'In flight' section still references audit/nightly-2026-06-04 push as pending — 2 days stale",
+      "file_globs": [".omc/STATUS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-06T04:00:00Z",
+      "closed_at": "2026-06-06T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-06"
+    },
+    {
+      "id": "AUDIT-factory-20260606-03",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP 'Now' section header stale — SPRINT-B still unstarted 16 days overdue as of 2026-06-06",
+      "file_globs": ["ROADMAP.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-06T04:00:00Z",
+      "closed_at": "2026-06-06T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-06"
+    },
+    {
+      "id": "AUDIT-factory-20260606-04",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "RISKS.md most rows not reviewed since 2026-05-15 (22 days) — review-gap notice required",
+      "file_globs": ["RISKS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-06T04:00:00Z",
+      "closed_at": "2026-06-06T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-06"
+    },
+    {
+      "id": "AUDIT-factory-20260606-05",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "AGENTS.md footer dates stale at 2026-05-26 despite 2026-06-04 content changes",
+      "file_globs": ["AGENTS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-06T04:00:00Z",
+      "closed_at": "2026-06-06T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-06"
+    },
+    {
+      "id": "AUDIT-factory-20260606-06",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "DECISIONS.md footer date stale — needs refresh to 2026-06-06",
+      "file_globs": ["DECISIONS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-06T04:00:00Z",
+      "closed_at": "2026-06-06T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-06"
+    },
+    {
+      "id": "AUDIT-factory-20260606-07",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "README.md 'Last updated' footer is 2026-05-26 — 11 days stale",
+      "file_globs": ["README.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-06T04:00:00Z",
+      "closed_at": "2026-06-06T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-06"
+    },
+    {
+      "id": "AUDIT-factory-20260606-08",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md missing 2026-06-06 audit run entry",
+      "file_globs": ["CHANGELOG.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-06T04:00:00Z",
+      "closed_at": "2026-06-06T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-06"
+    },
+    {
+      "id": "AUDIT-factory-20260606-09",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Five spec file footers show last_updated 2026-05-26 despite 2026-06-04 audit modifications",
+      "file_globs": ["ARCHITECTURE.md", "UBIQUITOUS_LANGUAGE.md", "NON_GOALS.md", "SECURITY.md", "INTEGRATIONS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-06T04:00:00Z",
+      "closed_at": "2026-06-06T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-06"
     }
   ]
 }

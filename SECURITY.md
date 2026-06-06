@@ -178,5 +178,5 @@ Toggling: SSH to relevant deployment, update env, restart. Discord command bridg
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit
+**Last updated:** 2026-06-06
+**Last verified:** 2026-06-06 — nightly audit (footer date refreshed; closes AUDIT-factory-20260606-09)

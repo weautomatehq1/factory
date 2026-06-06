@@ -1,7 +1,7 @@
 ---
 file: RISKS.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-06-06
 owner: sebas
 scoring: FMEA — Severity (1-10) × Occurrence (1-10) × Detection (1-10) = RPN
 review_threshold: RPN >= 100
@@ -93,5 +93,7 @@ escalate_rule: "S >= 9 always escalates regardless of RPN (catches rank-reversal
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-06
+**Last verified:** 2026-06-06 — nightly audit (review-gap acknowledgment added; S/O/D scores unchanged pending HITL; closes AUDIT-factory-20260606-04)
+
+> ⚠️ **Review gap notice (2026-06-06 audit):** Most risk rows were last reviewed 2026-05-15 (22 days ago). The weekly sprint review has not occurred because SPRINT-2026-05-B has not been opened. S/O/D scores are frozen pending human review. Risks most affected by elapsed time: R-004 (Retell state loss — Retell account never created), R-005 (webhook auth — integration never started), R-006 (Claude rate limit — no sprint activity), R-007 (synthesizer first-gen — synthesizer not built), R-008 (Tier 2 rollback — not built). Sebastian must re-score these in the first sprint session of SPRINT-2026-05-B.

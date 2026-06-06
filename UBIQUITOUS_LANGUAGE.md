@@ -259,5 +259,5 @@ When the system needs to emit/observe these events, use these exact names:
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-06
+**Last verified:** 2026-06-06 — nightly audit (footer date refreshed; closes AUDIT-factory-20260606-09)

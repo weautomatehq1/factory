@@ -196,5 +196,5 @@ If a rule in this file MUST be unbreakable, promote it to a hook. Note the promo
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-06
+**Last verified:** 2026-06-06 — nightly audit (footer dates refreshed; closes AUDIT-factory-20260606-05)

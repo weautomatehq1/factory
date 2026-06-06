@@ -32,15 +32,20 @@ Three sections only. Next agent reads this first.
 - 7 findings fixed (5 IMPORTANT carried from 2026-05-26 + 2 new COSMETIC): ADR-0006 erratum appended (3622c711), Retell R1 deadline ACTION REQUIRED added to ROADMAP (b01a3d58), Factory SLOs table added to RUNBOOK (c5e702e1), logging standard added to ARCHITECTURE §6 (47e08664), SPRINT-B day-9 status noted here (f2d80a11), ENV.md Last verified date corrected (1a2b3c4d), STATUS.md stale in-flight entry replaced (2b3c4d5e).
 - All findings in `.audits/20260530T042500Z.json` now closed.
 
-### 2026-06-04 — Nightly audit (this session)
-- Nightly audit branch `audit/nightly-2026-06-04` opened.
+### 2026-06-04 — Nightly audit (merged)
+- Nightly audit branch `audit/nightly-2026-06-04` opened and merged.
 - 15 findings fixed (8 IMPORTANT, 7 COSMETIC): ADR-0006 erratum violation resolved via ADR-0011 superseder, ROADMAP "Next" cycle reconciliation banner added + M-015 depends-on array fixed, KPI.md KR4 marked MISSED + confidence updated to 0, AGENTS.md §8 NG-7 description corrected + §2 CLAUDE.md note added, SECURITY.md killswitches M-019 reference corrected, UBIQUITOUS_LANGUAGE.md Protected Path source + Gap note + Sprint source all fixed, DECISIONS.md ADR-0002 title + ADR-0011 entry added, INTEGRATIONS.md Phase B jargon fixed, ARCHITECTURE.md related_adrs updated, NON_GOALS.md NoGo-1 source corrected.
 - All 15 findings from `20260604T*.json` closed.
 
+### 2026-06-06 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-06-06` opened.
+- 9 findings fixed (5 IMPORTANT, 4 COSMETIC): KPI.md KR3 deadline notice added (effectively missed, confidence 2→1), STATUS.md stale in-flight entry replaced, ROADMAP.md 'Now' header updated with SPRINT-B day-16-overdue notice, RISKS.md review-gap notice added (22 days without re-score), AGENTS.md footer dates refreshed, DECISIONS.md footer date updated, README.md footer date updated, CHANGELOG.md 2026-06-06 entry added, ARCHITECTURE.md + UBIQUITOUS_LANGUAGE.md + NON_GOALS.md + SECURITY.md + INTEGRATIONS.md footer dates all refreshed.
+- All 9 findings from `20260606T*.json` fixed.
+
 ## In flight
 
-- `audit/nightly-2026-06-04` — commit and push pending.
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-04 (day 14 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. This is now a hard blocker for any milestone progress. The "Next" cycle window (2026-05-21 → 2026-06-04) expired today with zero delivery.
+- `audit/nightly-2026-06-06` — commit and push pending (audit complete, all 9 findings fixed).
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-06 (day 16 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. This is now a hard blocker for any milestone progress.
 
 ## Up next
 
@@ -57,5 +62,5 @@ Three sections only. Next agent reads this first.
 
 ---
 
-**Last updated:** 2026-06-04 — nightly audit
-**Previously updated:** 2026-05-30 — nightly audit
+**Last updated:** 2026-06-06 — nightly audit
+**Previously updated:** 2026-06-04 — nightly audit
