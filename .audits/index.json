@@ -1,6 +1,6 @@
 {
   "repo": "factory",
-  "last_updated": "2026-06-04T04:19:27Z",
+  "last_updated": "2026-06-08T04:27:00Z",
   "open_findings": 0,
   "by_severity": {
     "CRITICAL": 0,
@@ -13,7 +13,8 @@
     "20260526T040710Z.json",
     "20260530T042500Z.json",
     "20260602T041140Z.json",
-    "20260604T041927Z.json"
+    "20260604T041927Z.json",
+    "2026-06-08T04:25:00Z.json"
   ],
   "findings": [
     {
@@ -489,6 +490,32 @@
       "opened_at": "2026-06-04T04:19:27Z",
       "closed_at": "2026-06-04T04:30:00Z",
       "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-d4e5f6a7",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ADR-0006 frontmatter uses non-standard status value 'superseded by ADR-0011'",
+      "detail": "Status field contained extra text 'by ADR-0011' making it non-standard per MADR template. The superseding relationship is captured in ADR-0011's supersedes field.",
+      "file_globs": ["docs/decisions/0006-retell-default-voice.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-08T04:25:00Z",
+      "closed_at": "2026-06-08T04:27:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-b8c9d0e1",
+      "severity": "COSMETIC",
+      "category": "logic",
+      "title": "DECISIONS.md status lifecycle description endorses non-standard 'superseded by NNNN' format",
+      "detail": "DECISIONS.md sections 3 and 4 described the status lifecycle as 'superseded by NNNN', perpetuating the non-standard format. Corrected to 'superseded'.",
+      "file_globs": ["DECISIONS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-08T04:25:00Z",
+      "closed_at": "2026-06-08T04:27:00Z",
+      "closing_pr": null
     }
   ]
 }

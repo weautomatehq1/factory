@@ -1,0 +1,38 @@
+{
+  "audit_id": "audit-factory-20260608T042500Z",
+  "repo": "factory",
+  "scanned_at": "2026-06-08T04:25:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-d4e5f6a7",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ADR-0006 frontmatter uses non-standard status value 'superseded by ADR-0011'",
+      "detail": "docs/decisions/0006-retell-default-voice.md line 4 has `status: superseded by ADR-0011`. The MADR template (ADR-0008) and _template.md define `superseded` as the valid terminal status. The superseding relationship belongs in ADR-0011's `supersedes: '0006'` field, not in ADR-0006's status string. This non-standard value would break any future ADR index generator that parses frontmatter.",
+      "file_globs": ["docs/decisions/0006-retell-default-voice.md"],
+      "fix_sketch": "Change `status: superseded by ADR-0011` to `status: superseded`.",
+      "parallel_safe": true,
+      "fingerprint": "factory-adr0006-status-nonstandard-2026-06-08",
+      "status": "fixed",
+      "opened_at": "2026-06-08T04:25:00Z",
+      "closed_at": "2026-06-08T04:27:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-b8c9d0e1",
+      "severity": "COSMETIC",
+      "category": "logic",
+      "title": "DECISIONS.md status lifecycle description endorses non-standard 'superseded by NNNN' format",
+      "detail": "DECISIONS.md section 3 and section 4 describe the ADR status lifecycle as flipping to 'superseded by NNNN', perpetuating the non-standard format that ADR-0006 uses. The canonical valid value is just 'superseded' (per _template.md); the link to the superseding ADR is captured via the new ADR's `supersedes` field.",
+      "file_globs": ["DECISIONS.md"],
+      "fix_sketch": "Change both instances of 'superseded by NNNN' to just 'superseded' in the How ADRs work here section.",
+      "parallel_safe": true,
+      "fingerprint": "factory-decisions-superseded-format-2026-06-08",
+      "status": "fixed",
+      "opened_at": "2026-06-08T04:25:00Z",
+      "closed_at": "2026-06-08T04:27:00Z",
+      "closing_pr": null
+    }
+  ]
+}
