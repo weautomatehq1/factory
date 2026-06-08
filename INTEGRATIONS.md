@@ -3,7 +3,7 @@ file: INTEGRATIONS.md
 status: accepted
 last_updated: 2026-05-26
 owner: sebas
-related_adrs: [ADR-0006]
+related_adrs: [ADR-0011]
 ---
 
 # Integrations Registry
