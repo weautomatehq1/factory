@@ -1,7 +1,7 @@
 ---
 file: ROADMAP.md
 status: living
-last_updated: 2026-05-21
+last_updated: 2026-05-30
 last_reconciled: 2026-05-21
 owner: sebas
 ---
@@ -276,7 +276,7 @@ owner: sebas
 
 - **Q1:** Self-heal autonomy level for client #1 (Option B `auto-merge low-risk` recommended). Decision pending.
 - **Q2:** Spec-template location confirmation (own repo `weautomatehq1/spec-template` recommended). Decision: A — confirmed implicitly by directory creation 2026-05-15.
-- **Q3:** Voice platform commitment (Retell default, Esme R1 research pending — see [M-005]). ⚠️ **ACTION REQUIRED**: Esme R1 confirmation is overdue. SPRINT-2026-05-A ended 2026-05-20; as of 2026-05-30 (10 days elapsed) no confirmation or pivot recommendation has landed. Must be scheduled in SPRINT-2026-05-B (itself unstarted). Sebastian to set a hard deadline before SPRINT-B scope is locked. Until confirmed, Retell remains default per ADR-0006.
+- **Q3:** Voice platform commitment (Retell default, Esme R1 research pending — see [M-005]). ⚠️ **ACTION REQUIRED**: Esme R1 confirmation is overdue. SPRINT-2026-05-A ended 2026-05-20; as of 2026-06-09 (20 days elapsed) no confirmation or pivot recommendation has landed. Must be scheduled in SPRINT-2026-05-B (itself unstarted). Sebastian to set a hard deadline before SPRINT-B scope is locked. Until confirmed, Retell remains default per ADR-0006.
 
 ---
 

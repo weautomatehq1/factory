@@ -1,0 +1,78 @@
+{
+  "audit_id": "audit-20260609T073200Z",
+  "repo": "factory",
+  "scanned_at": "2026-06-09T07:32:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-c3a1d8e2",
+      "severity": "IMPORTANT",
+      "category": "redo",
+      "title": "STATUS.md stale — In-flight section references 2026-05-30 push as pending (already merged) and understates sprint delay",
+      "detail": "STATUS.md §In flight showed 'audit/nightly-2026-05-30 — push pending for this session' — that branch was merged (commit 3b46e72). The 2026-06-02 nightly audit (f7ce2a2) also did not update STATUS.md. SPRINT-2026-05-B was described as '9 days overdue' but as of 2026-06-09 it is 20 days overdue.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Moved 2026-05-30 and 2026-06-02 audit entries to Done section. Updated In-flight to current 2026-06-09 nightly audit. Updated SPRINT-B overdue count to 20 days.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-06-09T07:32:00Z",
+      "closed_at": "2026-06-09T07:45:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-5b2e9f1a",
+      "severity": "IMPORTANT",
+      "category": "redo",
+      "title": "ROADMAP.md Q3 open question stale — 'as of 2026-05-30 (10 days elapsed)' understates urgency by 10 days",
+      "detail": "ROADMAP.md Q3 open question said 'as of 2026-05-30 (10 days elapsed)' but today is 2026-06-09 — 20 days since SPRINT-2026-05-A ended on 2026-05-20. The stale date understated urgency of the unresolved Esme R1 Retell confirmation.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Replaced 'as of 2026-05-30 (10 days elapsed)' with 'as of 2026-06-09 (20 days elapsed)'.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-09T07:32:00Z",
+      "closed_at": "2026-06-09T07:45:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-a7f3c6b4",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "RISKS.md R-013 mitigation references M-026 which does not exist in ROADMAP.md",
+      "detail": "RISKS.md R-013 mitigation read 'Pre-call screening questionnaire (planned M-026)' but ROADMAP.md only defines milestones up to M-024. M-025 and M-026 are not registered. Workers following the mitigation cannot find the referenced milestone.",
+      "file_globs": ["RISKS.md"],
+      "fix_sketch": "Replaced 'planned M-026' with 'future milestone (not yet scheduled in ROADMAP.md)' to eliminate the dangling reference.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-09T07:32:00Z",
+      "closed_at": "2026-06-09T07:45:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-d9e4b2c7",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ROADMAP.md frontmatter last_updated 2026-05-21 does not match footer Last verified 2026-05-30",
+      "detail": "ROADMAP.md frontmatter said last_updated: 2026-05-21 but the footer said 'Last verified: 2026-05-30 — nightly audit'. The frontmatter was not updated when the Q3 deadline notice was added.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Updated ROADMAP.md frontmatter last_updated from 2026-05-21 to 2026-05-30.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-09T07:32:00Z",
+      "closed_at": "2026-06-09T07:45:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-e1c8a3f5",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "AGENTS.md §5 table says 'regen from frontmatter' for DECISIONS.md but generator is not wired",
+      "detail": "AGENTS.md §5 Commands table said the tool for updating DECISIONS.md index is 'regen from frontmatter' — but DECISIONS.md frontmatter states the generator is 'not yet wired — manually maintained until M-002+ ships'. The table entry implied automation that does not exist.",
+      "file_globs": ["AGENTS.md"],
+      "fix_sketch": "Replaced 'regen from frontmatter' with 'Manual update to index table (automation pending M-002)' in AGENTS.md §5 table.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-09T07:32:00Z",
+      "closed_at": "2026-06-09T07:45:00Z",
+      "closing_pr": null
+    }
+  ]
+}

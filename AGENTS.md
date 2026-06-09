@@ -95,7 +95,7 @@ This repo is markdown only — no build, no tests. Worker actions in this repo:
 | Action | Tool | When |
 |---|---|---|
 | Add an ADR | `Write` new file in `docs/decisions/NNNN-*.md` | When making a non-trivial decision |
-| Update `DECISIONS.md` index | regen from frontmatter | After adding an ADR |
+| Update `DECISIONS.md` index | Manual update to index table (automation pending M-002) | After adding an ADR |
 | Update `CHANGELOG.md` `[Unreleased]` | `Edit` | On every spec change |
 | Update `.omc/STATUS.md` | `Edit` | End of each work session |
 
