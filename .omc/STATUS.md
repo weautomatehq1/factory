@@ -44,24 +44,30 @@ Three sections only. Next agent reads this first.
 - Factory: KR2 + KR3 marked MISSED, stale timestamps updated, cross-repo ref fixes (INTEGRATIONS.md, NON_GOALS.md, RISKS.md, ROADMAP.md, CHANGELOG.md).
 - audit-elevation: scan_id→audit_id fix, closing_pr type standardized, schema doc corrected.
 
+### 2026-06-10 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-06-10` opened across IFleet + factory + audit-elevation.
+- IFleet: 8 findings fixed (1C/5I/2Cos) including CRITICAL ANTHROPIC_API_KEY exfiltration vector closed — pushed to IFleet audit/nightly-2026-06-10.
+- Factory: KR3 deadline reached (today, 2026-06-10) — confirmed MISSED; timestamps corrected (KPI.md, RUNBOOK.md, SECURITY.md frontmatter); Esme R1 ACTION REQUIRED note updated (now 21 days overdue).
+- audit-elevation: scan in progress.
+
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-07 (day 17 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 OKRs are now MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-10 (day 20 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 14 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker. The "Next" cycle window closed today with zero delivery.
-2. **Confirm Retell R1 research** (Esme) — SPRINT-2026-05-A ended without this; now 15 days overdue. ROADMAP Q3 has ACTION REQUIRED notice. Must be resolved before SPRINT-B scope is locked.
-3. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero. Either build a sync mechanism or stop claiming Factory is the coordination-of-record.
-4. **All 15 audit findings from 2026-06-04 are now closed.**
+1. **Open SPRINT-2026-05-B** — now 20 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 21 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 starts 2026-07-01, no goals defined yet.
+4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
 ## Open questions
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
-- Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes, before re-planning.
-- Retell R1 confirmation: now 15 days overdue; ADR-0006 superseded by ADR-0011 which retains Retell as default.
+- Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
+- Retell R1 confirmation: now 21 days overdue; ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-06-07 — nightly audit (KR2+KR3 MISSED, stale refs fixed, audit-elevation fixed)
-**Previously updated:** 2026-06-04 — nightly audit
+**Last updated:** 2026-06-10 — nightly audit (KR3 deadline reached, timestamps corrected, Esme R1 note updated)
+**Previously updated:** 2026-06-07 — nightly audit

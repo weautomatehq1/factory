@@ -2,7 +2,7 @@
 file: RUNBOOK.md
 status: skeleton
 populated_when: first incident occurs OR M-018 daily digest exposes a recurring alert (rule of two — second occurrence triggers entry)
-last_updated: 2026-05-26
+last_updated: 2026-05-30
 owner: sebas
 template_source: Google SRE Book chs. 11-16
 ---
