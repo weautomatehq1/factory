@@ -90,20 +90,20 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 
 ### Q2 2026 (until 2026-06-30)
 
-> ⚠️ **OKR update required (2026-05-26 nightly audit; updated 2026-06-07):** KR1 MISSED (2026-05-20). KR2 MISSED (2026-05-27 — 11 days past deadline; no client scheduled; no active sprint). KR3 MISSED (2026-06-10 — 3 days away but KR2 prerequisite missed; no client onboarded). KR4 MISSED (2026-06-04). All four Q2 OKRs now failed or imminently missed. Sebastian/Esme must revise OKRs in the next sprint planning session. Current status preserved for audit trail.
+> ⚠️ **OKR update required (2026-05-26 nightly audit; updated 2026-06-11):** KR1 MISSED (2026-05-20). KR2 MISSED (2026-05-27 — 11 days past deadline; no client scheduled; no active sprint). KR3 MISSED (2026-06-10 — deadline passed; KR2 prerequisite missed; no client onboarded). KR4 MISSED (2026-06-04). All four Q2 OKRs now failed or missed. Sebastian/Esme must revise OKRs in the next sprint planning session. Current status preserved for audit trail.
 
 **Objective:** Operationalize The Factory and onboard client #1 end-to-end.
 
 **Key Results:** (numeric, time-bound — populate as we hit milestones)
 - KR1: Complete SPRINT-2026-05-A dry-run with all 15 milestones green — DUE 2026-05-20 ❌ MISSED (sprint incomplete)
 - KR2: Onboard client #1 via voice interview → merged spec PR — DUE 2026-05-27 ❌ MISSED (11 days past deadline; no client scheduled; no active sprint)
-- KR3: Client #1's phase 1 staging URL reviewed and signed-off by client — DUE 2026-06-10 ❌ MISSED (KR2 prerequisite missed; no client onboarded; 3 days remain but unachievable)
+- KR3: Client #1's phase 1 staging URL reviewed and signed-off by client — DUE 2026-06-10 ❌ MISSED (KR2 prerequisite missed; no client onboarded; deadline passed 2026-06-10; unachievable)
 - KR4: First Discord 8am digest contains at least 5 days of real data — DUE 2026-06-04 ❌ MISSED (M-018 not built; no active sprint)
 
 **Confidence (1-10):**
 - KR1: 0 (missed — SPRINT-2026-05-A confirmed incomplete as of 2026-05-21)
 - KR2: 0 (MISSED — deadline 2026-05-27 passed 11 days ago; no client; no sprint)
-- KR3: 0 (MISSED — KR2 prerequisite failed; DUE 2026-06-10 in 3 days but unachievable)
+- KR3: 0 (MISSED — KR2 prerequisite failed; DUE 2026-06-10 — deadline passed; missed)
 - KR4: 0 (deadline passed 2026-06-04; M-018 not built; no active sprint)
 
 ---

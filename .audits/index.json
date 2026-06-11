@@ -1,6 +1,6 @@
 {
   "repo": "factory",
-  "last_updated": "2026-06-04T04:19:27Z",
+  "last_updated": "2026-06-11T04:07:14Z",
   "open_findings": 0,
   "by_severity": {
     "CRITICAL": 0,
@@ -13,7 +13,8 @@
     "20260526T040710Z.json",
     "20260530T042500Z.json",
     "20260602T041140Z.json",
-    "20260604T041927Z.json"
+    "20260604T041927Z.json",
+    "20260611T040714Z.json"
   ],
   "findings": [
     {
@@ -489,6 +490,20 @@
       "opened_at": "2026-06-04T04:19:27Z",
       "closed_at": "2026-06-04T04:30:00Z",
       "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-aeec331e",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "KPI.md and STATUS.md contain stale day-count references after KR3 deadline (2026-06-10) passed",
+      "detail": "KPI.md line 93 banner said 'KR3 MISSED (2026-06-10 — 3 days away)' and line 100/106 said '3 days remain'. STATUS.md In-flight said 'As of 2026-06-07 (day 17 overdue)' and Up-next said 'now 14 days overdue'. All references scanned on 2026-06-11 after the deadline passed.",
+      "file_globs": ["KPI.md", ".omc/STATUS.md"],
+      "fix_sketch": "Update KPI.md to say 'deadline passed 2026-06-10; unachievable'. Update STATUS.md day counts to reflect 21 days overdue.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-11T04:07:14Z",
+      "closed_at": "2026-06-11T04:07:14Z",
+      "closing_pr": "audit/nightly-2026-06-11"
     }
   ]
 }

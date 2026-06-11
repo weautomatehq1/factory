@@ -44,13 +44,19 @@ Three sections only. Next agent reads this first.
 - Factory: KR2 + KR3 marked MISSED, stale timestamps updated, cross-repo ref fixes (INTEGRATIONS.md, NON_GOALS.md, RISKS.md, ROADMAP.md, CHANGELOG.md).
 - audit-elevation: scan_id→audit_id fix, closing_pr type standardized, schema doc corrected.
 
+### 2026-06-11 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-06-11` opened across IFleet + factory + audit-elevation.
+- IFleet: 3 findings fixed (0C/1I/2Cos) — codex tmpDir leak on non-zero exit, audit finding stuck in verifying, unused reposDir field removed.
+- Factory: 1 COSMETIC finding (AUDIT-factory-aeec331e) — KR3 deadline passed 2026-06-10; stale day-count refs in KPI.md and STATUS.md corrected.
+- All findings in this session now fixed.
+
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-07 (day 17 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 OKRs are now MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-11 (day 21 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 OKRs are now MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 14 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker. The "Next" cycle window closed today with zero delivery.
+1. **Open SPRINT-2026-05-B** — now 21 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker. The "Next" cycle window closed with zero delivery.
 2. **Confirm Retell R1 research** (Esme) — SPRINT-2026-05-A ended without this; now 15 days overdue. ROADMAP Q3 has ACTION REQUIRED notice. Must be resolved before SPRINT-B scope is locked.
 3. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero. Either build a sync mechanism or stop claiming Factory is the coordination-of-record.
 4. **All 15 audit findings from 2026-06-04 are now closed.**
@@ -63,5 +69,5 @@ Three sections only. Next agent reads this first.
 
 ---
 
-**Last updated:** 2026-06-07 — nightly audit (KR2+KR3 MISSED, stale refs fixed, audit-elevation fixed)
-**Previously updated:** 2026-06-04 — nightly audit
+**Last updated:** 2026-06-11 — nightly audit (KR3 deadline passed 2026-06-10; stale day-count refs corrected)
+**Previously updated:** 2026-06-07 — nightly audit
