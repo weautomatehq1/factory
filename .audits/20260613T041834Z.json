@@ -1,0 +1,12 @@
+{
+  "run_id": "nightly-2026-06-13",
+  "repo": "factory",
+  "branch": "audit/nightly-2026-06-13",
+  "started_at": "2026-06-13T04:18:34Z",
+  "finished_at": "2026-06-13T04:18:34Z",
+  "rubric": "CRITICAL/IMPORTANT/COSMETIC",
+  "result": "Clean scan",
+  "files_scanned": "*.md, docs/decisions/*.md, .omc/STATUS.md, .github/workflows/*.yml",
+  "new_findings": 0,
+  "note": "All previously identified findings remain closed. Date maintenance applied: RISKS.md, INTEGRATIONS.md, ROADMAP.md frontmatter last_updated corrected to 2026-06-13. STATUS.md updated with sprint/Retell overdue day counts."
+}

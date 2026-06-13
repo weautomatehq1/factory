@@ -1,7 +1,7 @@
 ---
 file: ROADMAP.md
 status: living
-last_updated: 2026-06-07
+last_updated: 2026-06-13
 last_reconciled: 2026-06-07
 owner: sebas
 ---
@@ -282,5 +282,5 @@ owner: sebas
 
 ---
 
-**Last updated:** 2026-06-10
-**Last verified:** 2026-06-10 — nightly audit (Esme R1 action-required date updated to 21 days elapsed)
+**Last updated:** 2026-06-13
+**Last verified:** 2026-06-13 — nightly audit (clean scan, date maintenance)
