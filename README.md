@@ -83,4 +83,4 @@ Full glossary: `UBIQUITOUS_LANGUAGE.md`.
 
 ---
 
-**Last updated:** 2026-05-26
+**Last updated:** 2026-06-14

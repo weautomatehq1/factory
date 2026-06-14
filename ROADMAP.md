@@ -278,9 +278,9 @@ owner: sebas
 
 - **Q1:** Self-heal autonomy level for client #1 (Option B `auto-merge low-risk` recommended). Decision pending.
 - **Q2:** Spec-template location confirmation (own repo `weautomatehq1/spec-template` recommended). Decision: A — confirmed implicitly by directory creation 2026-05-15.
-- **Q3:** Voice platform commitment (Retell default, Esme R1 research pending — see [M-005]). ⚠️ **ACTION REQUIRED**: Esme R1 confirmation is overdue. SPRINT-2026-05-A ended 2026-05-20; as of 2026-06-10 (21 days elapsed) no confirmation or pivot recommendation has landed. SPRINT-2026-05-B has not been created. Sebastian must set a hard deadline. Until confirmed, Retell remains default per ADR-0011 (supersedes ADR-0006).
+- **Q3:** Voice platform commitment (Retell default, Esme R1 research pending — see [M-005]). ⚠️ **ACTION REQUIRED**: Esme R1 confirmation is overdue. SPRINT-2026-05-A ended 2026-05-20; as of 2026-06-14 (25 days elapsed) no confirmation or pivot recommendation has landed. SPRINT-2026-05-B has not been created. Sebastian must set a hard deadline. Until confirmed, Retell remains default per ADR-0011 (supersedes ADR-0006).
 
 ---
 
-**Last updated:** 2026-06-10
-**Last verified:** 2026-06-10 — nightly audit (Esme R1 action-required date updated to 21 days elapsed)
+**Last updated:** 2026-06-14
+**Last verified:** 2026-06-14 — nightly audit (Esme R1 action-required date updated to 25 days elapsed)

@@ -50,15 +50,20 @@ Three sections only. Next agent reads this first.
 - Factory: KR3 deadline reached (today, 2026-06-10) — confirmed MISSED; timestamps corrected (KPI.md, RUNBOOK.md, SECURITY.md frontmatter); Esme R1 ACTION REQUIRED note updated (now 21 days overdue).
 - audit-elevation: scan in progress.
 
+### 2026-06-14 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-06-14` opened.
+- Factory: 7 findings total (0 CRITICAL, 3 IMPORTANT, 4 COSMETIC). 3 fixed (README footer, STATUS.md, CHANGELOG); 4 open (SPRINT-B 24 days overdue, Retell R1 25 days overdue, Q3 OKRs undefined, costs.json empty).
+- Written audit file: `.audits/2026-06-14T00:00:00.000Z.json`. Updated `.audits/index.json`.
+
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-10 (day 20 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-14 (day 24 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED. Q3 2026 starts 2026-07-01 (17 days) — Q3 OKRs also undefined.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 20 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 21 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
-3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 starts 2026-07-01, no goals defined yet.
+1. **Open SPRINT-2026-05-B** — now 24 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 25 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 starts 2026-07-01 (17 days), no goals defined yet. Urgent.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
 ## Open questions
@@ -69,5 +74,5 @@ Three sections only. Next agent reads this first.
 
 ---
 
-**Last updated:** 2026-06-10 — nightly audit (KR3 deadline reached, timestamps corrected, Esme R1 note updated)
-**Previously updated:** 2026-06-07 — nightly audit
+**Last updated:** 2026-06-14 — nightly audit (SPRINT-B day 24 overdue, Q3 OKRs undefined, 3 cosmetic fixes applied)
+**Previously updated:** 2026-06-10 — nightly audit
