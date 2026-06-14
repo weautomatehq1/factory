@@ -1,7 +1,7 @@
 ---
 file: RISKS.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-06-13
 owner: sebas
 scoring: FMEA — Severity (1-10) × Occurrence (1-10) × Detection (1-10) = RPN
 review_threshold: RPN >= 100
