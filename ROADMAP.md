@@ -1,8 +1,8 @@
 ---
 file: ROADMAP.md
 status: living
-last_updated: 2026-06-13
-last_reconciled: 2026-06-07
+last_updated: 2026-06-17
+last_reconciled: 2026-06-17
 owner: sebas
 ---
 
@@ -10,14 +10,39 @@ owner: sebas
 
 > Now / Next / Later / Not Doing. Milestones are bracketed `[M-NNN]` so IFleet's decomposer can regex-match them. `depends-on` builds the DAG that gates worker pickup.
 
-> ⚠️ **Reconciliation note (2026-05-21):** SPRINT-2026-05-A ended 2026-05-20 but `git log --since=2026-05-15` on factory returns only the scaffold commit (`d49b1a4`). Statuses below have been rolled back to reflect git reality — anything previously implying progress in this repo has been changed to `deferred` or `not-started` with reason. Sibling repos (IFleet, voice-discovery) are NOT backfilled into this file by audit-fix `AUDIT-factory-b5bd1864`. See SPRINT.md §Reconciliation note for full context. A new SPRINT-2026-05-B will re-plan based on current reality.
+> ⚠️ **Reconciliation note (2026-06-17):** Prior reconciliation paragraphs are superseded. Factory git reality 2026-05-23 → 2026-06-10 shows 8 nightly-audit cycles closing ~73 findings — real delivery, just not roadmap-milestone-shaped. IFleet shipped M5 substrate (#323/#325/#326), M5.2 partial (Approve→/ship enqueue + PR-outcome tracking merged), M6 substrate with flag-gated closure paths (`DRIFT_REAL_PR`/`BANDIT_LIVE` default OFF), M4.5 Phase C routing migration (ADR-0004), and an audit-hardening sweep (#374-#386, 15 findings incl. 6 CRITICAL security; closeouts #387-#390). None of this advances M-002/3/4 (the IFleet "spec decomposer / DAG queue / policy hook" gaps), which remain genuinely planned and blocked on IFleet sprint capacity, not on M-001. [M-001] spec-template repo flipped from `deferred` to `shipped`. [M-005] voice-discovery repo does not exist — `planned` is correct. SPRINT-2026-05-B was never opened; the current de-facto sprint is IFleet's M5.2/M6 push tracked in `~/dev/IFleet/SPRINT.md`, not in this file.
+
+---
+
+## Shipped (out-of-cycle delivery)
+
+### [M-NEW-A] Nightly self-audit cadence (factory)
+- status: shipped
+- delivered: 2026-05-23 → present
+- evidence: ~73 findings closed across 8 nightly-audit cycles. See `git log --grep "nightly audit"`.
+- owner: sebas
+
+### [M-NEW-B] IFleet audit-hardening sweep 2026-06
+- status: shipped
+- delivered: 2026-06 (PRs #374-#386, 15 findings, 6 CRITICAL security; closeouts #387-#390)
+- evidence: PRs #374-#390 in `weautomatehq1/IFleet`
+- cross-link: `~/dev/IFleet/docs/runbooks/audit-hardening-2026-06.md`
+- owner: sebas
+
+### [M-NEW-C] M5 Proposer substrate live (IFleet)
+- status: shipped (substrate), gated (live deploy on `#ifleet-proposals` channel + `PROPOSER_ENABLED=1`)
+- delivered: 2026-06 (IFleet PRs #323/#325/#326)
+- owner: sebas
+
+---
 
 ## Now (current cycle — re-plan pending in SPRINT-2026-05-B; SPRINT-2026-05-A ran 2026-05-15 → 2026-05-20, incomplete)
 
 ### [M-001] Spec-template repo scaffolded
-- status: deferred
-- reason: no factory commits since 2026-05-15 scaffold; spec-template repo state not tracked here
-- previous_status: in-progress (was incorrectly carried forward from 2026-05-15)
+- status: shipped
+- shipped_date: 2026-05-16
+- evidence: `gh repo view weautomatehq1/spec-template` — repo created 2026-05-16, `isTemplate: true`
+- follow-up: verify success criteria #2 (17 files with skeleton frontmatter) and #3 (README orients) in follow-up.
 - owner: sebas
 - appetite: 1 day
 - depends-on: []
@@ -210,8 +235,6 @@ owner: sebas
 
 ## Next (next cycle — 2026-05-21 → 2026-06-04; window expired with zero delivery; re-plan pending)
 
-> ⚠️ **Reconciliation note (2026-06-04 nightly audit):** The "next cycle" window (2026-05-21 → 2026-06-04) ended today with none of milestones [M-016] through [M-019] delivered. SPRINT-2026-05-B was never created — there is no active sprint document. Statuses below remain `planned`. All work in this section is deferred until SPRINT-2026-05-B opens. Sebastian and Esme must define the new sprint before any milestone can progress. See `.omc/STATUS.md` "Up next" for immediate blockers.
-
 ### [M-016] Real client #1 — interview through full pipeline
 - status: planned
 - depends-on: [M-015]
@@ -277,10 +300,15 @@ owner: sebas
 ## Open questions
 
 - **Q1:** Self-heal autonomy level for client #1 (Option B `auto-merge low-risk` recommended). Decision pending.
-- **Q2:** Spec-template location confirmation (own repo `weautomatehq1/spec-template` recommended). Decision: A — confirmed implicitly by directory creation 2026-05-15.
-- **Q3:** Voice platform commitment (Retell default, Esme R1 research pending — see [M-005]). ⚠️ **ACTION REQUIRED**: Esme R1 confirmation is overdue. SPRINT-2026-05-A ended 2026-05-20; as of 2026-06-10 (21 days elapsed) no confirmation or pivot recommendation has landed. SPRINT-2026-05-B has not been created. Sebastian must set a hard deadline. Until confirmed, Retell remains default per ADR-0011 (supersedes ADR-0006).
+- **Q2:** ~~Spec-template location confirmation (own repo `weautomatehq1/spec-template` recommended).~~ **Resolved by Q1** — repo exists at `weautomatehq1/spec-template`, `isTemplate: true`, created 2026-05-16. [M-001] flipped to `shipped`.
+- **Q3:** 🚨 **BLOCKING DECISION — OVERDUE (28+ days):** Voice platform commitment (Retell default vs. Esme R1). SPRINT-2026-05-A ended 2026-05-20; as of 2026-06-17 (28 days elapsed) no confirmation or pivot recommendation has landed. SPRINT-2026-05-B has not been created. Sebastian must set a hard deadline. M-005 through M-007, M-010, M-015 are all blocked on this decision. Until confirmed, Retell remains default per ADR-0011 (supersedes ADR-0006).
 
 ---
 
+<<<<<<< HEAD
 **Last updated:** 2026-06-13
 **Last verified:** 2026-06-13 — nightly audit (clean scan, date maintenance)
+=======
+**Last updated:** 2026-06-17
+**Last verified:** 2026-06-17 — manual reconciliation against factory git log + IFleet PR history
+>>>>>>> 3e502df (docs(roadmap): reconcile against 2026-06-17 git reality)
