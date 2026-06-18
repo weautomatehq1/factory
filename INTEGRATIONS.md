@@ -315,5 +315,5 @@ related_adrs: [ADR-0011]
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-13
+**Last verified:** 2026-06-18 — nightly audit (read-only review; no content changes)

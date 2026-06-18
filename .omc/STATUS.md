@@ -58,12 +58,12 @@ Three sections only. Next agent reads this first.
 
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-13 (day 23 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-18 (day 28 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 23 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 24 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+1. **Open SPRINT-2026-05-B** — now 28 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 29 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
 3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 starts 2026-07-01, no goals defined yet.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
@@ -71,9 +71,9 @@ Three sections only. Next agent reads this first.
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 24 days overdue; ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 29 days overdue; ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-06-13 — nightly audit (clean scan, date maintenance)
-**Previously updated:** 2026-06-10 — nightly audit
+**Last updated:** 2026-06-18 — nightly audit (5 COSMETIC findings fixed: footer/frontmatter date sync on INTEGRATIONS.md, RISKS.md, DECISIONS.md, NON_GOALS.md; STATUS.md day counts updated)
+**Previously updated:** 2026-06-13 — nightly audit
