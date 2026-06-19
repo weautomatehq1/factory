@@ -1,0 +1,50 @@
+{
+  "audit_id": "audit-20260619T040828Z",
+  "repo": "factory",
+  "scanned_at": "2026-06-19T04:08:28Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-c0d1e2f3",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "audits/index.json header counts show 2 open CRITICALs but all CRITICAL findings are closed",
+      "detail": "The index.json summary block (open_findings: 2, CRITICAL: 2) was not updated when AUDIT-factory-b6ff2b68 and AUDIT-factory-b5bd1864 were closed. Future agents reading only the header will incorrectly believe there are 2 open CRITICAL issues and may take unnecessary remedial action.",
+      "file_globs": [".audits/index.json"],
+      "fix_sketch": "Set open_findings to 0 and all severity counts to 0 in the header summary block.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-19T04:08:28Z",
+      "closed_at": "2026-06-19T04:20:00Z",
+      "closing_pr": "audit/nightly-2026-06-19"
+    },
+    {
+      "id": "AUDIT-factory-d4e5f6a7",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "AGENTS.md §8 mislabels NON_GOALS NG-7 as 'smoke-test-first rationale'",
+      "detail": "NG-7 in NON_GOALS.md is about DEFERRING comprehensive test coverage (intentional debt trade-off), not about adopting 'smoke-test-first' as a philosophy. The label 'smoke-test-first rationale' implies the strategy IS smoke-first, but NG-7 actually says smoke-only-this-sprint with full coverage next cycle. The IFleet AGENTS.md already carries the more precise characterization.",
+      "file_globs": ["AGENTS.md"],
+      "fix_sketch": "Replace 'smoke-test-first rationale' with 'intentional test-debt trade-off for sprint velocity' to match the actual NG-7 wording.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-19T04:08:28Z",
+      "closed_at": "2026-06-19T04:20:00Z",
+      "closing_pr": "audit/nightly-2026-06-19"
+    },
+    {
+      "id": "AUDIT-factory-b8c9d0e1",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md last updated 2026-05-30 — 20 days stale, in-flight section references past audit branch",
+      "detail": "STATUS.md 'In flight' still lists audit/nightly-2026-05-30 as pending push, and the overall file was last updated 2026-05-30 (20 days ago). Per AGENTS.md §7 Always rules, STATUS.md must be updated at end of every session. This causes the next agent to read stale state.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Add a 2026-06-19 audit entry to Done section. Replace stale In-flight entry. Update Last updated footer.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-19T04:08:28Z",
+      "closed_at": "2026-06-19T04:20:00Z",
+      "closing_pr": "audit/nightly-2026-06-19"
+    }
+  ]
+}
