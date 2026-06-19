@@ -1,6 +1,6 @@
 {
   "repo": "factory",
-  "last_updated": "2026-06-13T04:18:34Z",
+  "last_updated": "2026-06-18T04:00:00Z",
   "open_findings": 0,
   "by_severity": {
     "CRITICAL": 0,
@@ -14,7 +14,8 @@
     "20260530T042500Z.json",
     "20260602T041140Z.json",
     "20260604T041927Z.json",
-    "20260613T041834Z.json"
+    "20260613T041834Z.json",
+    "20260618T040000Z.json"
   ],
   "findings": [
     {
@@ -490,6 +491,66 @@
       "opened_at": "2026-06-04T04:19:27Z",
       "closed_at": "2026-06-04T04:30:00Z",
       "closing_pr": "audit/nightly-2026-06-04"
+    },
+    {
+      "id": "AUDIT-factory-20260618-01",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "INTEGRATIONS.md footer dates stale vs frontmatter (last_updated 2026-05-26 vs frontmatter 2026-06-13)",
+      "file_globs": ["INTEGRATIONS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-18T04:00:00Z",
+      "closed_at": "2026-06-18T04:10:00Z",
+      "closing_pr": "audit/nightly-2026-06-18"
+    },
+    {
+      "id": "AUDIT-factory-20260618-02",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "RISKS.md footer dates stale vs frontmatter (last_updated 2026-05-26 vs frontmatter 2026-06-13)",
+      "file_globs": ["RISKS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-18T04:00:00Z",
+      "closed_at": "2026-06-18T04:10:00Z",
+      "closing_pr": "audit/nightly-2026-06-18"
+    },
+    {
+      "id": "AUDIT-factory-20260618-03",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "DECISIONS.md frontmatter last_updated (2026-05-26) lags footer (2026-06-04) by 9 days",
+      "file_globs": ["DECISIONS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-18T04:00:00Z",
+      "closed_at": "2026-06-18T04:10:00Z",
+      "closing_pr": "audit/nightly-2026-06-18"
+    },
+    {
+      "id": "AUDIT-factory-20260618-04",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "NON_GOALS.md Last verified footer date (2026-05-26) is 23 days stale",
+      "file_globs": ["NON_GOALS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-18T04:00:00Z",
+      "closed_at": "2026-06-18T04:10:00Z",
+      "closing_pr": "audit/nightly-2026-06-18"
+    },
+    {
+      "id": "AUDIT-factory-20260618-05",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md overdue day counts and last-updated line are 5 days stale (last updated 2026-06-13)",
+      "file_globs": [".omc/STATUS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-18T04:00:00Z",
+      "closed_at": "2026-06-18T04:10:00Z",
+      "closing_pr": "audit/nightly-2026-06-18"
     }
   ]
 }

@@ -149,4 +149,4 @@ These are walking-away decisions. If a feature/scope hits a No-Go, we don't do i
 ---
 
 **Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last verified:** 2026-06-18 — nightly audit (read-only review; no content changes)
