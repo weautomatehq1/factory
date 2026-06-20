@@ -10,7 +10,7 @@ owner: sebas
 
 > Now / Next / Later / Not Doing. Milestones are bracketed `[M-NNN]` so IFleet's decomposer can regex-match them. `depends-on` builds the DAG that gates worker pickup.
 
-> ⚠️ **Reconciliation note (2026-06-17):** Prior reconciliation paragraphs are superseded. Factory git reality 2026-05-23 → 2026-06-10 shows 8 nightly-audit cycles closing ~73 findings — real delivery, just not roadmap-milestone-shaped. IFleet shipped M5 substrate (#323/#325/#326), M5.2 partial (Approve→/ship enqueue + PR-outcome tracking merged), M6 substrate with flag-gated closure paths (`DRIFT_REAL_PR`/`BANDIT_LIVE` default OFF), M4.5 Phase C routing migration (ADR-0004), and an audit-hardening sweep (#374-#386, 15 findings incl. 6 CRITICAL security; closeouts #387-#390). None of this advances M-002/3/4 (the IFleet "spec decomposer / DAG queue / policy hook" gaps), which remain genuinely planned and blocked on IFleet sprint capacity, not on M-001. [M-001] spec-template repo flipped from `deferred` to `shipped`. [M-005] voice-discovery repo does not exist — `planned` is correct. SPRINT-2026-05-B was never opened; the current de-facto sprint is IFleet's M5.2/M6 push tracked in `~/dev/IFleet/SPRINT.md`, not in this file.
+> ⚠️ **Reconciliation note (2026-06-17):** Prior reconciliation paragraphs are superseded. Factory git reality 2026-05-23 → 2026-06-10 shows 8 nightly-audit cycles closing ~73 findings — real delivery, just not roadmap-milestone-shaped. IFleet shipped M5 substrate (#323/#325/#326), M5.2 partial (Approve→/ship enqueue + PR-outcome tracking merged), M6 substrate with flag-gated closure paths (`DRIFT_REAL_PR`/`BANDIT_LIVE` default OFF), M4.5 Phase C routing migration (IFleet ADR-0004 — see IFleet docs/adr/0004-canonical-routing-alignment.md, not to be confused with factory ADR-0004 which covers pipeline-first strategy), and an audit-hardening sweep (#374-#386, 15 findings incl. 6 CRITICAL security; closeouts #387-#390). None of this advances M-002/3/4 (the IFleet "spec decomposer / DAG queue / policy hook" gaps), which remain genuinely planned and blocked on IFleet sprint capacity, not on M-001. [M-001] spec-template repo flipped from `deferred` to `shipped`. [M-005] voice-discovery repo does not exist — `planned` is correct. SPRINT-2026-05-B was never opened; the current de-facto sprint is IFleet's M5.2/M6 push tracked in `~/dev/IFleet/SPRINT.md`, not in this file.
 
 ---
 
@@ -305,10 +305,5 @@ owner: sebas
 
 ---
 
-<<<<<<< HEAD
-**Last updated:** 2026-06-13
-**Last verified:** 2026-06-13 — nightly audit (clean scan, date maintenance)
-=======
-**Last updated:** 2026-06-17
+**Last updated:** 2026-06-20
 **Last verified:** 2026-06-17 — manual reconciliation against factory git log + IFleet PR history
->>>>>>> 3e502df (docs(roadmap): reconcile against 2026-06-17 git reality)
