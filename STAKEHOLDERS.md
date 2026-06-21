@@ -68,7 +68,7 @@ owner: sebas
 | 2026-05-15 | Four-repo structure (Factory + IFleet + voice-discovery + spec-template + per-client) | Sebastian | Sebastian | ADR-0002 |
 | 2026-05-15 | AGENTS.md primary, CLAUDE.md as @AGENTS.md bridge | Sebastian | Sebastian | ADR-0001 |
 | 2026-05-15 | Issues remain unit of work for IFleet (4 upstream sources) | Sebastian | Sebastian | ADR-0003, ADR-0010 |
-| 2026-05-15 | Retell AI as voice default (pending Esme R1 confirmation) | Sebastian | Sebastian | ADR-0006 |
+| 2026-05-15 | Retell AI as voice default (pending Esme R1 confirmation) | Sebastian | Sebastian | ADR-0011 (supersedes ADR-0006) |
 | 2026-05-15 | Mermaid + C4 L1-L2 only for diagrams | Sebastian | Sebastian | ADR-0007 |
 | 2026-05-15 | MADR format for ADRs, append-only via filename | Sebastian | Sebastian | ADR-0008 |
 | 2026-05-15 | Four-tier data classification + NIST CIA mapping | Sebastian | Sebastian | ADR-0009 |

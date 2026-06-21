@@ -20,7 +20,7 @@ This repo does **not** contain runnable code. Code lives in the other three Fact
 |---|---|---|
 | `weautomatehq1/IFleet` | Worker fleet — picks issues, ships PRs | Exists (launched 2026-05-19, PR #117) |
 | `weautomatehq1/voice-discovery` | Voice interviewer + n8n orchestration | Not yet created |
-| `weautomatehq1/spec-template` | GitHub template used to spawn per-client repos | Not yet created |
+| `weautomatehq1/spec-template` | GitHub template used to spawn per-client repos | Exists (created 2026-05-16, isTemplate: true, [M-001] shipped) |
 | `weautomatehq1/<client-name>` | Per-client SaaS — generated from spec-template | Created when client #1 interviews |
 
 ## How to use this repo
@@ -83,4 +83,4 @@ Full glossary: `UBIQUITOUS_LANGUAGE.md`.
 
 ---
 
-**Last updated:** 2026-05-26
+**Last updated:** 2026-06-20
