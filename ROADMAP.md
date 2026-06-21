@@ -102,7 +102,7 @@ owner: sebas
   - n8n workflow: Retell webhook → Supabase persist transcript
   - Test call ends → row in Supabase with full transcript
 - sprint: SPRINT-2026-05-A
-- adrs: [ADR-0006]
+- adrs: [ADR-0011]
 
 ### [M-006] Voice interviewer brain (Layer 1 + Layer 2)
 - status: planned
@@ -233,7 +233,7 @@ owner: sebas
 
 ---
 
-## Next (next cycle — 2026-05-21 → 2026-06-04; window expired with zero delivery; re-plan pending)
+## Next (re-plan pending — SPRINT-2026-05-B not yet opened)
 
 ### [M-016] Real client #1 — interview through full pipeline
 - status: planned
@@ -272,7 +272,7 @@ owner: sebas
 
 ---
 
-## Later (this quarter — 2026-Q2 / Q3)
+## Later (2026-Q3 and beyond)
 
 ### [M-020] Client #2 and #3 onboarded
 - Validates that the pipeline scales beyond client #1.
@@ -301,14 +301,9 @@ owner: sebas
 
 - **Q1:** Self-heal autonomy level for client #1 (Option B `auto-merge low-risk` recommended). Decision pending.
 - **Q2:** ~~Spec-template location confirmation (own repo `weautomatehq1/spec-template` recommended).~~ **Resolved by Q1** — repo exists at `weautomatehq1/spec-template`, `isTemplate: true`, created 2026-05-16. [M-001] flipped to `shipped`.
-- **Q3:** 🚨 **BLOCKING DECISION — OVERDUE (28+ days):** Voice platform commitment (Retell default vs. Esme R1). SPRINT-2026-05-A ended 2026-05-20; as of 2026-06-17 (28 days elapsed) no confirmation or pivot recommendation has landed. SPRINT-2026-05-B has not been created. Sebastian must set a hard deadline. M-005 through M-007, M-010, M-015 are all blocked on this decision. Until confirmed, Retell remains default per ADR-0011 (supersedes ADR-0006).
+- **Q3:** 🚨 **BLOCKING DECISION — OVERDUE (32+ days):** Voice platform commitment (Retell default vs. Esme R1). SPRINT-2026-05-A ended 2026-05-20; as of 2026-06-21 (32 days elapsed) no confirmation or pivot recommendation has landed. SPRINT-2026-05-B has not been created. Sebastian must set a hard deadline. M-005 through M-007, M-010, M-015 are all blocked on this decision. Until confirmed, Retell remains default per ADR-0011 (supersedes ADR-0006). (see .omc/STATUS.md §Up-next for tracking)
 
 ---
 
-<<<<<<< HEAD
-**Last updated:** 2026-06-13
-**Last verified:** 2026-06-13 — nightly audit (clean scan, date maintenance)
-=======
 **Last updated:** 2026-06-17
 **Last verified:** 2026-06-17 — manual reconciliation against factory git log + IFleet PR history
->>>>>>> 3e502df (docs(roadmap): reconcile against 2026-06-17 git reality)

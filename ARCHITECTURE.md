@@ -166,8 +166,8 @@ These are the rules that don't show up by reading code — they show up by viola
 |---|---|---|
 | **Authentication** | per-client repo `lib/auth/`; protected path | `SECURITY.md` |
 | **Multi-tenant isolation** | Supabase RLS policies; `lib/api-guard/` | `supabase-multitenant` skill |
-| **Logging** | Structured JSON to stdout + Sentry breadcrumbs (see standard below) | `AGENTS.md` §6 |
-| **Error handling** | API boundary returns `{ data, error, status }`; never expose stack traces | `AGENTS.md` §6 |
+| **Logging** | Structured JSON to stdout + Sentry breadcrumbs (see standard below) | `ARCHITECTURE.md` §6 (this section) |
+| **Error handling** | API boundary returns `{ data, error, status }`; never expose stack traces | `ARCHITECTURE.md` §6 (this section) |
 | **Observability** | Sentry + PostHog + n8n execution history + Session Report plugin | `KPI.md` |
 | **Cost tracking** | per-session in `.omc/costs.json`; daily aggregate in Discord digest | `M-019` |
 | **Secrets management** | 1Password vault → env vars at deploy; names only in `ENV.md` | `SECURITY.md` |

@@ -96,13 +96,13 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 
 **Key Results:** (numeric, time-bound — populate as we hit milestones)
 - KR1: Complete SPRINT-2026-05-A dry-run with all 15 milestones green — DUE 2026-05-20 ❌ MISSED (sprint incomplete)
-- KR2: Onboard client #1 via voice interview → merged spec PR — DUE 2026-05-27 ❌ MISSED (11 days past deadline; no client scheduled; no active sprint)
+- KR2: Onboard client #1 via voice interview → merged spec PR — DUE 2026-05-27 ❌ MISSED (14 days past deadline; no client scheduled; no active sprint)
 - KR3: Client #1's phase 1 staging URL reviewed and signed-off by client — DUE 2026-06-10 ❌ MISSED (KR2 prerequisite missed; no client onboarded; deadline reached 2026-06-10)
 - KR4: First Discord 8am digest contains at least 5 days of real data — DUE 2026-06-04 ❌ MISSED (M-018 not built; no active sprint)
 
 **Confidence (1-10):**
 - KR1: 0 (missed — SPRINT-2026-05-A confirmed incomplete as of 2026-05-21)
-- KR2: 0 (MISSED — deadline 2026-05-27 passed 11 days ago; no client; no sprint)
+- KR2: 0 (MISSED — deadline 2026-05-27 passed 14 days ago; no client; no sprint)
 - KR3: 0 (MISSED — KR2 prerequisite failed; deadline reached 2026-06-10; KR2 prerequisite never met)
 - KR4: 0 (deadline passed 2026-06-04; M-018 not built; no active sprint)
 

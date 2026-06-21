@@ -52,7 +52,7 @@ Four-tier industry pattern. Each tier maps to NIST SP 800-60 CIA impact for audi
 
 ---
 
-## Protected Paths (the auto-merge gate)
+## Protected Paths
 
 Changes touching these paths **REQUIRE human review** — IFleet workers MAY NOT auto-merge, even on green CI + low risk score + outside business hours + all other gates passing.
 

@@ -1,10 +1,10 @@
 {
   "repo": "factory",
-  "last_updated": "2026-06-18T04:00:00Z",
-  "open_findings": 0,
+  "last_updated": "2026-06-21T04:00:00Z",
+  "open_findings": 5,
   "by_severity": {
-    "CRITICAL": 0,
-    "IMPORTANT": 0,
+    "CRITICAL": 2,
+    "IMPORTANT": 3,
     "COSMETIC": 0
   },
   "nightly_audits": [
@@ -15,7 +15,8 @@
     "20260602T041140Z.json",
     "20260604T041927Z.json",
     "20260613T041834Z.json",
-    "20260618T040000Z.json"
+    "20260618T040000Z.json",
+    "20260621T040000Z.json"
   ],
   "findings": [
     {
@@ -551,6 +552,246 @@
       "opened_at": "2026-06-18T04:00:00Z",
       "closed_at": "2026-06-18T04:10:00Z",
       "closing_pr": "audit/nightly-2026-06-18"
+    },
+    {
+      "id": "AUDIT-factory-20260621-01",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "Live git merge conflict in ROADMAP.md footer — conflict markers in working tree",
+      "file_globs": ["ROADMAP.md"],
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:15:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-02",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "ADR-0011 missing required MADR sections — pre-commit hook blocks autonomous fix",
+      "file_globs": ["docs/decisions/0011-retell-voice-platform-erratum.md"],
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-20260621-03",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "SPRINT-2026-05-B not created — coordination repo has no active sprint for 32 days",
+      "file_globs": ["SPRINT.md", "ROADMAP.md", ".omc/STATUS.md"],
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-20260621-04",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP M-005 adrs references superseded ADR-0006 instead of ADR-0011",
+      "file_globs": ["ROADMAP.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:20:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-05",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP Q3 Retell R1 overdue count stale (28 days → 32+ days)",
+      "file_globs": ["ROADMAP.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:20:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-06",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP 'Next' section heading references expired delivery window (2026-05-21 → 2026-06-04)",
+      "file_globs": ["ROADMAP.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:20:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-07",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP 'Later' section heading says '2026-Q2 / Q3' — Q3-only deliverables mislabeled",
+      "file_globs": ["ROADMAP.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:20:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-08",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "README.md spec-template row shows 'Not yet created' — repo exists since 2026-05-16",
+      "file_globs": ["README.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:25:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-09",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "KPI.md KR2 day count stale ('11 days past deadline' → '14 days')",
+      "file_globs": ["KPI.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:25:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-10",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ARCHITECTURE.md cross-cutting table lists wrong owner for Logging and Error Handling (AGENTS.md §6 → ARCHITECTURE.md §6)",
+      "file_globs": ["ARCHITECTURE.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-11",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "No Q3 2026 OKRs defined — Q3 starts 2026-07-01 (10 days away)",
+      "file_globs": ["KPI.md", ".omc/STATUS.md", "ROADMAP.md"],
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-20260621-12",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "RISKS.md risk rows have not been re-scored in 30-37 days — quarterly cadence exceeded",
+      "file_globs": ["RISKS.md"],
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-20260621-13",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "UBIQUITOUS_LANGUAGE.md IFleet path uses Mac local convention — conflicts with VPS path /home/user/IFleet",
+      "file_globs": ["UBIQUITOUS_LANGUAGE.md"],
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-20260621-14",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "SECURITY.md 'Protected Paths (the auto-merge gate)' heading generates broken GitHub anchor",
+      "file_globs": ["SECURITY.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:35:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-15",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "AGENTS.md §3 tree shows ADR range '0001-*.md … 0010-*.md' — ADR-0011 exists",
+      "file_globs": ["AGENTS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:35:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-16",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "AGENTS.md §3 tree missing docs/postmortems/ and docs/templates/ directories",
+      "file_globs": ["AGENTS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:35:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-17",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "NON_GOALS.md NoGo-6 references phantom milestone 'M-026+' (current max is M-024)",
+      "file_globs": ["NON_GOALS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:40:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-18",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md initial scaffold entry says '14 third-party services' (correct: 13)",
+      "file_globs": ["CHANGELOG.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:40:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-19",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md overdue day counts stale (28/29 days → 32 days as of 2026-06-21)",
+      "file_globs": [".omc/STATUS.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:45:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
+    },
+    {
+      "id": "AUDIT-factory-20260621-20",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ADR-0006 Erratum section lacks pointer to ADR-0011 superseder",
+      "file_globs": ["docs/decisions/0006-retell-default-voice.md"],
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-21T04:00:00Z",
+      "closed_at": "2026-06-21T04:45:00Z",
+      "closing_pr": "audit/nightly-2026-06-21"
     }
   ]
 }

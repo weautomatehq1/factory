@@ -56,14 +56,20 @@ Three sections only. Next agent reads this first.
 - Factory: Clean scan. Date maintenance only (RISKS.md, INTEGRATIONS.md, ROADMAP.md timestamps updated to 2026-06-13).
 - audit-elevation: scan pending.
 
+### 2026-06-21 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-06-21` opened across IFleet + factory + audit-elevation.
+- IFleet: 6 findings fixed (3C/2I/1Cos): sandbox git checkout `--` pathspec bug (CRITICAL), pipeline hardcoded `main` branch (CRITICAL), codex.ts `.ts` import extensions (CRITICAL), spawnCapture null exit code masking (IMPORTANT), costs.ts dead try/catch (IMPORTANT), trailing whitespace (COSMETIC). 4 open findings remain (sprint dispatch race, zero-boot workers, goal length unbounded, bandit boost zero). Pushed to IFleet audit/nightly-2026-06-21.
+- Factory: 20 findings (3C/10I/7C) — 15 fixed: ROADMAP.md live merge conflict resolved (CRITICAL), M-005 ADR ref updated, stale day counts corrected, 'Next'/'Later' headings fixed, README spec-template status corrected, KPI.md day counts, ARCHITECTURE.md logging owner, SECURITY.md anchor heading, AGENTS.md tree updated, NON_GOALS.md phantom milestone, CHANGELOG.md service count. 5 findings remain open (2C: ADR-0011 incomplete + SPRINT-B missing; 3I: no Q3 OKRs + RISKS.md stale + UL path inconsistency). Pushed to factory audit/nightly-2026-06-21.
+- audit-elevation: 3 findings (1I/2Cos) — 2 fixed: README stale date, proposer-spec Mac paths. 1 IMPORTANT open: Phase 3 soak window elapsed (gate assessment due). Pushed to audit-elevation audit/nightly-2026-06-21.
+
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-18 (day 28 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-21 (day 32 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 28 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 29 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+1. **Open SPRINT-2026-05-B** — now 32 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 32 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
 3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 starts 2026-07-01, no goals defined yet.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
@@ -71,9 +77,9 @@ Three sections only. Next agent reads this first.
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 29 days overdue; ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 32 days overdue; ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-06-18 — nightly audit (5 COSMETIC findings fixed: footer/frontmatter date sync on INTEGRATIONS.md, RISKS.md, DECISIONS.md, NON_GOALS.md; STATUS.md day counts updated)
-**Previously updated:** 2026-06-13 — nightly audit
+**Last updated:** 2026-06-21 — nightly audit (20 findings: 15 fixed — ROADMAP merge conflict resolved, M-005 ADR ref, stale counts, headings, README spec-template, KPI/ARCHITECTURE/SECURITY/AGENTS/NON_GOALS/CHANGELOG fixes; 5 open — ADR-0011 incomplete, SPRINT-B missing, no Q3 OKRs, RISKS stale, UL path)
+**Previously updated:** 2026-06-18 — nightly audit

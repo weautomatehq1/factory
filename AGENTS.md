@@ -66,7 +66,9 @@ factory/
 ├── DECISIONS.md               # auto-generated index
 ├── docs/decisions/            # one ADR per file (NNNN-*.md)
 │   ├── _template.md
-│   └── 0001-*.md … 0010-*.md
+│   └── 0001-*.md … 0011-*.md
+├── docs/postmortems/          # postmortem files (per RUNBOOK.md)
+├── docs/templates/            # file templates (per FILE_STRUCTURE.md)
 └── .omc/
     ├── STATUS.md              # Done / In flight / Up next
     └── costs.json             # usage log

@@ -126,7 +126,7 @@ These are walking-away decisions. If a feature/scope hits a No-Go, we don't do i
 - Text-only-preference clients — different product
 - Clients who refuse a recorded call — different product
 - Reason: voice interview is the foundational primitive of The Factory. Other intake forms = different system entirely.
-- (Future: a text-based intake mode is plausible but is M-026+, not this product line.)
+- (Future: a text-based intake mode is plausible but is beyond the current roadmap horizon (M-024+), not this product line.)
 
 ### NoGo-7. NOT fabricating INTAKE.md content
 - If we don't have a real client interview, INTAKE stays `status: skeleton`.
