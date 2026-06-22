@@ -1,0 +1,35 @@
+{
+  "scan_id": "20260622T041450Z",
+  "scanned_at": "2026-06-22T04:14:50Z",
+  "repo": "factory",
+  "findings": [
+    {
+      "id": "AUDIT-factory-sprint-b-stale-day-count",
+      "severity": "IMPORTANT",
+      "category": "staleness",
+      "title": "STATUS.md SPRINT-B and Retell R1 day counts stale by 2 days",
+      "detail": ".omc/STATUS.md last updated 2026-06-20 still shows SPRINT-B as '30 days overdue' and Retell R1 as '31 days overdue'. As of 2026-06-22 these are 32 and 33 days overdue respectively.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Update day counts and Last updated timestamp",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-22T04:14:50Z",
+      "closed_at": "2026-06-22T04:14:50Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-roadmap-overdue-count",
+      "severity": "IMPORTANT",
+      "category": "staleness",
+      "title": "ROADMAP.md blocking decision overdue count stale — '28+ days' should be '33+ days'",
+      "detail": "ROADMAP.md line 304 reads 'OVERDUE (28+ days)' and 'as of 2026-06-17 (28 days elapsed)'. As of 2026-06-22, 33 days have elapsed since SPRINT-2026-05-A ended 2026-05-20.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Update '28+ days' to '33+ days' and 'as of 2026-06-17' to 'as of 2026-06-22'",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-22T04:14:50Z",
+      "closed_at": "2026-06-22T04:14:50Z",
+      "closing_pr": null
+    }
+  ]
+}

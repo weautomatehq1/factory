@@ -1,13 +1,15 @@
 {
-  "last_updated": "2026-06-20T04:30:00Z",
+  "last_updated": "2026-06-22T04:14:50Z",
   "open_count": 2,
-  "fixed_count": 5,
-  "audits": ["20260620T041100Z.json"],
+  "fixed_count": 7,
+  "audits": ["20260622T041450Z.json", "20260620T041100Z.json"],
   "open_findings": [
     "AUDIT-factory-sprint-b-missing",
     "AUDIT-factory-retell-r1-overdue"
   ],
   "fixed_findings": [
+    "AUDIT-factory-sprint-b-stale-day-count",
+    "AUDIT-factory-roadmap-overdue-count",
     "AUDIT-factory-roadmap-merge-conflict",
     "AUDIT-factory-roadmap-adr004-collision",
     "AUDIT-factory-readme-spectemplate-stale",

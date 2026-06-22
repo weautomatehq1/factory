@@ -301,7 +301,7 @@ owner: sebas
 
 - **Q1:** Self-heal autonomy level for client #1 (Option B `auto-merge low-risk` recommended). Decision pending.
 - **Q2:** ~~Spec-template location confirmation (own repo `weautomatehq1/spec-template` recommended).~~ **Resolved by Q1** — repo exists at `weautomatehq1/spec-template`, `isTemplate: true`, created 2026-05-16. [M-001] flipped to `shipped`.
-- **Q3:** 🚨 **BLOCKING DECISION — OVERDUE (28+ days):** Voice platform commitment (Retell default vs. Esme R1). SPRINT-2026-05-A ended 2026-05-20; as of 2026-06-17 (28 days elapsed) no confirmation or pivot recommendation has landed. SPRINT-2026-05-B has not been created. Sebastian must set a hard deadline. M-005 through M-007, M-010, M-015 are all blocked on this decision. Until confirmed, Retell remains default per ADR-0011 (supersedes ADR-0006).
+- **Q3:** 🚨 **BLOCKING DECISION — OVERDUE (33+ days):** Voice platform commitment (Retell default vs. Esme R1). SPRINT-2026-05-A ended 2026-05-20; as of 2026-06-22 (33 days elapsed) no confirmation or pivot recommendation has landed. SPRINT-2026-05-B has not been created. Sebastian must set a hard deadline. M-005 through M-007, M-010, M-015 are all blocked on this decision. Until confirmed, Retell remains default per ADR-0011 (supersedes ADR-0006).
 
 ---
 
