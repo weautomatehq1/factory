@@ -1,17 +1,23 @@
 {
-  "last_updated": "2026-06-20T04:30:00Z",
-  "open_count": 2,
-  "fixed_count": 5,
-  "audits": ["20260620T041100Z.json"],
-  "open_findings": [
-    "AUDIT-factory-sprint-b-missing",
-    "AUDIT-factory-retell-r1-overdue"
-  ],
+  "last_updated": "2026-06-23T00:00:00Z",
+  "open_count": 0,
+  "fixed_count": 6,
+  "cannot_fix_count": 1,
+  "audits": ["20260623T000000Z.json"],
+  "open_findings": [],
   "fixed_findings": [
-    "AUDIT-factory-roadmap-merge-conflict",
-    "AUDIT-factory-roadmap-adr004-collision",
-    "AUDIT-factory-readme-spectemplate-stale",
-    "AUDIT-factory-stakeholders-adr-ref",
-    "AUDIT-factory-status-stale-dates"
+    "AUDIT-factory-2026-06-23-001",
+    "AUDIT-factory-2026-06-23-002",
+    "AUDIT-factory-2026-06-23-003",
+    "AUDIT-factory-2026-06-23-004",
+    "AUDIT-factory-2026-06-23-005",
+    "AUDIT-factory-2026-06-23-006"
+  ],
+  "cannot_fix_findings": [
+    "AUDIT-factory-2026-06-23-007"
+  ],
+  "prior_open_findings_resolved": [
+    "AUDIT-factory-sprint-b-missing (still open — sprint not created, day count updated)",
+    "AUDIT-factory-retell-r1-overdue (still open — no resolution from Esme, day count updated)"
   ]
 }

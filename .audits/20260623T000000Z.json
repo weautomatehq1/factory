@@ -1,0 +1,75 @@
+{
+  "audit_id": "AUDIT-factory-20260623",
+  "repo": "weautomatehq1/factory",
+  "branch": "audit/nightly-2026-06-23",
+  "audited_at": "2026-06-23T00:00:00Z",
+  "auditor": "claude-sonnet-4-6 (nightly audit agent)",
+  "summary": {
+    "total": 7,
+    "critical": 0,
+    "important": 3,
+    "cosmetic": 3,
+    "cannot_fix": 1,
+    "fixed": 6,
+    "open": 0
+  },
+  "findings": [
+    {
+      "id": "AUDIT-factory-2026-06-23-001",
+      "severity": "IMPORTANT",
+      "file": "README.md",
+      "description": "The '17 spec files' table listed 18 entries — CLAUDE.md was included but it is a Claude-specific bridge file, not one of the 17 spec files. AGENTS.md §2 clearly excludes CLAUDE.md from the 17-file count.",
+      "fix": "Removed CLAUDE.md row from the spec files table.",
+      "status": "fixed"
+    },
+    {
+      "id": "AUDIT-factory-2026-06-23-002",
+      "severity": "IMPORTANT",
+      "file": "ARCHITECTURE.md",
+      "description": "Frontmatter last_updated was 2026-05-26. ADRs 0011 was added 2026-06-04, logging standard was added in a 2026-05-30 audit session, and related_adrs were updated in the 2026-06-04 session. The file was substantively modified well after the stated date.",
+      "fix": "Updated last_updated to 2026-06-23 and Last verified footer.",
+      "status": "fixed"
+    },
+    {
+      "id": "AUDIT-factory-2026-06-23-003",
+      "severity": "IMPORTANT",
+      "file": "NON_GOALS.md",
+      "description": "Frontmatter related_adrs was empty ([]) despite NG-1 explicitly citing ADR-0005 in its Source field.",
+      "fix": "Changed related_adrs: [] to related_adrs: [ADR-0005].",
+      "status": "fixed"
+    },
+    {
+      "id": "AUDIT-factory-2026-06-23-004",
+      "severity": "COSMETIC",
+      "file": "AGENTS.md",
+      "description": "Directory tree in §3 showed '0001-*.md … 0010-*.md' but there are now 11 ADRs (ADR-0011 was added 2026-06-04).",
+      "fix": "Updated range to '0001-*.md … 0011-*.md'.",
+      "status": "fixed"
+    },
+    {
+      "id": "AUDIT-factory-2026-06-23-005",
+      "severity": "COSMETIC",
+      "file": "ROADMAP.md",
+      "description": "Frontmatter last_updated was 2026-06-17 but the footer said 'Last updated: 2026-06-20'. Also Q3 open question said '28 days elapsed' as of 2026-06-17 but today is 2026-06-23 (34 days).",
+      "fix": "Corrected frontmatter last_updated to 2026-06-20 to match footer; updated Q3 elapsed days from 28 to 34.",
+      "status": "fixed"
+    },
+    {
+      "id": "AUDIT-factory-2026-06-23-006",
+      "severity": "COSMETIC",
+      "file": ".omc/STATUS.md",
+      "description": "In-flight entry said 'day 30 overdue' (accurate as of 2026-06-20) and Up next said '30 days overdue'/'31 days overdue'. As of 2026-06-23 these are now 33 and 34 days respectively.",
+      "fix": "Updated day counts and Open questions stale day count; updated Last updated footer.",
+      "status": "fixed"
+    },
+    {
+      "id": "AUDIT-factory-2026-06-23-007",
+      "severity": "COSMETIC",
+      "file": "docs/decisions/0002-four-repo-structure.md",
+      "description": "ADR-0002 title says 'Four-repo structure' and H1 says 'Four-repo structure' but the decision body lists five entities: factory + IFleet + voice-discovery + spec-template + per-client repos. The subtitle even names all five. This is a nomenclature inconsistency in an accepted ADR.",
+      "fix": "Cannot fix — editing accepted ADRs violates the append-only rule (AGENTS.md §7 Never). Superseding via ADR-0012 would be disproportionate for a cosmetic title issue. Noted here for awareness.",
+      "status": "cannot_fix",
+      "reason": "Accepted ADR — append-only rule prevents edits. Not worth a superseding ADR for a cosmetic title inconsistency."
+    }
+  ]
+}

@@ -3,7 +3,7 @@ file: NON_GOALS.md
 status: accepted
 last_updated: 2026-05-26
 owner: sebas
-related_adrs: []
+related_adrs: [ADR-0005]
 ---
 
 # Non-Goals

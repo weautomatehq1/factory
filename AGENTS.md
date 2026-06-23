@@ -66,7 +66,7 @@ factory/
 ├── DECISIONS.md               # auto-generated index
 ├── docs/decisions/            # one ADR per file (NNNN-*.md)
 │   ├── _template.md
-│   └── 0001-*.md … 0010-*.md
+│   └── 0001-*.md … 0011-*.md
 └── .omc/
     ├── STATUS.md              # Done / In flight / Up next
     └── costs.json             # usage log

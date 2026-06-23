@@ -239,5 +239,5 @@ Quick pointers:
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-23
+**Last verified:** 2026-06-23 — nightly audit
