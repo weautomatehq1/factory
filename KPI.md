@@ -2,7 +2,7 @@
 file: KPI.md
 status: skeleton
 populated_when: M-016 (real client #1) ships AND first 7 days of production data captured
-last_updated: 2026-06-10
+last_updated: 2026-06-24
 owner: sebas
 frameworks: ["Sean Ellis North Star", "HEART (Rodden CHI 2010)", "Doerr OKRs"]
 ---
@@ -106,6 +106,19 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 - KR3: 0 (MISSED — KR2 prerequisite failed; deadline reached 2026-06-10; KR2 prerequisite never met)
 - KR4: 0 (deadline passed 2026-06-04; M-018 not built; no active sprint)
 
+### Q3 2026 (starts 2026-07-01)
+
+> ⚠️ **ACTION REQUIRED — Q3 OKRs not defined (2026-06-24 nightly audit).** Q3 starts in 7 days. All Q2 OKRs were MISSED. Sebastian + Esme MUST define Q3 OKRs before 2026-07-01 so workers have a quarter objective to align to and the review cadence (AGENTS.md §12) can function. This placeholder must be replaced with real OKRs signed off by both Stakeholders (STAKEHOLDERS.md §Owner + §Approver).
+
+**Objective:** [PENDING — populate before 2026-07-01]
+
+**Key Results:** (numeric, time-bound)
+- KR1: [PENDING] — DUE [TBD]
+- KR2: [PENDING] — DUE [TBD]
+- KR3: [PENDING] — DUE [TBD]
+
+**Confidence (1-10):** N/A — not defined yet
+
 ---
 
 ## Anti-metrics (things we do NOT measure)
@@ -129,5 +142,5 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 
 ---
 
-**Last updated:** 2026-06-10
-**Last verified:** 2026-06-10 — nightly audit (KR3 deadline reached today; all four Q2 OKRs confirmed MISSED; stale "3 days remain" corrected)
+**Last updated:** 2026-06-24
+**Last verified:** 2026-06-24 — nightly audit (Q3 2026 OKR placeholder section added; ACTION REQUIRED note for Sebastian/Esme to populate before 2026-07-01; last_updated refreshed)

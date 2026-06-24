@@ -1,0 +1,42 @@
+{
+  "repo": "factory",
+  "audited_at": "2026-06-24T00:00:00Z",
+  "auditor": "claude-sonnet-4-6 / nightly-audit",
+  "branch": "audit/nightly-2026-06-24",
+  "findings": [
+    {
+      "id": "AUDIT-factory-kpi-q3-missing",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "KPI.md has no Q3 2026 OKR section — Q3 starts in 7 days",
+      "file": "KPI.md",
+      "description": "KPI.md last_updated is 2026-06-10 (14 days stale). All Q2 OKRs are MISSED and Q2 ends 2026-06-30. Q3 2026 starts 2026-07-01 (7 days away) with zero OKRs defined. Without Q3 goals, workers have no quarter objective to align to and the review cadence (AGENTS.md §12) cannot function.",
+      "fix": "Update last_updated, add Q3 2026 OKR placeholder section with ACTION REQUIRED note calling for Sebastian/Esme to populate before 2026-07-01.",
+      "status": "open"
+    },
+    {
+      "id": "AUDIT-factory-status-day-counts",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": ".omc/STATUS.md day counts and last_updated are stale",
+      "file": ".omc/STATUS.md",
+      "description": "STATUS.md last_updated is 2026-06-20 (4 days stale, today is 2026-06-24). The In-flight block says 'day 30 overdue' for SPRINT-2026-05-B; actual count is now 34 days. Up-next item 1 says '30 days overdue'; item 2 says '31 days overdue'. Day counts must be updated so the next agent reading this gets accurate urgency signals.",
+      "fix": "Update last_updated, day counts in In-flight + Up-next sections, and add 2026-06-24 Done entry for this audit run.",
+      "status": "open"
+    }
+  ],
+  "carried_open_findings": [
+    "AUDIT-factory-sprint-b-missing",
+    "AUDIT-factory-retell-r1-overdue"
+  ],
+  "summary": {
+    "total": 2,
+    "open": 2,
+    "fixed_this_run": 0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "IMPORTANT": 1,
+      "COSMETIC": 1
+    }
+  }
+}
