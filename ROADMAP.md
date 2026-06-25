@@ -1,7 +1,7 @@
 ---
 file: ROADMAP.md
 status: living
-last_updated: 2026-06-17
+last_updated: 2026-06-25
 last_reconciled: 2026-06-17
 owner: sebas
 ---
@@ -305,5 +305,5 @@ owner: sebas
 
 ---
 
-**Last updated:** 2026-06-20
+**Last updated:** 2026-06-25
 **Last verified:** 2026-06-17 — manual reconciliation against factory git log + IFleet PR history

@@ -1,0 +1,92 @@
+{
+  "audit_id": "audit-20260625T040000Z",
+  "repo": "factory",
+  "scanned_at": "2026-06-25T04:00:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-kpi-q3-okrs-missing",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "Q3 2026 OKRs not defined — Q3 starts in 6 days (2026-07-01)",
+      "detail": "KPI.md contains only Q2 2026 OKRs (all four MISSED). No Q3 2026 OKR section exists. Q3 starts 2026-07-01, which is 6 days from scan date. AGENTS.md §7 requires spec files to stay current; STATUS.md 'Up next' item 3 flagged this but the KPI.md itself has no Q3 section or ACTION REQUIRED note. Without defined Q3 OKRs the next sprint has no measurable success criteria.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Add Q3 2026 OKR placeholder section to KPI.md with ACTION REQUIRED banner. Actual OKR content requires Sebastian/Esme decision.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-25T04:00:00Z",
+      "closed_at": "2026-06-25T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-25"
+    },
+    {
+      "id": "AUDIT-factory-sprint-b-missing",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "SPRINT-2026-05-B does not exist — active sprint missing for 35 days",
+      "detail": "Every coordination file references SPRINT-2026-05-B as the promised follow-up to SPRINT-2026-05-A. No such file exists. The reconciliation commitment was made on 2026-05-21; as of 2026-06-25 that is 35 days with no active sprint document. Without it there is no canonical work queue, violating AGENTS.md §2 required reading order item 6 (SPRINT.md as work queue). Requires Sebastian/Esme decision on scope.",
+      "file_globs": ["SPRINT.md"],
+      "fix_sketch": "Create SPRINT-2026-05-B.md (or SPRINT-2026-06-A.md) with realistic scope. Requires Sebastian/Esme input on sprint goals.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-25T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-retell-r1-overdue",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "Retell R1 research 36 days overdue with 5 milestones blocked",
+      "detail": "ADR-0011 retains Retell pending Esme R1 confirmation. Q3 BLOCKING DECISION is now 36 days overdue (from 2026-05-20 SPRINT-A end). M-005, M-006, M-007, M-010, M-015 are all blocked. No deadline has been set. ROADMAP.md Open Question Q3 still says '28+ days' (last updated 2026-06-17) — this count is now stale.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Sebastian must confirm Retell or commission ADR-0012. Add hard deadline in STATUS.md. Update ROADMAP Q3 elapsed day count.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-25T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-status-stale-2026-06-25",
+      "severity": "COSMETIC",
+      "category": "assumption",
+      "title": "STATUS.md overdue day counts stale (30/31 should be 35/36) and last_updated is 2026-06-20",
+      "detail": "STATUS.md 'In flight' section says 'As of 2026-06-20 (day 30 overdue)' for SPRINT-2026-05-B and 'Up next' item 1 says 'now 30 days overdue'. Retell R1 item 2 says 'now 31 days overdue'. As of 2026-06-25: SPRINT-B overdue is 35 days (from 2026-05-21), Retell R1 is 36 days (from 2026-05-20). Footer 'Last updated: 2026-06-20' is also stale.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Update SPRINT-B count to 35, Retell R1 count to 36, refresh Last updated to 2026-06-25.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-25T04:00:00Z",
+      "closed_at": "2026-06-25T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-25"
+    },
+    {
+      "id": "AUDIT-factory-changelog-missing-2026-06-25",
+      "severity": "COSMETIC",
+      "category": "assumption",
+      "title": "CHANGELOG.md [Unreleased] section has no entry for 2026-06-25 nightly audit",
+      "detail": "CHANGELOG.md [Unreleased] most recent entry is '2026-06-18 — Nightly audit fixes'. Today's nightly audit (2026-06-25) found and fixed 3 findings. AGENTS.md §5 requires CHANGELOG.md [Unreleased] to be updated on every spec change.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Add 2026-06-25 entry to [Unreleased] Changed section describing today's fixes.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-25T04:00:00Z",
+      "closed_at": "2026-06-25T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-25"
+    },
+    {
+      "id": "AUDIT-factory-roadmap-date-mismatch",
+      "severity": "COSMETIC",
+      "category": "assumption",
+      "title": "ROADMAP.md frontmatter last_updated (2026-06-17) lags footer (2026-06-20) by 3 days",
+      "detail": "ROADMAP.md frontmatter says 'last_updated: 2026-06-17' but the footer says 'Last updated: 2026-06-20'. The 2026-06-20 audit updated the footer when fixing merge conflict markers but forgot to sync the frontmatter. Both should be updated to 2026-06-25 to reflect today's date maintenance.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Sync ROADMAP.md frontmatter last_updated and footer Last updated to 2026-06-25.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-25T04:00:00Z",
+      "closed_at": "2026-06-25T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-25"
+    }
+  ]
+}
