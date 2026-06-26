@@ -2,7 +2,7 @@
 file: KPI.md
 status: skeleton
 populated_when: M-016 (real client #1) ships AND first 7 days of production data captured
-last_updated: 2026-06-10
+last_updated: 2026-06-25
 owner: sebas
 frameworks: ["Sean Ellis North Star", "HEART (Rodden CHI 2010)", "Doerr OKRs"]
 ---
@@ -106,6 +106,25 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 - KR3: 0 (MISSED — KR2 prerequisite failed; deadline reached 2026-06-10; KR2 prerequisite never met)
 - KR4: 0 (deadline passed 2026-06-04; M-018 not built; no active sprint)
 
+### Q3 2026 (2026-07-01 → 2026-09-30)
+
+> 🚨 **ACTION REQUIRED — OKRs not yet defined (2026-06-25 nightly audit).** Q3 starts in 6 days. SPRINT-2026-05-B has not been created; Retell R1 research is 36 days overdue. Sebastian + Esme must define Q3 OKRs before 2026-07-01 or carry forward the same gap into Q3.
+>
+> Prerequisite decisions before Q3 OKRs can be written:
+> 1. Confirm voice platform (Retell vs. pivot) — ADR-0011 has been pending 36 days
+> 2. Open SPRINT-2026-05-B (or SPRINT-2026-06-A) to establish realistic sprint capacity
+> 3. Agree on whether Q2 postmortem precedes Q3 goal-setting
+
+**Objective:** (TBD — requires SPRINT-B scope decision)
+
+**Key Results:** (TBD — requires objective above + Retell R1 confirmation)
+- KR1: TBD
+- KR2: TBD
+- KR3: TBD
+
+**Confidence (1-10):**
+- Overall: 0 until OKRs defined and SPRINT-B opened
+
 ---
 
 ## Anti-metrics (things we do NOT measure)
@@ -129,5 +148,5 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 
 ---
 
-**Last updated:** 2026-06-10
-**Last verified:** 2026-06-10 — nightly audit (KR3 deadline reached today; all four Q2 OKRs confirmed MISSED; stale "3 days remain" corrected)
+**Last updated:** 2026-06-25
+**Last verified:** 2026-06-25 — nightly audit (Q3 2026 OKR placeholder section added with ACTION REQUIRED; Q3 starts 2026-07-01)
