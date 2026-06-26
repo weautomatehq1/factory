@@ -1,17 +1,20 @@
 {
-  "last_updated": "2026-06-20T04:30:00Z",
-  "open_count": 2,
-  "fixed_count": 5,
-  "audits": ["20260620T041100Z.json"],
+  "last_updated": "2026-06-26T04:14:00Z",
+  "open_count": 3,
+  "fixed_count": 7,
+  "audits": ["20260620T041100Z.json", "20260626T040848Z.json"],
   "open_findings": [
     "AUDIT-factory-sprint-b-missing",
-    "AUDIT-factory-retell-r1-overdue"
+    "AUDIT-factory-retell-r1-overdue",
+    "AUDIT-factory-arch-related-adrs-missing-0004"
   ],
   "fixed_findings": [
     "AUDIT-factory-roadmap-merge-conflict",
     "AUDIT-factory-roadmap-adr004-collision",
     "AUDIT-factory-readme-spectemplate-stale",
     "AUDIT-factory-stakeholders-adr-ref",
-    "AUDIT-factory-status-stale-dates"
+    "AUDIT-factory-status-stale-dates",
+    "AUDIT-factory-roadmap-m005-adr006",
+    "AUDIT-factory-sprint-missing-last-updated"
   ]
 }

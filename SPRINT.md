@@ -8,6 +8,7 @@ owner: sebas
 co_owner: esme
 status: incomplete
 reconciled_at: 2026-05-21
+last_updated: 2026-05-21
 ---
 
 # Sprint: The Factory — full pipeline build

@@ -1,0 +1,50 @@
+{
+  "audit_id": "audit-20260626T040848Z",
+  "repo": "factory",
+  "scanned_at": "2026-06-26T04:08:48Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-roadmap-m005-adr006",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ROADMAP.md M-005 cites superseded ADR-0006 instead of ADR-0011",
+      "detail": "ROADMAP.md line 105 lists 'adrs: [ADR-0006]' for milestone M-005 (Voice-discovery + Retell). ADR-0006 was superseded by ADR-0011 on 2026-06-04. The 2026-06-07 nightly audit corrected the Q3 section reference but missed the M-005 milestone block. ADR-0011 is the canonical voice-platform decision that governs M-005.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Change 'adrs: [ADR-0006]' to 'adrs: [ADR-0011]' in the M-005 block.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-26T04:08:48Z",
+      "closed_at": "2026-06-26T04:14:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-sprint-missing-last-updated",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "SPRINT.md frontmatter missing last_updated field",
+      "detail": "SPRINT.md frontmatter does not include a 'last_updated:' field, while all other spec files follow this convention. The footer shows 'Last updated: 2026-05-21' and reconciled_at is also 2026-05-21, so the value is unambiguous.",
+      "file_globs": ["SPRINT.md"],
+      "fix_sketch": "Add 'last_updated: 2026-05-21' after 'reconciled_at: 2026-05-21' in SPRINT.md frontmatter.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-26T04:08:48Z",
+      "closed_at": "2026-06-26T04:14:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-arch-related-adrs-missing-0004",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ARCHITECTURE.md related_adrs missing ADR-0004 (build-full-pipeline-before-client-1)",
+      "detail": "ARCHITECTURE.md frontmatter related_adrs lists [ADR-0001, ADR-0002, ADR-0003, ADR-0005, ADR-0007, ADR-0009, ADR-0010] but omits ADR-0004 (Build full pipeline before client #1). ADR-0004 directly informs ARCHITECTURE.md invariant 3 (Issues as unit of work) and the pipeline-first strategy described in the doc. The 2026-06-04 audit added ADR-0005 and ADR-0009 but missed ADR-0004.",
+      "file_globs": ["ARCHITECTURE.md"],
+      "fix_sketch": "Add ADR-0004 to the related_adrs array. SKIPPED by nightly audit: ARCHITECTURE.md has 'status: accepted' in frontmatter — per AGENTS.md §7 Ask-first rule, this edit requires human sign-off before merging.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-06-26T04:08:48Z",
+      "closed_at": null,
+      "closing_pr": null
+    }
+  ]
+}

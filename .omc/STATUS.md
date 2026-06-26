@@ -75,5 +75,5 @@ Three sections only. Next agent reads this first.
 
 ---
 
-**Last updated:** 2026-06-20 — nightly audit (merge conflict resolved in ROADMAP.md, ADR cross-repo ref disambiguated, README spec-template status corrected, STAKEHOLDERS.md ADR-0006→ADR-0011, day counts updated)
-**Previously updated:** 2026-06-13 — nightly audit
+**Last updated:** 2026-06-26 — nightly audit (ROADMAP.md M-005 adrs corrected ADR-0006→ADR-0011; SPRINT.md last_updated frontmatter added; ARCHITECTURE.md related_adrs missing ADR-0004 flagged as open finding — needs human sign-off per accepted-file rule)
+**Previously updated:** 2026-06-20 — nightly audit
