@@ -42,7 +42,7 @@ related_adrs: [ADR-0011]
 - **status_page:** https://status.retellai.com ⚠️ [UNVERIFIED — confirm after account creation; update this line with verified date]
 - **docs:** https://docs.retellai.com
 - **owner:** sebas
-- **lifecycle:** production (pending account creation D2)
+- **lifecycle:** experimental (blocked — account creation pending; Retell R1 milestone overdue; see AUDIT-factory-4ac993be)
 - **depended_on_by:** voice-discovery
 - **last_audit:** n/a (new integration)
 

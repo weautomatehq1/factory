@@ -57,6 +57,16 @@ last_verified: YYYY-MM-DD by <name> — <pass | fail | partial>
 - YYYY-MM-DD by <name> — <outcome>
 ```
 
+## First-time setup
+
+> Run this after every fresh clone. Without it the secret-scan pre-commit hook is inactive.
+
+```bash
+git config core.hooksPath .husky
+```
+
+See `AGENTS.md` §13 ("Hard enforcement vs advisory rules") and `SECURITY.md` for context.
+
 ## Index of entries
 
 _(Empty. Entries will be added here as runbook items are written.)_

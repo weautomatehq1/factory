@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.1",
+  "repo": "weautomatehq1/factory",
+  "scanned_at": "2026-06-27T04:09:02Z",
+  "scanner": "nightly-audit-agent",
+  "summary": {
+    "total": 20,
+    "critical": 5,
+    "important": 8,
+    "cosmetic": 7,
+    "fixed_this_run": 15,
+    "open_after_fix": 5
+  },
+  "findings": [
+    {
+      "id": "AUDIT-factory-13e2b775",
+      "title": "SPRINT-2026-05-B referenced for 35+ days with no successor",
+      "category": "stale-sprint",
+      "severity": "CRITICAL",
+      "status": "open",
+      "parallel_safe": false,
+      "file": "SPRINT.md",
+      "detail": "SPRINT.md references SPRINT-2026-05-B as the active sprint. As of 2026-06-27 this is >35 days old. No successor sprint (SPRINT-B or SPRINT-2026-06-*) has been created. Workers reading SPRINT.md may execute stale tasks or block on completed work.",
+      "remediation": "Create SPRINT-2026-06-B (or the next applicable sprint ID) in SPRINT.md with current active tasks. Archive or close SPRINT-2026-05-B."
+    },
+    {
+      "id": "AUDIT-factory-907bcc70",
+      "title": "All Q2 2026 OKRs missed — KPI.md not updated",
+      "category": "stale-kpi",
+      "severity": "CRITICAL",
+      "status": "open",
+      "parallel_safe": false,
+      "file": "KPI.md",
+      "detail": "KPI.md retains Q2 2026 OKRs with no outcome recorded. Q2 ended 2026-06-30 (or sooner per team calendar). The 'status: skeleton' tag is now misleading — the skeleton was for pre-launch, but launch happened. Untracked OKRs prevent retrospective learning and Q3 planning.",
+      "remediation": "Record actual Q2 outcomes against each OKR. Add Q3 OKRs. Update status from 'skeleton' to 'active'."
+    },
+    {
+      "id": "AUDIT-factory-4ac993be",
+      "title": "Retell R1 milestone 36+ days overdue",
+      "category": "stale-milestone",
+      "severity": "CRITICAL",
+      "status": "open",
+      "parallel_safe": false,
+      "file": "ROADMAP.md",
+      "detail": "ROADMAP.md lists Retell R1 (first real interview run) as a milestone. INTEGRATIONS.md lists Retell status as 'production (pending account creation D2)'. This milestone was due ~D2 of Sprint A, which has long passed. No completion record exists.",
+      "remediation": "Either mark the milestone complete with actual date, reschedule with rationale, or open a blocking issue in IFleet. Update INTEGRATIONS.md Retell status to reflect reality."
+    },
+    {
+      "id": "AUDIT-factory-3e16388e",
+      "title": "SECURITY.md setup step buried — hook activation not prominent",
+      "category": "security-doc",
+      "severity": "CRITICAL",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "README.md",
+      "detail": "AGENTS.md §13 warns: 'Workers and humans MUST run git config core.hooksPath .husky after first clone for the secret-scan hook to fire locally.' This instruction appears only in the AGENTS.md warning block, not in README.md setup section or SECURITY.md. New contributors and workers starting fresh will miss it.",
+      "remediation": "Add a prominent 'Setup' block to README.md with the git config step. Add a note to RUNBOOK.md §First-time setup."
+    },
+    {
+      "id": "AUDIT-factory-9f8e1af8",
+      "title": "ARCHITECTURE.md and RUNBOOK.md describe unbuilt Tier 1/2 as operational",
+      "category": "accuracy",
+      "severity": "CRITICAL",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "ARCHITECTURE.md",
+      "detail": "ARCHITECTURE.md describes a Tier 1 (voice discovery) and Tier 2 (spec generation) pipeline as if it is operational. INTEGRATIONS.md and INTAKE.md confirm voice-discovery is not yet built. RUNBOOK.md similarly contains operational steps for a system that doesn't exist. A reader following RUNBOOK.md would have nothing to run.",
+      "remediation": "Add 'NOT YET BUILT — See [M-NNN] in ROADMAP.md' banners to Tier 1 and Tier 2 sections in both ARCHITECTURE.md and RUNBOOK.md."
+    },
+    {
+      "id": "AUDIT-factory-853bc26c",
+      "title": "AGENTS.md §2 lists 18 items but claims 17 spec files",
+      "category": "doc-inconsistency",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "AGENTS.md",
+      "detail": "AGENTS.md §2 'Required reading order' has items 1–18 but its own inline note says 'the canonical 17 spec files are items 1–16 above plus this file; CLAUDE.md is included here as the Claude Code entry point, not counted in the 17'. Item 17 is AGENTS.md and item 18 is CLAUDE.md. The numbering is accurate; the note is confusing. Workers may miscount.",
+      "remediation": "Rewrite the inline note after item 18 to make it clear: items 1–16 + AGENTS.md (item 17) = the 17 spec files; CLAUDE.md at item 18 is the entry-point bridge."
+    },
+    {
+      "id": "AUDIT-factory-f2419747",
+      "title": "UBIQUITOUS_LANGUAGE.md frontmatter last_updated is stale",
+      "category": "stale-metadata",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "UBIQUITOUS_LANGUAGE.md",
+      "detail": "UBIQUITOUS_LANGUAGE.md has frontmatter last_updated that predates the most recent substantive content additions (ADR-0011, new domain terms from the June session). Stale frontmatter breaks metadata-driven indexers.",
+      "remediation": "Update last_updated to 2026-06-27."
+    },
+    {
+      "id": "AUDIT-factory-d980069f",
+      "title": "ROADMAP.md '## Now' section is misleading — no active sprint",
+      "category": "accuracy",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "ROADMAP.md",
+      "detail": "ROADMAP.md has a '## Now' section that implies a currently-executing sprint. SPRINT.md shows SPRINT-2026-05-B which is stale. There is no active sprint as of 2026-06-27. The heading misleads workers about current system state.",
+      "remediation": "Rename '## Now' to '## Planned (no active sprint — SPRINT-B pending)' or equivalent that reflects the actual state."
+    },
+    {
+      "id": "AUDIT-factory-bebb4f88",
+      "title": "INTEGRATIONS.md Retell lifecycle status contradicts reality",
+      "category": "accuracy",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "INTEGRATIONS.md",
+      "detail": "INTEGRATIONS.md lists Retell as 'production (pending account creation D2)'. Day 2 has long passed, account was not created, and Retell R1 milestone is overdue (see AUDIT-factory-4ac993be). The lifecycle label 'production' is wrong; the actual status is 'not started' or 'blocked'.",
+      "remediation": "Update Retell lifecycle to 'experimental (blocked — account creation pending, see [M-NNN])' or similar accurate description."
+    },
+    {
+      "id": "AUDIT-factory-74be3fcc",
+      "title": "RISKS.md 14 of 15 risks have no reviewed_at entry",
+      "category": "stale-doc",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "parallel_safe": false,
+      "file": "RISKS.md",
+      "detail": "RISKS.md contains 15 risk entries. Only 1 has a reviewed_at timestamp. The remaining 14 show status from initial writing (May 2026). After 5+ weeks of operation, risk status may have materially changed (e.g., R-001 'voice-discovery not built' is still true; R-007 'single-seat Max plan hit' may now be actively limiting).",
+      "remediation": "Review and update all 15 risk entries with current status and a reviewed_at timestamp."
+    },
+    {
+      "id": "AUDIT-factory-c9377631",
+      "title": "STAKEHOLDERS.md decision log missing ADR-0011 entry",
+      "category": "doc-gap",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "STAKEHOLDERS.md",
+      "detail": "STAKEHOLDERS.md contains a decision log table. ADR-0011 was created during the 2026-06-04 session but has no entry in the STAKEHOLDERS.md decision log. Cross-referencing between STAKEHOLDERS.md and docs/decisions/ is incomplete.",
+      "remediation": "Add a row for ADR-0011 to the STAKEHOLDERS.md decision log with date 2026-06-04 and brief description."
+    },
+    {
+      "id": "AUDIT-factory-0a88d4cf",
+      "title": "DECISIONS.md index out of sync with docs/decisions/ contents",
+      "category": "doc-gap",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "parallel_safe": false,
+      "file": "DECISIONS.md",
+      "detail": "DECISIONS.md is described as an 'auto-generated index' in AGENTS.md §3. However it appears to be manually maintained and may be missing recent ADRs (0010, 0011). The index and the actual files in docs/decisions/ may have drifted.",
+      "remediation": "Regenerate DECISIONS.md from ADR frontmatter. Add any missing ADR entries."
+    },
+    {
+      "id": "AUDIT-factory-829053d3",
+      "title": "README.md footer 'Last updated' is stale",
+      "category": "stale-metadata",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "README.md",
+      "detail": "README.md footer shows a Last updated date that predates multiple content changes made in June 2026 sessions. Stale dates erode trust in the document's currency.",
+      "remediation": "Update README.md 'Last updated' footer to 2026-06-27."
+    },
+    {
+      "id": "AUDIT-factory-f822bc94",
+      "title": "ROADMAP.md references local filesystem path instead of GitHub URL",
+      "category": "portability",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "ROADMAP.md",
+      "detail": "ROADMAP.md contains a reference to '~/dev/IFleet/SPRINT.md' (a local filesystem path). This path is not valid for any other developer or worker running in a different environment. Should be a GitHub URL or relative cross-repo reference.",
+      "remediation": "Replace '~/dev/IFleet/SPRINT.md' with 'https://github.com/weautomatehq1/IFleet/blob/main/SPRINT.md' or similar."
+    },
+    {
+      "id": "AUDIT-factory-742c52f0",
+      "title": "FILE_STRUCTURE.md 'Last verified' date is stale",
+      "category": "stale-metadata",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "FILE_STRUCTURE.md",
+      "detail": "FILE_STRUCTURE.md footer shows a 'Last verified' date from an earlier session. The structure has been accurate through the June sessions but the verification date should be current.",
+      "remediation": "Update 'Last verified' to 2026-06-27."
+    },
+    {
+      "id": "AUDIT-factory-31942fcf",
+      "title": "FILE_STRUCTURE.md references docs/templates/ which may not exist",
+      "category": "accuracy",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "FILE_STRUCTURE.md",
+      "detail": "FILE_STRUCTURE.md lists 'docs/templates/' as part of the repo structure, but this directory may not actually exist or may have different contents than described.",
+      "remediation": "Verify docs/templates/ exists. If not, remove or mark as '(planned)' in the structure."
+    },
+    {
+      "id": "AUDIT-factory-f7cf5c43",
+      "title": "UBIQUITOUS_LANGUAGE.md '### Voice Discovery' should be repo-name cased",
+      "category": "naming",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "UBIQUITOUS_LANGUAGE.md",
+      "detail": "UBIQUITOUS_LANGUAGE.md has a section header '### Voice Discovery' (two words, title-case). The repo is named 'voice-discovery' (lowercase-hyphen). Consistent naming prevents tools that search by repo name from missing content.",
+      "remediation": "Rename '### Voice Discovery' to '### voice-discovery'."
+    },
+    {
+      "id": "AUDIT-factory-a8232399",
+      "title": "UBIQUITOUS_LANGUAGE.md '### Spec Template' should be repo-name cased",
+      "category": "naming",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "UBIQUITOUS_LANGUAGE.md",
+      "detail": "UBIQUITOUS_LANGUAGE.md has a section header '### Spec Template' (two words, title-case). The repo is named 'spec-template' (lowercase-hyphen). Consistent naming prevents tools that search by repo name from missing content.",
+      "remediation": "Rename '### Spec Template' to '### spec-template'."
+    },
+    {
+      "id": "AUDIT-factory-de7bfb84",
+      "title": "STAKEHOLDERS.md 'Last verified' date is stale",
+      "category": "stale-metadata",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "STAKEHOLDERS.md",
+      "detail": "STAKEHOLDERS.md footer 'Last verified' date predates the June 2026 sessions. After adding the ADR-0011 entry (see AUDIT-factory-c9377631), this date must also be updated.",
+      "remediation": "Update 'Last verified' to 2026-06-27."
+    },
+    {
+      "id": "AUDIT-factory-44e1c362",
+      "title": "ARCHITECTURE.md frontmatter missing related_adrs entry for ADR-0004",
+      "category": "doc-gap",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "parallel_safe": true,
+      "file": "ARCHITECTURE.md",
+      "detail": "ARCHITECTURE.md frontmatter has a related_adrs list. ADR-0004 (canonical routing alignment) is directly relevant to the architecture but is not listed in the frontmatter. Cross-reference completeness helps workers navigate the decision history.",
+      "remediation": "Add 'ADR-0004' to the related_adrs list in ARCHITECTURE.md frontmatter."
+    }
+  ]
+}

@@ -102,7 +102,7 @@ factory/
 | An update to a spec file's status | Frontmatter `status:` field | n/a |
 | An ops note for next session | `.omc/STATUS.md` "Up next" section | n/a |
 | A cost log entry | `.omc/costs.json` | append-only JSON |
-| A new file template (e.g., POSTMORTEM_TEMPLATE.md) | `docs/templates/` | UPPER_SNAKE_CASE |
+| A new file template (e.g., POSTMORTEM_TEMPLATE.md) | `docs/templates/` (exists, currently empty) | UPPER_SNAKE_CASE |
 
 ### In a client repo
 
@@ -150,5 +150,5 @@ factory/
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-27
+**Last verified:** 2026-06-27 — nightly audit (docs/templates/ confirmed to exist; entry clarified)

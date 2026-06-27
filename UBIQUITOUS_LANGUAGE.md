@@ -1,7 +1,7 @@
 ---
 file: UBIQUITOUS_LANGUAGE.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-06-27
 owner: sebas
 ---
 
@@ -182,14 +182,14 @@ The Factory operates across four bounded contexts. The same word can mean differ
 - **Lifecycle:** proposed → accepted | rejected | superseded by NNNN
 - **Source:** ADR-0008
 
-### Voice Discovery
+### voice-discovery
 - **Canonical:** voice-discovery (lowercase, hyphenated — repo name)
 - **Context:** all
 - **Definition:** The repo that contains the Retell config, n8n workflow, Layer 1 + Layer 2 prompts, operator dashboard, and synthesizer. Created M-005.
 - **NOT:** "voice agent," "voice AI" (these describe the function, not the repo)
 - **Source:** ROADMAP [M-005]
 
-### Spec Template
+### spec-template
 - **Canonical:** spec-template (lowercase, hyphenated — repo name)
 - **Context:** all
 - **Definition:** The GitHub template repo that every client project starts from. Contains 17 file skeletons with frontmatter and stub content. Created M-001.
@@ -259,5 +259,5 @@ When the system needs to emit/observe these events, use these exact names:
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-27
+**Last verified:** 2026-06-27 — nightly audit (section headers renamed to match repo names; frontmatter date updated)

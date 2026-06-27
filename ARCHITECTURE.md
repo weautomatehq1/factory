@@ -3,7 +3,7 @@ file: ARCHITECTURE.md
 status: accepted
 last_updated: 2026-05-26
 owner: sebas
-related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0005, ADR-0007, ADR-0009, ADR-0010]
+related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0007, ADR-0009, ADR-0010]
 ---
 
 # Architecture
@@ -66,7 +66,7 @@ flowchart TB
         F3[.omc/STATUS.md<br/>operational state]
     end
 
-    subgraph voice[" voice-discovery (new repo) "]
+    subgraph voice[" voice-discovery ⚠️ NOT YET BUILT — see [M-005] "]
         V1[Retell config<br/>+ system prompt]
         V2[n8n workflow:<br/>webhook → Supabase]
         V3[Operator dashboard<br/>Next.js 15]

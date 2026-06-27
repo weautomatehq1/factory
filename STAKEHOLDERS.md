@@ -76,6 +76,7 @@ owner: sebas
 | 2026-05-15 | Esme as builder, not just researcher (6 of 8 IFleet gaps) | Sebastian | Sebastian | This conversation, ROADMAP ownership column |
 | 2026-05-15 | Markdown-only spec files (no `.yaml` siblings until parsing fails) | Sebastian | Sebastian | ADR-0001 reasoning, "correct not clever" |
 | 2026-05-15 | Empty files use `status: skeleton` instead of fabricated content | Sebastian | Sebastian | "correct not clever" framing |
+| 2026-06-04 | Retell AI as default voice platform (supersedes ADR-0006; pending Esme R1) | Sebastian | Sebastian | ADR-0011 |
 
 ---
 
@@ -102,5 +103,5 @@ owner: sebas
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-27
+**Last verified:** 2026-06-27 — nightly audit (added ADR-0011 decision log entry; updated dates)

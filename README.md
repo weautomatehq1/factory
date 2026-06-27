@@ -23,6 +23,16 @@ This repo does **not** contain runnable code. Code lives in the other three Fact
 | `weautomatehq1/spec-template` | GitHub template used to spawn per-client repos | Exists (created 2026-05-16, isTemplate: true, [M-001] shipped) |
 | `weautomatehq1/<client-name>` | Per-client SaaS — generated from spec-template | Created when client #1 interviews |
 
+## Setup
+
+```bash
+git clone git@github.com:weautomatehq1/factory.git ~/dev/coordination/factory
+cd ~/dev/coordination/factory
+git config core.hooksPath .husky  # REQUIRED — activates secret-scan pre-commit hook
+```
+
+> ⚠️ **The hook only fires if `git config core.hooksPath .husky` is run after clone.** Without it, the secret-pattern guard is inactive. See `AGENTS.md` §13 and `SECURITY.md` for details.
+
 ## How to use this repo
 
 **As a human (Sebastian or Esme):** read `README.md` (this file) → `ARCHITECTURE.md` → `SPRINT.md` to know what's active.
@@ -83,4 +93,4 @@ Full glossary: `UBIQUITOUS_LANGUAGE.md`.
 
 ---
 
-**Last updated:** 2026-06-20
+**Last updated:** 2026-06-27

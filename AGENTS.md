@@ -37,7 +37,10 @@ Before doing any non-trivial work in a client repo generated from this template,
 15. `DECISIONS.md` → `docs/decisions/*.md` — why we picked what we picked
 16. `CHANGELOG.md` — release history
 17. `AGENTS.md` — this file
-18. `CLAUDE.md` — Claude-specific bridge (not a spec file; the canonical 17 spec files are items 1–16 above plus this file; CLAUDE.md is included here as the Claude Code entry point, not counted in the 17)
+
+> **Count:** items 1–16 plus `AGENTS.md` (item 17) = **the 17 spec files**. `CLAUDE.md` (item 18 below) is the Claude Code entry-point bridge — it is NOT one of the 17 spec files.
+
+18. `CLAUDE.md` — Claude-specific bridge (`@AGENTS.md` import + Claude-only rules; entry point for Claude Code; not a spec file)
 
 **If a spec file contradicts code, the spec wins.** Open an issue; do not silently drift.
 
