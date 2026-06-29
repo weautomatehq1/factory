@@ -1,0 +1,92 @@
+{
+  "audit_id": "audit-20260628T040632Z",
+  "repo": "factory",
+  "scanned_at": "2026-06-28T04:06:32Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-sprint-b-missing",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "SPRINT-2026-05-B does not exist — active sprint missing for 38 days",
+      "detail": "Every coordination file references SPRINT-2026-05-B as the promised follow-up to SPRINT-2026-05-A. No such file exists. The reconciliation commitment was made on 2026-05-21; as of 2026-06-28 that is 38 days with no active sprint document. Without it there is no canonical work queue, violating AGENTS.md §2 required reading order item 6 (SPRINT.md as work queue). Requires Sebastian/Esme decision on scope. Carried open from 2026-06-25 audit.",
+      "file_globs": ["SPRINT.md"],
+      "fix_sketch": "Create SPRINT-2026-05-B.md (or SPRINT-2026-06-A.md) with realistic scope. Requires Sebastian/Esme input on sprint goals.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-25T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-retell-r1-overdue",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "Retell R1 research 39 days overdue with 5 milestones blocked",
+      "detail": "ADR-0011 retains Retell pending Esme R1 confirmation. Q3 BLOCKING DECISION is now 39 days overdue (from 2026-05-20 SPRINT-A end). M-005, M-006, M-007, M-010, M-015 are all blocked. Q3 starts in 3 days (2026-07-01). Carried open from 2026-06-25 audit.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Sebastian must confirm Retell or commission ADR-0012. Add hard deadline in STATUS.md. Resolve before Q3 starts on 2026-07-01.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-06-25T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-5bcbbe99",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md overdue day counts stale (35/36 should be 38/39) and last_updated is 2026-06-25",
+      "detail": "STATUS.md 'In flight' section said 'As of 2026-06-25 (day 35 overdue)' for SPRINT-2026-05-B and 'Up next' said 'now 35 days overdue'. Retell R1 item said 'now 36 days overdue'. As of 2026-06-28: SPRINT-B overdue is 38 days (from 2026-05-21), Retell R1 is 39 days (from 2026-05-20). Footer 'Last updated: 2026-06-25' was also stale. Q3 countdown said '6 days away' but Q3 starts in 3 days.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Update SPRINT-B count to 38, Retell R1 count to 39, Q3 countdown to 3 days, refresh Last updated to 2026-06-28.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-28T04:06:32Z",
+      "closed_at": "2026-06-28T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-28"
+    },
+    {
+      "id": "AUDIT-factory-0b7506a9",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "KPI.md Q3 ACTION REQUIRED countdown stale (says 6 days, Q3 starts in 3 days)",
+      "detail": "KPI.md Q3 section ACTION REQUIRED banner said 'Q3 starts in 6 days' and 'Retell R1 research is 36 days overdue'. As of 2026-06-28, Q3 starts in 3 days and Retell R1 is 39 days overdue. Footer 'Last updated: 2026-06-25' was stale.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Update countdown from 6→3 days, Retell R1 count 36→39 days, refresh footer to 2026-06-28.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-28T04:06:32Z",
+      "closed_at": "2026-06-28T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-28"
+    },
+    {
+      "id": "AUDIT-factory-bb5a1b99",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ROADMAP.md Q3 blocking decision elapsed count stale (28+ days from 2026-06-17 note, should be 39 days from sprint end)",
+      "detail": "ROADMAP.md Open Question Q3 said 'OVERDUE (28+ days)' with 'as of 2026-06-17 (28 days elapsed)'. As of 2026-06-28, the elapsed days from SPRINT-A end (2026-05-20) is 39 days. The 2026-06-17 timestamp in the note was also stale. Frontmatter last_updated said 2026-06-25.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Update Q3 note to '39 days elapsed as of 2026-06-28', sync frontmatter and footer to 2026-06-28.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-28T04:06:32Z",
+      "closed_at": "2026-06-28T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-28"
+    },
+    {
+      "id": "AUDIT-factory-63c73a2a",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md [Unreleased] section has no entry for 2026-06-28 nightly audit",
+      "detail": "CHANGELOG.md [Unreleased] most recent entry was '2026-06-25 — Nightly audit fixes'. Today's nightly audit (2026-06-28) found and fixed 3 COSMETIC findings. AGENTS.md §5 requires CHANGELOG.md [Unreleased] to be updated on every spec change.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Add 2026-06-28 entry to [Unreleased] Changed section describing today's fixes.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-06-28T04:06:32Z",
+      "closed_at": "2026-06-28T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-06-28"
+    }
+  ]
+}
