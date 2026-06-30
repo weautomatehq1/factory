@@ -70,22 +70,22 @@ Three sections only. Next agent reads this first.
 
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-28 (day 38 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-06-30 (day 40 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 38 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 39 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
-3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 starts 2026-07-01 (3 days away), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
+1. **Open SPRINT-2026-05-B** — now 40 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 41 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 starts 2026-07-01 (TOMORROW), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
 ## Open questions
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 39 days overdue; ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 41 days overdue; ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-06-28 — nightly audit (STATUS.md day counts updated 35/36→38/39, Q3 start countdown updated 6→3 days, ROADMAP.md overdue count updated, CHANGELOG.md entry added)
-**Previously updated:** 2026-06-25 — nightly audit
+**Last updated:** 2026-06-30 — nightly audit (STATUS.md day counts updated 38/39→40/41, Q3 start countdown updated 3 days→TOMORROW, ROADMAP.md + KPI.md overdue counts updated, CHANGELOG.md entry added)
+**Previously updated:** 2026-06-28 — nightly audit
