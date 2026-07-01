@@ -1,0 +1,92 @@
+{
+  "audit_id": "audit-20260701T040000Z",
+  "repo": "factory",
+  "scanned_at": "2026-07-01T04:00:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-fe79b39e",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md stale day counts (SPRINT-B 40→41, Retell R1 41→42)",
+      "detail": "STATUS.md 'In flight' section referenced SPRINT-B as 40 days overdue and Retell R1 as 41 days overdue. The correct values as of 2026-07-01 are 41 and 42 days respectively. Q3 start referenced as TOMORROW when Q3 started TODAY.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Update day counts and replace TOMORROW with TODAY throughout STATUS.md.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-01T04:00:00Z",
+      "closed_at": "2026-07-01T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-07-01"
+    },
+    {
+      "id": "AUDIT-factory-2175823a",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "KPI.md Q3 banner says TOMORROW, Q3 has started TODAY",
+      "detail": "KPI.md Q3 2026 section ACTION REQUIRED banner referenced Q3 starting TOMORROW (2026-07-01) and Retell R1 as 41 days overdue. As of 2026-07-01 Q3 has started and the overdue count is 42 days. Footer dates also lagged at 2026-06-30.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Update Q3 ACTION REQUIRED banner to say TODAY, update Retell R1 count to 42, update footer dates.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-01T04:00:00Z",
+      "closed_at": "2026-07-01T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-07-01"
+    },
+    {
+      "id": "AUDIT-factory-d06ddff2",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ROADMAP.md Q3 blocking decision elapsed count shows 41, should be 42",
+      "detail": "ROADMAP.md Q3 blocking decision warning referenced 41 days elapsed and 'as of 2026-06-30'. As of 2026-07-01 the count is 42 days. Also missing note that Q3 has now started. Frontmatter last_updated and footer dates also lagged.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Update elapsed count to 42, update 'as of' date, add Q3-started note, update frontmatter + footer dates.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-01T04:00:00Z",
+      "closed_at": "2026-07-01T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-07-01"
+    },
+    {
+      "id": "AUDIT-factory-0641c593",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md missing 2026-07-01 nightly audit entry",
+      "detail": "CHANGELOG.md had no entry for the 2026-07-01 nightly audit session. All other nightly audit sessions have a corresponding CHANGELOG entry.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Add 2026-07-01 nightly audit entry under [Unreleased] > Changed, documenting all 4 COSMETIC findings fixed.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-01T04:00:00Z",
+      "closed_at": "2026-07-01T04:30:00Z",
+      "closing_pr": "audit/nightly-2026-07-01"
+    },
+    {
+      "id": "AUDIT-factory-sprint-b-missing",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "SPRINT-2026-05-B still not created (day 41 overdue)",
+      "detail": "SPRINT-2026-05-B was referenced since 2026-05-21 but has not been created. As of 2026-07-01 this is 41 days overdue. There is no active sprint document, blocking all milestone progress. Q3 has started with zero OKRs defined.",
+      "file_globs": ["SPRINT.md", ".omc/STATUS.md", "KPI.md"],
+      "fix_sketch": "Sebastian + Esme must create SPRINT-2026-05-B (or SPRINT-2026-07-A) with realistic capacity and define Q3 OKRs. Cannot be fixed by an automated audit agent.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-05-21T00:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-retell-r1-overdue",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "Retell R1 research decision 42 days overdue",
+      "detail": "ADR-0011 has been pending Esme's Retell R1 research confirmation for 42 days as of 2026-07-01. M-005 through M-007, M-010, and M-015 are all blocked on this decision. Q3 OKRs cannot be finalized until this is resolved.",
+      "file_globs": ["ROADMAP.md", "KPI.md", "docs/decisions/0011-retell-voice-platform-erratum.md"],
+      "fix_sketch": "Esme must deliver Retell R1 research and confirm platform choice. Sebastian must set a hard deadline. Cannot be fixed by an automated audit agent.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-05-20T00:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    }
+  ]
+}
