@@ -94,4 +94,4 @@ escalate_rule: "S >= 9 always escalates regardless of RPN (catches rank-reversal
 ---
 
 **Last updated:** 2026-06-13
-**Last verified:** 2026-06-18 — nightly audit (read-only review; no content changes)
+**Last verified:** 2026-07-03 — nightly audit (read-only review; no content changes)
