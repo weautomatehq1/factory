@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-07-01T04:00:00Z",
+  "last_updated": "2026-07-03T05:00:00Z",
   "open_count": 2,
-  "fixed_count": 12,
-  "audits": ["20260625T040000Z.json", "2026-06-28T040632Z.json", "20260701T040000Z.json"],
+  "fixed_count": 18,
+  "audits": ["20260625T040000Z.json", "2026-06-28T040632Z.json", "20260701T040000Z.json", "20260703T050000Z.json"],
   "open_findings": [
     "AUDIT-factory-sprint-b-missing",
     "AUDIT-factory-retell-r1-overdue"
@@ -19,7 +19,13 @@
     "AUDIT-factory-fe79b39e",
     "AUDIT-factory-2175823a",
     "AUDIT-factory-d06ddff2",
-    "AUDIT-factory-0641c593"
+    "AUDIT-factory-0641c593",
+    "AUDIT-factory-status-missing-done-entries",
+    "AUDIT-factory-status-stale-2026-07-03",
+    "AUDIT-factory-roadmap-stale-2026-07-03",
+    "AUDIT-factory-kpi-stale-2026-07-03",
+    "AUDIT-factory-changelog-missing-2026-07-03",
+    "AUDIT-factory-risks-lastverified-2026-07-03"
   ],
   "carried_open_from_prior": [
     "AUDIT-factory-sprint-b-missing",

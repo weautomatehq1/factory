@@ -1,0 +1,135 @@
+{
+  "audit_id": "AUDIT-factory-20260703",
+  "repo": "weautomatehq1/factory",
+  "branch": "audit/nightly-2026-07-03",
+  "generated_at": "2026-07-03T05:00:00Z",
+  "auditor": "nightly-audit-agent",
+  "findings": [
+    {
+      "id": "AUDIT-factory-status-missing-done-entries",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "STATUS.md 'Done' section missing entries for 2026-06-30 and 2026-07-01 nightly audits",
+      "detail": "Both the 2026-06-30 and 2026-07-01 nightly audits are fully documented in CHANGELOG.md (4 COSMETIC findings each) and are referenced in the STATUS.md footer ('Last updated: 2026-07-01', 'Previously updated: 2026-06-30'), but neither appears as a 'Done' section entry. The most recent Done entry is 2026-06-28. The Done section is the canonical audit history record; these gaps break the chain of evidence. Content for both entries can be reconstructed from CHANGELOG.md.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Add '### 2026-06-30 — Nightly audit (this session)' and '### 2026-07-01 — Nightly audit (this session)' Done entries between the 2026-06-28 entry and the In flight section, using CHANGELOG.md as the source of truth for what was fixed.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-07-03T05:00:00Z",
+      "closed_at": "2026-07-03T05:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-03"
+    },
+    {
+      "id": "AUDIT-factory-status-stale-2026-07-03",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md overdue day counts stale (41→43 for SPRINT-B, 42→44 for Retell R1)",
+      "detail": "STATUS.md was last updated 2026-07-01. Today is 2026-07-03 (+2 days). 'In flight': 'day 41 overdue' should be 'day 43 overdue'. 'Up next' #1: 'now 41 days overdue' should be 'now 43 days overdue'. 'Up next' #2: 'now 42 days overdue' should be 'now 44 days overdue'. 'Open questions': 'now 42 days overdue' should be 'now 44 days overdue'. Footer dates stale.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Increment SPRINT-B counts by 2 (41→43) and Retell R1 counts by 2 (42→44) in all three locations; update footer.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-07-03T05:00:00Z",
+      "closed_at": "2026-07-03T05:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-03"
+    },
+    {
+      "id": "AUDIT-factory-roadmap-stale-2026-07-03",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ROADMAP.md Q3 blocking decision elapsed count stale (42 days → 44 days) + dates",
+      "detail": "ROADMAP.md was last updated 2026-07-01. Today is 2026-07-03. Q3 open question: 'BLOCKING DECISION — OVERDUE (42 days)' and 'as of 2026-07-01 (42 days elapsed)' should read 44 days and 2026-07-03. Frontmatter last_updated and footer also stale.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Update '(42 days)' → '(44 days)', 'as of 2026-07-01 (42 days elapsed)' → 'as of 2026-07-03 (44 days elapsed)', frontmatter last_updated, and footer Last updated/verified.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-07-03T05:00:00Z",
+      "closed_at": "2026-07-03T05:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-03"
+    },
+    {
+      "id": "AUDIT-factory-kpi-stale-2026-07-03",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "KPI.md Q3 OKR section stale + frontmatter/footer date mismatch",
+      "detail": "KPI.md Q3 OKR section says 'Retell R1 research is 42 days overdue' (should be 44) and 'Q3 started TODAY (2026-07-01)' (should now say Q3 started 2 days ago). Additionally, frontmatter shows last_updated: 2026-06-25 while footer shows Last updated: 2026-07-01 — the 2026-07-01 audit updated the footer but not the frontmatter, creating a mismatch.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Update Q3 action required banner (42→44 days, fix 'TODAY' language), sync frontmatter last_updated to match footer date (2026-07-03), update footer.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-07-03T05:00:00Z",
+      "closed_at": "2026-07-03T05:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-03"
+    },
+    {
+      "id": "AUDIT-factory-changelog-missing-2026-07-03",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md missing 2026-07-03 nightly audit entry",
+      "detail": "The nightly audit for 2026-07-03 has no CHANGELOG entry. Every audit that touches files must have a CHANGELOG entry per the audit protocol.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Add a '2026-07-03 — Nightly audit fixes' entry at the top of [Unreleased] ### Changed summarizing all fixes made in this session.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-07-03T05:00:00Z",
+      "closed_at": "2026-07-03T05:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-03"
+    },
+    {
+      "id": "AUDIT-factory-risks-lastverified-2026-07-03",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "RISKS.md 'Last verified' date stale (2026-06-18)",
+      "detail": "RISKS.md footer shows 'Last verified: 2026-06-18 — nightly audit'. This file has been read and verified clean in subsequent audits but the Last verified line was not updated. It is now 15 days stale.",
+      "file_globs": ["RISKS.md"],
+      "fix_sketch": "Update footer 'Last verified: 2026-06-18 — nightly audit' to 'Last verified: 2026-07-03 — nightly audit (read-only review; no content changes)'.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-07-03T05:00:00Z",
+      "closed_at": "2026-07-03T05:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-03"
+    },
+    {
+      "id": "AUDIT-factory-sprint-b-missing",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "SPRINT-2026-05-B never created — now 43 days overdue",
+      "detail": "SPRINT-2026-05-A ended 2026-05-20 incomplete. A SPRINT-2026-05-B re-plan was committed to in the 2026-05-21 reconciliation PR. As of 2026-07-03 it has never been created (43 days elapsed). No active sprint document means no trackable work. All Q2 OKRs missed. Q3 started 2026-07-01 with no sprint. Hard blocker for any milestone progress. Cannot be fixed by an automated audit agent — Sebastian + Esme must create SPRINT-2026-05-B (or SPRINT-2026-07-A) and re-plan.",
+      "file_globs": ["SPRINT.md"],
+      "fix_sketch": "Sebastian or Esme creates SPRINT-2026-05-B (or re-names to SPRINT-2026-07-A) with realistic capacity, deferred M-NNN tasks, and a hard start date. Update SPRINT.md status from 'incomplete' to appropriate historical state and create the new sprint file.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-05-26T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-retell-r1-overdue",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "Retell R1 research decision 44 days overdue — blocks M-005 through M-007, M-010, M-015",
+      "detail": "Esme's R1 Retell platform research was due at end of SPRINT-2026-05-A (2026-05-20). As of 2026-07-03 it is 44 days overdue. ADR-0011 retains Retell as default pending confirmation. M-005, M-006, M-007, M-010, M-015 are all blocked. Q3 OKRs cannot be written without this decision. ROADMAP.md has 'ACTION REQUIRED' note. Cannot be fixed by an automated audit agent — Esme must complete the R1 research or Sebastian must make an executive call to retain Retell without it.",
+      "file_globs": ["ROADMAP.md", "docs/decisions/0011-retell-voice-platform-erratum.md"],
+      "fix_sketch": "Esme publishes R1 findings; new ADR-0012 either confirms Retell or supersedes ADR-0011 with a pivot decision. Update ROADMAP.md Q3 blocking decision note. Update ADR-0011 status if superseded.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-05-26T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "by_severity": {
+      "CRITICAL": 0,
+      "IMPORTANT": 2,
+      "COSMETIC": 6
+    },
+    "by_status": {
+      "fixed": 6,
+      "open": 2
+    },
+    "open_findings": ["AUDIT-factory-sprint-b-missing", "AUDIT-factory-retell-r1-overdue"],
+    "notes": "6 findings fixed: 1 IMPORTANT (STATUS.md missing Done entries for 2026-06-30 and 2026-07-01 audits), 5 COSMETIC (stale day counts in STATUS.md/ROADMAP.md/KPI.md, missing CHANGELOG entry, RISKS.md Last verified). 2 IMPORTANT findings remain open — both require human action (Sebastian/Esme)."
+  }
+}
