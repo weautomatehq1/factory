@@ -3,7 +3,7 @@ file: ARCHITECTURE.md
 status: accepted
 last_updated: 2026-05-26
 owner: sebas
-related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0005, ADR-0007, ADR-0009, ADR-0010]
+related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0005, ADR-0007, ADR-0009, ADR-0010, ADR-0011]
 ---
 
 # Architecture
@@ -149,7 +149,7 @@ factory/
 
 These are the rules that don't show up by reading code — they show up by violations breaking the system.
 
-1. **The Factory repo contains no executable code.** Markdown only. Code lives in IFleet / voice-discovery / per-client repos.
+1. **The Factory repo contains no application code.** Spec and decision files are Markdown. Enforcement tooling (`.husky/`, `.github/`, `.claude/`) is present but contains only hooks and configuration, not feature-implementing code. Feature code lives in IFleet / voice-discovery / per-client repos.
 2. **The 17 spec files are the contract.** If code contradicts a spec, the spec wins. Open an issue; do not silently drift.
 3. **Issues are the unit of work for IFleet.** Voice interview, self-healing, monitoring, humans — all upstream sources go through "create issue" → "worker picks up." See ADR-0003.
 4. **No worker self-merges.** A human or designated reviewer agent merges every PR. Even green CI does not authorize self-merge.
@@ -157,7 +157,7 @@ These are the rules that don't show up by reading code — they show up by viola
 6. **The client's word always wins in `UBIQUITOUS_LANGUAGE.md`.** If client says "matter," we use "matter" everywhere. Aliases are banned, not just discouraged.
 7. **ADRs are append-only via filename discipline.** One per file at `docs/decisions/NNNN-*.md`. Supersede via new file with `supersedes:` frontmatter. Never edit accepted ones.
 8. **INTAKE.md stays raw forever.** Synthesis happens elsewhere. INTAKE is the evidence bucket so future agents can re-derive synthesis when models improve.
-9. **No `.yaml` siblings of spec files unless markdown parsing has demonstrably failed.** Premature sync layer creates drift. See ADR-0001 reasoning.
+9. **No `.yaml` siblings of spec files unless markdown parsing has demonstrably failed.** Premature sync layer creates drift. (Note: ADR-0001 covers the AGENTS.md/CLAUDE.md bridge, not this rule — see §7 Boundaries rationale in AGENTS.md.)
 10. **Cross-cutting concerns (auth, error handling, logging, RLS) are AGENTS.md-enforced patterns, not freestyle.** Policy hook (M-004) catches drift before merge.
 
 ## 6. Cross-Cutting Concerns
@@ -166,7 +166,7 @@ These are the rules that don't show up by reading code — they show up by viola
 |---|---|---|
 | **Authentication** | per-client repo `lib/auth/`; protected path | `SECURITY.md` |
 | **Multi-tenant isolation** | Supabase RLS policies; `lib/api-guard/` | `supabase-multitenant` skill |
-| **Logging** | Structured JSON to stdout + Sentry breadcrumbs (see standard below) | `AGENTS.md` §6 |
+| **Logging** | Structured JSON to stdout + Sentry breadcrumbs (see standard below) | `ARCHITECTURE.md` §6 |
 | **Error handling** | API boundary returns `{ data, error, status }`; never expose stack traces | `AGENTS.md` §6 |
 | **Observability** | Sentry + PostHog + n8n execution history + Session Report plugin | `KPI.md` |
 | **Cost tracking** | per-session in `.omc/costs.json`; daily aggregate in Discord digest | `M-019` |
@@ -239,5 +239,5 @@ Quick pointers:
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-07-04
+**Last verified:** 2026-07-04 — nightly audit (factual corrections: invariant 1 wording, cross-cutting table owner, invariant 9 ADR citation, related_adrs added ADR-0011)

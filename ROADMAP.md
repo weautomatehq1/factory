@@ -102,7 +102,7 @@ owner: sebas
   - n8n workflow: Retell webhook → Supabase persist transcript
   - Test call ends → row in Supabase with full transcript
 - sprint: SPRINT-2026-05-A
-- adrs: [ADR-0006]
+- adrs: [ADR-0011]
 
 ### [M-006] Voice interviewer brain (Layer 1 + Layer 2)
 - status: planned
