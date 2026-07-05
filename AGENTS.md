@@ -66,7 +66,13 @@ factory/
 ├── DECISIONS.md               # auto-generated index
 ├── docs/decisions/            # one ADR per file (NNNN-*.md)
 │   ├── _template.md
-│   └── 0001-*.md … 0010-*.md
+│   └── 0001-*.md … 0011-*.md
+├── .husky/                    # git hook scripts (pre-commit secret scan)
+├── .github/
+│   ├── CODEOWNERS             # protected-path review requirements
+│   └── workflows/             # CI: protected-paths gate, etc.
+├── .claude/
+│   └── settings.json          # Claude Code hooks (force-push blocker, secret scan)
 └── .omc/
     ├── STATUS.md              # Done / In flight / Up next
     └── costs.json             # usage log
@@ -133,7 +139,7 @@ Steal Cloudflare's `Always / Ask first / Never` pattern. Every rule has a one-li
 - **Use `Get-Content` / `Set-Content` in PowerShell.** Rationale: corrupts encoding (Esme is on Windows; this matters cross-team).
 - **Force-push to `main`.** Rationale: rewrites history; loses other agents' work.
 - **Skip pre-commit hooks (`--no-verify`).** Rationale: hooks are the only hard enforcement (per Anthropic docs — AGENTS.md/CLAUDE.md are advisory).
-- **Generate `.yaml` siblings of spec files unless an agent has failed to parse the `.md`.** Rationale: ADR-0001 — premature sync layer = drift risk.
+- **Generate `.yaml` siblings of spec files unless an agent has failed to parse the `.md`.** Rationale: premature sync layer creates drift between the canonical `.md` and a derived YAML copy. (ADR-0001 covers the AGENTS.md/CLAUDE.md bridge, not this rule — the YAML rationale lives in ARCHITECTURE.md §5.)
 
 ## 8. Testing
 
@@ -188,13 +194,13 @@ This file is **advisory**. Per Anthropic's docs, AGENTS.md and CLAUDE.md shape a
 
 **For absolutely-never rules**, use hooks in `.claude/settings.json` (Claude Code) or sandbox config (Codex). Current hard-enforced rules:
 
-- Pre-commit hook: rejects commits with secret patterns (`sk_`, `xoxb-`, JWT `eyJ`)
-- Pre-commit hook: rejects edits to `docs/decisions/*.md` with `status: accepted` (allows `proposed → accepted/rejected/superseded` transitions only)
-- Pre-push hook: blocks `push --force` to `main`
+- Pre-commit hook (`.husky/pre-commit`): rejects commits with secret patterns (`sk_`, `xoxb-`, JWT `eyJ`)
+- Pre-commit hook (`.husky/pre-commit`): rejects edits to `docs/decisions/*.md` with `status: accepted` (allows `proposed → accepted/rejected/superseded` transitions only)
+- Claude Code PreToolUse hook (`.claude/settings.json`): blocks `push --force` to `main` when using Claude Code. Non-Claude terminal pushes are not git-hook-protected at this time — add `.husky/pre-push` to close the gap.
 
 If a rule in this file MUST be unbreakable, promote it to a hook. Note the promotion here.
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-07-04
+**Last verified:** 2026-07-04 — nightly audit (corrected repo tree, ADR-0001 citation, force-push hook description)

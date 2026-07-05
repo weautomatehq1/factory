@@ -1,0 +1,99 @@
+{
+  "scan_id": "20260704T040000Z",
+  "scanned_at": "2026-07-04T04:00:00Z",
+  "scanner": "nightly-audit-agent",
+  "branch": "audit/nightly-2026-07-04",
+  "summary": "Nightly audit — 7 new findings (6 IMPORTANT + 4 COSMETIC). 6 findings fixed in this run. 2 require human review (AUDIT-factory-a5d3e092 security policy change, AUDIT-factory-71c4b389 sprint creation).",
+  "findings": [
+    {
+      "id": "AUDIT-factory-d41b09a2",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "title": "AGENTS.md §13 claims a git pre-push hook that does not exist",
+      "file": "AGENTS.md",
+      "fix": "Updated §13 to accurately describe the force-push blocker as a Claude Code PreToolUse hook in .claude/settings.json, not a git pre-push hook. Added note that non-Claude terminal pushes are unprotected and .husky/pre-push would close the gap.",
+      "fixed_at": "2026-07-04T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-f3c72e81",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "title": "ARCHITECTURE.md §5 invariant 1 'Markdown only' is now false",
+      "file": "ARCHITECTURE.md",
+      "fix": "Updated invariant 1 to say 'no application code' and explicitly acknowledge that enforcement tooling (.husky/, .github/, .claude/) is present but contains only hooks and configuration.",
+      "fixed_at": "2026-07-04T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-b0a95c47",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "title": "ADR-0001 cited as rationale for the no-.yaml-siblings rule, but ADR-0001 does not discuss this",
+      "file": "AGENTS.md, ARCHITECTURE.md",
+      "fix": "Replaced the 'ADR-0001' citation with accurate parenthetical in both files: ADR-0001 covers the AGENTS.md/CLAUDE.md bridge; the YAML rationale is in ARCHITECTURE.md §5 and AGENTS.md §7.",
+      "fixed_at": "2026-07-04T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-3e17fd28",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "title": "ARCHITECTURE.md §6 cross-cutting table lists wrong owner for Logging standard",
+      "file": "ARCHITECTURE.md",
+      "fix": "Changed Logging Owner from 'AGENTS.md §6' to 'ARCHITECTURE.md §6' — the standard is defined in §6 of ARCHITECTURE.md itself, not in AGENTS.md.",
+      "fixed_at": "2026-07-04T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "title": "SECURITY.md Protected Paths canonical list is missing **/(auth)/** which is enforced in CODEOWNERS and protected-paths.yml",
+      "file": "SECURITY.md",
+      "description": "The **/(auth)/** glob (Next.js route-group auth pattern) is enforced in .github/CODEOWNERS and .github/workflows/protected-paths.yml but absent from SECURITY.md's canonical Protected Paths list. Adding it is a security-tightening change; removing from CODEOWNERS/workflow would be a security regression. Requires operator review to confirm the intent and update SECURITY.md.",
+      "opened_at": "2026-07-04T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "title": "No active sprint document — SPRINT.md only contains a reconciled incomplete sprint",
+      "file": "SPRINT.md",
+      "description": "SPRINT-2026-05-B was never created. Agents following AGENTS.md §2 required reading arrive at SPRINT.md expecting an active work queue and find only a completed/deferred sprint. Requires Sebastian to create SPRINT-2026-05-B or explicitly mark the current work queue.",
+      "opened_at": "2026-07-04T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-9e8f3c12",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "AGENTS.md §3 repo structure tree is outdated — ADR range and enforcement dirs missing",
+      "file": "AGENTS.md",
+      "fix": "Updated ADR range from 0001-0010 to 0001-0011 and added .husky/, .github/, and .claude/ directories to the tree.",
+      "fixed_at": "2026-07-04T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-4a7b2d05",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "ROADMAP.md M-005 adrs field references superseded ADR-0006",
+      "file": "ROADMAP.md",
+      "fix": "Changed M-005 adrs: [ADR-0006] to adrs: [ADR-0011] (ADR-0011 supersedes ADR-0006 on the Retell voice platform choice, accepted 2026-06-04).",
+      "fixed_at": "2026-07-04T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-c6e81f34",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "ARCHITECTURE.md related_adrs frontmatter does not include ADR-0011",
+      "file": "ARCHITECTURE.md",
+      "fix": "Added ADR-0011 to the related_adrs frontmatter list.",
+      "fixed_at": "2026-07-04T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-2b091d7a",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "SECURITY.md last_verified date is 38+ days stale",
+      "file": "SECURITY.md",
+      "fix": "Updated Last verified date to 2026-07-04. Added note about the AUDIT-factory-a5d3e092 gap that still needs operator review.",
+      "fixed_at": "2026-07-04T04:00:00Z"
+    }
+  ]
+}
