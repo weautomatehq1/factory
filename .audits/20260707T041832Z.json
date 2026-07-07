@@ -1,0 +1,65 @@
+{
+  "audit_id": "20260707T041832Z",
+  "repo": "factory",
+  "scanned_at": "2026-07-07T04:18:32Z",
+  "scanner": "nightly-audit-agent",
+  "branch": "audit/nightly-2026-07-07",
+  "findings": [
+    {
+      "id": "AUDIT-factory-a8c3d1f7",
+      "severity": "COSMETIC",
+      "category": "assumption",
+      "title": "STATUS.md day counts stale — SPRINT-B now 47 days overdue, Retell R1 now 48 days overdue",
+      "detail": "STATUS.md last updated 2026-07-01 (6 days ago). 'In flight' and 'Up next' sections still say 'day 41 overdue' for SPRINT-B and '42 days overdue' for Retell R1. As of 2026-07-07 the correct counts are 47 and 48 days respectively. Last verified and last updated footers also need refreshing.",
+      "file_globs": ["factory/.omc/STATUS.md"],
+      "fix_sketch": "Update day counts in 'In flight' (41→47) and 'Up next' (41→47, 42→48). Update last_updated to 2026-07-07.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-07T04:18:32Z",
+      "closed_at": "2026-07-07T04:18:32Z",
+      "closing_pr": "audit/nightly-2026-07-07"
+    },
+    {
+      "id": "AUDIT-factory-b5e2f9c1",
+      "severity": "COSMETIC",
+      "category": "assumption",
+      "title": "KPI.md Q3 ACTION REQUIRED Retell R1 overdue count stale (42 → 48 days)",
+      "detail": "KPI.md last updated 2026-07-01. Q3 section still says 'Retell R1 research is 42 days overdue' and footer says '42 days'. As of 2026-07-07 it is 48 days overdue.",
+      "file_globs": ["factory/KPI.md"],
+      "fix_sketch": "Update '42 days overdue' to '48 days overdue' in Q3 ACTION REQUIRED section and footer. Update last_updated and last_verified to 2026-07-07.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-07T04:18:32Z",
+      "closed_at": "2026-07-07T04:18:32Z",
+      "closing_pr": "audit/nightly-2026-07-07"
+    },
+    {
+      "id": "AUDIT-factory-c1d8b4e6",
+      "severity": "COSMETIC",
+      "category": "assumption",
+      "title": "ROADMAP.md Q3 blocking decision elapsed count stale (42 → 48 days)",
+      "detail": "ROADMAP.md last updated 2026-07-01. Q3 blocking decision note says '(42 days elapsed)'. As of 2026-07-07 it is 48 days elapsed. Footer also needs refreshing.",
+      "file_globs": ["factory/ROADMAP.md"],
+      "fix_sketch": "Update '(42 days elapsed)' to '(48 days elapsed)' in Open questions Q3. Update last_updated and last_verified to 2026-07-07.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-07T04:18:32Z",
+      "closed_at": "2026-07-07T04:18:32Z",
+      "closing_pr": "audit/nightly-2026-07-07"
+    },
+    {
+      "id": "AUDIT-factory-d3f7a2b8",
+      "severity": "COSMETIC",
+      "category": "assumption",
+      "title": "CHANGELOG.md missing 2026-07-07 nightly audit entry",
+      "detail": "CHANGELOG.md last entry is the 2026-07-01 nightly audit. The 2026-07-07 nightly audit must be recorded here per the session-update convention.",
+      "file_globs": ["factory/CHANGELOG.md"],
+      "fix_sketch": "Prepend a 2026-07-07 nightly audit entry to the [Unreleased] Changed section, summarising the 4 COSMETIC findings fixed in this run.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-07T04:18:32Z",
+      "closed_at": "2026-07-07T04:18:32Z",
+      "closing_pr": "audit/nightly-2026-07-07"
+    }
+  ]
+}
