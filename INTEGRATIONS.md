@@ -37,12 +37,12 @@ related_adrs: [ADR-0011]
 - **auth_model:** api_key + hmac (for webhooks)
 - **secret_refs:** [`RETELL_API_KEY`, `RETELL_PHONE_NUMBER`, `RETELL_WEBHOOK_SECRET`]
 - **scope:** WeAutomateHQ-wide; clients receive/place calls but don't have direct Retell access
-- **rate_limits:** per Retell plan (TBD from Esme R1 research)
+- **rate_limits:** TBD — Esme R1 research 48 days overdue; blocked on account creation (M-005)
 - **retry_policy:** exponential, max 3; on persistent fail, n8n escalates to Discord
 - **status_page:** https://status.retellai.com ⚠️ [UNVERIFIED — confirm after account creation; update this line with verified date]
 - **docs:** https://docs.retellai.com
 - **owner:** sebas
-- **lifecycle:** production (pending account creation D2)
+- **lifecycle:** experimental (account not yet created — blocked on M-005; see ADR-0011)
 - **depended_on_by:** voice-discovery
 - **last_audit:** n/a (new integration)
 

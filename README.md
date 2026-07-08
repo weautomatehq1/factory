@@ -34,7 +34,7 @@ This repo does **not** contain runnable code. Code lives in the other three Fact
 | File | Purpose |
 |---|---|
 | `AGENTS.md` | Rulebook for AI workers (cross-vendor agents.md convention) |
-| `CLAUDE.md` | Claude-specific bridge (`@AGENTS.md` import + Claude rules) |
+| `CLAUDE.md` † | Claude-specific bridge (`@AGENTS.md` import + Claude rules) |
 | `ROADMAP.md` | Phased milestones with `[M-NNN]` IDs |
 | `ARCHITECTURE.md` | System shape (Mermaid C4 Levels 1–2) + invariants |
 | `SPRINT.md` | Current active work |
@@ -51,6 +51,8 @@ This repo does **not** contain runnable code. Code lives in the other three Fact
 | `INTEGRATIONS.md` | Third-party services + auth model |
 | `SECURITY.md` | Threat model + protected paths + data classification |
 | `CHANGELOG.md` | Release log (Keep a Changelog + SemVer) |
+
+† Not one of the 17 canonical spec files — this is the Claude Code bridge (see AGENTS.md §2).
 
 ## Glossary (quick)
 

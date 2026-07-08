@@ -83,7 +83,7 @@ Three sections only. Next agent reads this first.
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 42 days overdue; ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 48 days overdue (as of 2026-07-07); ADR-0011 retains Retell as default pending confirmation.
 
 ---
 

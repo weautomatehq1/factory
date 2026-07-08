@@ -46,9 +46,12 @@ factory/
 │   └── decisions/
 │       ├── _template.md         # MADR template
 │       └── NNNN-*.md            # one ADR per file
-└── .omc/
-    ├── STATUS.md                # Done / In flight / Up next
-    └── costs.json               # usage log
+├── .omc/
+│   ├── STATUS.md                # Done / In flight / Up next
+│   └── costs.json               # usage log
+└── .audits/                     # nightly audit scan results (append-only)
+    ├── index.json               # open findings rollup
+    └── <ISO-timestamp>.json     # per-run scan output
 ```
 
 ## Tree (template for client repos — applies to per-client SaaS, NOT this repo)
