@@ -1,7 +1,7 @@
 ---
 file: ROADMAP.md
 status: living
-last_updated: 2026-07-01
+last_updated: 2026-07-09
 last_reconciled: 2026-06-17
 owner: sebas
 ---

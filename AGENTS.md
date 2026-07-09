@@ -64,9 +64,12 @@ factory/
 ├── INTEGRATIONS.md
 ├── SECURITY.md
 ├── DECISIONS.md               # auto-generated index
-├── docs/decisions/            # one ADR per file (NNNN-*.md)
-│   ├── _template.md
-│   └── 0001-*.md … 0011-*.md
+├── docs/
+│   ├── decisions/             # one ADR per file (NNNN-*.md)
+│   │   ├── _template.md
+│   │   └── 0001-*.md … 0011-*.md
+│   ├── postmortems/           # incident retrospectives
+│   └── templates/             # reusable spec + doc templates
 ├── .husky/                    # git hook scripts (pre-commit secret scan)
 ├── .github/
 │   ├── CODEOWNERS             # protected-path review requirements
@@ -196,11 +199,11 @@ This file is **advisory**. Per Anthropic's docs, AGENTS.md and CLAUDE.md shape a
 
 - Pre-commit hook (`.husky/pre-commit`): rejects commits with secret patterns (`sk_`, `xoxb-`, JWT `eyJ`)
 - Pre-commit hook (`.husky/pre-commit`): rejects edits to `docs/decisions/*.md` with `status: accepted` (allows `proposed → accepted/rejected/superseded` transitions only)
-- Claude Code PreToolUse hook (`.claude/settings.json`): blocks `push --force` to `main` when using Claude Code. Non-Claude terminal pushes are not git-hook-protected at this time — add `.husky/pre-push` to close the gap.
+- Claude Code PreToolUse hook (`.claude/settings.json`): blocks `push --force` to `main` when using Claude Code. Non-Claude terminal pushes are not git-hook-protected at this time — tracked as AUDIT-factory-f8a1c3e6; close by adding `.husky/pre-push`.
 
 If a rule in this file MUST be unbreakable, promote it to a hook. Note the promotion here.
 
 ---
 
-**Last updated:** 2026-07-04
-**Last verified:** 2026-07-04 — nightly audit (corrected repo tree, ADR-0001 citation, force-push hook description)
+**Last updated:** 2026-07-09
+**Last verified:** 2026-07-09 — nightly audit (§3 codemap expanded with docs/postmortems/ + docs/templates/; §13 pre-push gap tracking reference added)

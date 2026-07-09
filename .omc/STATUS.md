@@ -62,6 +62,12 @@ Three sections only. Next agent reads this first.
 - Factory: 4 findings fixed (1 IMPORTANT, 3 COSMETIC): KPI.md Q3 OKR placeholder added, STATUS.md day counts corrected (30/31→35/36), CHANGELOG.md entry added, ROADMAP.md frontmatter date synced. 2 findings remain open: SPRINT-2026-05-B missing (day 35), Retell R1 (day 36).
 - audit-elevation: scan in progress.
 
+### 2026-07-09 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-07-09` opened across IFleet + factory + audit-elevation.
+- IFleet: 13 findings fixed (1C/9I/3Cos) + 2 findings remain open. All 1606 tests pass. Pushed to IFleet audit/nightly-2026-07-09.
+- Factory: 10 findings fixed (6 IMPORTANT, 4 COSMETIC): ARCHITECTURE.md §6 M-019→M-018 + codemap + frontmatter; SECURITY.md/ROADMAP.md frontmatter dates; STATUS.md day counts 47/48→49/50 + stale "42 days"→50; NON_GOALS.md M-026+ fix + header; DECISIONS.md ADR-0006 status; AGENTS.md codemap + pre-push note. 5 findings remain open/deferred.
+- audit-elevation: 29 findings (14 IMPORTANT, 15 COSMETIC) identified. Fixes in progress.
+
 ### 2026-06-28 — Nightly audit (this session)
 - Nightly audit branch `audit/nightly-2026-06-28` opened across IFleet + factory + audit-elevation.
 - IFleet: 14 findings fixed (2C/8I/4Cos) including CRITICAL path traversal in invariants.ts, CRITICAL orphaned approval in server.ts, IMPORTANT auth fail-closed in interaction-create.ts. Pushed to IFleet audit/nightly-2026-06-28.
@@ -70,12 +76,12 @@ Three sections only. Next agent reads this first.
 
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-07-07 (day 47 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-07-09 (day 49 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 47 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 48 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+1. **Open SPRINT-2026-05-B** — now 49 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 50 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
 3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (TODAY), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
@@ -83,9 +89,9 @@ Three sections only. Next agent reads this first.
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 42 days overdue; ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 50 days overdue; ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-07-07 — nightly audit (STATUS.md day counts updated 41/42→47/48, ROADMAP.md + KPI.md overdue counts updated, CHANGELOG.md entry added)
+**Last updated:** 2026-07-09 — nightly audit (day counts updated 47/48→49/50 + stale "42 days" in Open questions corrected to 50; ARCHITECTURE.md M-018/codemap/frontmatter fixes; SECURITY.md/ROADMAP.md/NON_GOALS.md frontmatter dates; CHANGELOG.md entry added)
 **Previously updated:** 2026-07-01 — nightly audit

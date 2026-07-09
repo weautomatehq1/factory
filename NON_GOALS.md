@@ -1,7 +1,7 @@
 ---
 file: NON_GOALS.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-07-09
 owner: sebas
 related_adrs: []
 ---
@@ -33,7 +33,7 @@ The Factory at full operation:
 7. Platform launches behind 7 human gates (spec, design, copy, Stripe, DNS, compliance, go-live)
 8. Post-launch: Tier 3 self-healing catches and fixes runtime issues
 
-## Non-Goals (this release — 5-day sprint ending 2026-05-20)
+## Non-Goals (this release — initial scope from SPRINT-2026-05-A, ended 2026-05-20)
 
 ### NG-1. Tier 3 runtime self-healing
 - **Reasonable as a goal?** Yes.
@@ -126,7 +126,7 @@ These are walking-away decisions. If a feature/scope hits a No-Go, we don't do i
 - Text-only-preference clients — different product
 - Clients who refuse a recorded call — different product
 - Reason: voice interview is the foundational primitive of The Factory. Other intake forms = different system entirely.
-- (Future: a text-based intake mode is plausible but is M-026+, not this product line.)
+- (Future: a text-based intake mode is plausible but is not yet scoped — planned after M-024, not this product line.)
 
 ### NoGo-7. NOT fabricating INTAKE.md content
 - If we don't have a real client interview, INTAKE stays `status: skeleton`.
@@ -148,5 +148,5 @@ These are walking-away decisions. If a feature/scope hits a No-Go, we don't do i
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-06-18 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-07-09
+**Last verified:** 2026-07-09 — nightly audit (NoGo-6 stale M-026+ ref corrected to "not yet scoped — planned after M-024"; section header sprint date clarified)
