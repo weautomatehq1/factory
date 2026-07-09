@@ -40,7 +40,7 @@ The Factory operates across four bounded contexts. The same word can mean differ
 ### IFleet
 - **Canonical:** IFleet (one word, capital I, capital F)
 - **Context:** Build
-- **Definition:** The autonomous fleet of Claude Code Pro Max + Codex Pro workers that picks up GitHub Issues, runs in isolated git worktrees, and ships PRs. Lives at `~/dev/ai-products/IFleet`.
+- **Definition:** The autonomous fleet of Claude Code Pro Max + Codex Pro workers that picks up GitHub Issues, runs in isolated git worktrees, and ships PRs. Lives at `github.com/weautomatehq1/IFleet`.
 - **NOT:** "the fleet" (lowercase, alone), "iFleet," "I-Fleet," "Claude fleet," "worker pool" (worker pool is a component of IFleet, not IFleet itself)
 - **Source:** Sebastian 2026-05-12 conversation, [[ifleet-repo]] memory
 

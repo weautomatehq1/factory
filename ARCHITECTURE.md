@@ -73,7 +73,7 @@ flowchart TB
         V4[Synthesizer<br/>Opus pipeline]
     end
 
-    subgraph template[" spec-template (new repo) "]
+    subgraph template[" spec-template "]
         T1[17 file skeletons<br/>+ frontmatter]
         T2[GitHub template config]
     end
@@ -83,11 +83,11 @@ flowchart TB
         I2[Queue bridge<br/>GitHub I/O]
         I3[Worker pool<br/>Claude + Codex]
         I4[Architect → Editor → Reviewer<br/>pipeline]
-        I5[Decomposer<br/>NEW: M-002]
-        I6[Schema worker<br/>NEW: M-008]
-        I7[Design bootstrap<br/>NEW: M-009]
-        I8[Deploy worker<br/>NEW: M-012]
-        I9[Policy hook<br/>NEW: M-004]
+        I5[Decomposer<br/>PLANNED: M-002]
+        I6[Schema worker<br/>PLANNED: M-008]
+        I7[Design bootstrap<br/>PLANNED: M-009]
+        I8[Deploy worker<br/>PLANNED: M-012]
+        I9[Policy hook<br/>PLANNED: M-004]
     end
 
     subgraph client[" weautomatehq1/<client-name> (per-client) "]
@@ -171,7 +171,7 @@ These are the rules that don't show up by reading code — they show up by viola
 | **Observability** | Sentry + PostHog + n8n execution history + Session Report plugin | `KPI.md` |
 | **Cost tracking** | per-session in `.omc/costs.json`; daily aggregate in Discord digest | `M-019` |
 | **Secrets management** | 1Password vault → env vars at deploy; names only in `ENV.md` | `SECURITY.md` |
-| **Killswitches** | env vars `SELF_HEAL_BUILD`, `SELF_HEAL_DEPLOY`, `SELF_HEAL_RUNTIME` | per-client `RUNBOOK.md` |
+| **Killswitches** | env vars `SELF_HEAL_BUILD`, `SELF_HEAL_DEPLOY`, `SELF_HEAL_RUNTIME`; `OMC_KILLSWITCH` — global OMC emergency halt (stops all orchestration processes) | per-client `RUNBOOK.md` |
 
 ### Logging standard (closes AUDIT-factory-47e08664)
 

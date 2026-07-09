@@ -8,9 +8,10 @@
 
 **The Factory** is WeAutomateHQ's autonomous client-SaaS factory. A voice AI interviews a client → produces 17 spec files in this format → autonomous Claude/Codex workers (IFleet) read the spec → build, ship, and self-heal the platform.
 
-Two repos sit beside this one:
+Three repos sit beside this one:
 - `github.com/weautomatehq1/IFleet` — the worker fleet that executes specs
 - `github.com/weautomatehq1/voice-discovery` — the voice interviewer (to be created)
+- `github.com/weautomatehq1/spec-template` — GitHub template used to spawn per-client repos (created M-001, 2026-05-16)
 
 Plus one per client: `github.com/weautomatehq1/<client-name>` — generated from this template at interview-end.
 
@@ -73,9 +74,12 @@ factory/
 │   └── workflows/             # CI: protected-paths gate, etc.
 ├── .claude/
 │   └── settings.json          # Claude Code hooks (force-push blocker, secret scan)
-└── .omc/
-    ├── STATUS.md              # Done / In flight / Up next
-    └── costs.json             # usage log
+├── .omc/
+│   ├── STATUS.md              # Done / In flight / Up next
+│   └── costs.json             # usage log
+└── .audits/                   # nightly audit scan results (append-only)
+    ├── index.json             # open findings rollup
+    └── <ISO-timestamp>.json   # per-run scan output
 ```
 
 ### Nested AGENTS.md expansion clause

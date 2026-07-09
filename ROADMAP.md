@@ -36,7 +36,7 @@ owner: sebas
 
 ---
 
-## Now (current cycle — re-plan pending in SPRINT-2026-05-B; SPRINT-2026-05-A ran 2026-05-15 → 2026-05-20, incomplete)
+## Now (no active sprint — re-plan pending SPRINT-2026-05-B start; last sprint SPRINT-2026-05-A closed 2026-05-20)
 
 ### [M-001] Spec-template repo scaffolded
 - status: shipped

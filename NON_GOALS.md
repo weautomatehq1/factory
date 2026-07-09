@@ -33,7 +33,7 @@ The Factory at full operation:
 7. Platform launches behind 7 human gates (spec, design, copy, Stripe, DNS, compliance, go-live)
 8. Post-launch: Tier 3 self-healing catches and fixes runtime issues
 
-## Non-Goals (this release — 5-day sprint ending 2026-05-20)
+## Non-Goals (standing — last reviewed for sprint SPRINT-2026-05-A; pending SPRINT-2026-05-B re-evaluation)
 
 ### NG-1. Tier 3 runtime self-healing
 - **Reasonable as a goal?** Yes.
@@ -86,7 +86,7 @@ These are walking-away decisions. If a feature/scope hits a No-Go, we don't do i
 - We will NOT compete with Lovable / Bolt / Cursor / v0 / Replit Agent / Devin.
 - The Factory is **internal agency leverage**. The product we sell is the SaaS we build for the client, not the system that built it.
 - Reason: distinct market, distinct customer (developers vs business owners), distinct support requirements. We don't have the bandwidth or interest for a dev-tool customer base.
-- Basis: Sebastian 2026-05-12 scope decision (see STAKEHOLDERS.md project overview; ADR-0004 covers sprint strategy, not this scope boundary)
+- Basis: Sebastian 2026-05-12 scope decision (see AGENTS.md §1 and STAKEHOLDERS.md §Decision log (2026-05-15 entry); ADR-0004 covers sprint strategy, not this scope boundary)
 
 ### NoGo-2. NOT supporting non-SaaS deliverables
 - Mobile apps (native iOS/Android) — out of competence zone
