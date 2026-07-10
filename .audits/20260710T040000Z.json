@@ -1,0 +1,171 @@
+{
+  "audit_id": "20260710T040000Z",
+  "repo": "factory",
+  "scanned_at": "2026-07-10T04:00:00Z",
+  "scanner": "nightly-audit-agent",
+  "branch": "audit/nightly-2026-07-10",
+  "findings_fixed_from_prior_open": [
+    {
+      "id": "AUDIT-factory-7e8c1eea",
+      "severity": "IMPORTANT",
+      "title": "STATUS.md days-overdue counter inconsistency — one section showed 42 days where others showed 48",
+      "file_globs": [".omc/STATUS.md"],
+      "status": "fixed",
+      "fix_note": "File already shows consistent 48 days as of 2026-07-07 (fixed by 2026-07-08 commit); index updated",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    },
+    {
+      "id": "AUDIT-factory-9e2e2cb7",
+      "severity": "IMPORTANT",
+      "title": "NON_GOALS.md sprint header references completed sprint ending 2026-05-20 — stale by 49 days",
+      "file_globs": ["NON_GOALS.md"],
+      "status": "fixed",
+      "fix_note": "NON_GOALS.md already shows updated standing header per fix_sketch; fixed by 2026-07-08 commit; index updated",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    },
+    {
+      "id": "AUDIT-factory-60e00c09",
+      "severity": "IMPORTANT",
+      "title": "ARCHITECTURE.md marks spec-template subgraph as '(new repo)' after M-001 shipped",
+      "file_globs": ["ARCHITECTURE.md"],
+      "status": "fixed",
+      "fix_note": "ARCHITECTURE.md subgraph label already reads `spec-template` with no '(new repo)'; fixed by 2026-07-08 commit; index updated",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    },
+    {
+      "id": "AUDIT-factory-b196aaab",
+      "severity": "IMPORTANT",
+      "title": "ARCHITECTURE.md cross-cutting table missing OMC_KILLSWITCH env var",
+      "file_globs": ["ARCHITECTURE.md"],
+      "status": "fixed",
+      "fix_note": "ARCHITECTURE.md §6 cross-cutting table already includes OMC_KILLSWITCH; fixed by 2026-07-08 commit; index updated",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    },
+    {
+      "id": "AUDIT-factory-56a7982f",
+      "severity": "IMPORTANT",
+      "title": "ROADMAP.md Now section references stale sprint SPRINT-2026-05-A",
+      "file_globs": ["ROADMAP.md"],
+      "status": "fixed",
+      "fix_note": "ROADMAP.md Now section already reads 'no active sprint — re-plan pending SPRINT-2026-05-B start'; fixed by 2026-07-08 commit; index updated",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    },
+    {
+      "id": "AUDIT-factory-5a72c4fb",
+      "severity": "IMPORTANT",
+      "title": "INTEGRATIONS.md Retell rate_limits still TBD after Esme R1 research",
+      "file_globs": ["INTEGRATIONS.md"],
+      "status": "fixed",
+      "fix_note": "INTEGRATIONS.md already acknowledges delay with overdue reference; updated count from 48→51 days in this session",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    },
+    {
+      "id": "AUDIT-factory-5b026618",
+      "severity": "IMPORTANT",
+      "title": "FILE_STRUCTURE.md and AGENTS.md directory trees both missing .audits directory",
+      "file_globs": ["FILE_STRUCTURE.md", "AGENTS.md"],
+      "status": "fixed",
+      "fix_note": "Both FILE_STRUCTURE.md and AGENTS.md §3 already contain .audits/ entry; fixed by 2026-07-08 commit; index updated",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    },
+    {
+      "id": "AUDIT-factory-b9a43e43",
+      "severity": "COSMETIC",
+      "title": "ARCHITECTURE.md IFleet component labels use 'NEW: M-NNN' for shipped milestones",
+      "file_globs": ["ARCHITECTURE.md"],
+      "status": "fixed",
+      "fix_note": "ARCHITECTURE.md ifleet subgraph already shows 'PLANNED: M-NNN' labels; fixed by 2026-07-08 commit; index updated",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    }
+  ],
+  "findings_new_fixed": [
+    {
+      "id": "AUDIT-factory-e3c82a17",
+      "severity": "COSMETIC",
+      "category": "conformance",
+      "title": "ADR-0006 frontmatter uses non-standard status value 'superseded by ADR-0011'",
+      "detail": "docs/decisions/0006-retell-default-voice.md line 4 had `status: superseded by ADR-0011`. The valid set is skeleton/proposed/accepted/rejected/superseded. The composite string is non-conforming. DECISIONS.md index correctly normalised it to `superseded`.",
+      "file_globs": ["docs/decisions/0006-retell-default-voice.md"],
+      "fix_sketch": "Changed `status: superseded by ADR-0011` to `status: superseded`",
+      "status": "fixed",
+      "opened_at": "2026-07-10T04:00:00Z",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    },
+    {
+      "id": "AUDIT-factory-f7b941c3",
+      "severity": "IMPORTANT",
+      "category": "process",
+      "title": "CHANGELOG.md missing [Unreleased] entry for 2026-07-08 audit (14 findings fixed)",
+      "detail": "The 2026-07-08 nightly audit commit fixed 14 findings (3 CRITICAL, 7 IMPORTANT, 4 COSMETIC) across AGENTS.md, README.md, INTEGRATIONS.md, ARCHITECTURE.md, ROADMAP.md, FILE_STRUCTURE.md, NON_GOALS.md, STATUS.md, ENV.md, UBIQUITOUS_LANGUAGE.md. Every prior nightly audit added a CHANGELOG entry; this one did not.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Added retroactive 2026-07-08 entry to CHANGELOG.md [Unreleased] section",
+      "status": "fixed",
+      "opened_at": "2026-07-10T04:00:00Z",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    },
+    {
+      "id": "AUDIT-factory-a52de094",
+      "severity": "COSMETIC",
+      "category": "maintenance",
+      "title": ".omc/STATUS.md footer date not bumped after 2026-07-08 body edit — 3 days stale",
+      "detail": ".omc/STATUS.md footer read `Last updated: 2026-07-07` even though the 2026-07-08 commit edited the body. As of today (2026-07-10) the date was 3 days stale.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Updated footer to 2026-07-10; bumped overdue counts from 47/48 to 50/51 days",
+      "status": "fixed",
+      "opened_at": "2026-07-10T04:00:00Z",
+      "closed_at": "2026-07-10T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-10"
+    }
+  ],
+  "findings_deferred": [
+    {
+      "id": "AUDIT-factory-c9d72b41",
+      "severity": "COSMETIC",
+      "category": "conformance",
+      "title": "DECISIONS.md, ROADMAP.md, SPRINT.md use non-standard ADR status values (living, incomplete)",
+      "detail": "DECISIONS.md has `status: living`, ROADMAP.md has `status: living`, SPRINT.md has `status: incomplete`. The ADR valid-status enum is skeleton/proposed/accepted/rejected/superseded. However, these are non-ADR spec files, not decisions — their status values are intentionally different from the ADR enum.",
+      "file_globs": ["DECISIONS.md", "ROADMAP.md", "SPRINT.md"],
+      "fix_sketch": "N/A — deferred as by-design. Non-ADR spec files intentionally use non-ADR status values. The ADR enum only applies to files in docs/decisions/.",
+      "status": "deferred",
+      "notes": "by-design: non-ADR spec files are permitted to use non-ADR status values; the pre-commit hook only guards docs/decisions/*.md",
+      "opened_at": "2026-07-10T04:00:00Z"
+    }
+  ],
+  "findings_still_open": [
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "title": "SECURITY.md Protected Paths gap — requires operator review",
+      "notes": "Carried forward; requires Sebastian/Esme review — not auto-fixable"
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "title": "No active sprint — SPRINT-2026-05-B not yet created (50 days overdue)",
+      "notes": "Carried forward; requires Sebastian/Esme to open SPRINT-2026-05-B — not auto-fixable"
+    },
+    {
+      "id": "AUDIT-factory-4abde52c",
+      "severity": "COSMETIC",
+      "title": "Carried forward open finding (origin unclear — may be cross-repo artifact)",
+      "notes": "Carried forward from prior index; details not available in this scan"
+    }
+  ],
+  "summary": {
+    "fixed_from_prior_open": 8,
+    "fixed_new": 3,
+    "deferred": 1,
+    "still_open": 3,
+    "total_open_after_run": 3
+  }
+}

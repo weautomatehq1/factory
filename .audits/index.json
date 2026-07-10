@@ -1,20 +1,27 @@
 {
-  "last_updated": "2026-07-08T04:25:54Z",
-  "open_count": 11,
-  "fixed_count": 27,
-  "audits": ["20260625T040000Z.json", "2026-06-28T040632Z.json", "20260701T040000Z.json", "20260704T040000Z.json", "20260707T041832Z.json", "20260708T042554Z.json"],
+  "last_updated": "2026-07-10T04:00:00Z",
+  "open_count": 3,
+  "fixed_count": 41,
+  "audits": ["20260625T040000Z.json", "2026-06-28T040632Z.json", "20260701T040000Z.json", "20260704T040000Z.json", "20260707T041832Z.json", "20260708T042554Z.json", "20260710T040000Z.json"],
   "open_findings": [
-    "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-71c4b389",
-    "AUDIT-factory-7e8c1eea",
-    "AUDIT-factory-9e2e2cb7",
-    "AUDIT-factory-60e00c09",
-    "AUDIT-factory-b196aaab",
-    "AUDIT-factory-56a7982f",
-    "AUDIT-factory-5a72c4fb",
-    "AUDIT-factory-5b026618",
-    "AUDIT-factory-b9a43e43",
-    "AUDIT-factory-4abde52c"
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "title": "SECURITY.md Protected Paths gap — requires operator review",
+      "file_globs": ["SECURITY.md"]
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "title": "No active sprint — SPRINT-2026-05-B not yet created (50 days overdue as of 2026-07-10)",
+      "file_globs": ["SPRINT.md", ".omc/STATUS.md"]
+    },
+    {
+      "id": "AUDIT-factory-4abde52c",
+      "severity": "COSMETIC",
+      "title": "Carried forward open finding (origin unclear)",
+      "file_globs": []
+    }
   ],
   "fixed_findings": [
     "AUDIT-factory-kpi-q3-okrs-missing",
@@ -46,10 +53,17 @@
     "AUDIT-factory-9d8028ef",
     "AUDIT-factory-0c3ff30f",
     "AUDIT-factory-7229b7db",
-    "AUDIT-factory-7014eefb"
-  ],
-  "carried_open_from_prior": [
-    "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-71c4b389"
+    "AUDIT-factory-7014eefb",
+    "AUDIT-factory-7e8c1eea",
+    "AUDIT-factory-9e2e2cb7",
+    "AUDIT-factory-60e00c09",
+    "AUDIT-factory-b196aaab",
+    "AUDIT-factory-56a7982f",
+    "AUDIT-factory-5a72c4fb",
+    "AUDIT-factory-5b026618",
+    "AUDIT-factory-b9a43e43",
+    "AUDIT-factory-e3c82a17",
+    "AUDIT-factory-f7b941c3",
+    "AUDIT-factory-a52de094"
   ]
 }
