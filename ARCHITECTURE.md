@@ -1,7 +1,7 @@
 ---
 file: ARCHITECTURE.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-07-12
 owner: sebas
 related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0005, ADR-0007, ADR-0009, ADR-0010, ADR-0011]
 ---
@@ -239,5 +239,5 @@ Quick pointers:
 
 ---
 
-**Last updated:** 2026-07-04
-**Last verified:** 2026-07-04 — nightly audit (factual corrections: invariant 1 wording, cross-cutting table owner, invariant 9 ADR citation, related_adrs added ADR-0011)
+**Last updated:** 2026-07-12
+**Last verified:** 2026-07-12 — nightly audit (frontmatter last_updated synced from 2026-05-26 to 2026-07-12 — closes AUDIT-factory-d8a5c012)

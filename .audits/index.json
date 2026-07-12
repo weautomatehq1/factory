@@ -1,19 +1,11 @@
 {
-  "last_updated": "2026-07-08T04:25:54Z",
-  "open_count": 11,
-  "fixed_count": 27,
-  "audits": ["20260625T040000Z.json", "2026-06-28T040632Z.json", "20260701T040000Z.json", "20260704T040000Z.json", "20260707T041832Z.json", "20260708T042554Z.json"],
+  "last_updated": "2026-07-12T04:12:38Z",
+  "open_count": 3,
+  "fixed_count": 40,
+  "audits": ["20260625T040000Z.json", "2026-06-28T040632Z.json", "20260701T040000Z.json", "20260704T040000Z.json", "20260707T041832Z.json", "20260708T042554Z.json", "20260712T041238Z.json"],
   "open_findings": [
     "AUDIT-factory-a5d3e092",
     "AUDIT-factory-71c4b389",
-    "AUDIT-factory-7e8c1eea",
-    "AUDIT-factory-9e2e2cb7",
-    "AUDIT-factory-60e00c09",
-    "AUDIT-factory-b196aaab",
-    "AUDIT-factory-56a7982f",
-    "AUDIT-factory-5a72c4fb",
-    "AUDIT-factory-5b026618",
-    "AUDIT-factory-b9a43e43",
     "AUDIT-factory-4abde52c"
   ],
   "fixed_findings": [
@@ -46,10 +38,30 @@
     "AUDIT-factory-9d8028ef",
     "AUDIT-factory-0c3ff30f",
     "AUDIT-factory-7229b7db",
-    "AUDIT-factory-7014eefb"
+    "AUDIT-factory-7014eefb",
+    "AUDIT-factory-7e8c1eea",
+    "AUDIT-factory-9e2e2cb7",
+    "AUDIT-factory-60e00c09",
+    "AUDIT-factory-b196aaab",
+    "AUDIT-factory-56a7982f",
+    "AUDIT-factory-5a72c4fb",
+    "AUDIT-factory-5b026618",
+    "AUDIT-factory-b9a43e43",
+    "AUDIT-factory-e4f1c2b3",
+    "AUDIT-factory-d8a5c012",
+    "AUDIT-factory-b3e79f14",
+    "AUDIT-factory-c1d2f4a8",
+    "AUDIT-factory-b5f6e7d9",
+    "AUDIT-factory-a2c3e4f5",
+    "AUDIT-factory-f6b7c8d9",
+    "AUDIT-factory-e0a1b2c3",
+    "AUDIT-factory-d4e5f6a7",
+    "AUDIT-factory-b8c9d0e1"
   ],
   "carried_open_from_prior": [
     "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-71c4b389"
-  ]
+    "AUDIT-factory-71c4b389",
+    "AUDIT-factory-4abde52c"
+  ],
+  "notes": "2026-07-12: 8 findings (AUDIT-factory-7e8c1eea, -9e2e2cb7, -60e00c09, -b196aaab, -56a7982f, -5a72c4fb, -5b026618, -b9a43e43) moved from open to fixed — these were closed by the 2026-07-08 audit commit (801e35a) but the index was not updated at that time. AUDIT-factory-4abde52c is an orphaned ID with no matching scan file entry."
 }

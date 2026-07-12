@@ -1,7 +1,7 @@
 ---
 file: SECURITY.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-07-12
 owner: sebas
 related_adrs: [ADR-0009]
 ---
@@ -178,5 +178,5 @@ Toggling: SSH to relevant deployment, update env, restart. Discord command bridg
 
 ---
 
-**Last updated:** 2026-07-04
-**Last verified:** 2026-07-04 — nightly audit (Last verified date refreshed; note: **/(auth)/** glob present in CODEOWNERS and protected-paths.yml but missing from this Protected Paths list — flagged as AUDIT-factory-a5d3e092, requires operator review before adding)
+**Last updated:** 2026-07-12
+**Last verified:** 2026-07-12 — nightly audit (frontmatter last_updated synced from 2026-05-26 to 2026-07-12 — closes AUDIT-factory-b3e79f14; AUDIT-factory-a5d3e092 still open: **/(auth)/** glob in CODEOWNERS/workflow but not in this list — requires operator review)
