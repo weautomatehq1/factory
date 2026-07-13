@@ -62,6 +62,11 @@ Three sections only. Next agent reads this first.
 - Factory: 4 findings fixed (1 IMPORTANT, 3 COSMETIC): KPI.md Q3 OKR placeholder added, STATUS.md day counts corrected (30/31→35/36), CHANGELOG.md entry added, ROADMAP.md frontmatter date synced. 2 findings remain open: SPRINT-2026-05-B missing (day 35), Retell R1 (day 36).
 - audit-elevation: scan in progress.
 
+### 2026-07-12 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-07-12` opened.
+- 10 findings fixed (5 IMPORTANT, 5 COSMETIC): CHANGELOG.md 2026-07-08 entry added (e4f1c2b3), ARCHITECTURE.md frontmatter date synced (d8a5c012), SECURITY.md frontmatter date synced (b3e79f14), KPI.md frontmatter date synced (c1d2f4a8), ROADMAP.md frontmatter date synced (b5f6e7d9), index.json stale-open cleared for 8 findings already fixed (a2c3e4f5), STATUS.md overdue counts 47/48→52/53 (f6b7c8d9), KPI.md overdue count 48→53 (e0a1b2c3), ROADMAP.md overdue count 48→53 (d4e5f6a7), INTEGRATIONS.md overdue count 48→53 (b8c9d0e1).
+- 3 findings remain open: AUDIT-factory-a5d3e092 (SECURITY.md /(auth)/** gap — operator review), AUDIT-factory-71c4b389 (no active sprint — Sebastian/Esme), AUDIT-factory-4abde52c (orphaned ID, origin unknown — manual review needed).
+
 ### 2026-06-28 — Nightly audit (this session)
 - Nightly audit branch `audit/nightly-2026-06-28` opened across IFleet + factory + audit-elevation.
 - IFleet: 14 findings fixed (2C/8I/4Cos) including CRITICAL path traversal in invariants.ts, CRITICAL orphaned approval in server.ts, IMPORTANT auth fail-closed in interaction-create.ts. Pushed to IFleet audit/nightly-2026-06-28.
@@ -70,12 +75,12 @@ Three sections only. Next agent reads this first.
 
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-07-07 (day 47 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-07-12 (day 52 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 47 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 48 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+1. **Open SPRINT-2026-05-B** — now 52 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 53 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
 3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (TODAY), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
@@ -83,9 +88,9 @@ Three sections only. Next agent reads this first.
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 48 days overdue (as of 2026-07-07); ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 53 days overdue (as of 2026-07-12); ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-07-07 — nightly audit (STATUS.md day counts updated 41/42→47/48, ROADMAP.md + KPI.md overdue counts updated, CHANGELOG.md entry added)
-**Previously updated:** 2026-07-01 — nightly audit
+**Last updated:** 2026-07-12 — nightly audit (day counts updated 47/48→52/53, frontmatter dates synced across 4 spec files, index.json stale-open cleared, CHANGELOG.md 2026-07-08 entry added — closes AUDIT-factory-f6b7c8d9)
+**Previously updated:** 2026-07-07 — nightly audit
