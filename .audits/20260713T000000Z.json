@@ -1,0 +1,78 @@
+{
+  "audit_id": "audit-20260713T000000Z",
+  "repo": "factory",
+  "scanned_at": "2026-07-13T00:00:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-e4a7d913",
+      "severity": "COSMETIC",
+      "category": "redo",
+      "title": "STATUS.md day-overdue counters stale (47/48 → should be 53/54 as of 2026-07-13)",
+      "detail": ".omc/STATUS.md 'In flight' and 'Up next' sections reference day 47 (SPRINT-2026-05-B) and 48 days (Retell R1) as of 2026-07-07. Six days have elapsed; the counts should be 53 and 54 respectively. The 'Open questions' section also references '48 days overdue (as of 2026-07-07)' and requires updating.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Update '47 days' → '53 days' (SPRINT-B), '48 days' → '54 days' (Retell R1). Update 'as of 2026-07-07' → 'as of 2026-07-13'. Update Last updated footer.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-13T00:00:00Z",
+      "closed_at": "2026-07-13T00:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-f2c8a102",
+      "severity": "COSMETIC",
+      "category": "redo",
+      "title": "KPI.md Q3 ACTION REQUIRED banner references stale Retell R1 overdue count (48 days → should be 54)",
+      "detail": "KPI.md line ~111 references '48 days overdue' for Retell R1 and '42 days' pending for ADR-0011 as of 2026-07-07. Both counts need updating to 54 and 48 respectively as of 2026-07-13.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Update '48 days overdue' → '54 days overdue', 'ADR-0011 has been pending 42 days' → '48 days'. Update Last updated footer.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-13T00:00:00Z",
+      "closed_at": "2026-07-13T00:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-a1b3c9d7",
+      "severity": "COSMETIC",
+      "category": "redo",
+      "title": "ROADMAP.md Q3 blocking decision counter stale (48 days → should be 54 as of 2026-07-13)",
+      "detail": "ROADMAP.md Open questions §Q3 references 'OVERDUE (48 days)' and 'as of 2026-07-07 (48 days elapsed)'. Should be 54 days as of 2026-07-13. frontmatter last_updated and footer also need updating from 2026-07-01 to 2026-07-13.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Update '48 days' → '54 days', 'as of 2026-07-07' → 'as of 2026-07-13'. Update frontmatter + footer dates.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-13T00:00:00Z",
+      "closed_at": "2026-07-13T00:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-b8e4f216",
+      "severity": "COSMETIC",
+      "category": "redo",
+      "title": "CHANGELOG.md missing 2026-07-13 nightly audit entry",
+      "detail": "CHANGELOG.md [Unreleased] section has no entry for the 2026-07-13 nightly audit session. Pattern: every nightly audit adds an entry to the Changed section.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Add '2026-07-13 — Nightly audit fixes' entry under ### Changed.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-13T00:00:00Z",
+      "closed_at": "2026-07-13T00:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-idx-stale-2026-07-13",
+      "severity": "IMPORTANT",
+      "category": "redo",
+      "title": ".audits/index.json lists 8 July-08 findings as open despite being fixed in commit 801e35a",
+      "detail": "The July 8 nightly audit commit (801e35a) fixed 10 findings but the index.json was only partially updated — it moved 4 CRITICALs/COSMETICs to fixed_findings but left 8 IMPORTANT findings (7e8c1eea, 9e2e2cb7, 60e00c09, b196aaab, 56a7982f, 5a72c4fb, 5b026618, b9a43e43) in open_findings. open_count shows 11 but should be 3 (a5d3e092, 71c4b389, and the misplaced 4abde52c). Additionally, 4abde52c in the factory index appears to be an IFleet finding (candidate-gen.ts) erroneously copied here.",
+      "file_globs": [".audits/index.json"],
+      "fix_sketch": "Move the 8 findings to fixed_findings. Remove 4abde52c (IFleet finding). Update open_count to 2, fixed_count accordingly.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-13T00:00:00Z",
+      "closed_at": "2026-07-13T00:00:00Z",
+      "closing_pr": null
+    }
+  ]
+}

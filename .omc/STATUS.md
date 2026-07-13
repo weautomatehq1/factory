@@ -68,24 +68,32 @@ Three sections only. Next agent reads this first.
 - Factory: 4 findings fixed (all COSMETIC): STATUS.md day counts updated 35/36→38/39 + Q3 countdown 6→3 days, KPI.md Q3 countdown updated 6→3 days + Retell count 36→39 days, ROADMAP.md overdue count updated 28+→39 days, CHANGELOG.md entry added. 2 findings remain open: SPRINT-2026-05-B missing (day 38), Retell R1 (day 39).
 - audit-elevation: scan pending.
 
+### 2026-07-08 — Nightly audit (committed 2026-07-08)
+- Nightly audit branch `audit/nightly-2026-07-08` merged to main (commit 801e35a).
+- Factory: 10 findings fixed (3 CRITICAL, 7 IMPORTANT/COSMETIC): Retell lifecycle corrected (CRITICAL), spec-template added to AGENTS.md §1 (CRITICAL), README.md CLAUDE.md footnote added (CRITICAL), ARCHITECTURE.md spec-template/OMC_KILLSWITCH/NEW-labels fixed (3 IMPORTANT), ROADMAP.md Now header updated (IMPORTANT), FILE_STRUCTURE.md .audits/ added (IMPORTANT), NON_GOALS.md sprint header + cross-ref fixed (2 IMPORTANT), STATUS.md 42→48 days corrected (IMPORTANT), ENV.md Esmel typo fixed (COSMETIC), UBIQUITOUS_LANGUAGE.md local path → GitHub URL (COSMETIC). Note: index.json partially updated — 8 fixed findings remained listed as open (corrected in 2026-07-13 audit).
+
+### 2026-07-13 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-07-13` opened.
+- Factory: 4 findings fixed (all COSMETIC): day counts updated 47/48→53/54 (STATUS.md), Q3 blocking decision overdue count updated 48→54 days (ROADMAP.md + KPI.md), CHANGELOG.md entry added. index.json corrected — 8 July-08 findings moved to fixed. 2 findings remain open: SPRINT-2026-05-B missing (day 53, hard blocker), Retell R1 (day 54, needs Esme).
+
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-07-07 (day 47 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-07-13 (day 53 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 47 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 48 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
-3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (TODAY), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
+1. **Open SPRINT-2026-05-B** — now 53 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 54 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (12 days ago), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
 ## Open questions
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 48 days overdue (as of 2026-07-07); ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 54 days overdue (as of 2026-07-13); ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-07-07 — nightly audit (STATUS.md day counts updated 41/42→47/48, ROADMAP.md + KPI.md overdue counts updated, CHANGELOG.md entry added)
-**Previously updated:** 2026-07-01 — nightly audit
+**Last updated:** 2026-07-13 — nightly audit (STATUS.md day counts updated 47/48→53/54, ROADMAP.md + KPI.md overdue counts updated, CHANGELOG.md entry added)
+**Previously updated:** 2026-07-07 — nightly audit
