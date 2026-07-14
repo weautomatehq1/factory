@@ -2,7 +2,7 @@
 file: KPI.md
 status: skeleton
 populated_when: M-016 (real client #1) ships AND first 7 days of production data captured
-last_updated: 2026-06-25
+last_updated: 2026-07-14
 owner: sebas
 frameworks: ["Sean Ellis North Star", "HEART (Rodden CHI 2010)", "Doerr OKRs"]
 ---
@@ -108,10 +108,10 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 
 ### Q3 2026 (2026-07-01 → 2026-09-30)
 
-> 🚨 **ACTION REQUIRED — OKRs not yet defined (2026-06-25 nightly audit; updated 2026-07-07).** Q3 started 2026-07-01 with zero OKRs defined. SPRINT-2026-05-B has not been created; Retell R1 research is 48 days overdue. Sebastian + Esme must define Q3 OKRs immediately — Q3 has already started.
+> 🚨 **ACTION REQUIRED — OKRs not yet defined (2026-06-25 nightly audit; updated 2026-07-14).** Q3 started 2026-07-01 with zero OKRs defined. SPRINT-2026-05-B has not been created; Retell R1 research is 55 days overdue. Sebastian + Esme must define Q3 OKRs immediately — Q3 has already started.
 >
 > Prerequisite decisions before Q3 OKRs can be written:
-> 1. Confirm voice platform (Retell vs. pivot) — ADR-0011 has been pending 42 days
+> 1. Confirm voice platform (Retell vs. pivot) — ADR-0011 has been pending 55 days
 > 2. Open SPRINT-2026-05-B (or SPRINT-2026-06-A) to establish realistic sprint capacity
 > 3. Agree on whether Q2 postmortem precedes Q3 goal-setting
 
