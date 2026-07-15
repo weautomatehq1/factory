@@ -1,0 +1,101 @@
+{
+  "scan_id": "2026-07-15T04:00:00Z",
+  "repo": "factory",
+  "branch": "audit/nightly-2026-07-15",
+  "audited_at": "2026-07-15T04:00:00Z",
+  "summary": {
+    "total": 6,
+    "critical": 0,
+    "important": 2,
+    "cosmetic": 4,
+    "new_open": 0,
+    "new_fixed": 4,
+    "carried_open": 2
+  },
+  "findings": [
+    {
+      "id": "AUDIT-factory-c4d7e891",
+      "severity": "COSMETIC",
+      "category": "stale-dates",
+      "title": "STATUS.md day counts stale (53/54 → 55/56)",
+      "detail": "STATUS.md In-flight block said 'day 53 overdue' (SPRINT-B) and '54 days overdue' (Retell R1) and '12 days ago' (Q3); correct values are 55/56/14 as of 2026-07-15.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Update day counts 53→55, 54→56, 12→14. Refresh last-updated line.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-15T04:00:00Z",
+      "closed_at": "2026-07-15T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-15"
+    },
+    {
+      "id": "AUDIT-factory-d5e8f902",
+      "severity": "COSMETIC",
+      "category": "stale-dates",
+      "title": "KPI.md day counts stale (Retell R1 54→56, ADR-0011 48→50, Q3 12→14 days in)",
+      "detail": "KPI.md Q3 ACTION REQUIRED banner referenced 54 days overdue (Retell R1), 12 days in (Q3), and ADR-0011 pending 48 days; correct values are 56/14/50 as of 2026-07-15.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Update Retell R1 overdue 54→56, Q3 days in 12→14, ADR-0011 pending 48→50. Refresh Last verified footer.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-15T04:00:00Z",
+      "closed_at": "2026-07-15T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-15"
+    },
+    {
+      "id": "AUDIT-factory-e6f9a013",
+      "severity": "COSMETIC",
+      "category": "stale-dates",
+      "title": "ROADMAP.md Q3 blocking decision elapsed count stale (54→56 days)",
+      "detail": "ROADMAP.md Q3 Open questions Q3 said '54 days elapsed' and 'as of 2026-07-13 (54 days elapsed)'; correct value is 56 days as of 2026-07-15. Frontmatter last_updated and footer dates also lagged.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Update 'OVERDUE (54 days)' → '(56 days)', 'as of 2026-07-13 (54 days elapsed)' → 'as of 2026-07-15 (56 days elapsed)'. Update frontmatter last_updated and footer.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-15T04:00:00Z",
+      "closed_at": "2026-07-15T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-15"
+    },
+    {
+      "id": "AUDIT-factory-f7a0b124",
+      "severity": "COSMETIC",
+      "category": "missing-changelog-entry",
+      "title": "CHANGELOG.md missing 2026-07-15 nightly audit entry",
+      "detail": "CHANGELOG.md last entry was 2026-07-13. This audit's fixes need a CHANGELOG entry.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Add 2026-07-15 nightly audit entry under [Unreleased] ### Changed.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-15T04:00:00Z",
+      "closed_at": "2026-07-15T04:00:00Z",
+      "closing_pr": "audit/nightly-2026-07-15"
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "category": "security-gap",
+      "title": "SECURITY.md Protected Paths missing **/(auth)/** glob",
+      "detail": "CODEOWNERS and protected-paths.yml include **/(auth)/** but SECURITY.md Protected Paths list does not. Creates a documentation gap where the actual gate is broader than the spec states. Cannot fix without operator review — SECURITY.md has status: accepted and AGENTS.md §7 requires 'ask first' before touching Protected Paths list.",
+      "file_globs": ["SECURITY.md"],
+      "fix_sketch": "Add **/(auth)/** to the Protected Paths glob list in SECURITY.md after operator review and approval.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-07-13T00:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "category": "process-gap",
+      "title": "SPRINT-2026-05-B never created — no active sprint (day 55 overdue)",
+      "detail": "SPRINT-2026-05-A closed incomplete 2026-05-20. As of 2026-07-15 (55 days later) SPRINT-2026-05-B has not been created. SPRINT.md contains only the reconciled closed sprint. All M-002 through M-015 milestones are blocked. Q2 OKRs all MISSED. Q3 started 2026-07-01 with zero goals defined.",
+      "file_globs": ["SPRINT.md", "ROADMAP.md"],
+      "fix_sketch": "Sebastian + Esme must open SPRINT-2026-05-B with realistic scope. Requires: (1) Retell R1 confirmation, (2) Q3 OKR definition, (3) process retro on SPRINT-A failure.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-07-13T00:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    }
+  ]
+}
