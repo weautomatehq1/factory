@@ -43,9 +43,11 @@ factory/
 ├── DECISIONS.md                 # auto-generated index
 ├── CHANGELOG.md
 ├── docs/
-│   └── decisions/
-│       ├── _template.md         # MADR template
-│       └── NNNN-*.md            # one ADR per file
+│   ├── decisions/
+│   │   ├── _template.md         # MADR template
+│   │   └── NNNN-*.md            # one ADR per file
+│   ├── postmortems/             # YYYY-MM-DD-<incident-name>.md (Sev1/Sev2 post-mortems)
+│   └── templates/               # UPPER_SNAKE_CASE file templates (e.g. POSTMORTEM_TEMPLATE.md)
 ├── .omc/
 │   ├── STATUS.md                # Done / In flight / Up next
 │   └── costs.json               # usage log
@@ -153,5 +155,5 @@ factory/
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-07-16
+**Last verified:** 2026-07-16 — nightly audit (added docs/templates/ and docs/postmortems/ to factory tree; closes AUDIT-factory-caa88a30)
