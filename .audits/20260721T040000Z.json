@@ -1,0 +1,64 @@
+{
+  "run_id": "20260721T040000Z",
+  "timestamp": "2026-07-21T04:00:00Z",
+  "repo": "weautomatehq1/factory",
+  "branch": "audit/nightly-2026-07-21",
+  "summary": {
+    "critical": 0,
+    "important_new": 0,
+    "important_fixed": 0,
+    "cosmetic_fixed": 4,
+    "carried_open": 2
+  },
+  "new_findings": [],
+  "fixed_findings": [
+    {
+      "id": "AUDIT-factory-a5d6e7f8",
+      "severity": "COSMETIC",
+      "title": "STATUS.md SPRINT-B/Retell R1 overdue counts and Q3 elapsed count stale (59/60/18 → 61/62/20)",
+      "file": ".omc/STATUS.md",
+      "fix": "Updated SPRINT-B 59→61, Retell R1 60→62, Q3 elapsed 18→20 days.",
+      "closed_at": "2026-07-21T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-b1c2d3e4",
+      "severity": "COSMETIC",
+      "title": "KPI.md Q3 ACTION REQUIRED counts stale (60 days overdue, 54 days pending, 18 days elapsed)",
+      "file": "KPI.md",
+      "fix": "Updated Retell R1 60→62, ADR-0011 pending 54→56, Q3 elapsed 18→20, frontmatter + footer dates.",
+      "closed_at": "2026-07-21T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-f5g6h7i8",
+      "severity": "COSMETIC",
+      "title": "ROADMAP.md Q3 blocking decision elapsed count stale (60 days)",
+      "file": "ROADMAP.md",
+      "fix": "Updated Q3 blocking decision 60→62 days, frontmatter + footer dates.",
+      "closed_at": "2026-07-21T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-j9k0l1m2",
+      "severity": "COSMETIC",
+      "title": "INTEGRATIONS.md Retell rate_limits overdue count stale (60 days)",
+      "file": "INTEGRATIONS.md",
+      "fix": "Updated Retell rate_limits overdue 60→62 days, frontmatter + footer dates.",
+      "closed_at": "2026-07-21T04:00:00Z"
+    }
+  ],
+  "open_findings": [
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "title": "SECURITY.md Protected Paths canonical list is missing **/(auth)/** enforced in CODEOWNERS and protected-paths.yml",
+      "file": "SECURITY.md",
+      "note": "Requires operator (Sebastian) approval before editing per AGENTS.md §7 — carried open"
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "title": "No active sprint document — SPRINT.md contains only a reconciled incomplete sprint from 2026-05",
+      "file": "SPRINT.md",
+      "note": "Requires Sebastian + Esme to open SPRINT-2026-05-B — now 61 days overdue; carried open"
+    }
+  ]
+}
