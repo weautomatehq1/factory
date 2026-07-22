@@ -206,5 +206,5 @@ If a rule in this file MUST be unbreakable, promote it to a hook. Note the promo
 
 ---
 
-**Last updated:** 2026-07-04
-**Last verified:** 2026-07-04 — nightly audit (corrected repo tree, ADR-0001 citation, force-push hook description)
+**Last updated:** 2026-07-08
+**Last verified:** 2026-07-08 — spec-template added to §1 (CRITICAL fix, commit 801e35a)
