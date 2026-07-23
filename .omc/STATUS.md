@@ -76,24 +76,28 @@ Three sections only. Next agent reads this first.
 - Nightly audit branch `audit/nightly-2026-07-13` opened.
 - Factory: 4 findings fixed (all COSMETIC): day counts updated 47/48→53/54 (STATUS.md), Q3 blocking decision overdue count updated 48→54 days (ROADMAP.md + KPI.md), CHANGELOG.md entry added. index.json corrected — 8 July-08 findings moved to fixed. 2 findings remain open: SPRINT-2026-05-B missing (day 53, hard blocker), Retell R1 (day 54, needs Esme).
 
+### 2026-07-23 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-07-23` opened.
+- Factory: 4 findings fixed (all COSMETIC): day counts updated 59/60→63/64 (STATUS.md + Up next), Q3 blocking decision overdue count updated 60→64 days (ROADMAP.md + KPI.md), INTEGRATIONS.md Retell overdue count updated 60→64 days, CHANGELOG.md entry added. 2 findings remain open: SPRINT-2026-05-B missing (day 63, hard blocker), Retell R1 (day 64, needs Esme).
+
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-07-19 (day 59 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-07-23 (day 63 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 59 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 60 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
-3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (18 days ago), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
+1. **Open SPRINT-2026-05-B** — now 63 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 64 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (22 days ago), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
 ## Open questions
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 60 days overdue (as of 2026-07-19); ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 64 days overdue (as of 2026-07-23); ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-07-19 — nightly audit (STATUS.md day counts updated 56/57→59/60, Q3 elapsed 15→18 days, ROADMAP.md + KPI.md overdue counts updated, CHANGELOG.md entry added)
-**Previously updated:** 2026-07-16 — nightly audit
+**Last updated:** 2026-07-23 — nightly audit (STATUS.md day counts updated 59/60→63/64, Q3 elapsed 18→22 days, ROADMAP.md + KPI.md + INTEGRATIONS.md overdue counts updated, CHANGELOG.md entry added)
+**Previously updated:** 2026-07-19 — nightly audit
