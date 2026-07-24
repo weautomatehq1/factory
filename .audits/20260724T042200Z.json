@@ -1,0 +1,78 @@
+{
+  "scan_id": "20260724T042200Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "scanned_at": "2026-07-24T04:22:00Z",
+  "repo": "weautomatehq1/factory",
+  "summary": {
+    "total_findings": 4,
+    "new_this_cycle": 4,
+    "fixed_this_cycle": 4,
+    "open_count": 2,
+    "carried_open_count": 2,
+    "by_severity": {
+      "CRITICAL": 0,
+      "IMPORTANT": 0,
+      "COSMETIC": 4
+    }
+  },
+  "carried_open_from_prior": [
+    "AUDIT-factory-a5d3e092",
+    "AUDIT-factory-71c4b389"
+  ],
+  "findings": [
+    {
+      "id": "AUDIT-factory-ad02a6ff",
+      "title": "STATUS.md day-overdue counters stale (53/54 → should be 64/65 as of 2026-07-24)",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "file": ".omc/STATUS.md",
+      "description": "STATUS.md 'In flight' section and 'Up next' section reference SPRINT-2026-05-B as 53 days overdue and Retell R1 as 54 days overdue (as of 2026-07-13). As of 2026-07-24 (11 days later) these are 64 and 65 days overdue respectively.",
+      "fix": "Updated day counts: SPRINT-B 53→64, Retell R1 54→65. Updated last-updated footer."
+    },
+    {
+      "id": "AUDIT-factory-345f550b",
+      "title": "KPI.md Q3 ACTION REQUIRED overdue count stale (54 days → should be 65 as of 2026-07-24)",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "file": "KPI.md",
+      "description": "KPI.md Q3 2026 section ACTION REQUIRED banner references Retell R1 research as 54 days overdue and ADR-0011 pending 48 days (as of 2026-07-13). As of 2026-07-24: 65 and 59 days respectively.",
+      "fix": "Updated overdue count 54→65, ADR-0011 pending count 48→59, Q3 elapsed 23 days. Footer date updated."
+    },
+    {
+      "id": "AUDIT-factory-2bcd6f54",
+      "title": "ROADMAP.md Q3 blocking decision overdue count stale (54 days → should be 65 as of 2026-07-24)",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "file": "ROADMAP.md",
+      "description": "ROADMAP.md Q3 section references voice platform blocking decision as 54 days elapsed (as of 2026-07-13). As of 2026-07-24 this is 65 days.",
+      "fix": "Updated elapsed count 54→65 days. Frontmatter last_updated and footer date updated to 2026-07-24."
+    },
+    {
+      "id": "AUDIT-factory-538b8416",
+      "title": "CHANGELOG.md missing 2026-07-24 nightly audit entry",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "file": "CHANGELOG.md",
+      "description": "No changelog entry for the 2026-07-24 nightly audit. Per convention each nightly audit pass that makes changes adds an entry.",
+      "fix": "Added 2026-07-24 nightly audit entry under [Unreleased]."
+    }
+  ],
+  "open_findings": [
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "title": "SECURITY.md Protected Paths canonical list missing **/(auth)/**",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "carried_from": "20260704T040000Z.json",
+      "note": "Still requires operator review. **/(auth)/** glob enforced in CODEOWNERS + protected-paths.yml but absent from SECURITY.md canonical list. Footer note references this finding."
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "title": "No active sprint document — SPRINT.md only contains reconciled incomplete sprint",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "carried_from": "20260704T040000Z.json",
+      "note": "SPRINT-2026-05-B still not created (day 64 overdue as of 2026-07-24). Requires Sebastian/Esme. Cannot be fixed by the nightly audit agent."
+    }
+  ]
+}
