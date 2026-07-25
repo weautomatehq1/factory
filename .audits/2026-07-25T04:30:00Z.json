@@ -1,0 +1,68 @@
+{
+  "run_at": "2026-07-25T04:30:00Z",
+  "repo": "weautomatehq1/factory",
+  "branch": "audit/nightly-2026-07-25",
+  "findings": [
+    {
+      "id": "AUDIT-factory-a3b4c5d6",
+      "severity": "COSMETIC",
+      "title": "STATUS.md day counters stale (59/60 days → 65/66 as of 2026-07-25)",
+      "file": ".omc/STATUS.md",
+      "description": "Overdue counters: SPRINT-B 59→65 days, Retell R1 60→66 days, Q3 elapsed 18→24 days.",
+      "status": "fixed",
+      "fixed_in_commit": "audit/nightly-2026-07-25"
+    },
+    {
+      "id": "AUDIT-factory-e7f8g9h0",
+      "severity": "COSMETIC",
+      "title": "KPI.md Q3 ACTION REQUIRED banner references stale counts (60→66 days overdue; 18→24 days into Q3)",
+      "file": "KPI.md",
+      "description": "ACTION REQUIRED banner and prerequisite decisions list had stale day counts.",
+      "status": "fixed",
+      "fixed_in_commit": "audit/nightly-2026-07-25"
+    },
+    {
+      "id": "AUDIT-factory-i1j2k3l4",
+      "severity": "COSMETIC",
+      "title": "ROADMAP.md Q3 blocking decision counter stale (60→66 days)",
+      "file": "ROADMAP.md",
+      "description": "Q3 blocking decision elapsed count updated 60→66 days; frontmatter + footer dates refreshed.",
+      "status": "fixed",
+      "fixed_in_commit": "audit/nightly-2026-07-25"
+    },
+    {
+      "id": "AUDIT-factory-m5n6o7p8",
+      "severity": "COSMETIC",
+      "title": "INTEGRATIONS.md Retell rate_limits overdue count stale (60→66 days)",
+      "file": "INTEGRATIONS.md",
+      "description": "Retell AI rate_limits field had stale 60-day overdue count; updated to 66.",
+      "status": "fixed",
+      "fixed_in_commit": "audit/nightly-2026-07-25"
+    },
+    {
+      "id": "AUDIT-factory-q9r0s1t2",
+      "severity": "COSMETIC",
+      "title": "CHANGELOG.md missing 2026-07-25 nightly audit entry",
+      "file": "CHANGELOG.md",
+      "description": "No entry for the current audit run under [Unreleased] → Changed.",
+      "status": "fixed",
+      "fixed_in_commit": "audit/nightly-2026-07-25"
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "title": "SECURITY.md Protected Paths canonical list is missing **/(auth)/** enforced in CODEOWNERS and protected-paths.yml",
+      "file": "SECURITY.md",
+      "description": "The **(auth)/** glob exists in CODEOWNERS and the protected-paths.yml workflow but is absent from the canonical Protected Paths list in SECURITY.md. Requires operator (Sebastian) approval before editing per AGENTS.md §7.",
+      "status": "open"
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "title": "No active sprint document — SPRINT.md contains only a reconciled incomplete sprint from 2026-05",
+      "file": "SPRINT.md",
+      "description": "SPRINT-2026-05-B is 65 days overdue. Requires Sebastian + Esme to create the document. Cannot be fixed autonomously.",
+      "status": "open"
+    }
+  ]
+}
