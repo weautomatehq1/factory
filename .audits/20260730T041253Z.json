@@ -1,0 +1,83 @@
+{
+  "audit_id": "nightly-2026-07-30",
+  "repo": "factory",
+  "scanned_at": "2026-07-30T04:12:53Z",
+  "scanner": "claude-sonnet-4-6",
+  "findings": [
+    {
+      "id": "AUDIT-factory-2026-07-30-s1",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md day counts stale (59/60 → 70/71 days, Q3 18 → 29 days)",
+      "file": ".omc/STATUS.md",
+      "description": "11 days elapsed since last audit. SPRINT-B and Retell R1 overdue counters and Q3 elapsed count needed updating.",
+      "status": "fixed",
+      "opened_at": "2026-07-30T04:12:53Z",
+      "closed_at": "2026-07-30T04:12:53Z"
+    },
+    {
+      "id": "AUDIT-factory-2026-07-30-k1",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "KPI.md Q3 ACTION REQUIRED overdue counts stale (60 → 71 days, 54 → 65 days, 18 → 29 days)",
+      "file": "KPI.md",
+      "description": "Retell R1, ADR-0011 pending, and Q3 elapsed counts needed updating. Footer dates updated.",
+      "status": "fixed",
+      "opened_at": "2026-07-30T04:12:53Z",
+      "closed_at": "2026-07-30T04:12:53Z"
+    },
+    {
+      "id": "AUDIT-factory-2026-07-30-r1",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ROADMAP.md Q3 blocking decision overdue count stale (60 → 71 days)",
+      "file": "ROADMAP.md",
+      "description": "Q3 blocking decision elapsed count and footer dates needed updating.",
+      "status": "fixed",
+      "opened_at": "2026-07-30T04:12:53Z",
+      "closed_at": "2026-07-30T04:12:53Z"
+    },
+    {
+      "id": "AUDIT-factory-2026-07-30-i1",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "INTEGRATIONS.md Retell rate_limits overdue count stale (60 → 71 days)",
+      "file": "INTEGRATIONS.md",
+      "description": "Retell rate_limits overdue count and footer dates needed updating.",
+      "status": "fixed",
+      "opened_at": "2026-07-30T04:12:53Z",
+      "closed_at": "2026-07-30T04:12:53Z"
+    },
+    {
+      "id": "AUDIT-factory-2026-07-30-c1",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md missing 2026-07-30 audit entry",
+      "file": "CHANGELOG.md",
+      "description": "No audit entry existed for this run.",
+      "status": "fixed",
+      "opened_at": "2026-07-30T04:12:53Z",
+      "closed_at": "2026-07-30T04:12:53Z"
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "title": "SECURITY.md Protected Paths canonical list is missing **/(auth)/** enforced in CODEOWNERS and protected-paths.yml",
+      "file": "SECURITY.md",
+      "description": "The **/(auth)/** glob exists in CODEOWNERS and protected-paths.yml workflow but is absent from the canonical Protected Paths list in SECURITY.md. Requires operator (Sebastian) approval before editing per AGENTS.md §7 (Protected Paths is an 'Ask first' boundary).",
+      "status": "open",
+      "opened_at": "2026-07-19T04:00:00Z",
+      "closed_at": null
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "title": "No active sprint document — SPRINT.md contains only a reconciled incomplete sprint from 2026-05",
+      "file": "SPRINT.md",
+      "description": "SPRINT-2026-05-B is now 70 days overdue. Requires Sebastian + Esme to create the document. Cannot be fixed autonomously.",
+      "status": "open",
+      "opened_at": "2026-07-19T04:00:00Z",
+      "closed_at": null
+    }
+  ]
+}
