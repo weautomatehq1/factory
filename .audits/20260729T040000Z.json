@@ -1,0 +1,40 @@
+{
+  "scan_id": "20260729T040000Z",
+  "repo": "weautomatehq1/factory",
+  "branch": "audit/nightly-2026-07-29",
+  "scanned_at": "2026-07-29T04:00:00Z",
+  "summary": {
+    "total_findings": 2,
+    "new_findings": 0,
+    "fixed_this_run": 0,
+    "carried_open": 2
+  },
+  "findings": [
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "title": "SECURITY.md Protected Paths missing auth glob",
+      "detail": "SECURITY.md has status: accepted + is itself a Protected Path. Cannot modify without operator approval (Sebastian). Carried open.",
+      "first_seen": "2026-07-19",
+      "carried_from": "20260719T040000Z.json"
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "title": "No active sprint document (SPRINT-2026-05-B)",
+      "detail": "SPRINT-2026-05-B has not been created (day 69 overdue). Requires Sebastian + Esme to define sprint scope. Carried open.",
+      "first_seen": "2026-07-13",
+      "carried_from": "20260719T040000Z.json"
+    }
+  ],
+  "date_maintenance_only": true,
+  "files_updated": [
+    "ROADMAP.md",
+    "KPI.md",
+    ".omc/STATUS.md",
+    "CHANGELOG.md",
+    ".audits/index.json"
+  ]
+}
