@@ -1,7 +1,7 @@
 ---
 file: ARCHITECTURE.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-07-04
 owner: sebas
 related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0005, ADR-0007, ADR-0009, ADR-0010, ADR-0011]
 ---
@@ -137,12 +137,18 @@ factory/
 ├── DECISIONS.md               # auto-generated ADR index
 ├── CHANGELOG.md               # Keep a Changelog + SemVer
 ├── docs/
-│   └── decisions/
-│       ├── _template.md       # MADR format
-│       └── NNNN-*.md          # one ADR per file
-└── .omc/
-    ├── STATUS.md              # Done / In flight / Up next
-    └── costs.json             # usage log
+│   ├── decisions/
+│   │   ├── _template.md       # MADR format
+│   │   └── 0001-*.md … 0011-*.md
+│   ├── postmortems/           # incident postmortems
+│   └── templates/             # reusable doc templates
+├── .omc/
+│   ├── STATUS.md              # Done / In flight / Up next
+│   └── costs.json             # usage log
+└── .audits/                   # nightly audit scan results (append-only)
+    ├── index.json             # open findings rollup
+    ├── closed.json            # closed findings archive
+    └── <ISO-timestamp>.json   # per-run scan output
 ```
 
 ## 5. Architectural Invariants (explicit absences)
@@ -169,7 +175,8 @@ These are the rules that don't show up by reading code — they show up by viola
 | **Logging** | Structured JSON to stdout + Sentry breadcrumbs (see standard below) | `ARCHITECTURE.md` §6 |
 | **Error handling** | API boundary returns `{ data, error, status }`; never expose stack traces | `AGENTS.md` §6 |
 | **Observability** | Sentry + PostHog + n8n execution history + Session Report plugin | `KPI.md` |
-| **Cost tracking** | per-session in `.omc/costs.json`; daily aggregate in Discord digest | `M-019` |
+| **Cost tracking (per-session)** | per-session in `.omc/costs.json` | `M-019` |
+| **Cost tracking (digest)** | daily aggregate in Discord 8am digest | `M-018` |
 | **Secrets management** | 1Password vault → env vars at deploy; names only in `ENV.md` | `SECURITY.md` |
 | **Killswitches** | env vars `SELF_HEAL_BUILD`, `SELF_HEAL_DEPLOY`, `SELF_HEAL_RUNTIME`; `OMC_KILLSWITCH` — global OMC emergency halt (stops all orchestration processes) | per-client `RUNBOOK.md` |
 

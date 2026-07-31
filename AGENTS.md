@@ -65,9 +65,12 @@ factory/
 ├── INTEGRATIONS.md
 ├── SECURITY.md
 ├── DECISIONS.md               # auto-generated index
-├── docs/decisions/            # one ADR per file (NNNN-*.md)
-│   ├── _template.md
-│   └── 0001-*.md … 0011-*.md
+├── docs/
+│   ├── decisions/             # one ADR per file (NNNN-*.md)
+│   │   ├── _template.md
+│   │   └── 0001-*.md … 0011-*.md
+│   ├── postmortems/           # incident postmortems
+│   └── templates/             # reusable doc templates
 ├── .husky/                    # git hook scripts (pre-commit secret scan)
 ├── .github/
 │   ├── CODEOWNERS             # protected-path review requirements
@@ -79,6 +82,7 @@ factory/
 │   └── costs.json             # usage log
 └── .audits/                   # nightly audit scan results (append-only)
     ├── index.json             # open findings rollup
+    ├── closed.json            # closed findings archive
     └── <ISO-timestamp>.json   # per-run scan output
 ```
 
@@ -206,5 +210,5 @@ If a rule in this file MUST be unbreakable, promote it to a hook. Note the promo
 
 ---
 
-**Last updated:** 2026-07-04
-**Last verified:** 2026-07-04 — nightly audit (corrected repo tree, ADR-0001 citation, force-push hook description)
+**Last updated:** 2026-07-08
+**Last verified:** 2026-07-08 — nightly audit (spec-template added to §1; corrected repo tree, ADR-0001 citation, force-push hook description on 2026-07-04)

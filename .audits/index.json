@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-29T04:00:00Z",
-  "open_count": 2,
-  "fixed_count": 54,
+  "last_updated": "2026-07-31T05:50:00Z",
+  "open_count": 9,
+  "fixed_count": 64,
   "audits": [
     "20260625T040000Z.json",
     "2026-06-28T040632Z.json",
@@ -12,11 +12,19 @@
     "20260713T000000Z.json",
     "20260716T040000Z.json",
     "20260719T040000Z.json",
-    "20260729T040000Z.json"
+    "20260729T040000Z.json",
+    "20260731T055000Z.json"
   ],
   "open_findings": [
     "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-71c4b389"
+    "AUDIT-factory-71c4b389",
+    "AUDIT-factory-sprint-missing-72d",
+    "AUDIT-factory-q3-okrs-undefined-30d",
+    "AUDIT-factory-adr-broken-anchors",
+    "AUDIT-factory-roadmap-last-reconciled-field",
+    "AUDIT-factory-sprint-nonstandard-status",
+    "AUDIT-factory-adr006-erratum-section",
+    "AUDIT-factory-decisions-generator-unwired"
   ],
   "carried_open_from_prior": [
     "AUDIT-factory-a5d3e092",
@@ -76,6 +84,16 @@
     "AUDIT-factory-k5l6m7n8",
     "AUDIT-factory-o9p0q1r2",
     "AUDIT-factory-s3t4u5v6",
-    "AUDIT-factory-w7x8y9z0"
+    "AUDIT-factory-w7x8y9z0",
+    "AUDIT-factory-arch-date-mismatch",
+    "AUDIT-factory-ubiquitous-lang-dates",
+    "AUDIT-factory-arch-codemap-missing-dirs",
+    "AUDIT-factory-arch-m018-m019-confusion",
+    "AUDIT-factory-integrations-retell-stale",
+    "AUDIT-factory-adr006-nonstandard-status",
+    "AUDIT-factory-agents-footer-date",
+    "AUDIT-factory-readme-no-changelog-entry",
+    "AUDIT-factory-audits-closedJson-undocumented",
+    "AUDIT-factory-changelog-scaffold-14-services"
   ]
 }

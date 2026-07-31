@@ -1,0 +1,294 @@
+{
+  "audit_id": "audit-20260731T055000Z",
+  "repo": "factory",
+  "scanned_at": "2026-07-31T05:50:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-sprint-missing-72d",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "SPRINT-2026-05-B does not exist \u2014 no active sprint file for 72 days",
+      "detail": "SPRINT.md only documents SPRINT-2026-05-A (status: incomplete, ended 2026-05-20). At least 13 files explicitly reference SPRINT-2026-05-B. The factory repo has no active sprint document as of 2026-07-31 (day 72). All Q2 2026 OKRs are MISSED. Q3 started 2026-07-01 with zero goals defined (30 days in). Open: AUDIT-factory-71c4b389.",
+      "file_globs": [
+        "SPRINT.md",
+        "ROADMAP.md",
+        "KPI.md",
+        "NON_GOALS.md",
+        ".omc/STATUS.md"
+      ],
+      "fix_sketch": "Create SPRINT-2026-05-B.md with Shape Up structure. Requires Sebastian + Esme alignment.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-q3-okrs-undefined-30d",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "Q3 2026 OKRs undefined 30 days into the quarter",
+      "detail": "KPI.md Q3 2026 section has ACTION REQUIRED banner. Both prerequisites (Retell R1 + SPRINT-B) unmet. All four Q2 OKRs confirmed MISSED. Without OKRs, self-healing has no KPI thresholds.",
+      "file_globs": [
+        "KPI.md",
+        "ROADMAP.md",
+        ".omc/STATUS.md"
+      ],
+      "fix_sketch": "Sebastian + Esme: resolve ADR-0011, open SPRINT-B, define Q3 OKRs in KPI.md.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-adr-broken-anchors",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "Broken GitHub anchor references in ADR-0001, ADR-0003, ADR-0010",
+      "detail": "Three ADRs reference `#5-architectural-invariants` but actual GitHub anchor is `#5-architectural-invariants-explicit-absences`. Silently 404s. Pre-commit hook blocks editing accepted ADRs \u2014 requires operator.",
+      "file_globs": [
+        "docs/decisions/0001-agents-md-as-primary.md",
+        "docs/decisions/0003-issues-as-unit-of-work.md",
+        "docs/decisions/0010-issues-from-four-upstream-sources.md"
+      ],
+      "fix_sketch": "Change anchor to `#5-architectural-invariants-explicit-absences` in each ADR (requires operator \u2014 hook blocks).",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-arch-date-mismatch",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "Four spec files had frontmatter `last_updated` mismatching footer date \u2014 FIXED",
+      "detail": "ARCHITECTURE.md (2026-05-26\u21922026-07-04), SECURITY.md (2026-05-26\u21922026-07-04), FILE_STRUCTURE.md (2026-05-26\u21922026-07-16), KPI.md (2026-07-16\u21922026-07-19). All four frontmatter dates corrected.",
+      "file_globs": [
+        "ARCHITECTURE.md",
+        "SECURITY.md",
+        "FILE_STRUCTURE.md",
+        "KPI.md"
+      ],
+      "fix_sketch": "Updated frontmatter last_updated fields to match footers. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-ubiquitous-lang-dates",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "UBIQUITOUS_LANGUAGE.md dates not updated after 2026-06-04 content changes \u2014 FIXED",
+      "detail": "Three substantive corrections applied in 2026-06-04 audit but frontmatter and footer still said 2026-05-26. Dates corrected to 2026-06-04.",
+      "file_globs": [
+        "UBIQUITOUS_LANGUAGE.md"
+      ],
+      "fix_sketch": "Updated frontmatter last_updated and footer dates to 2026-06-04. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-arch-codemap-missing-dirs",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "AGENTS.md \u00a73 and ARCHITECTURE.md Codemap missing docs/postmortems/, docs/templates/, .audits/ \u2014 FIXED",
+      "detail": "Both tree listings lacked docs/postmortems/, docs/templates/, and the full .audits/ subtree (including closed.json). Trees updated in both files.",
+      "file_globs": [
+        "AGENTS.md",
+        "ARCHITECTURE.md"
+      ],
+      "fix_sketch": "Added missing directory entries to AGENTS.md \u00a73 and ARCHITECTURE.md \u00a74 Codemap. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-arch-m018-m019-confusion",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ARCHITECTURE.md \u00a76 attributes Discord 8am digest to M-019 instead of M-018 \u2014 FIXED",
+      "detail": "Cost tracking row combined per-session costs AND Discord digest but attributed both to M-019. M-018 = Discord digest, M-019 = cost dashboard. Split into two rows with correct M-IDs.",
+      "file_globs": [
+        "ARCHITECTURE.md"
+      ],
+      "fix_sketch": "Split row into two: per-session M-019 and Discord digest M-018. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-integrations-retell-stale",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "INTEGRATIONS.md Retell rate_limits overdue count stale (60 days, actual 72) \u2014 FIXED",
+      "detail": "The 2026-07-29 audit updated STATUS.md and KPI.md but skipped INTEGRATIONS.md. Count was 60, actual is 72 days. Updated to 72 days and frontmatter last_updated bumped to 2026-07-31.",
+      "file_globs": [
+        "INTEGRATIONS.md"
+      ],
+      "fix_sketch": "Updated rate_limits overdue count to 72 days, frontmatter last_updated to 2026-07-31. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-adr006-nonstandard-status",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ADR-0006 frontmatter `status: superseded by ADR-0011` is non-standard \u2014 FIXED",
+      "detail": "Valid values are `proposed`, `accepted`, `rejected`, `superseded`. The `superseded by ADR-0011` string could fail YAML schema validators. Changed to `status: superseded`.",
+      "file_globs": [
+        "docs/decisions/0006-retell-default-voice.md"
+      ],
+      "fix_sketch": "Changed to `status: superseded`. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-agents-footer-date",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "AGENTS.md footer says last updated 2026-07-04 but spec-template edit was 2026-07-08 \u2014 FIXED",
+      "detail": "STATUS.md 2026-07-08 session notes spec-template added to AGENTS.md \u00a71. Footer date was not bumped. Updated to 2026-07-08.",
+      "file_globs": [
+        "AGENTS.md"
+      ],
+      "fix_sketch": "Updated AGENTS.md footer Last updated to 2026-07-08. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-readme-no-changelog-entry",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "README.md `Last updated: 2026-06-20` had no corresponding CHANGELOG entry \u2014 FIXED",
+      "detail": "CHANGELOG.md had no 2026-06-20 entry despite commit ed4fd03 making real changes to README.md. Retroactive CHANGELOG entry added.",
+      "file_globs": [
+        "README.md",
+        "CHANGELOG.md"
+      ],
+      "fix_sketch": "Added retroactive 2026-06-20 CHANGELOG entry. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-roadmap-last-reconciled-field",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "ROADMAP.md has non-standard frontmatter field `last_reconciled` not in spec schema",
+      "detail": "`last_reconciled: 2026-06-17` does not appear in the standard spec file schema. Changing spec frontmatter schema is Ask-first per AGENTS.md \u00a77. Open pending operator decision.",
+      "file_globs": [
+        "ROADMAP.md"
+      ],
+      "fix_sketch": "Remove field or formally add to schema. Ask-first. Open pending operator.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-sprint-nonstandard-status",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "SPRINT.md uses non-standard `status: incomplete` value not in spec-file status enum",
+      "detail": "Standard values: `accepted`, `skeleton`, `living`, `proposed`. `incomplete` appears nowhere in schema definitions. Ask-first per AGENTS.md \u00a77 for format changes to spec files. Open pending operator.",
+      "file_globs": [
+        "SPRINT.md"
+      ],
+      "fix_sketch": "Add `incomplete` as valid sprint status to schema, or change to `living` with in-body note. Ask-first. Open.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-audits-closedJson-undocumented",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": ".audits/closed.json undocumented in AGENTS.md and ARCHITECTURE.md trees \u2014 FIXED",
+      "detail": "All tree listings only showed index.json and <ISO-timestamp>.json under .audits/. closed.json added to AGENTS.md \u00a73 and ARCHITECTURE.md \u00a74 Codemap.",
+      "file_globs": [
+        "AGENTS.md",
+        "ARCHITECTURE.md"
+      ],
+      "fix_sketch": "Added closed.json entry to both tree listings. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-adr006-erratum-section",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ADR-0006 body contains Erratum section appended in violation of append-only rule",
+      "detail": "Erratum section was appended to ADR-0006 after it had `status: accepted`, violating AGENTS.md \u00a77. Pre-commit hook should have blocked this. Hook investigation needed. Erratum itself is harmless (ADR-0011 supersedes). Open pending hook review.",
+      "file_globs": [
+        "docs/decisions/0006-retell-default-voice.md"
+      ],
+      "fix_sketch": "Investigate .husky/pre-commit to confirm it blocks ALL content edits to accepted ADRs. Open.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-decisions-generator-unwired",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "DECISIONS.md Stats generator not wired \u2014 average age NOT COMPUTED",
+      "detail": "DECISIONS.md has `generation: Auto-generated ... (generator not yet wired)` since 2026-06-04. M-002 (Spec decomposer) remains planned. Open until M-002 ships.",
+      "file_globs": [
+        "DECISIONS.md"
+      ],
+      "fix_sketch": "Add nightly audit check for ADR count divergence. Open until M-002.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-changelog-scaffold-14-services",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md scaffold Added entry said 14 third-party services (correct is 13) \u2014 FIXED",
+      "detail": "Scaffold entry had `14 third-party services`. A Changed entry corrected it to 13 but the Added entry remained wrong. Strikethrough added: `~~14~~ 13 third-party services`.",
+      "file_globs": [
+        "CHANGELOG.md"
+      ],
+      "fix_sketch": "Added strikethrough to scaffold entry. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:00:00Z",
+      "closed_at": "2026-07-31T05:00:00Z",
+      "closing_pr": null
+    }
+  ]
+}

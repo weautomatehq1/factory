@@ -2,7 +2,7 @@
 file: KPI.md
 status: skeleton
 populated_when: M-016 (real client #1) ships AND first 7 days of production data captured
-last_updated: 2026-07-16
+last_updated: 2026-07-19
 owner: sebas
 frameworks: ["Sean Ellis North Star", "HEART (Rodden CHI 2010)", "Doerr OKRs"]
 ---
