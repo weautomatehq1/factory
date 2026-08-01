@@ -1,7 +1,7 @@
 ---
 file: UBIQUITOUS_LANGUAGE.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-06-04
 owner: sebas
 ---
 
@@ -259,5 +259,5 @@ When the system needs to emit/observe these events, use these exact names:
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-04
+**Last verified:** 2026-06-04 — nightly audit (Protected Path source corrected, Gap entry clarified, Sprint source replaced — closes AUDIT-factory-20260604-05, -11, and -14)

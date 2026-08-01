@@ -1,7 +1,7 @@
 ---
 file: FILE_STRUCTURE.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-07-16
 owner: sebas
 related_adrs: [ADR-0001, ADR-0002]
 ---
