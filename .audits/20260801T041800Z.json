@@ -1,0 +1,85 @@
+{
+  "scan_id": "20260801T041800Z",
+  "repo": "weautomatehq1/factory",
+  "branch": "audit/nightly-2026-08-01",
+  "scanned_at": "2026-08-01T04:18:00Z",
+  "summary": {
+    "total_findings": 7,
+    "new_findings": 7,
+    "fixed_this_run": 3,
+    "wontfix_this_run": 4,
+    "carried_open": 0
+  },
+  "findings": [
+    {
+      "id": "AUDIT-factory-c4a82f3e",
+      "severity": "IMPORTANT",
+      "status": "fixed",
+      "title": "ARCHITECTURE.md §4 and AGENTS.md §3 codemaps missing docs/postmortems/ and docs/templates/",
+      "detail": "Both directories exist on disk but were absent from the repo tree in ARCHITECTURE.md §4 (Codemap) and AGENTS.md §3 (Repo structure). Added to both.",
+      "first_seen": "2026-08-01",
+      "fixed_in": "20260801T041800Z.json"
+    },
+    {
+      "id": "AUDIT-factory-3f8a2d61",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "ARCHITECTURE.md §1 NON_GOALS.md anchor wrong (#no-gos vs #no-gos-never-not-not-yet)",
+      "detail": "Line 21 cited `NON_GOALS.md#no-gos` but the actual section header is `## No-Gos (never, not \"not yet\")`, which GitHub renders as `#no-gos-never-not-not-yet`. Corrected.",
+      "first_seen": "2026-08-01",
+      "fixed_in": "20260801T041800Z.json"
+    },
+    {
+      "id": "AUDIT-factory-e2c74d18",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "CHANGELOG.md ### Decisions subsection not in Keep a Changelog's 6 allowed categories",
+      "detail": "Keep a Changelog 1.1.0 allows only: Added, Changed, Deprecated, Removed, Fixed, Security. Renamed `### Decisions` to `### Notes` in the initial scaffold section.",
+      "first_seen": "2026-08-01",
+      "fixed_in": "20260801T041800Z.json"
+    },
+    {
+      "id": "AUDIT-factory-9e1c5b72",
+      "severity": "COSMETIC",
+      "status": "wontfix",
+      "title": "ADR-0001/-0003/-0010 cite truncated anchor #5-architectural-invariants",
+      "detail": "Correct anchor is #5-architectural-invariants-explicit-absences. Cannot fix: ADR-0001, ADR-0003, and ADR-0010 all have status: accepted. Editing accepted ADRs is blocked by the pre-commit hook (.husky/pre-commit) and the Never rule in AGENTS.md §7.",
+      "first_seen": "2026-08-01",
+      "wontfix_reason": "accepted-adr-immutable"
+    },
+    {
+      "id": "AUDIT-factory-d7b391fa",
+      "severity": "COSMETIC",
+      "status": "wontfix",
+      "title": "ADR-0006 status 'superseded by ADR-0011' not in canonical 4-value set",
+      "detail": "MADR does not restrict status values to 4 options; 'superseded by ADR-0011' is a valid MADR pattern carrying the superseder reference inline. Not a defect.",
+      "first_seen": "2026-08-01",
+      "wontfix_reason": "valid-per-madr-spec"
+    },
+    {
+      "id": "AUDIT-factory-b5f0a923",
+      "severity": "COSMETIC",
+      "status": "wontfix",
+      "title": "6 spec files use non-canonical status values (skeleton, living, incomplete)",
+      "detail": "Values skeleton, living, incomplete are defined in the Factory spec lifecycle and are intentional. The 4-value ADR set (proposed/accepted/rejected/superseded) applies only to ADRs in docs/decisions/, not to the 17 spec files.",
+      "first_seen": "2026-08-01",
+      "wontfix_reason": "intentional-spec-lifecycle-values"
+    },
+    {
+      "id": "AUDIT-factory-7a09cd45",
+      "severity": "COSMETIC",
+      "status": "wontfix",
+      "title": "KPI.md and RUNBOOK.md have status: skeleton but contain substantial content",
+      "detail": "Status skeleton means 'populated when first production data/incident is captured' (per frontmatter comment). Having substantial placeholder/template content is expected at this stage; the status reflects data readiness, not content volume.",
+      "first_seen": "2026-08-01",
+      "wontfix_reason": "status-reflects-data-readiness-not-content-volume"
+    }
+  ],
+  "files_updated": [
+    "ARCHITECTURE.md",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    ".audits/20260801T041800Z.json",
+    ".audits/index.json"
+  ]
+}

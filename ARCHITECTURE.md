@@ -18,7 +18,7 @@ related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0005, ADR-0007, ADR-0009, ADR-0
 
 **Non-Goal:** see `NON_GOALS.md`. The Factory is internal agency leverage, not a productized dev tool.
 
-Related: see `ROADMAP.md`, `NON_GOALS.md#no-gos`.
+Related: see `ROADMAP.md`, `NON_GOALS.md#no-gos-never-not-not-yet`.
 
 ## 2. System Context (C4 Level 1)
 
@@ -137,9 +137,11 @@ factory/
 ├── DECISIONS.md               # auto-generated ADR index
 ├── CHANGELOG.md               # Keep a Changelog + SemVer
 ├── docs/
-│   └── decisions/
-│       ├── _template.md       # MADR format
-│       └── NNNN-*.md          # one ADR per file
+│   ├── decisions/
+│   │   ├── _template.md       # MADR format
+│   │   └── NNNN-*.md          # one ADR per file
+│   ├── postmortems/           # incident post-mortems (empty until first incident)
+│   └── templates/             # document templates (empty until populated)
 └── .omc/
     ├── STATUS.md              # Done / In flight / Up next
     └── costs.json             # usage log

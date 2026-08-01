@@ -76,6 +76,11 @@ Three sections only. Next agent reads this first.
 - Nightly audit branch `audit/nightly-2026-07-13` opened.
 - Factory: 4 findings fixed (all COSMETIC): day counts updated 47/48→53/54 (STATUS.md), Q3 blocking decision overdue count updated 48→54 days (ROADMAP.md + KPI.md), CHANGELOG.md entry added. index.json corrected — 8 July-08 findings moved to fixed. 2 findings remain open: SPRINT-2026-05-B missing (day 53, hard blocker), Retell R1 (day 54, needs Esme).
 
+### 2026-08-01 — Nightly audit pass 2 (this session)
+- 3 findings fixed (1 IMPORTANT, 2 COSMETIC): ARCHITECTURE.md §4 + AGENTS.md §3 codemaps updated to include docs/postmortems/ and docs/templates/ (c4a82f3e IMPORTANT), ARCHITECTURE.md §1 NON_GOALS.md anchor corrected to #no-gos-never-not-not-yet (3f8a2d61), CHANGELOG.md ### Decisions renamed to ### Notes per Keep a Changelog spec (e2c74d18).
+- 4 findings marked wontfix: ADR anchor truncation (9e1c5b72, blocked by accepted-ADR immutability), ADR-0006 non-canonical status (d7b391fa, valid per MADR), non-canonical spec status values (b5f0a923, intentional), KPI/RUNBOOK status mismatch (7a09cd45, status reflects data readiness not content volume).
+- 2 findings remain open: AUDIT-factory-a5d3e092 (SECURITY.md Protected Paths gap), AUDIT-factory-71c4b389 (no active sprint).
+
 ## In flight
 
 - **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-08-01 (day 72 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
@@ -95,5 +100,5 @@ Three sections only. Next agent reads this first.
 
 ---
 
-**Last updated:** 2026-08-01 — nightly audit (STATUS.md day counts updated 69/70→72/73, Q3 elapsed 28→31 days, ROADMAP.md + KPI.md + INTEGRATIONS.md overdue counts updated, CHANGELOG.md entry added)
-**Previously updated:** 2026-07-29 — nightly audit
+**Last updated:** 2026-08-01 — nightly audit pass 2 (3 findings fixed: ARCHITECTURE.md + AGENTS.md codemaps, CHANGELOG.md ### Decisions→Notes; 4 wontfix recorded)
+**Previously updated:** 2026-08-01 — nightly audit pass 1 (date maintenance)
