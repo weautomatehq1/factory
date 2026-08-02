@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-31T05:50:00Z",
+  "last_updated": "2026-08-02T08:00:00Z",
   "open_count": 9,
-  "fixed_count": 64,
+  "fixed_count": 70,
   "audits": [
     "20260625T040000Z.json",
     "2026-06-28T040632Z.json",
@@ -13,7 +13,8 @@
     "20260716T040000Z.json",
     "20260719T040000Z.json",
     "20260729T040000Z.json",
-    "20260731T055000Z.json"
+    "20260731T055000Z.json",
+    "20260802T080000Z.json"
   ],
   "open_findings": [
     "AUDIT-factory-a5d3e092",
@@ -28,7 +29,14 @@
   ],
   "carried_open_from_prior": [
     "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-71c4b389"
+    "AUDIT-factory-71c4b389",
+    "AUDIT-factory-sprint-missing-72d",
+    "AUDIT-factory-q3-okrs-undefined-30d",
+    "AUDIT-factory-adr-broken-anchors",
+    "AUDIT-factory-roadmap-last-reconciled-field",
+    "AUDIT-factory-sprint-nonstandard-status",
+    "AUDIT-factory-adr006-erratum-section",
+    "AUDIT-factory-decisions-generator-unwired"
   ],
   "fixed_findings": [
     "AUDIT-factory-kpi-q3-okrs-missing",
@@ -94,6 +102,12 @@
     "AUDIT-factory-agents-footer-date",
     "AUDIT-factory-readme-no-changelog-entry",
     "AUDIT-factory-audits-closedJson-undocumented",
-    "AUDIT-factory-changelog-scaffold-14-services"
+    "AUDIT-factory-changelog-scaffold-14-services",
+    "AUDIT-factory-agents-footer-stale-20260802",
+    "AUDIT-factory-arch-footer-stale-20260802",
+    "AUDIT-factory-status-stale-20260802",
+    "AUDIT-factory-kpi-stale-20260802",
+    "AUDIT-factory-roadmap-stale-20260802",
+    "AUDIT-factory-integrations-stale-20260802"
   ]
 }

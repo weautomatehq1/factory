@@ -1,0 +1,92 @@
+{
+  "audit_id": "audit-20260802T080000Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-02T08:00:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-agents-footer-stale-20260802",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "AGENTS.md footer said 'Last updated: 2026-07-08' despite 2026-07-31 tree edits — FIXED",
+      "detail": "The 2026-07-31 nightly audit commit (3b0e16e) added docs/postmortems/, docs/templates/, and .audits/closed.json to the §3 tree. The commit set the footer to 2026-07-08 (the prior substantive-edit date) rather than 2026-07-31 (the actual commit date). Footer updated to reflect the actual last-change date.",
+      "file_globs": ["AGENTS.md"],
+      "fix_sketch": "Updated AGENTS.md footer Last updated to 2026-07-31. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-02T08:00:00Z",
+      "closed_at": "2026-08-02T08:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-arch-footer-stale-20260802",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ARCHITECTURE.md footer said 'Last updated: 2026-07-04' despite 2026-07-31 Codemap/cost-row edits — FIXED",
+      "detail": "The 2026-07-31 nightly audit commit (3b0e16e) updated the §4 Codemap with missing directories and split the §6 cost tracking row into M-018 digest and M-019 per-session. Footer was not updated from 2026-07-04. Updated to 2026-07-31.",
+      "file_globs": ["ARCHITECTURE.md"],
+      "fix_sketch": "Updated ARCHITECTURE.md footer Last updated to 2026-07-31. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-02T08:00:00Z",
+      "closed_at": "2026-08-02T08:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-status-stale-20260802",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md day counts stale (SPRINT-B 72 days, Retell R1 72 days, Q3 30 days) — FIXED",
+      "detail": "STATUS.md was last updated 2026-07-31 with 72-day counts for SPRINT-B and Retell R1 and 30-day elapsed for Q3. As of 2026-08-02 the correct counts are 74 days and 32 days. Updated all three counters and footer.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Updated SPRINT-B and Retell R1 overdue counts 72→74 days, Q3 elapsed 30→32 days. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-02T08:00:00Z",
+      "closed_at": "2026-08-02T08:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-kpi-stale-20260802",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "KPI.md Q3 banner counts stale (Retell R1 70d, Q3 elapsed 28d, ADR-0011 54d) — FIXED",
+      "detail": "KPI.md body Q3 banner had Retell R1 overdue at 70 days (actual 74), Q3 elapsed at 28 days (actual 32), ADR-0011 pending at 54 days in body (footer tracked it to 64 days as of 2026-07-29). All three updated to current values; footer Last verified updated to 2026-08-02.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Updated Retell R1 70→74 days, Q3 elapsed 28→32 days, ADR-0011 pending 54→68 days, footer to 2026-08-02. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-02T08:00:00Z",
+      "closed_at": "2026-08-02T08:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-roadmap-stale-20260802",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ROADMAP.md Q3 blocking decision overdue count stale (70 days, actual 74) — FIXED",
+      "detail": "Open question Q3 row said 'OVERDUE (70 days)' and 'as of 2026-07-29 (70 days elapsed)'. Updated to 74 days / 2026-08-02. Footer Last verified updated from 2026-07-29 to 2026-08-02.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Updated Q3 blocking overdue count 70→74 days, date 2026-07-29→2026-08-02. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-02T08:00:00Z",
+      "closed_at": "2026-08-02T08:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-integrations-stale-20260802",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "INTEGRATIONS.md Retell rate_limits overdue count stale (72 days, actual 74) — FIXED",
+      "detail": "INTEGRATIONS.md was last updated 2026-07-31 with Retell R1 overdue count at 72 days. As of 2026-08-02 the count is 74 days. Updated and frontmatter last_updated bumped to 2026-08-02.",
+      "file_globs": ["INTEGRATIONS.md"],
+      "fix_sketch": "Updated Retell R1 overdue count 72→74 days, frontmatter last_updated to 2026-08-02. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-02T08:00:00Z",
+      "closed_at": "2026-08-02T08:00:00Z",
+      "closing_pr": null
+    }
+  ]
+}

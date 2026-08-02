@@ -210,5 +210,5 @@ If a rule in this file MUST be unbreakable, promote it to a hook. Note the promo
 
 ---
 
-**Last updated:** 2026-07-08
-**Last verified:** 2026-07-08 — nightly audit (spec-template added to §1; corrected repo tree, ADR-0001 citation, force-push hook description on 2026-07-04)
+**Last updated:** 2026-07-31
+**Last verified:** 2026-07-31 — nightly audit (§3 tree updated: docs/postmortems/, docs/templates/, .audits/closed.json added; footer date corrected to reflect 2026-07-31 edits)
