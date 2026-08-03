@@ -76,18 +76,22 @@ Three sections only. Next agent reads this first.
 - Nightly audit branch `audit/nightly-2026-07-13` opened.
 - Factory: 4 findings fixed (all COSMETIC): day counts updated 47/48→53/54 (STATUS.md), Q3 blocking decision overdue count updated 48→54 days (ROADMAP.md + KPI.md), CHANGELOG.md entry added. index.json corrected — 8 July-08 findings moved to fixed. 2 findings remain open: SPRINT-2026-05-B missing (day 53, hard blocker), Retell R1 (day 54, needs Esme).
 
+### 2026-08-03 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-08-03` opened.
+- Factory: 3 COSMETIC fixes — INTEGRATIONS.md Retell rate_limits overdue count updated 72→75 days + frontmatter/footer dates corrected; STATUS.md day counts updated 72→75; CHANGELOG.md entry added. 9 findings remain open (all require human action: sprint, OKRs, ADR anchors, hook investigation, schema decisions, M-002).
+
 ### 2026-07-31 — Nightly audit (this session)
 - Nightly audit branch `audit/nightly-2026-07-31` opened.
 - Factory: 8 IMPORTANT findings fixed + 2 COSMETIC fixed. 4 CRITICAL remain open (sprint, OKRs, auth glob, ADR anchors — all require human action or hook protection). Key IMPORTANT fixes: ARCHITECTURE.md frontmatter date/Codemap/M-018 split, SECURITY.md/FILE_STRUCTURE.md/KPI.md frontmatter dates, UBIQUITOUS_LANGUAGE.md dates, INTEGRATIONS.md Retell count 60→72 days, ADR-0006 status standardized, AGENTS.md footer date/tree updated, CHANGELOG retroactive 2026-06-20 entry added. See CHANGELOG.md 2026-07-31 entry for full detail. 4+2 findings remain open.
 
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-07-31 (day 72 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-08-03 (day 75 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 72 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 72 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+1. **Open SPRINT-2026-05-B** — now 75 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 75 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
 3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (30 days ago), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
@@ -95,9 +99,9 @@ Three sections only. Next agent reads this first.
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 72 days overdue (as of 2026-07-31); ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 75 days overdue (as of 2026-08-03); ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-07-31 — nightly audit (8 IMPORTANT + 2 COSMETIC fixes across ARCHITECTURE/SECURITY/FILE_STRUCTURE/KPI/UBIQUITOUS_LANGUAGE/INTEGRATIONS/AGENTS/CHANGELOG; 4 CRITICAL remain open)
-**Previously updated:** 2026-07-29 — nightly audit
+**Last updated:** 2026-08-03 — nightly audit (3 COSMETIC fixes: INTEGRATIONS.md/STATUS.md day counts 72→75, CHANGELOG entry; 9 findings remain open)
+**Previously updated:** 2026-07-31 — nightly audit

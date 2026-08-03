@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-31T05:50:00Z",
+  "last_updated": "2026-08-03T04:12:48Z",
   "open_count": 9,
-  "fixed_count": 64,
+  "fixed_count": 65,
   "audits": [
     "20260625T040000Z.json",
     "2026-06-28T040632Z.json",
@@ -13,7 +13,8 @@
     "20260716T040000Z.json",
     "20260719T040000Z.json",
     "20260729T040000Z.json",
-    "20260731T055000Z.json"
+    "20260731T055000Z.json",
+    "20260803T041248Z.json"
   ],
   "open_findings": [
     "AUDIT-factory-a5d3e092",
@@ -94,6 +95,7 @@
     "AUDIT-factory-agents-footer-date",
     "AUDIT-factory-readme-no-changelog-entry",
     "AUDIT-factory-audits-closedJson-undocumented",
-    "AUDIT-factory-changelog-scaffold-14-services"
+    "AUDIT-factory-changelog-scaffold-14-services",
+    "AUDIT-factory-integrations-footer-stale"
   ]
 }

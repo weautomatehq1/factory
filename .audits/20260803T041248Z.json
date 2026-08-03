@@ -1,0 +1,106 @@
+{
+  "audit_id": "audit-20260803T041248Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-03T04:12:48Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-sprint-missing-72d",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "No active sprint document — SPRINT-2026-05-B still not created (75 days overdue)",
+      "status": "open",
+      "note": "Still open. Now day 75. Requires Sebastian + Esme alignment. Cannot be fixed autonomously."
+    },
+    {
+      "id": "AUDIT-factory-q3-okrs-undefined-30d",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "Q3 2026 OKRs undefined 33 days into the quarter",
+      "status": "open",
+      "note": "Still open. 33 days into Q3 with no defined OKRs. Requires Sebastian + Esme."
+    },
+    {
+      "id": "AUDIT-factory-adr-broken-anchors",
+      "severity": "CRITICAL",
+      "category": "logic",
+      "title": "Broken GitHub anchor references in ADR-0001, ADR-0003, ADR-0010",
+      "status": "open",
+      "note": "Still open. Pre-commit hook blocks editing accepted ADRs — requires operator override."
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "category": "risk",
+      "title": "SECURITY.md Protected Paths gap — requires operator review",
+      "status": "open",
+      "note": "Still open. Carried from prior audits."
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "No active sprint — requires Sebastian/Esme",
+      "status": "open",
+      "note": "Still open. Carried from prior audits."
+    },
+    {
+      "id": "AUDIT-factory-roadmap-last-reconciled-field",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "ROADMAP.md non-standard frontmatter field last_reconciled — Ask-first per AGENTS.md §7",
+      "status": "open",
+      "note": "Still open. Pending operator decision on schema change."
+    },
+    {
+      "id": "AUDIT-factory-sprint-nonstandard-status",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "SPRINT.md uses non-standard status: incomplete — Ask-first per AGENTS.md §7",
+      "status": "open",
+      "note": "Still open. Pending operator decision."
+    },
+    {
+      "id": "AUDIT-factory-adr006-erratum-section",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ADR-0006 body contains Erratum section appended in violation of append-only rule",
+      "status": "open",
+      "note": "Still open. Hook investigation needed."
+    },
+    {
+      "id": "AUDIT-factory-decisions-generator-unwired",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "DECISIONS.md Stats generator not wired — average age NOT COMPUTED",
+      "status": "open",
+      "note": "Still open. Waiting on M-002."
+    },
+    {
+      "id": "AUDIT-factory-integrations-footer-stale",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "INTEGRATIONS.md footer Last updated/verified not updated after 2026-07-31 content change",
+      "detail": "INTEGRATIONS.md frontmatter was updated to 2026-07-31 and the rate_limits count bumped from 60→72 days in the 2026-07-31 audit, but the page footer still said 'Last updated: 2026-07-19' and 'Last verified: 2026-07-19 — nightly audit (Retell rate_limits overdue count updated 57 → 60 days)'. Footer dates and the overdue count were stale by 3 days.",
+      "file_globs": [
+        "INTEGRATIONS.md"
+      ],
+      "fix_sketch": "Update footer Last updated and Last verified to 2026-08-03 and bump rate_limits count from 72→75 days. FIXED.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-03T04:12:48Z",
+      "closed_at": "2026-08-03T04:12:48Z",
+      "closing_pr": null
+    }
+  ],
+  "summary": {
+    "new_findings": 1,
+    "fixed_this_run": 1,
+    "still_open": 9,
+    "breakdown": {
+      "CRITICAL": 0,
+      "IMPORTANT": 0,
+      "COSMETIC": 1
+    }
+  }
+}
