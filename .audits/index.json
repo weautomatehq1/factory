@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-02T08:00:00Z",
-  "open_count": 9,
-  "fixed_count": 70,
+  "last_updated": "2026-08-04T04:26:53Z",
+  "open_count": 8,
+  "fixed_count": 75,
   "audits": [
     "20260625T040000Z.json",
     "2026-06-28T040632Z.json",
@@ -14,14 +14,14 @@
     "20260719T040000Z.json",
     "20260729T040000Z.json",
     "20260731T055000Z.json",
-    "20260802T080000Z.json"
+    "20260802T080000Z.json",
+    "20260804T042653Z.json"
   ],
   "open_findings": [
-    "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-71c4b389",
-    "AUDIT-factory-sprint-missing-72d",
-    "AUDIT-factory-q3-okrs-undefined-30d",
+    "AUDIT-factory-sprint-missing-76d",
+    "AUDIT-factory-q3-okrs-undefined-34d",
     "AUDIT-factory-adr-broken-anchors",
+    "AUDIT-factory-a5d3e092",
     "AUDIT-factory-roadmap-last-reconciled-field",
     "AUDIT-factory-sprint-nonstandard-status",
     "AUDIT-factory-adr006-erratum-section",
@@ -29,9 +29,6 @@
   ],
   "carried_open_from_prior": [
     "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-71c4b389",
-    "AUDIT-factory-sprint-missing-72d",
-    "AUDIT-factory-q3-okrs-undefined-30d",
     "AUDIT-factory-adr-broken-anchors",
     "AUDIT-factory-roadmap-last-reconciled-field",
     "AUDIT-factory-sprint-nonstandard-status",
@@ -39,6 +36,11 @@
     "AUDIT-factory-decisions-generator-unwired"
   ],
   "fixed_findings": [
+    "AUDIT-factory-integrations-footer-mismatch-20260804",
+    "AUDIT-factory-status-stale-20260804",
+    "AUDIT-factory-kpi-stale-20260804",
+    "AUDIT-factory-roadmap-stale-20260804",
+    "AUDIT-factory-integrations-count-stale-20260804",
     "AUDIT-factory-kpi-q3-okrs-missing",
     "AUDIT-factory-status-stale-2026-06-25",
     "AUDIT-factory-changelog-missing-2026-06-25",
