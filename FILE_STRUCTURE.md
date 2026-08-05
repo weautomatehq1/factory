@@ -53,6 +53,7 @@ factory/
 │   └── costs.json               # usage log
 └── .audits/                     # nightly audit scan results (append-only)
     ├── index.json               # open findings rollup
+    ├── closed.json              # closed findings archive
     └── <ISO-timestamp>.json     # per-run scan output
 ```
 

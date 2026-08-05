@@ -1,7 +1,7 @@
 ---
 file: STAKEHOLDERS.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-06-20
 owner: sebas
 ---
 
@@ -102,5 +102,5 @@ owner: sebas
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-05-26 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-06-20
+**Last verified:** 2026-06-20 — per CHANGELOG: Retell decision log updated from ADR-0006 to ADR-0011; nightly audit corrected dates 2026-08-05

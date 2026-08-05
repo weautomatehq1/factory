@@ -1,7 +1,7 @@
 ---
 file: ARCHITECTURE.md
 status: accepted
-last_updated: 2026-07-04
+last_updated: 2026-08-02
 owner: sebas
 related_adrs: [ADR-0001, ADR-0002, ADR-0003, ADR-0005, ADR-0007, ADR-0009, ADR-0010, ADR-0011]
 ---
@@ -246,5 +246,5 @@ Quick pointers:
 
 ---
 
-**Last updated:** 2026-07-31
-**Last verified:** 2026-07-31 — nightly audit (§4 Codemap updated with docs/postmortems/, docs/templates/, .audits/ dirs; §6 cost tracking split into M-018 digest and M-019 per-session)
+**Last updated:** 2026-08-02
+**Last verified:** 2026-08-02 — nightly audit (frontmatter date corrected 2026-07-04→2026-08-02 to match footer; footer date corrected 2026-07-31→2026-08-02)
