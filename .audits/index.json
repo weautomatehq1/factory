@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-02T08:00:00Z",
-  "open_count": 9,
-  "fixed_count": 70,
+  "last_updated": "2026-08-06T04:00:00Z",
+  "open_count": 8,
+  "fixed_count": 75,
   "audits": [
     "20260625T040000Z.json",
     "2026-06-28T040632Z.json",
@@ -14,14 +14,14 @@
     "20260719T040000Z.json",
     "20260729T040000Z.json",
     "20260731T055000Z.json",
-    "20260802T080000Z.json"
+    "20260802T080000Z.json",
+    "20260806T040000Z.json"
   ],
   "open_findings": [
     "AUDIT-factory-a5d3e092",
     "AUDIT-factory-71c4b389",
     "AUDIT-factory-sprint-missing-72d",
     "AUDIT-factory-q3-okrs-undefined-30d",
-    "AUDIT-factory-adr-broken-anchors",
     "AUDIT-factory-roadmap-last-reconciled-field",
     "AUDIT-factory-sprint-nonstandard-status",
     "AUDIT-factory-adr006-erratum-section",
@@ -32,7 +32,6 @@
     "AUDIT-factory-71c4b389",
     "AUDIT-factory-sprint-missing-72d",
     "AUDIT-factory-q3-okrs-undefined-30d",
-    "AUDIT-factory-adr-broken-anchors",
     "AUDIT-factory-roadmap-last-reconciled-field",
     "AUDIT-factory-sprint-nonstandard-status",
     "AUDIT-factory-adr006-erratum-section",

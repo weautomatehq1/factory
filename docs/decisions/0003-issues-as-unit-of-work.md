@@ -71,5 +71,5 @@ Workers pick the next unblocked issue (DAG-aware per M-003 dependency-aware queu
 
 ## Related
 
-- Related ARCHITECTURE.md section: `#5-architectural-invariants` (item 3)
+- Related ARCHITECTURE.md section: `#5-architectural-invariants-explicit-absences` (item 3)
 - Related: ADR-0010 (the four upstream sources), ROADMAP [M-002] [M-003]

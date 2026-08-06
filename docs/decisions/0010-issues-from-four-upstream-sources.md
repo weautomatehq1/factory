@@ -72,5 +72,5 @@ Every auto-created issue is labeled with its source: `source:decomposer`, `sourc
 ## Related
 
 - Related: ADR-0003 (Issues as unit of work)
-- Related: ARCHITECTURE.md "External systems" + `#5-architectural-invariants` (item 3)
+- Related: ARCHITECTURE.md "External systems" + `#5-architectural-invariants-explicit-absences` (item 3)
 - Related: ROADMAP [M-002] (Decomposer); existing Sentry bridge per [[project-status-20260513]]

@@ -66,6 +66,6 @@ Reasons tied to drivers:
 
 ## Related
 
-- Related ARCHITECTURE.md section: `#5-architectural-invariants`
+- Related ARCHITECTURE.md section: `#5-architectural-invariants-explicit-absences`
 - Source: agents.md spec (https://agents.md); Anthropic docs (https://code.claude.com/docs/en/memory)
 - Related: AGENTS.md §1, CLAUDE.md (root)

@@ -1,0 +1,83 @@
+{
+  "audit_id": "audit-20260806T040000Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-06T04:00:00Z",
+  "scanner": "claude-sonnet-4-6",
+  "rubric_version": "1.0.0",
+  "findings": [
+    {
+      "id": "AUDIT-factory-5fbe87cd",
+      "severity": "COSMETIC",
+      "category": "stale-content",
+      "title": "STATUS.md day counts stale — SPRINT-B and Retell R1 at 74 days (now 78); Q3 elapsed at 32 days (now 36)",
+      "detail": "STATUS.md was last updated 2026-08-02. As of 2026-08-06: SPRINT-B overdue 74→78 days, Retell R1 overdue 74→78 days, Q3 elapsed 32→36 days. Day counts and footer updated.",
+      "file_globs": ["STATUS.md"],
+      "fix_sketch": "Update day counts and Last updated footer.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-06T04:00:00Z",
+      "closed_at": "2026-08-06T04:00:00Z",
+      "fix_summary": "Updated SPRINT-B/Retell 74→78 days, Q3 elapsed 32→36 days, footer to 2026-08-06."
+    },
+    {
+      "id": "AUDIT-factory-cf111943",
+      "severity": "COSMETIC",
+      "category": "stale-content",
+      "title": "KPI.md stale overdue counts — Retell R1 74 (now 78), Q3 elapsed 32 (now 36), ADR-0011 68 (now 72) days",
+      "detail": "KPI.md was last verified 2026-08-02. Retell R1 overdue 74→78 days; Q3 elapsed 32→36 days; ADR-0011 pending 68→72 days. Footer date updated.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Update three counters and Last verified footer.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-06T04:00:00Z",
+      "closed_at": "2026-08-06T04:00:00Z",
+      "fix_summary": "Updated Retell R1 74→78, Q3 elapsed 32→36, ADR-0011 68→72 days; footer to 2026-08-06."
+    },
+    {
+      "id": "AUDIT-factory-ca72c504",
+      "severity": "COSMETIC",
+      "category": "stale-content",
+      "title": "ROADMAP.md Q3 blocking decision overdue count stale at 74 days (now 78); date reference stale",
+      "detail": "ROADMAP.md §Open Questions row was last verified 2026-08-02 with 74-day count. As of 2026-08-06: 74→78 days. Date reference updated.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Update overdue count 74→78 days, date 2026-08-02→2026-08-06, Last verified footer.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-06T04:00:00Z",
+      "closed_at": "2026-08-06T04:00:00Z",
+      "fix_summary": "Updated Q3 blocking overdue 74→78 days, date reference to 2026-08-06."
+    },
+    {
+      "id": "AUDIT-factory-15907ed4",
+      "severity": "COSMETIC",
+      "category": "stale-content",
+      "title": "INTEGRATIONS.md Retell rate_limits overdue count stale (74 days, now 78) and footer dates stale since 2026-07-19",
+      "detail": "INTEGRATIONS.md body has Retell R1 overdue at 74 days (now 78). Footer 'Last updated' and 'Last verified' both say 2026-07-19 despite body edits on 2026-08-02. Frontmatter last_updated correctly shows 2026-08-02 but the footer section was not updated.",
+      "file_globs": ["INTEGRATIONS.md"],
+      "fix_sketch": "Update Retell count 74→78, update footer Last updated and Last verified to 2026-08-06.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-06T04:00:00Z",
+      "closed_at": "2026-08-06T04:00:00Z",
+      "fix_summary": "Updated Retell count 74→78, corrected both footer dates to 2026-08-06."
+    },
+    {
+      "id": "AUDIT-factory-adr-broken-anchors",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "ADR broken anchor links to #5-architectural-invariants section in ARCHITECTURE.md",
+      "detail": "ADRs 0001, 0003, and 0010 link to #5-architectural-invariants which does not exist. The actual heading is '## 5. Architectural Invariants (explicit absences)' which generates anchor #5-architectural-invariants-explicit-absences. All three links produce 404 on GitHub.",
+      "file_globs": [
+        "docs/decisions/0001-agents-md-as-primary.md",
+        "docs/decisions/0003-issues-as-unit-of-work.md",
+        "docs/decisions/0010-issues-from-four-upstream-sources.md"
+      ],
+      "fix_sketch": "Replace #5-architectural-invariants with #5-architectural-invariants-explicit-absences in all three ADR files.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-07-31T05:50:00Z",
+      "closed_at": "2026-08-06T04:00:00Z",
+      "fix_summary": "Fixed anchor link in ADRs 0001, 0003, 0010 to use correct #5-architectural-invariants-explicit-absences."
+    }
+  ]
+}
