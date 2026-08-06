@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-02T08:00:00Z",
-  "open_count": 9,
-  "fixed_count": 70,
+  "last_updated": "2026-08-05T05:00:00Z",
+  "open_count": 5,
+  "fixed_count": 86,
   "audits": [
     "20260625T040000Z.json",
     "2026-06-28T040632Z.json",
@@ -14,29 +14,19 @@
     "20260719T040000Z.json",
     "20260729T040000Z.json",
     "20260731T055000Z.json",
-    "20260802T080000Z.json"
+    "20260802T080000Z.json",
+    "20260805T050000Z.json"
   ],
   "open_findings": [
+    "AUDIT-factory-sprint-b-overdue",
+    "AUDIT-factory-q3-okrs-undefined",
     "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-71c4b389",
-    "AUDIT-factory-sprint-missing-72d",
-    "AUDIT-factory-q3-okrs-undefined-30d",
     "AUDIT-factory-adr-broken-anchors",
-    "AUDIT-factory-roadmap-last-reconciled-field",
-    "AUDIT-factory-sprint-nonstandard-status",
-    "AUDIT-factory-adr006-erratum-section",
-    "AUDIT-factory-decisions-generator-unwired"
+    "AUDIT-factory-risks-no-rescore"
   ],
   "carried_open_from_prior": [
     "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-71c4b389",
-    "AUDIT-factory-sprint-missing-72d",
-    "AUDIT-factory-q3-okrs-undefined-30d",
-    "AUDIT-factory-adr-broken-anchors",
-    "AUDIT-factory-roadmap-last-reconciled-field",
-    "AUDIT-factory-sprint-nonstandard-status",
-    "AUDIT-factory-adr006-erratum-section",
-    "AUDIT-factory-decisions-generator-unwired"
+    "AUDIT-factory-adr-broken-anchors"
   ],
   "fixed_findings": [
     "AUDIT-factory-kpi-q3-okrs-missing",
@@ -108,6 +98,22 @@
     "AUDIT-factory-status-stale-20260802",
     "AUDIT-factory-kpi-stale-20260802",
     "AUDIT-factory-roadmap-stale-20260802",
-    "AUDIT-factory-integrations-stale-20260802"
+    "AUDIT-factory-integrations-stale-20260802",
+    "AUDIT-factory-71c4b389",
+    "AUDIT-factory-roadmap-last-reconciled-field",
+    "AUDIT-factory-sprint-nonstandard-status",
+    "AUDIT-factory-adr006-erratum-section",
+    "AUDIT-factory-decisions-generator-unwired",
+    "AUDIT-factory-architecture-date-mismatch",
+    "AUDIT-factory-integrations-date-mismatch",
+    "AUDIT-factory-stakeholders-stale-dates",
+    "AUDIT-factory-non-goals-m026-undefined",
+    "AUDIT-factory-file-structure-closed-json",
+    "AUDIT-factory-decisions-supersedes-inverted",
+    "AUDIT-factory-kpi-adr-pending-wrong",
+    "AUDIT-factory-stale-day-counts-20260805",
+    "AUDIT-factory-agents-footer-stale-20260805",
+    "AUDIT-factory-roadmap-next-header-stale",
+    "AUDIT-factory-security-wrong-glob-note"
   ]
 }

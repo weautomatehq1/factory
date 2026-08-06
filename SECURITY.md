@@ -179,4 +179,4 @@ Toggling: SSH to relevant deployment, update env, restart. Discord command bridg
 ---
 
 **Last updated:** 2026-07-04
-**Last verified:** 2026-07-04 — nightly audit (Last verified date refreshed; note: **/(auth)/** glob present in CODEOWNERS and protected-paths.yml but missing from this Protected Paths list — flagged as AUDIT-factory-a5d3e092, requires operator review before adding)
+**Last verified:** 2026-08-05 — nightly audit (note: `**/(auth)/**` glob (Next.js App Router route-group variant) is present in CODEOWNERS line 15 and protected-paths.yml line 36 but absent from this Protected Paths list — flagged as AUDIT-factory-a5d3e092; the prior note incorrectly named `**/auth/**` as missing — that glob IS present at line 67; the missing glob is specifically `**/(auth)/**`; requires operator review before adding)
