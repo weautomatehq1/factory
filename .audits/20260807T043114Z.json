@@ -1,0 +1,77 @@
+{
+  "scan_id": "20260807T043114Z",
+  "repo": "weautomatehq1/factory",
+  "branch": "audit/nightly-2026-08-07",
+  "scanned_at": "2026-08-07T04:31:14Z",
+  "summary": {
+    "total_findings": 7,
+    "new_findings": 5,
+    "fixed_this_run": 5,
+    "carried_open": 2
+  },
+  "findings": [
+    {
+      "id": "AUDIT-factory-9a1b2c3d",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "STATUS.md stale day counts (69/70 → 78/79 days overdue)",
+      "detail": "STATUS.md SPRINT-B overdue count was 69 days (as of 2026-07-29), Retell R1 was 70 days overdue, Q3 elapsed was 28 days. Updated to reflect 2026-08-07.",
+      "fix": "Updated In flight and Up next sections: SPRINT-B 69→78 days, Retell R1 70→79 days, Q3 elapsed 28→37 days. Last-updated line refreshed.",
+      "first_seen": "2026-08-07"
+    },
+    {
+      "id": "AUDIT-factory-8b2c3d4e",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "KPI.md stale overdue counts",
+      "detail": "Q3 ACTION REQUIRED banner showed Retell R1 as 70 days overdue and ADR-0011 pending 64 days; Q3 elapsed was 28 days. All counts and footer date were stale.",
+      "fix": "Updated banner: Retell R1 70→79 days, ADR-0011 64→73 days, Q3 elapsed 28→37 days. Footer last_updated updated to 2026-08-07.",
+      "first_seen": "2026-08-07"
+    },
+    {
+      "id": "AUDIT-factory-7c3d4e5f",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "ROADMAP.md Q3 blocking decision overdue count stale",
+      "detail": "Open questions Q3 showed 70 days elapsed (as of 2026-07-29). Footer last_updated and last_verified were 2026-07-19/2026-07-29.",
+      "fix": "Updated Q3 blocking decision count to 79 days, date reference to 2026-08-07, footer last_updated and last_verified updated.",
+      "first_seen": "2026-08-07"
+    },
+    {
+      "id": "AUDIT-factory-6d4e5f6a",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "INTEGRATIONS.md Retell rate_limits overdue count stale",
+      "detail": "INTEGRATIONS.md Retell entry showed 'Esme R1 research 60 days overdue' (last updated 2026-07-19). Footer last_updated 2026-07-19 was stale.",
+      "fix": "Updated Retell rate_limits overdue count 60→79 days. Footer last_updated and last_verified updated to 2026-08-07.",
+      "first_seen": "2026-08-07"
+    },
+    {
+      "id": "AUDIT-factory-5e5f6a7b",
+      "severity": "COSMETIC",
+      "status": "fixed",
+      "title": "CHANGELOG.md missing 2026-08-07 nightly audit entry",
+      "detail": "CHANGELOG.md had no entry for this nightly audit run. Per audit protocol, every run produces a CHANGELOG entry.",
+      "fix": "Added 2026-08-07 nightly audit entry to [Unreleased] → Changed section.",
+      "first_seen": "2026-08-07"
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "title": "SECURITY.md Protected Paths missing auth glob",
+      "detail": "SECURITY.md has status: accepted + is itself a Protected Path. Cannot modify without operator approval (Sebastian). Carried open.",
+      "first_seen": "2026-07-19",
+      "carried_from": "20260729T040000Z.json"
+    },
+    {
+      "id": "AUDIT-factory-71c4b389",
+      "severity": "IMPORTANT",
+      "status": "open",
+      "title": "No active sprint document (SPRINT-2026-05-B)",
+      "detail": "SPRINT-2026-05-B has not been created (day 78 overdue). Requires Sebastian + Esme to define sprint scope. Carried open.",
+      "first_seen": "2026-07-13",
+      "carried_from": "20260729T040000Z.json"
+    }
+  ]
+}
