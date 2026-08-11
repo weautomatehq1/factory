@@ -76,6 +76,11 @@ Three sections only. Next agent reads this first.
 - Nightly audit branch `audit/nightly-2026-07-13` opened.
 - Factory: 4 findings fixed (all COSMETIC): day counts updated 47/48→53/54 (STATUS.md), Q3 blocking decision overdue count updated 48→54 days (ROADMAP.md + KPI.md), CHANGELOG.md entry added. index.json corrected — 8 July-08 findings moved to fixed. 2 findings remain open: SPRINT-2026-05-B missing (day 53, hard blocker), Retell R1 (day 54, needs Esme).
 
+### 2026-08-11 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-08-11` opened.
+- Factory: 1 COSMETIC finding (day count bundle) — SPRINT-B/Retell overdue 77→83 days; Q3 elapsed 35→41 days across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md.
+- 5 findings remain open (all require human action: sprint creation, Q3 OKRs, SECURITY.md auth glob, ADR anchor fix blocked by pre-commit hook, RISKS.md quarterly re-score).
+
 ### 2026-08-02 — Nightly audit (this session)
 - Nightly audit branch `audit/nightly-2026-08-02` opened.
 - Factory: 6 COSMETIC findings fixed (AGENTS.md/ARCHITECTURE.md footer dates corrected to reflect 2026-07-31 edits; day counts updated: SPRINT-B/Retell 72→74 days in STATUS.md/KPI.md/ROADMAP.md/INTEGRATIONS.md; Q3 elapsed 30→32 days in STATUS.md/KPI.md; ADR-0011 pending 54→68 in KPI.md body).
@@ -87,22 +92,22 @@ Three sections only. Next agent reads this first.
 
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-08-05 (day 77 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-08-11 (day 83 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 77 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+1. **Open SPRINT-2026-05-B** — now 83 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
 2. **Confirm Retell R1 research** (Esme) — now 77 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
-3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (35 days ago), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
+3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (41 days ago), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
 ## Open questions
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 77 days overdue (as of 2026-08-05); ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 83 days overdue (as of 2026-08-11); ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-08-05 — nightly audit (IMPORTANT+COSMETIC fixes: day counts updated 74→77 days SPRINT-B/Retell, Q3 elapsed 32→35 days; ARCHITECTURE.md frontmatter date corrected; INTEGRATIONS.md footer date corrected; STAKEHOLDERS.md dates corrected; NON_GOALS.md M-026+→post-[M-024]; DECISIONS.md ADR-0006 Supersedes column corrected; KPI.md ADR-0011 pending wording fixed; ROADMAP.md Next header updated; FILE_STRUCTURE.md .audits/closed.json added)
-**Previously updated:** 2026-07-31 — nightly audit
+**Last updated:** 2026-08-11 — nightly audit (COSMETIC: day counts updated 77→83 days SPRINT-B/Retell, Q3 elapsed 35→41 days; 5 open findings carried — all require human action)
+**Previously updated:** 2026-08-05 — nightly audit
