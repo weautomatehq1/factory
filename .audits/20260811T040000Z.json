@@ -1,0 +1,44 @@
+{
+  "audit_id": "audit-20260811T040000Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-11T04:00:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-day-counts-20260811",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Day-counts stale (77→83 days SPRINT-B/Retell, 35→41 days Q3 elapsed) across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md",
+      "detail": "Last audit ran 2026-08-05; today is 2026-08-11 (6 days elapsed). Standard nightly cosmetic pass updating all stale day-count references.",
+      "file_globs": [".omc/STATUS.md", "KPI.md", "ROADMAP.md", "INTEGRATIONS.md"],
+      "fix_sketch": "Fixed: all 77-day SPRINT-B/Retell counts updated to 83; Q3 elapsed 35-day count updated to 41; all four file footers updated.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-11T04:00:00Z",
+      "closed_at": "2026-08-11T04:00:00Z",
+      "closing_pr": null
+    }
+  ],
+  "carried_open": [
+    {
+      "id": "AUDIT-factory-sprint-b-overdue",
+      "reason": "Requires Sebastian + Esme to create SPRINT-2026-05-B — cannot fix autonomously. Now 83 days overdue."
+    },
+    {
+      "id": "AUDIT-factory-q3-okrs-undefined",
+      "reason": "Requires Sebastian + Esme alignment. Q3 now 41 days in with zero OKRs defined."
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "reason": "Adding **/(auth)/** to SECURITY.md Protected Paths requires Sebastian's approval per AGENTS.md §7 ask-first rule."
+    },
+    {
+      "id": "AUDIT-factory-adr-broken-anchors",
+      "reason": "Fixing anchors in accepted ADRs (0001, 0003, 0010) is blocked by .husky/pre-commit hook that rejects edits to accepted ADRs."
+    },
+    {
+      "id": "AUDIT-factory-risks-no-rescore",
+      "reason": "Quarterly RISKS.md re-score requires Sebastian's expert judgment. Now 82 days overdue."
+    }
+  ]
+}

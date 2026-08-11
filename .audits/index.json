@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-05T05:00:00Z",
+  "last_updated": "2026-08-11T04:00:00Z",
   "open_count": 5,
-  "fixed_count": 86,
+  "fixed_count": 87,
   "audits": [
     "20260625T040000Z.json",
     "2026-06-28T040632Z.json",
@@ -15,7 +15,8 @@
     "20260729T040000Z.json",
     "20260731T055000Z.json",
     "20260802T080000Z.json",
-    "20260805T050000Z.json"
+    "20260805T050000Z.json",
+    "20260811T040000Z.json"
   ],
   "open_findings": [
     "AUDIT-factory-sprint-b-overdue",
@@ -114,6 +115,7 @@
     "AUDIT-factory-stale-day-counts-20260805",
     "AUDIT-factory-agents-footer-stale-20260805",
     "AUDIT-factory-roadmap-next-header-stale",
-    "AUDIT-factory-security-wrong-glob-note"
+    "AUDIT-factory-security-wrong-glob-note",
+    "AUDIT-factory-day-counts-20260811"
   ]
 }
