@@ -1,7 +1,7 @@
 ---
 file: NON_GOALS.md
 status: accepted
-last_updated: 2026-05-26
+last_updated: 2026-08-05
 owner: sebas
 related_adrs: []
 ---
@@ -148,5 +148,5 @@ These are walking-away decisions. If a feature/scope hits a No-Go, we don't do i
 
 ---
 
-**Last updated:** 2026-05-26
-**Last verified:** 2026-06-18 — nightly audit (read-only review; no content changes)
+**Last updated:** 2026-08-05 (NoGo-6 corrected from M-026+ to post-[M-024] — closes AUDIT-factory-non-goals-m026-undefined)
+**Last verified:** 2026-08-12 — nightly audit (dates corrected to reflect 2026-08-05 content change — closes AUDIT-factory-non-goals-dates-stale)

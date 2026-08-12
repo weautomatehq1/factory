@@ -1,0 +1,78 @@
+{
+  "audit_id": "audit-20260812T054007Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-12T05:40:07Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-non-goals-dates-stale",
+      "severity": "IMPORTANT",
+      "category": "cosmetic",
+      "title": "NON_GOALS.md frontmatter and footer dates not updated after 2026-08-05 content change",
+      "detail": "The 2026-08-05 nightly audit corrected NoGo-6 (changed M-026+ to post-[M-024]) — a content change — but did not update the frontmatter last_updated or footer Last updated/Last verified. Frontmatter still reads 2026-05-26; footer Last updated still reads 2026-05-26; Last verified still reads 2026-06-18. All three should reflect the 2026-08-05 edit.",
+      "file_globs": ["NON_GOALS.md"],
+      "fix_sketch": "Update frontmatter last_updated: 2026-08-05, footer Last updated: 2026-08-05, footer Last verified: 2026-08-12.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-08-12T05:40:07Z",
+      "closed_at": "2026-08-12T05:40:07Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-decisions-dates-stale",
+      "severity": "IMPORTANT",
+      "category": "cosmetic",
+      "title": "DECISIONS.md frontmatter and footer dates not updated after 2026-08-05 Supersedes column fix",
+      "detail": "The 2026-08-05 nightly audit corrected DECISIONS.md (ADR-0006 Supersedes column changed from 'superseded by 0011' to '—') — a content change — but did not update the frontmatter last_updated or footer Last updated. Both still read 2026-06-04, which is the date before the correction was made.",
+      "file_globs": ["DECISIONS.md"],
+      "fix_sketch": "Update frontmatter last_updated: 2026-08-05, footer Last updated: 2026-08-05 (manually until generator wired).",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-08-12T05:40:07Z",
+      "closed_at": "2026-08-12T05:40:07Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-stakeholders-verified-confusing",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STAKEHOLDERS.md Last verified footer confusingly shows 2026-06-20 with trailing 2026-08-05 note",
+      "detail": "The 2026-08-05 audit corrected the STAKEHOLDERS.md frontmatter and footer dates to 2026-06-20 (matching the actual content change date), but appended 'nightly audit corrected dates 2026-08-05' to the Last verified line without updating the date itself. The result reads: 'Last verified: 2026-06-20 — ... nightly audit corrected dates 2026-08-05'. The Last verified should be the most recent date a nightly audit reviewed the file.",
+      "file_globs": ["STAKEHOLDERS.md"],
+      "fix_sketch": "Update Last verified to 2026-08-12 with a clean note; remove the confusing trailing 2026-08-05 suffix.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-08-12T05:40:07Z",
+      "closed_at": "2026-08-12T05:40:07Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-stale-day-counts-20260812",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Day-counts stale (7 days elapsed since 2026-08-05 audit) across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md",
+      "detail": "Last audit ran 2026-08-05; today is 2026-08-12 (7 days elapsed). SPRINT-B overdue: 77→83 days (from 2026-05-21). Retell R1 overdue in STATUS.md: 77→84 days (from 2026-05-20). Retell R1 pending in KPI.md: 71→78 days (from 2026-05-26). Q3 elapsed: 35→42 days (from 2026-07-01). ROADMAP.md overdue count: 77→83. INTEGRATIONS.md Retell overdue: 77→84.",
+      "file_globs": [".omc/STATUS.md", "KPI.md", "ROADMAP.md", "INTEGRATIONS.md"],
+      "fix_sketch": "Update all stale counts. STATUS.md: SPRINT-B 77→83, Retell R1 77→84, Q3 35→42, update footer date. KPI.md: Q3 elapsed 35→42, Retell R1 pending 71→78, update Last verified. ROADMAP.md: overdue 77→83, Q3 elapsed 35→42, Retell R1 84, update dates. INTEGRATIONS.md: Retell rate_limits 77→84, update Last verified.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-12T05:40:07Z",
+      "closed_at": "2026-08-12T05:40:07Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-changelog-missing-20260812",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md has no entry for the 2026-08-12 nightly audit",
+      "detail": "AGENTS.md §5 requires CHANGELOG.md [Unreleased] to be updated on every spec change. This nightly audit fixes 5 findings (2 IMPORTANT, 3 COSMETIC) and that activity must be recorded.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Prepend a 2026-08-12 nightly audit entry to the [Unreleased] Changed section documenting all fixes made in this pass.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-08-12T05:40:07Z",
+      "closed_at": "2026-08-12T05:40:07Z",
+      "closing_pr": null
+    }
+  ]
+}

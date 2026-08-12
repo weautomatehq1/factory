@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-05T05:00:00Z",
+  "last_updated": "2026-08-12T05:40:07Z",
   "open_count": 5,
-  "fixed_count": 86,
+  "fixed_count": 91,
   "audits": [
     "20260625T040000Z.json",
     "2026-06-28T040632Z.json",
@@ -15,7 +15,8 @@
     "20260729T040000Z.json",
     "20260731T055000Z.json",
     "20260802T080000Z.json",
-    "20260805T050000Z.json"
+    "20260805T050000Z.json",
+    "20260812T054007Z.json"
   ],
   "open_findings": [
     "AUDIT-factory-sprint-b-overdue",
@@ -25,8 +26,11 @@
     "AUDIT-factory-risks-no-rescore"
   ],
   "carried_open_from_prior": [
+    "AUDIT-factory-sprint-b-overdue",
+    "AUDIT-factory-q3-okrs-undefined",
     "AUDIT-factory-a5d3e092",
-    "AUDIT-factory-adr-broken-anchors"
+    "AUDIT-factory-adr-broken-anchors",
+    "AUDIT-factory-risks-no-rescore"
   ],
   "fixed_findings": [
     "AUDIT-factory-kpi-q3-okrs-missing",
@@ -114,6 +118,11 @@
     "AUDIT-factory-stale-day-counts-20260805",
     "AUDIT-factory-agents-footer-stale-20260805",
     "AUDIT-factory-roadmap-next-header-stale",
-    "AUDIT-factory-security-wrong-glob-note"
+    "AUDIT-factory-security-wrong-glob-note",
+    "AUDIT-factory-non-goals-dates-stale",
+    "AUDIT-factory-decisions-dates-stale",
+    "AUDIT-factory-stakeholders-verified-confusing",
+    "AUDIT-factory-stale-day-counts-20260812",
+    "AUDIT-factory-changelog-missing-20260812"
   ]
 }

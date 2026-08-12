@@ -103,4 +103,4 @@ owner: sebas
 ---
 
 **Last updated:** 2026-06-20
-**Last verified:** 2026-06-20 — per CHANGELOG: Retell decision log updated from ADR-0006 to ADR-0011; nightly audit corrected dates 2026-08-05
+**Last verified:** 2026-08-12 — nightly audit (2026-08-05 audit corrected frontmatter + footer dates 2026-05-26→2026-06-20, matching the 2026-06-20 content change; Last verified date now corrected — closes AUDIT-factory-stakeholders-verified-confusing)
