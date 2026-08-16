@@ -1,0 +1,44 @@
+{
+  "audit_id": "audit-20260815T040000Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-15T04:00:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-day-counts-20260815",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Day-counts stale (83→89 days SPRINT-B/Retell, 41→45 days Q3 elapsed) across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md, AGENTS.md",
+      "detail": "Last audit ran 2026-08-11; today is 2026-08-15 (4 days elapsed). Standard nightly cosmetic pass updating all stale day-count references. SPRINT-B overdue count: 83→89 (from 2026-05-18 baseline). Q3 elapsed: 41→45 (from 2026-07-01 baseline). AGENTS.md footer: 2026-08-02→2026-08-15.",
+      "file_globs": [".omc/STATUS.md", "KPI.md", "ROADMAP.md", "INTEGRATIONS.md", "AGENTS.md"],
+      "fix_sketch": "Fixed: all 83-day SPRINT-B/Retell counts updated to 89; Q3 elapsed 41-day count updated to 45; AGENTS.md footer updated to 2026-08-15.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-15T04:00:00Z",
+      "closed_at": "2026-08-15T04:00:00Z",
+      "closing_pr": null
+    }
+  ],
+  "carried_open": [
+    {
+      "id": "AUDIT-factory-sprint-b-overdue",
+      "reason": "Requires Sebastian + Esme to create SPRINT-2026-05-B — cannot fix autonomously. Now 89 days overdue."
+    },
+    {
+      "id": "AUDIT-factory-q3-okrs-undefined",
+      "reason": "Requires Sebastian + Esme alignment. Q3 now 45 days in with zero OKRs defined."
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "reason": "Adding **/(auth)/** to SECURITY.md Protected Paths requires Sebastian's approval per AGENTS.md §7 ask-first rule."
+    },
+    {
+      "id": "AUDIT-factory-adr-broken-anchors",
+      "reason": "Fixing anchors in accepted ADRs (0001, 0003, 0010) is blocked by .husky/pre-commit hook that rejects edits to accepted ADRs."
+    },
+    {
+      "id": "AUDIT-factory-risks-no-rescore",
+      "reason": "Quarterly RISKS.md re-score requires Sebastian's expert judgment. Now 86 days overdue."
+    }
+  ]
+}
