@@ -1,0 +1,92 @@
+{
+  "audit_id": "audit-20260818T075425Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-18T07:54:25Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-20260818-daycount",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Day-count bundle: SPRINT-B/Retell overdue 83→90 days; Q3 elapsed 41→48 days",
+      "detail": "Six spec files (KPI.md, ROADMAP.md, INTEGRATIONS.md, AGENTS.md, .omc/STATUS.md) carried stale overdue-day counts from the 2026-08-11 audit. SPRINT-B is now 90 days overdue (May 20→Aug 18). Retell R1 confirmation pending 84 days (May 26→Aug 18). Q3 is now 48 days in (Jul 1→Aug 18).",
+      "file_globs": ["KPI.md", "ROADMAP.md", "INTEGRATIONS.md", "AGENTS.md", ".omc/STATUS.md"],
+      "fix_sketch": "Updated all day counts in a single pass. SPRINT-B 83→90; Retell 83→84; Q3 41→48. Dates-as-of references updated to 2026-08-18.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-18T07:54:25Z",
+      "closed_at": "2026-08-18T07:54:25Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-sprint-b-overdue",
+      "severity": "CRITICAL",
+      "category": "assumption",
+      "title": "No active sprint document — SPRINT-2026-05-B now 90 days overdue",
+      "detail": "SPRINT-2026-05-A closed 2026-05-21 with commitment to open SPRINT-2026-05-B immediately. As of 2026-08-18 (day 90) no such file exists. Every roadmap milestone (M-002 through M-015) remains unstarted.",
+      "file_globs": ["SPRINT.md", ".omc/STATUS.md"],
+      "fix_sketch": "Sebastian and Esme must create SPRINT-2026-05-B.md (or SPRINT-2026-08-A.md) at repo root with realistic scope. Cannot be fixed autonomously.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-08-05T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-q3-okrs-undefined",
+      "severity": "CRITICAL",
+      "category": "assumption",
+      "title": "Q3 2026 OKRs undefined — 48 days into Q3 with zero measurable goals",
+      "detail": "Q3 2026 OKR block in KPI.md contains only TBD placeholders. Q3 started 2026-07-01; today is 2026-08-18 (48 days in). All four Q2 OKRs were MISSED. Cannot be fixed autonomously — requires Sebastian + Esme alignment.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Sebastian must define Q3 Objective and Key Results with numeric targets. Day counts updated in this pass.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-08-05T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "CRITICAL",
+      "category": "risk",
+      "title": "SECURITY.md missing **/(auth)/** glob enforced in CODEOWNERS and protected-paths.yml",
+      "detail": "The Protected Paths list in SECURITY.md lacks **/(auth)/** (Next.js App Router route group syntax) which IS enforced in CODEOWNERS and protected-paths.yml. Adding the glob requires operator review.",
+      "file_globs": ["SECURITY.md"],
+      "fix_sketch": "Add **/(auth)/** to auth section in SECURITY.md Protected Paths. Requires Sebastian's approval — ask-first per AGENTS.md §7.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-08-05T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-adr-broken-anchors",
+      "severity": "IMPORTANT",
+      "category": "redo",
+      "title": "Broken anchor #5-architectural-invariants in ADR-0001, ADR-0003, ADR-0010",
+      "detail": "Three accepted ADRs reference #5-architectural-invariants in ARCHITECTURE.md. The correct GitHub anchor is #5-architectural-invariants-explicit-absences. Pre-commit hook blocks accepted ADR edits — cannot fix autonomously.",
+      "file_globs": ["docs/decisions/0001-*.md", "docs/decisions/0003-*.md", "docs/decisions/0010-*.md"],
+      "fix_sketch": "Change anchor from #5-architectural-invariants to #5-architectural-invariants-explicit-absences in all three ADRs. Requires Sebastian's manual fix or hook bypass.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-08-05T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-risks-no-rescore",
+      "severity": "IMPORTANT",
+      "category": "assumption",
+      "title": "RISKS.md risk register not reviewed since May 2026 — 89 days overdue for quarterly re-score",
+      "detail": "All 15 open risks show last_reviewed dates between 2026-05-15 and 2026-05-23. Q2 quarterly re-score (due 2026-06-30) was never performed. Cannot be fixed autonomously — requires Sebastian's expert judgment.",
+      "file_globs": ["RISKS.md"],
+      "fix_sketch": "Sebastian must perform quarterly re-score of all 15 open risks, update last_reviewed dates, and re-score R-004, R-007, R-009, R-010 at minimum.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-08-05T05:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    }
+  ]
+}

@@ -211,4 +211,4 @@ If a rule in this file MUST be unbreakable, promote it to a hook. Note the promo
 ---
 
 **Last updated:** 2026-08-02
-**Last verified:** 2026-08-02 — nightly audit (footer date corrected 2026-07-31→2026-08-02 to reflect 2026-08-02 audit edits)
+**Last verified:** 2026-08-18 — nightly audit (day-count cosmetics applied to KPI.md and ROADMAP.md)
