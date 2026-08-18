@@ -1,0 +1,109 @@
+{
+  "audit_id": "audit-20260817T040000Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-17T04:00:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-day-counts-20260817",
+      "severity": "COSMETIC",
+      "category": "staleness",
+      "title": "Stale day counts — SPRINT-B/Retell 83→89 days, Q3 elapsed 41→47 days",
+      "detail": "STATUS.md, KPI.md, ROADMAP.md, and INTEGRATIONS.md all carried day-count references from the 2026-08-11 audit. SPRINT-B overdue was 83 days (now 89), Retell R1 overdue was 83 days (now 89), Q3 elapsed was 41 days (now 47). Fixed by updating all four files.",
+      "file_globs": [
+        ".omc/STATUS.md",
+        "KPI.md",
+        "ROADMAP.md",
+        "INTEGRATIONS.md",
+        "CHANGELOG.md"
+      ],
+      "fix_sketch": "Update all numeric day counts from 83→89 for SPRINT-B/Retell and from 41→47 for Q3 elapsed.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-17T04:00:00Z",
+      "closed_at": "2026-08-17T04:15:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-sprint-b-overdue",
+      "severity": "CRITICAL",
+      "category": "process",
+      "title": "SPRINT-2026-05-B not created — 89 days overdue",
+      "detail": "SPRINT-2026-05-B has been referenced since the 2026-05-21 reconciliation but remains uncreated as of 2026-08-17 (89 days overdue). There is no active sprint document. All milestone progress (M-002 through M-015) is blocked. Requires Sebastian + Esme to open the sprint file and define scope.",
+      "file_globs": [
+        "SPRINT.md",
+        ".omc/STATUS.md"
+      ],
+      "fix_sketch": "Create SPRINT-2026-05-B (or SPRINT-2026-06-A) with re-scoped milestones based on actual capacity. Requires human decision.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-05-21T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-q3-okrs-undefined",
+      "severity": "CRITICAL",
+      "category": "process",
+      "title": "Q3 2026 OKRs undefined — 47 days into Q3",
+      "detail": "Q3 started 2026-07-01 with zero OKRs defined. As of 2026-08-17 (47 days in) KPI.md Q3 section remains TBD. Prerequisites: Retell R1 confirmation (89 days overdue) + SPRINT-B scope decision. Requires Sebastian + Esme to define objectives and key results for the quarter.",
+      "file_globs": [
+        "KPI.md"
+      ],
+      "fix_sketch": "Populate KPI.md Q3 2026 OKR section with concrete objectives and key results. Requires voice-platform decision and SPRINT-B scope first.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-07-01T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "severity": "IMPORTANT",
+      "category": "security",
+      "title": "SECURITY.md Protected Paths missing **/(auth)/** glob",
+      "detail": "CODEOWNERS and the protected-paths workflow use `**/(auth)/**` for Next.js route group matching but SECURITY.md Protected Paths section only lists `**/auth/**`. The gap means the SECURITY.md documentation understates actual protection. Fixing SECURITY.md requires operator approval (status: accepted file — ask-first per AGENTS.md §7).",
+      "file_globs": [
+        "SECURITY.md"
+      ],
+      "fix_sketch": "Add `**/(auth)/**` alongside `**/auth/**` in SECURITY.md Protected Paths section. Requires ask-first approval per AGENTS.md §7.",
+      "parallel_safe": true,
+      "status": "open",
+      "opened_at": "2026-05-26T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-adr-broken-anchors",
+      "severity": "IMPORTANT",
+      "category": "documentation",
+      "title": "3 ADR internal anchor links broken",
+      "detail": "Three ADR files contain anchor links to section headings that don't match (heading text changed after link was written). The pre-commit hook blocks edits to accepted-ADR files, so these cannot be fixed autonomously. Requires hook bypass or a new superseding ADR.",
+      "file_globs": [
+        "docs/decisions/*.md"
+      ],
+      "fix_sketch": "Either temporarily disable the accepted-ADR pre-commit guard for a targeted anchor-only fix, or open new ADRs that supersede the affected ones and correct anchors there.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-07-31T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-risks-no-rescore",
+      "severity": "IMPORTANT",
+      "category": "process",
+      "title": "RISKS.md quarterly re-score overdue",
+      "detail": "RISKS.md specifies a quarterly FMEA re-score cadence. The last documented re-score was Q2 2026 (2026-06-30 deadline). Q3 started 2026-07-01 and 47 days have elapsed without a re-score. Some risk severity/probability scores may have changed given SPRINT-B not launching. Requires Sebastian to review each risk entry against current reality.",
+      "file_globs": [
+        "RISKS.md"
+      ],
+      "fix_sketch": "Re-score all FMEA entries (Severity × Probability × Detectability) against Q3 2026 reality. Update RISKS.md with new scores and rationale. Requires human judgment.",
+      "parallel_safe": false,
+      "status": "open",
+      "opened_at": "2026-08-05T04:00:00Z",
+      "closed_at": null,
+      "closing_pr": null
+    }
+  ]
+}
