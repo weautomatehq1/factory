@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-11T04:00:00Z",
+  "last_updated": "2026-08-19T04:05:00Z",
   "open_count": 5,
   "fixed_count": 87,
   "audits": [
@@ -117,5 +117,27 @@
     "AUDIT-factory-roadmap-next-header-stale",
     "AUDIT-factory-security-wrong-glob-note",
     "AUDIT-factory-day-counts-20260811"
+  ],
+  "findings": [
+    {
+      "id": "AUDIT-factory-day-counts-20260819",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Day counts stale across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md",
+      "detail": "Last audit was 2026-08-11; 8 days have elapsed. SPRINT-B/Retell overdue counts updated 83\u219291, Q3 elapsed 41\u219249.",
+      "file_globs": [
+        ".omc/STATUS.md",
+        "KPI.md",
+        "ROADMAP.md",
+        "INTEGRATIONS.md",
+        "CHANGELOG.md"
+      ],
+      "fix_sketch": "Replace all stale day counts and update Last verified dates",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-08-19T04:00:00Z",
+      "closed_at": "2026-08-19T04:05:00Z",
+      "closing_pr": null
+    }
   ]
 }
