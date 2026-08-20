@@ -1,0 +1,72 @@
+{
+  "audit_id": "audit-20260820T040910Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-20T04:09:10Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-status-retell-stale-77",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "STATUS.md Retell R1 overdue count frozen at 77 — 2026-08-11 audit claimed to update it but did not",
+      "detail": "CHANGELOG.md 2026-08-11 entry states 'day counts updated 77→83 days SPRINT-B/Retell'. SPRINT-B was correctly updated to 83 in STATUS.md line 99, but line 101 ('Confirm Retell R1 research — now 77 days overdue') and the Open questions section still show 77. The last audit introduced a factual inconsistency: its CHANGELOG claim did not match the actual file edit.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Update STATUS.md line 101 and open-questions Retell line from 77 to 92 (83 corrected baseline + 9 days elapsed since 2026-08-11). Absorbed into day-count sweep.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-20T04:09:10Z",
+      "closed_at": "2026-08-20T04:09:10Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-day-counts-20260820",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Day-counts stale across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md (9 days elapsed since 2026-08-11 audit)",
+      "detail": "Standard nightly cosmetic pass. SPRINT-B overdue: 83→92 days. Retell R1 overdue: 83→92 days (STATUS.md, ROADMAP.md, INTEGRATIONS.md) and 77→86 days in KPI.md (KPI measures from ADR-0011 baseline, 9 days added). Q3 elapsed: 41→50 days.",
+      "file_globs": [".omc/STATUS.md", "KPI.md", "ROADMAP.md", "INTEGRATIONS.md"],
+      "fix_sketch": "Update all stale overdue counts and Q3 elapsed counts in the four listed files. Update file footers.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-20T04:09:10Z",
+      "closed_at": "2026-08-20T04:09:10Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-changelog-2026-08-20",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "CHANGELOG.md missing 2026-08-20 nightly audit entry",
+      "detail": "Per AGENTS.md §5, CHANGELOG.md must be updated on every spec change. The 2026-08-20 audit findings and fixes must be logged in the [Unreleased] section.",
+      "file_globs": ["CHANGELOG.md"],
+      "fix_sketch": "Prepend a 2026-08-20 Changed bullet in [Unreleased] summarising the 2 new findings (1 IMPORTANT, 1 COSMETIC) fixed plus the 5 carried open findings.",
+      "parallel_safe": false,
+      "status": "fixed",
+      "opened_at": "2026-08-20T04:09:10Z",
+      "closed_at": "2026-08-20T04:09:10Z",
+      "closing_pr": null
+    }
+  ],
+  "carried_open": [
+    {
+      "id": "AUDIT-factory-sprint-b-overdue",
+      "reason": "Requires Sebastian + Esme to create SPRINT-2026-05-B — cannot fix autonomously. Now 92 days overdue."
+    },
+    {
+      "id": "AUDIT-factory-q3-okrs-undefined",
+      "reason": "Requires Sebastian + Esme alignment. Q3 now 50 days in with zero OKRs defined."
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "reason": "Adding **/(auth)/** to SECURITY.md Protected Paths requires Sebastian's approval per AGENTS.md §7 ask-first rule."
+    },
+    {
+      "id": "AUDIT-factory-adr-broken-anchors",
+      "reason": "Fixing anchors in accepted ADRs (0001, 0003, 0010) is blocked by .husky/pre-commit hook that rejects edits to accepted ADRs."
+    },
+    {
+      "id": "AUDIT-factory-risks-no-rescore",
+      "reason": "Quarterly RISKS.md re-score requires Sebastian's expert judgment. Now 97 days since last proper scoring (2026-05-15); quarterly cadence due 2026-08-13 (7 days overdue)."
+    }
+  ]
+}

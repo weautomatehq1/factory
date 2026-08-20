@@ -108,7 +108,7 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 
 ### Q3 2026 (2026-07-01 → 2026-09-30)
 
-> 🚨 **ACTION REQUIRED — OKRs not yet defined (2026-06-25 nightly audit; updated 2026-07-29).** Q3 started 2026-07-01 with zero OKRs defined. SPRINT-2026-05-B has not been created; Retell R1 research is 77 days overdue. Sebastian + Esme must define Q3 OKRs immediately — Q3 has already started (41 days in, no goals).
+> 🚨 **ACTION REQUIRED — OKRs not yet defined (2026-06-25 nightly audit; updated 2026-08-20).** Q3 started 2026-07-01 with zero OKRs defined. SPRINT-2026-05-B has not been created; Retell R1 research is 86 days overdue. Sebastian + Esme must define Q3 OKRs immediately — Q3 has already started (50 days in, no goals).
 >
 > Prerequisite decisions before Q3 OKRs can be written:
 > 1. Confirm voice platform (Retell vs. pivot) — Retell R1 confirmation (per ADR-0011) has been pending 77 days
@@ -149,4 +149,4 @@ Per Doerr's grammar: "I will [Objective] as measured by [Key Results]"
 ---
 
 **Last updated:** 2026-07-19
-**Last verified:** 2026-08-11 — nightly audit (Retell R1 pending count updated 71 → 77 days; Q3 elapsed 35 → 41 days)
+**Last verified:** 2026-08-20 — nightly audit (Retell R1 pending count updated 77 → 86 days; Q3 elapsed 41 → 50 days)
