@@ -1,0 +1,28 @@
+{
+  "audit_id": "audit-factory-20260821",
+  "repo": "factory",
+  "scanned_at": "2026-08-21T04:30:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-day-counts-20260821",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Day-counts stale (83→93 days SPRINT-B/Retell, 41→51 days Q3 elapsed) across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md",
+      "detail": "Ten days elapsed since the 2026-08-11 audit. All day-count references to SPRINT-B overdue (83 days), Retell R1 research overdue (83 days), and Q3 elapsed (41 days) are stale. Updated to 93/93/51 respectively.",
+      "file_globs": [
+        ".omc/STATUS.md",
+        "KPI.md",
+        "ROADMAP.md",
+        "INTEGRATIONS.md",
+        "CHANGELOG.md"
+      ],
+      "fix_sketch": "Update all day-count references and last_verified footers to reflect 2026-08-21 values.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-21T04:30:00Z",
+      "closed_at": "2026-08-21T04:30:00Z",
+      "closing_pr": null
+    }
+  ]
+}
