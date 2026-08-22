@@ -1,0 +1,86 @@
+{
+  "audit_id": "audit-20260822T000000Z",
+  "repo": "factory",
+  "scanned_at": "2026-08-22T00:00:00Z",
+  "scanner": "claude-sonnet-4-6-nightly",
+  "findings": [
+    {
+      "id": "AUDIT-factory-day-counts-20260822",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "Day-counts stale (83→94 days SPRINT-B/Retell, 41→52 days Q3 elapsed) across STATUS.md, ROADMAP.md, INTEGRATIONS.md",
+      "detail": "Last audit ran 2026-08-11; today is 2026-08-22 (11 days elapsed). Standard nightly cosmetic pass updating all stale day-count references. SPRINT-B/Retell R1 overdue counts move 83→94; Q3 elapsed moves 41→52. Note: KPI.md Retell R1 count is handled separately under AUDIT-factory-kpi-r1-drift (body showed 77, not 83, before today's update).",
+      "file_globs": [".omc/STATUS.md", "ROADMAP.md", "INTEGRATIONS.md"],
+      "fix_sketch": "Update all '83 days' references to 94, '41 days' Q3 elapsed references to 52, date stamps from 2026-08-11 to 2026-08-22. Update ROADMAP.md frontmatter last_updated. Update INTEGRATIONS.md frontmatter last_updated.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-22T00:00:00Z",
+      "closed_at": "2026-08-22T00:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-kpi-r1-drift",
+      "severity": "IMPORTANT",
+      "category": "logic",
+      "title": "KPI.md body shows stale Retell R1 overdue count (77 days) with wrong footer transition note; CHANGELOG claimed 2026-08-11 updated to 83 but body was not updated",
+      "detail": "KPI.md Q3 OKR banner says 'Retell R1 research is 77 days overdue' — this should have been updated to 83 in the 2026-08-11 audit per CHANGELOG entry ('day counts updated 77→83 days... across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md'). The KPI.md footer note also incorrectly says 'Retell R1 pending count updated 71→77 days' (the 2026-08-05 transition) instead of '77→83' for the 2026-08-11 audit. The Q3 elapsed count (41 days) was correctly updated; only the Retell R1 count was missed, creating an internal inconsistency between the CHANGELOG and the file body.",
+      "file_globs": ["KPI.md"],
+      "fix_sketch": "Update KPI.md Q3 OKR banner 'Retell R1 research is 77 days overdue' → 94 days (correcting the missed 2026-08-11 update and applying today's increment). Update footer note to accurately describe the fix. Update KPI.md frontmatter last_updated and footer Last updated/Last verified.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-22T00:00:00Z",
+      "closed_at": "2026-08-22T00:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-roadmap-fm-date",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "ROADMAP.md frontmatter last_updated stale at 2026-07-19 despite 5 content changes since",
+      "detail": "ROADMAP.md frontmatter shows last_updated: 2026-07-19 but the file was modified in the 2026-07-29, 2026-08-02, 2026-08-05, and 2026-08-11 nightly audits (day count updates, header wording). Previous audits updated the footer but left the frontmatter stale. Day count updates are content changes that warrant a frontmatter date update.",
+      "file_globs": ["ROADMAP.md"],
+      "fix_sketch": "Update ROADMAP.md frontmatter last_updated: 2026-07-19 → 2026-08-22. (Covered by the AUDIT-factory-day-counts-20260822 fix above.)",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-22T00:00:00Z",
+      "closed_at": "2026-08-22T00:00:00Z",
+      "closing_pr": null
+    },
+    {
+      "id": "AUDIT-factory-status-done-order",
+      "severity": "COSMETIC",
+      "category": "cosmetic",
+      "title": "STATUS.md Done section last 3 entries (2026-08-11, 2026-08-02, 2026-07-31) are in reverse-chronological order, breaking the ascending pattern",
+      "detail": "The STATUS.md Done section runs in ascending chronological order from 2026-05-15 through 2026-07-13, then abruptly lists 2026-08-11 before 2026-08-02 before 2026-07-31. The correct order should be 2026-07-31 → 2026-08-02 → 2026-08-11. This appears to be an insertion ordering bug from the 2026-08-11 audit — the 2026-08-11 session entry was prepended rather than appended, then the 2026-08-02 and 2026-07-31 entries followed. Readers expect ascending order to navigate history.",
+      "file_globs": [".omc/STATUS.md"],
+      "fix_sketch": "Reorder the three Done section entries so they read 2026-07-31 → 2026-08-02 → 2026-08-11 in ascending order. Then append the 2026-08-22 nightly audit entry.",
+      "parallel_safe": true,
+      "status": "fixed",
+      "opened_at": "2026-08-22T00:00:00Z",
+      "closed_at": "2026-08-22T00:00:00Z",
+      "closing_pr": null
+    }
+  ],
+  "carried_open": [
+    {
+      "id": "AUDIT-factory-sprint-b-overdue",
+      "reason": "Requires Sebastian + Esme to create SPRINT-2026-05-B — cannot fix autonomously. Now 94 days overdue."
+    },
+    {
+      "id": "AUDIT-factory-q3-okrs-undefined",
+      "reason": "Requires Sebastian + Esme alignment. Q3 now 52 days in with zero OKRs defined."
+    },
+    {
+      "id": "AUDIT-factory-a5d3e092",
+      "reason": "Adding **/(auth)/** to SECURITY.md Protected Paths requires Sebastian's approval per AGENTS.md §7 ask-first rule."
+    },
+    {
+      "id": "AUDIT-factory-adr-broken-anchors",
+      "reason": "Fixing anchors in accepted ADRs (0001, 0003, 0010) is blocked by .husky/pre-commit hook that rejects edits to accepted ADRs."
+    },
+    {
+      "id": "AUDIT-factory-risks-no-rescore",
+      "reason": "Quarterly RISKS.md re-score requires Sebastian's expert judgment. Now 93 days past last re-score (2026-05-23). Q2 quarterly re-score never happened."
+    }
+  ]
+}
