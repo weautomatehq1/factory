@@ -76,38 +76,43 @@ Three sections only. Next agent reads this first.
 - Nightly audit branch `audit/nightly-2026-07-13` opened.
 - Factory: 4 findings fixed (all COSMETIC): day counts updated 47/48→53/54 (STATUS.md), Q3 blocking decision overdue count updated 48→54 days (ROADMAP.md + KPI.md), CHANGELOG.md entry added. index.json corrected — 8 July-08 findings moved to fixed. 2 findings remain open: SPRINT-2026-05-B missing (day 53, hard blocker), Retell R1 (day 54, needs Esme).
 
+### 2026-07-31 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-07-31` opened.
+- Factory: 8 IMPORTANT findings fixed + 2 COSMETIC fixed. 4 CRITICAL remain open (sprint, OKRs, auth glob, ADR anchors — all require human action or hook protection). Key IMPORTANT fixes: ARCHITECTURE.md frontmatter date/Codemap/M-018 split, SECURITY.md/FILE_STRUCTURE.md/KPI.md frontmatter dates, UBIQUITOUS_LANGUAGE.md dates, INTEGRATIONS.md Retell count 60→72 days, ADR-0006 status standardized, AGENTS.md footer date/tree updated, CHANGELOG retroactive 2026-06-20 entry added. See CHANGELOG.md 2026-07-31 entry for full detail. 4+2 findings remain open.
+
+### 2026-08-02 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-08-02` opened.
+- Factory: 6 COSMETIC findings fixed (AGENTS.md/ARCHITECTURE.md footer dates corrected to reflect 2026-07-31 edits; day counts updated: SPRINT-B/Retell 72→74 days in STATUS.md/KPI.md/ROADMAP.md/INTEGRATIONS.md; Q3 elapsed 30→32 days in STATUS.md/KPI.md; ADR-0011 pending 54→68 in KPI.md body).
+- 9 findings remain open (all require operator action or are blocked by hooks). ⚠️ SPRINT-B now 74 days overdue; Q3 OKRs still undefined (32 days into Q3).
+
 ### 2026-08-11 — Nightly audit (this session)
 - Nightly audit branch `audit/nightly-2026-08-11` opened.
 - Factory: 1 COSMETIC finding (day count bundle) — SPRINT-B/Retell overdue 77→83 days; Q3 elapsed 35→41 days across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md.
 - 5 findings remain open (all require human action: sprint creation, Q3 OKRs, SECURITY.md auth glob, ADR anchor fix blocked by pre-commit hook, RISKS.md quarterly re-score).
 
-### 2026-08-02 — Nightly audit (this session)
-- Nightly audit branch `audit/nightly-2026-08-02` opened.
-- Factory: 6 COSMETIC findings fixed (AGENTS.md/ARCHITECTURE.md footer dates corrected to reflect 2026-07-31 edits; day counts updated: SPRINT-B/Retell 72→74 days in STATUS.md/KPI.md/ROADMAP.md/INTEGRATIONS.md; Q3 elapsed 30→32 days in STATUS.md/KPI.md; ADR-0011 pending 54→68 in KPI.md body).
-- 9 findings remain open (all require operator action or are blocked by hooks). ⚠️ SPRINT-B now 77 days overdue; Q3 OKRs still undefined (32 days into Q3).
-
-### 2026-07-31 — Nightly audit (this session)
-- Nightly audit branch `audit/nightly-2026-07-31` opened.
-- Factory: 8 IMPORTANT findings fixed + 2 COSMETIC fixed. 4 CRITICAL remain open (sprint, OKRs, auth glob, ADR anchors — all require human action or hook protection). Key IMPORTANT fixes: ARCHITECTURE.md frontmatter date/Codemap/M-018 split, SECURITY.md/FILE_STRUCTURE.md/KPI.md frontmatter dates, UBIQUITOUS_LANGUAGE.md dates, INTEGRATIONS.md Retell count 60→72 days, ADR-0006 status standardized, AGENTS.md footer date/tree updated, CHANGELOG retroactive 2026-06-20 entry added. See CHANGELOG.md 2026-07-31 entry for full detail. 4+2 findings remain open.
+### 2026-08-22 — Nightly audit (this session)
+- Nightly audit branch `audit/nightly-2026-08-22` opened.
+- Factory: 4 findings fixed (1 IMPORTANT, 3 COSMETIC): KPI.md Retell R1 overdue count corrected from 77→94 (body had not been updated in 2026-08-11 audit despite CHANGELOG claiming it; footer note fixed to accurately reflect the correction) — closes AUDIT-factory-kpi-r1-drift. Day counts updated SPRINT-B/Retell 83→94 days, Q3 elapsed 41→52 days across STATUS.md, ROADMAP.md, INTEGRATIONS.md — closes AUDIT-factory-day-counts-20260822. ROADMAP.md frontmatter last_updated corrected 2026-07-19→2026-08-22 — closes AUDIT-factory-roadmap-fm-date. STATUS.md Done section reordered (2026-07-31 → 2026-08-02 → 2026-08-11 ascending order, was reversed) — closes AUDIT-factory-status-done-order.
+- 5 findings remain open (all require human action: sprint creation, Q3 OKRs, SECURITY.md auth glob, ADR anchor fix, RISKS.md re-score). ⚠️ SPRINT-B now 94 days overdue; Q3 OKRs still undefined (52 days into Q3).
 
 ## In flight
 
-- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-08-11 (day 83 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
+- **SPRINT-2026-05-B** — referenced since 2026-05-21 but NOT YET CREATED. As of 2026-08-22 (day 94 overdue) there is no active sprint document. Sebastian + Esme must open SPRINT-2026-05-B to resume work. Hard blocker for any milestone progress. All four Q2 2026 OKRs are MISSED.
 
 ## Up next
 
-1. **Open SPRINT-2026-05-B** — now 83 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
-2. **Confirm Retell R1 research** (Esme) — now 77 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
-3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (41 days ago), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
+1. **Open SPRINT-2026-05-B** — now 94 days overdue from the 2026-05-21 reconciliation commitment. Re-plan with realistic capacity. Hard blocker.
+2. **Confirm Retell R1 research** (Esme) — now 94 days overdue. ROADMAP Q3 has ACTION REQUIRED. Must resolve before SPRINT-B scope is locked.
+3. **Decide Q3 2026 OKRs** — all Q2 OKRs MISSED; Q3 started 2026-07-01 (52 days ago), no goals defined yet. KPI.md has Q3 placeholder section with ACTION REQUIRED.
 4. **Decide cross-repo coordination contract** — if real work happens in IFleet/voice-discovery but never reflects here, Factory's value as "source of truth for sprint state" is zero.
 
 ## Open questions
 
 - Should Factory absorb sibling-repo activity feeds automatically (cron-scraped) or only via explicit PR? Decision pending.
 - Does SPRINT-2026-05-A's failure trigger a process retro before SPRINT-B opens? Recommended: yes.
-- Retell R1 confirmation: now 83 days overdue (as of 2026-08-11); ADR-0011 retains Retell as default pending confirmation.
+- Retell R1 confirmation: now 94 days overdue (as of 2026-08-22); ADR-0011 retains Retell as default pending confirmation.
 
 ---
 
-**Last updated:** 2026-08-11 — nightly audit (COSMETIC: day counts updated 77→83 days SPRINT-B/Retell, Q3 elapsed 35→41 days; 5 open findings carried — all require human action)
-**Previously updated:** 2026-08-05 — nightly audit
+**Last updated:** 2026-08-22 — nightly audit (1 IMPORTANT fixed: KPI.md Retell R1 count corrected 77→94; 3 COSMETIC fixed: day counts 83→94/41→52, ROADMAP.md frontmatter date, STATUS.md Done section ordering; 5 open findings carried — all require human action)
+**Previously updated:** 2026-08-11 — nightly audit
