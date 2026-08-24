@@ -1,0 +1,82 @@
+{
+  "run_at": "2026-08-23T04:00:00Z",
+  "repo": "factory",
+  "branch": "audit/nightly-2026-08-23",
+  "total_findings": 9,
+  "fixed_this_run": 2,
+  "opened_this_run": 4,
+  "carried_open": 5,
+  "findings_fixed": [
+    {
+      "id": "AUDIT-factory-day-counts-20260823",
+      "severity": "IMPORTANT",
+      "category": "stale-dates",
+      "title": "Day-count bundle stale across 4 files (12 days since last audit)",
+      "detail": "83-day SPRINT-B/Retell overdue counts and 41-day Q3 elapsed counts were 12 days stale. Updated 83→95 days (SPRINT-B/Retell) and 41→53 days (Q3) across STATUS.md, KPI.md, ROADMAP.md, INTEGRATIONS.md. Also updated 'as of 2026-08-11' inline references to 2026-08-23.",
+      "files": [".omc/STATUS.md", "KPI.md", "ROADMAP.md", "INTEGRATIONS.md"],
+      "status": "fixed",
+      "opened_at": "2026-08-23T04:00:00Z",
+      "closed_at": "2026-08-23T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-stale-dates-20260823",
+      "severity": "COSMETIC",
+      "category": "stale-dates",
+      "title": "AGENTS.md Last verified and DECISIONS.md last_updated stale",
+      "detail": "AGENTS.md footer Last verified was 2026-08-02 (21 days stale). DECISIONS.md frontmatter last_updated was 2026-06-04 (80 days stale). Updated both to 2026-08-23.",
+      "files": ["AGENTS.md", "DECISIONS.md"],
+      "status": "fixed",
+      "opened_at": "2026-08-23T04:00:00Z",
+      "closed_at": "2026-08-23T04:00:00Z"
+    }
+  ],
+  "findings_opened": [
+    {
+      "id": "AUDIT-factory-adr0011-incomplete-template",
+      "severity": "IMPORTANT",
+      "category": "adr-quality",
+      "title": "ADR-0011 deviates from MADR template — missing required sections",
+      "detail": "ADR-0011 (docs/decisions/0011-retell-voice-platform-erratum.md) is missing: Decision Drivers, Considered Options, Why not the others?, Consequences, and Confirmation sections required by the template (docs/decisions/_template.md). Uses 'Decision' instead of 'Decision Outcome'. Deferred: accepted ADR cannot be edited; requires supersession via ADR-0012.",
+      "files": ["docs/decisions/0011-retell-voice-platform-erratum.md"],
+      "status": "open",
+      "opened_at": "2026-08-23T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-arch-anchor-rename",
+      "severity": "IMPORTANT",
+      "category": "broken-cross-reference",
+      "title": "ADR-0001/0003/0010 reference broken ARCHITECTURE.md anchor #5-architectural-invariants",
+      "detail": "Three ADRs reference anchor #5-architectural-invariants but the actual heading is '## 5. Architectural Invariants (explicit absences)' which renders as #5-architectural-invariants-explicit-absences on GitHub. Carried from AUDIT-factory-adr-broken-anchors. Proposed fix: rename ARCHITECTURE.md heading to drop the parenthetical — but ARCHITECTURE.md has status:accepted so this requires ask-first.",
+      "files": ["ARCHITECTURE.md", "docs/decisions/0001-agents-md-as-primary.md", "docs/decisions/0003-issues-as-unit-of-work.md", "docs/decisions/0010-issues-from-four-upstream-sources.md"],
+      "status": "open",
+      "opened_at": "2026-08-23T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-sprint-b-overdue",
+      "severity": "CRITICAL",
+      "category": "process-gap",
+      "title": "SPRINT-2026-05-B still not created — 95 days overdue",
+      "detail": "SPRINT.md status is incomplete (SPRINT-2026-05-A ended 2026-05-20). SPRINT-2026-05-B was promised at the 2026-05-21 reconciliation. As of 2026-08-23 this is 95 days overdue. No active sprint document exists. All milestones M-002 through M-015 are blocked. Requires human decision — cannot be fixed autonomously.",
+      "files": ["SPRINT.md", ".omc/STATUS.md", "ROADMAP.md"],
+      "status": "open",
+      "opened_at": "2026-08-23T04:00:00Z"
+    },
+    {
+      "id": "AUDIT-factory-q3-okrs-undefined",
+      "severity": "CRITICAL",
+      "category": "process-gap",
+      "title": "Q3 2026 OKRs undefined — 53 days into Q3",
+      "detail": "Q3 started 2026-07-01. As of 2026-08-23 that is 53 days elapsed with zero OKRs defined. All Q2 OKRs are MISSED. KPI.md has Q3 placeholder section marked ACTION REQUIRED. Requires Sebastian + Esme alignment — cannot be fixed autonomously.",
+      "files": ["KPI.md", ".omc/STATUS.md"],
+      "status": "open",
+      "opened_at": "2026-08-23T04:00:00Z"
+    }
+  ],
+  "carried_open_findings": [
+    "AUDIT-factory-sprint-b-overdue",
+    "AUDIT-factory-q3-okrs-undefined",
+    "AUDIT-factory-a5d3e092",
+    "AUDIT-factory-adr-broken-anchors",
+    "AUDIT-factory-risks-no-rescore"
+  ]
+}
