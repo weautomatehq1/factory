@@ -37,7 +37,7 @@ related_adrs: [ADR-0011]
 - **auth_model:** api_key + hmac (for webhooks)
 - **secret_refs:** [`RETELL_API_KEY`, `RETELL_PHONE_NUMBER`, `RETELL_WEBHOOK_SECRET`]
 - **scope:** WeAutomateHQ-wide; clients receive/place calls but don't have direct Retell access
-- **rate_limits:** TBD — Esme R1 research 83 days overdue; blocked on account creation (M-005)
+- **rate_limits:** TBD — Esme R1 research 96 days overdue; blocked on account creation (M-005)
 - **retry_policy:** exponential, max 3; on persistent fail, n8n escalates to Discord
 - **status_page:** https://status.retellai.com ⚠️ [UNVERIFIED — confirm after account creation; update this line with verified date]
 - **docs:** https://docs.retellai.com
@@ -316,4 +316,4 @@ related_adrs: [ADR-0011]
 ---
 
 **Last updated:** 2026-08-02
-**Last verified:** 2026-08-11 — nightly audit (Retell rate_limits overdue count updated 77→83 days)
+**Last verified:** 2026-08-24 — nightly audit (Retell rate_limits overdue count updated 83→96 days)
